@@ -1,0 +1,5 @@
+<annotationInfo>
+<item  id="9" filename="Packet_Gen.cpp" linenumber="10" name="icmp_ln10" contextFuncName="slot_Data_gen" moduleName="slot_Data_gen" rtlName="icmp_ln10_fu_63_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen"><\/item>
+<item  id="11" filename="Packet_Gen.cpp" linenumber="10" name="i" contextFuncName="slot_Data_gen" moduleName="slot_Data_gen" rtlName="i_fu_69_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="23" fileDirectory="/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen"><\/item>
+<item  id="14" filename="Packet_Gen.cpp" linenumber="10" name="tmp_V_1" contextFuncName="slot_Data_gen" moduleName="slot_Data_gen" rtlName="tmp_V_1_fu_75_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen"><\/item>
+</annotationInfo>

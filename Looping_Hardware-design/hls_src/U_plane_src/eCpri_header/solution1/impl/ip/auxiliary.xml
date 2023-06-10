@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="eCpri_header_config" xd:componentRef="eCpri_header_config" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="eCPRI_PCID_config.PCID_conf" xd:originalName="eCPRI_PCID_config" xd:direction="in" xd:interfaceRef="eCPRI_PCID_config_V_PCID_conf_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="eCPRI_data_out.data" xd:originalName="eCPRI_data_out" xd:direction="out" xd:interfaceRef="eCPRI_data_out_V_data_V" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="state_out" xd:originalName="state_out" xd:direction="out" xd:interfaceRef="state_out" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:arg xd:name="PAYLOAD_VALUE" xd:originalName="PAYLOAD_VALUE" xd:direction="out" xd:interfaceRef="PAYLOAD_VALUE" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="16" xd:firstOut="1"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="181" xd:FF="88" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

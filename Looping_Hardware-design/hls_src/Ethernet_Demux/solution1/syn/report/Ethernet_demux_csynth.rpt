@@ -1,0 +1,354 @@
+
+
+================================================================
+== Vivado HLS Report for 'Ethernet_demux'
+================================================================
+* Date:           Fri Mar  3 10:30:23 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        Ethernet_Demux
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     1.161|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|     230|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     551|    -|
+|Register         |        -|      -|    1741|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|    1741|     781|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------------+----------+-------+---+----+------------+------------+
+    |              Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------+----------+-------+---+----+------------+------------+
+    |ap_condition_1148                        |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_1234                        |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_1249                        |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_data_V_1_load_A            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_data_V_1_load_B            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_keep_V_1_load_A            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_keep_V_1_load_B            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_last_V_1_load_A            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_last_V_1_load_B            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_user_V_1_load_A            |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_user_V_1_load_B            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_data_V_0_load_A            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_data_V_0_load_B            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_keep_V_0_load_A            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_keep_V_0_load_B            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_last_V_0_load_A            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_last_V_0_load_B            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_user_V_0_load_A            |    and   |      0|  0|   2|           1|           1|
+    |eth_data_rx_V_user_V_0_load_B            |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_data_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_data_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_keep_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_keep_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_last_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_last_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_user_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |mgmt_data_out_V_user_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |rx_tstamp_out_V_V_1_load_A               |    and   |      0|  0|   2|           1|           1|
+    |rx_tstamp_out_V_V_1_load_B               |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_data_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_data_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_keep_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_keep_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_last_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_last_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_user_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |sync_data_out_V_user_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |cu_data_out_V_data_V_1_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |cu_data_out_V_keep_V_1_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |cu_data_out_V_last_V_1_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |cu_data_out_V_user_V_1_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |eth_data_rx_V_data_V_0_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |eth_data_rx_V_keep_V_0_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |eth_data_rx_V_last_V_0_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |eth_data_rx_V_user_V_0_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |mgmt_data_out_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |mgmt_data_out_V_keep_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |mgmt_data_out_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |mgmt_data_out_V_user_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |rx_tstamp_out_V_V_1_state_cmp_full       |   icmp   |      0|  0|   8|           2|           1|
+    |sync_data_out_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |sync_data_out_V_keep_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |sync_data_out_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |sync_data_out_V_user_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_state1_pp0_stage0_iter0         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2_io                       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2         |    or    |      0|  0|   2|           1|           1|
+    |select_ln276_fu_270_p3                   |  select  |      0|  0|   3|           1|           1|
+    |select_ln293_fu_256_p3                   |  select  |      0|  0|   3|           1|           1|
+    |select_ln304_fu_242_p3                   |  select  |      0|  0|   3|           1|           1|
+    |select_ln313_fu_228_p3                   |  select  |      0|  0|   3|           1|           1|
+    +-----------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                    |          |      0|  0| 230|          79|          62|
+    +-----------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |cu_data_out_TDATA_blk_n            |   9|          2|    1|          2|
+    |cu_data_out_V_data_V_1_data_in     |  15|          3|  128|        384|
+    |cu_data_out_V_data_V_1_data_out    |   9|          2|  128|        256|
+    |cu_data_out_V_data_V_1_state       |  15|          3|    2|          6|
+    |cu_data_out_V_keep_V_1_data_in     |  15|          3|   16|         48|
+    |cu_data_out_V_keep_V_1_data_out    |   9|          2|   16|         32|
+    |cu_data_out_V_keep_V_1_state       |  15|          3|    2|          6|
+    |cu_data_out_V_last_V_1_data_in     |  15|          3|    1|          3|
+    |cu_data_out_V_last_V_1_data_out    |   9|          2|    1|          2|
+    |cu_data_out_V_last_V_1_state       |  15|          3|    2|          6|
+    |cu_data_out_V_user_V_1_data_in     |  15|          3|    1|          3|
+    |cu_data_out_V_user_V_1_data_out    |   9|          2|    1|          2|
+    |cu_data_out_V_user_V_1_state       |  15|          3|    2|          6|
+    |eth_data_rx_TDATA_blk_n            |   9|          2|    1|          2|
+    |eth_data_rx_V_data_V_0_data_out    |   9|          2|  128|        256|
+    |eth_data_rx_V_data_V_0_state       |  15|          3|    2|          6|
+    |eth_data_rx_V_keep_V_0_data_out    |   9|          2|   16|         32|
+    |eth_data_rx_V_keep_V_0_state       |  15|          3|    2|          6|
+    |eth_data_rx_V_last_V_0_data_out    |   9|          2|    1|          2|
+    |eth_data_rx_V_last_V_0_state       |  15|          3|    2|          6|
+    |eth_data_rx_V_user_V_0_data_out    |   9|          2|    1|          2|
+    |eth_data_rx_V_user_V_0_state       |  15|          3|    2|          6|
+    |mgmt_data_out_TDATA_blk_n          |   9|          2|    1|          2|
+    |mgmt_data_out_V_data_V_1_data_out  |   9|          2|  128|        256|
+    |mgmt_data_out_V_data_V_1_state     |  15|          3|    2|          6|
+    |mgmt_data_out_V_keep_V_1_data_out  |   9|          2|   16|         32|
+    |mgmt_data_out_V_keep_V_1_state     |  15|          3|    2|          6|
+    |mgmt_data_out_V_last_V_1_data_out  |   9|          2|    1|          2|
+    |mgmt_data_out_V_last_V_1_state     |  15|          3|    2|          6|
+    |mgmt_data_out_V_user_V_1_data_out  |   9|          2|    1|          2|
+    |mgmt_data_out_V_user_V_1_state     |  15|          3|    2|          6|
+    |rx_tstamp_out_V_V_1_data_out       |   9|          2|   80|        160|
+    |rx_tstamp_out_V_V_1_state          |  15|          3|    2|          6|
+    |rx_tstamp_out_V_V_TDATA_blk_n      |   9|          2|    1|          2|
+    |state_V                            |  38|          7|    3|         21|
+    |sync_data_out_TDATA_blk_n          |   9|          2|    1|          2|
+    |sync_data_out_V_data_V_1_data_out  |   9|          2|  128|        256|
+    |sync_data_out_V_data_V_1_state     |  15|          3|    2|          6|
+    |sync_data_out_V_keep_V_1_data_out  |   9|          2|   16|         32|
+    |sync_data_out_V_keep_V_1_state     |  15|          3|    2|          6|
+    |sync_data_out_V_last_V_1_data_out  |   9|          2|    1|          2|
+    |sync_data_out_V_last_V_1_state     |  15|          3|    2|          6|
+    |sync_data_out_V_user_V_1_data_out  |   9|          2|    1|          2|
+    |sync_data_out_V_user_V_1_state     |  15|          3|    2|          6|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              | 551|        114|  852|       1899|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+-----+----+-----+-----------+
+    |                Name                |  FF | LUT| Bits| Const Bits|
+    +------------------------------------+-----+----+-----+-----------+
+    |ap_CS_iter0_fsm                     |    1|   0|    1|          0|
+    |ap_CS_iter1_fsm                     |    1|   0|    1|          0|
+    |ap_CS_iter2_fsm                     |    1|   0|    1|          0|
+    |cu_data_out_V_data_V_1_payload_A    |  128|   0|  128|          0|
+    |cu_data_out_V_data_V_1_payload_B    |  128|   0|  128|          0|
+    |cu_data_out_V_data_V_1_sel_rd       |    1|   0|    1|          0|
+    |cu_data_out_V_data_V_1_sel_wr       |    1|   0|    1|          0|
+    |cu_data_out_V_data_V_1_state        |    2|   0|    2|          0|
+    |cu_data_out_V_keep_V_1_payload_A    |   16|   0|   16|          0|
+    |cu_data_out_V_keep_V_1_payload_B    |   16|   0|   16|          0|
+    |cu_data_out_V_keep_V_1_sel_rd       |    1|   0|    1|          0|
+    |cu_data_out_V_keep_V_1_sel_wr       |    1|   0|    1|          0|
+    |cu_data_out_V_keep_V_1_state        |    2|   0|    2|          0|
+    |cu_data_out_V_last_V_1_payload_A    |    1|   0|    1|          0|
+    |cu_data_out_V_last_V_1_payload_B    |    1|   0|    1|          0|
+    |cu_data_out_V_last_V_1_sel_rd       |    1|   0|    1|          0|
+    |cu_data_out_V_last_V_1_sel_wr       |    1|   0|    1|          0|
+    |cu_data_out_V_last_V_1_state        |    2|   0|    2|          0|
+    |cu_data_out_V_user_V_1_payload_A    |    1|   0|    1|          0|
+    |cu_data_out_V_user_V_1_payload_B    |    1|   0|    1|          0|
+    |cu_data_out_V_user_V_1_sel_rd       |    1|   0|    1|          0|
+    |cu_data_out_V_user_V_1_sel_wr       |    1|   0|    1|          0|
+    |cu_data_out_V_user_V_1_state        |    2|   0|    2|          0|
+    |eth_data_in_user_V                  |    1|   0|    1|          0|
+    |eth_data_rx_V_data_V_0_payload_A    |  128|   0|  128|          0|
+    |eth_data_rx_V_data_V_0_payload_B    |  128|   0|  128|          0|
+    |eth_data_rx_V_data_V_0_sel_rd       |    1|   0|    1|          0|
+    |eth_data_rx_V_data_V_0_sel_wr       |    1|   0|    1|          0|
+    |eth_data_rx_V_data_V_0_state        |    2|   0|    2|          0|
+    |eth_data_rx_V_keep_V_0_payload_A    |   16|   0|   16|          0|
+    |eth_data_rx_V_keep_V_0_payload_B    |   16|   0|   16|          0|
+    |eth_data_rx_V_keep_V_0_sel_rd       |    1|   0|    1|          0|
+    |eth_data_rx_V_keep_V_0_sel_wr       |    1|   0|    1|          0|
+    |eth_data_rx_V_keep_V_0_state        |    2|   0|    2|          0|
+    |eth_data_rx_V_last_V_0_payload_A    |    1|   0|    1|          0|
+    |eth_data_rx_V_last_V_0_payload_B    |    1|   0|    1|          0|
+    |eth_data_rx_V_last_V_0_sel_rd       |    1|   0|    1|          0|
+    |eth_data_rx_V_last_V_0_sel_wr       |    1|   0|    1|          0|
+    |eth_data_rx_V_last_V_0_state        |    2|   0|    2|          0|
+    |eth_data_rx_V_user_V_0_payload_A    |    1|   0|    1|          0|
+    |eth_data_rx_V_user_V_0_payload_B    |    1|   0|    1|          0|
+    |eth_data_rx_V_user_V_0_sel_rd       |    1|   0|    1|          0|
+    |eth_data_rx_V_user_V_0_sel_wr       |    1|   0|    1|          0|
+    |eth_data_rx_V_user_V_0_state        |    2|   0|    2|          0|
+    |mgmt_data_out_V_data_V_1_payload_A  |  128|   0|  128|          0|
+    |mgmt_data_out_V_data_V_1_payload_B  |  128|   0|  128|          0|
+    |mgmt_data_out_V_data_V_1_sel_rd     |    1|   0|    1|          0|
+    |mgmt_data_out_V_data_V_1_sel_wr     |    1|   0|    1|          0|
+    |mgmt_data_out_V_data_V_1_state      |    2|   0|    2|          0|
+    |mgmt_data_out_V_keep_V_1_payload_A  |   16|   0|   16|          0|
+    |mgmt_data_out_V_keep_V_1_payload_B  |   16|   0|   16|          0|
+    |mgmt_data_out_V_keep_V_1_sel_rd     |    1|   0|    1|          0|
+    |mgmt_data_out_V_keep_V_1_sel_wr     |    1|   0|    1|          0|
+    |mgmt_data_out_V_keep_V_1_state      |    2|   0|    2|          0|
+    |mgmt_data_out_V_last_V_1_payload_A  |    1|   0|    1|          0|
+    |mgmt_data_out_V_last_V_1_payload_B  |    1|   0|    1|          0|
+    |mgmt_data_out_V_last_V_1_sel_rd     |    1|   0|    1|          0|
+    |mgmt_data_out_V_last_V_1_sel_wr     |    1|   0|    1|          0|
+    |mgmt_data_out_V_last_V_1_state      |    2|   0|    2|          0|
+    |mgmt_data_out_V_user_V_1_payload_A  |    1|   0|    1|          0|
+    |mgmt_data_out_V_user_V_1_payload_B  |    1|   0|    1|          0|
+    |mgmt_data_out_V_user_V_1_sel_rd     |    1|   0|    1|          0|
+    |mgmt_data_out_V_user_V_1_sel_wr     |    1|   0|    1|          0|
+    |mgmt_data_out_V_user_V_1_state      |    2|   0|    2|          0|
+    |reg_202                             |  128|   0|  128|          0|
+    |reg_209                             |   16|   0|   16|          0|
+    |rx_tstamp_out_V_V_1_payload_A       |   80|   0|   80|          0|
+    |rx_tstamp_out_V_V_1_payload_B       |   80|   0|   80|          0|
+    |rx_tstamp_out_V_V_1_sel_rd          |    1|   0|    1|          0|
+    |rx_tstamp_out_V_V_1_sel_wr          |    1|   0|    1|          0|
+    |rx_tstamp_out_V_V_1_state           |    2|   0|    2|          0|
+    |state_V                             |    3|   0|    4|          1|
+    |state_V_load_reg_319                |    3|   0|    4|          1|
+    |state_V_load_reg_319_pp0_iter1_reg  |    3|   0|    4|          1|
+    |sync_data_out_V_data_V_1_payload_A  |  128|   0|  128|          0|
+    |sync_data_out_V_data_V_1_payload_B  |  128|   0|  128|          0|
+    |sync_data_out_V_data_V_1_sel_rd     |    1|   0|    1|          0|
+    |sync_data_out_V_data_V_1_sel_wr     |    1|   0|    1|          0|
+    |sync_data_out_V_data_V_1_state      |    2|   0|    2|          0|
+    |sync_data_out_V_keep_V_1_payload_A  |   16|   0|   16|          0|
+    |sync_data_out_V_keep_V_1_payload_B  |   16|   0|   16|          0|
+    |sync_data_out_V_keep_V_1_sel_rd     |    1|   0|    1|          0|
+    |sync_data_out_V_keep_V_1_sel_wr     |    1|   0|    1|          0|
+    |sync_data_out_V_keep_V_1_state      |    2|   0|    2|          0|
+    |sync_data_out_V_last_V_1_payload_A  |    1|   0|    1|          0|
+    |sync_data_out_V_last_V_1_payload_B  |    1|   0|    1|          0|
+    |sync_data_out_V_last_V_1_sel_rd     |    1|   0|    1|          0|
+    |sync_data_out_V_last_V_1_sel_wr     |    1|   0|    1|          0|
+    |sync_data_out_V_last_V_1_state      |    2|   0|    2|          0|
+    |sync_data_out_V_user_V_1_payload_A  |    1|   0|    1|          0|
+    |sync_data_out_V_user_V_1_payload_B  |    1|   0|    1|          0|
+    |sync_data_out_V_user_V_1_sel_rd     |    1|   0|    1|          0|
+    |sync_data_out_V_user_V_1_sel_wr     |    1|   0|    1|          0|
+    |sync_data_out_V_user_V_1_state      |    2|   0|    2|          0|
+    |tmp_V_reg_338                       |   80|   0|   80|          0|
+    |tmp_last_V_1_reg_348                |    1|   0|    1|          0|
+    |tmp_last_V_2_reg_333                |    1|   0|    1|          0|
+    |tmp_last_V_reg_358                  |    1|   0|    1|          0|
+    |tmp_user_V_1_reg_353                |    1|   0|    1|          0|
+    |tmp_user_V_2_reg_343                |    1|   0|    1|          0|
+    |tmp_user_V_3_reg_328                |    1|   0|    1|          0|
+    |trunc_ln209_reg_323                 |    3|   0|    3|          0|
+    |trunc_ln209_reg_323_pp0_iter1_reg   |    3|   0|    3|          0|
+    |trunc_ln647_reg_363                 |   96|   0|   96|          0|
+    +------------------------------------+-----+----+-----+-----------+
+    |Total                               | 1741|   0| 1744|          3|
+    +------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+--------------+----------------------------+--------------+
+|          RTL Ports         | Dir | Bits|   Protocol   |        Source Object       |    C Type    |
++----------------------------+-----+-----+--------------+----------------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_none |       Ethernet_demux       | return value |
+|ap_rst_n                    |  in |    1| ap_ctrl_none |       Ethernet_demux       | return value |
+|eth_data_rx_TDATA           |  in |  128|     axis     |    eth_data_rx_V_data_V    |    pointer   |
+|eth_data_rx_TVALID          |  in |    1|     axis     |    eth_data_rx_V_last_V    |    pointer   |
+|eth_data_rx_TREADY          | out |    1|     axis     |    eth_data_rx_V_last_V    |    pointer   |
+|eth_data_rx_TLAST           |  in |    1|     axis     |    eth_data_rx_V_last_V    |    pointer   |
+|eth_data_rx_TUSER           |  in |    1|     axis     |    eth_data_rx_V_user_V    |    pointer   |
+|eth_data_rx_TKEEP           |  in |   16|     axis     |    eth_data_rx_V_keep_V    |    pointer   |
+|cu_data_out_TDATA           | out |  128|     axis     |    cu_data_out_V_data_V    |    pointer   |
+|cu_data_out_TREADY          |  in |    1|     axis     |    cu_data_out_V_data_V    |    pointer   |
+|cu_data_out_TVALID          | out |    1|     axis     |    cu_data_out_V_last_V    |    pointer   |
+|cu_data_out_TLAST           | out |    1|     axis     |    cu_data_out_V_last_V    |    pointer   |
+|cu_data_out_TUSER           | out |    1|     axis     |    cu_data_out_V_user_V    |    pointer   |
+|cu_data_out_TKEEP           | out |   16|     axis     |    cu_data_out_V_keep_V    |    pointer   |
+|sync_data_out_TDATA         | out |  128|     axis     |   sync_data_out_V_data_V   |    pointer   |
+|sync_data_out_TREADY        |  in |    1|     axis     |   sync_data_out_V_data_V   |    pointer   |
+|sync_data_out_TVALID        | out |    1|     axis     |   sync_data_out_V_last_V   |    pointer   |
+|sync_data_out_TLAST         | out |    1|     axis     |   sync_data_out_V_last_V   |    pointer   |
+|sync_data_out_TUSER         | out |    1|     axis     |   sync_data_out_V_user_V   |    pointer   |
+|sync_data_out_TKEEP         | out |   16|     axis     |   sync_data_out_V_keep_V   |    pointer   |
+|mgmt_data_out_TDATA         | out |  128|     axis     |   mgmt_data_out_V_data_V   |    pointer   |
+|mgmt_data_out_TREADY        |  in |    1|     axis     |   mgmt_data_out_V_data_V   |    pointer   |
+|mgmt_data_out_TVALID        | out |    1|     axis     |   mgmt_data_out_V_last_V   |    pointer   |
+|mgmt_data_out_TLAST         | out |    1|     axis     |   mgmt_data_out_V_last_V   |    pointer   |
+|mgmt_data_out_TUSER         | out |    1|     axis     |   mgmt_data_out_V_user_V   |    pointer   |
+|mgmt_data_out_TKEEP         | out |   16|     axis     |   mgmt_data_out_V_keep_V   |    pointer   |
+|rx_tstamp_in_V              |  in |   80|    ap_none   |       rx_tstamp_in_V       |    pointer   |
+|rx_tstamp_out_V_V_TDATA     | out |   80|     axis     |      rx_tstamp_out_V_V     |    pointer   |
+|rx_tstamp_out_V_V_TVALID    | out |    1|     axis     |      rx_tstamp_out_V_V     |    pointer   |
+|rx_tstamp_out_V_V_TREADY    |  in |    1|     axis     |      rx_tstamp_out_V_V     |    pointer   |
+|ethernet_demux_state_out_V  | out |    3|    ap_none   | ethernet_demux_state_out_V |    pointer   |
++----------------------------+-----+-----+--------------+----------------------------+--------------+
+

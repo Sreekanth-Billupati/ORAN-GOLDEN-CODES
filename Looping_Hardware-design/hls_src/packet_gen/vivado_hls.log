@@ -1,0 +1,23 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'harishmani' on host 'workstation3' (Linux_x86_64 version 4.15.0-142-generic) on Tue Apr 27 11:25:31 IST 2021
+INFO: [HLS 200-10] On os Ubuntu 16.04.7 LTS
+INFO: [HLS 200-10] In directory '/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen'
+Sourcing Tcl script '/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen/packet_gen/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project '/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen/packet_gen'.
+INFO: [HLS 200-10] Opening solution '/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen/packet_gen/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/opt/Xilinx/Vivado/2019.1/common/technology/xilinx/zynquplusRFSOC/zynquplusRFSOC.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/zynquplusRFSOC/zynquplusRFSOC'.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 27 11:25:44 2021...

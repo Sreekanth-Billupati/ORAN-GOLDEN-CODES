@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ecpri_demux_header.h" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src/ecpri_demux_header.h"/>
+    <originFiles name="ecpri_demux.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src/eCPRI_demux/ecpri_demux.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

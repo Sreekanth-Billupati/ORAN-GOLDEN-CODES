@@ -1,0 +1,712 @@
+{
+  "Top": "L1toORAN",
+  "RtlTop": "L1toORAN",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu9eg",
+    "Package": "-ffvb1156",
+    "Speed": "-2-i"
+  },
+  "HlsSolution": {"Config": [
+      "config_compile -no_signed_zeros=0",
+      "config_compile -unsafe_math_optimizations=0",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
+      "config_export -vivado_optimization_level=2",
+      "config_export -vivado_phys_opt=place",
+      "config_export -vivado_report_level=0",
+      "config_sdx -optimization_level=none",
+      "config_sdx -target=none"
+    ]},
+  "Args": {
+    "L1_axis": {
+      "index": "0",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "l1_data_axis",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "payload": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "dst_module": {
+            "order": "1",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "application_header": {
+      "index": "1",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "Appn_header",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "dataDirection": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "payloadVersion": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "filterIndex": {
+            "order": "2",
+            "dataType": "ap_uint"
+          },
+          "frameId": {
+            "order": "3",
+            "dataType": "ap_uint"
+          },
+          "subframeId": {
+            "order": "4",
+            "dataType": "ap_uint"
+          },
+          "slotID": {
+            "order": "5",
+            "dataType": "ap_uint"
+          },
+          "startsymbolId": {
+            "order": "6",
+            "dataType": "ap_uint"
+          },
+          "numSections": {
+            "order": "7",
+            "dataType": "ap_uint"
+          },
+          "sectionType": {
+            "order": "8",
+            "dataType": "ap_uint"
+          },
+          "udCompHdr": {
+            "order": "9",
+            "dataType": "ap_uint"
+          },
+          "reserved": {
+            "order": "10",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "section_header": {
+      "index": "2",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "Section_header",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "sectionID": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "rb": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "symInc": {
+            "order": "2",
+            "dataType": "ap_uint"
+          },
+          "startPrbu": {
+            "order": "3",
+            "dataType": "ap_uint"
+          },
+          "numPrbu": {
+            "order": "4",
+            "dataType": "ap_uint"
+          },
+          "reMask": {
+            "order": "5",
+            "dataType": "ap_uint"
+          },
+          "numSymbol": {
+            "order": "6",
+            "dataType": "ap_uint"
+          },
+          "beamID": {
+            "order": "7",
+            "dataType": "ap_uint"
+          },
+          "ef": {
+            "order": "8",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "extension_header": {
+      "index": "3",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "Section_Ext_header",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "ef": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "extType": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "extLen": {
+            "order": "2",
+            "dataType": "ap_uint"
+          },
+          "disablebfW": {
+            "order": "3",
+            "dataType": "ap_uint"
+          },
+          "RAD": {
+            "order": "4",
+            "dataType": "ap_uint"
+          },
+          "reserved": {
+            "order": "5",
+            "dataType": "ap_uint"
+          },
+          "numBundPRB": {
+            "order": "6",
+            "dataType": "ap_uint"
+          },
+          "bfWCompHdr": {
+            "order": "7",
+            "dataType": "ap_uint"
+          },
+          "bfWCompParam": {
+            "order": "8",
+            "dataType": "ap_uint"
+          },
+          "reserved_comp": {
+            "order": "9",
+            "dataType": "ap_uint"
+          },
+          "beamID": {
+            "order": "10",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "mux_config": {
+      "index": "4",
+      "type": {"dataType": "ap_uint"}
+    },
+    "numBeams": {
+      "index": "5",
+      "type": {"dataType": "ap_uint"}
+    },
+    "l1toc_stateout": {
+      "index": "6",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "8",
+        "interfaceRef": "l1toc_stateout_V"
+      }
+    },
+    "rtcid": {
+      "index": "7",
+      "type": {"dataType": "ap_uint"}
+    },
+    "CDATA_COUNTER": {
+      "index": "8",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "8",
+        "interfaceRef": "CDATA_COUNTER_V"
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "3.2",
+    "IsCombLogic": "0",
+    "II": "1",
+    "Latency": "12",
+    "Uncertainty": "0.4"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 3.200 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "L1toORAN",
+    "Version": "1.0",
+    "DisplayName": "L1tooran",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/L1toORAN_main.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/L1toORAN_udiv_8ns_8ns_3_12_1.vhd",
+      "impl\/vhdl\/L1toORAN.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/L1toORAN_udiv_8ns_8ns_3_12_1.v",
+      "impl\/verilog\/L1toORAN.v"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/home\/ssaraswathy\/Documents\/ORAN_Uplane\/Uplane_without_Compression\/Hardware_design_TX\/Looping_1layer_Test\/Looping_Hardware-design\/hls_src\/L1toORAN\/solution1\/.autopilot\/db\/L1toORAN.design.xml",
+    "DebugDir": "\/home\/ssaraswathy\/Documents\/ORAN_Uplane\/Uplane_without_Compression\/Hardware_design_TX\/Looping_1layer_Test\/Looping_Hardware-design\/hls_src\/L1toORAN\/solution1\/.debug",
+    "ProtoInst": ["\/home\/ssaraswathy\/Documents\/ORAN_Uplane\/Uplane_without_Compression\/Hardware_design_TX\/Looping_1layer_Test\/Looping_Hardware-design\/hls_src\/L1toORAN\/solution1\/.debug\/L1toORAN.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "L1_axis_V application_header_V section_header_V extension_header_V mux_config_V_V numBeams_V_V rtcid_V_V",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "application_header_V": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "application_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "64",
+          "Fields": {
+            "dataDirection": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "payloadVersion": {
+              "Type": "integer unsigned",
+              "Width": "3"
+            },
+            "filterIndex": {
+              "Type": "integer unsigned",
+              "Width": "4"
+            },
+            "frameId": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "subframeId": {
+              "Type": "integer unsigned",
+              "Width": "4"
+            },
+            "slotID": {
+              "Type": "integer unsigned",
+              "Width": "6"
+            },
+            "startsymbolId": {
+              "Type": "integer unsigned",
+              "Width": "6"
+            },
+            "numSections": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "sectionType": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "udCompHdr": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "reserved": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "64"}
+    },
+    "CDATA_COUNTER_V": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "CDATA_COUNTER_V",
+      "bundle_role": "default"
+    },
+    "extension_header_V": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "extension_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "72",
+          "Fields": {
+            "ef": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "extType": {
+              "Type": "integer unsigned",
+              "Width": "7"
+            },
+            "extLen": {
+              "Type": "integer unsigned",
+              "Width": "16"
+            },
+            "disablebfW": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "RAD": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "reserved": {
+              "Type": "integer unsigned",
+              "Width": "6"
+            },
+            "numBundPRB": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "bfWCompHdr": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "bfWCompParam": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "reserved_comp": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "beamID": {
+              "Type": "integer unsigned",
+              "Width": "15"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "72"}
+    },
+    "L1_axis_V": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "L1_axis_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "64",
+          "Fields": {
+            "payload": {
+              "Type": "integer unsigned",
+              "Width": "54"
+            },
+            "dst_module": {
+              "Type": "integer unsigned",
+              "Width": "10"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "64"}
+    },
+    "l1toc_stateout_V": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "l1toc_stateout_V",
+      "bundle_role": "default"
+    },
+    "mux_config_V_V": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "mux_config_V_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "96"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "96"}
+    },
+    "numBeams_V_V": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "numBeams_V_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "3",
+          "Bits": "8"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "8"}
+    },
+    "rtcid_V_V": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "rtcid_V_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "16"}
+    },
+    "section_header_V": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "section_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "64",
+          "Fields": {
+            "sectionID": {
+              "Type": "integer unsigned",
+              "Width": "12"
+            },
+            "rb": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "symInc": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "startPrbu": {
+              "Type": "integer unsigned",
+              "Width": "10"
+            },
+            "numPrbu": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "reMask": {
+              "Type": "integer unsigned",
+              "Width": "12"
+            },
+            "numSymbol": {
+              "Type": "integer unsigned",
+              "Width": "4"
+            },
+            "beamID": {
+              "Type": "integer unsigned",
+              "Width": "15"
+            },
+            "ef": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "64"}
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "L1_axis_V_TDATA": {
+      "dir": "in",
+      "width": "64"
+    },
+    "L1_axis_V_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "L1_axis_V_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "application_header_V_TDATA": {
+      "dir": "out",
+      "width": "64"
+    },
+    "application_header_V_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "application_header_V_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "section_header_V_TDATA": {
+      "dir": "out",
+      "width": "64"
+    },
+    "section_header_V_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "section_header_V_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "extension_header_V_TDATA": {
+      "dir": "out",
+      "width": "72"
+    },
+    "extension_header_V_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "extension_header_V_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "mux_config_V_V_TDATA": {
+      "dir": "out",
+      "width": "96"
+    },
+    "mux_config_V_V_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "mux_config_V_V_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "numBeams_V_V_TDATA": {
+      "dir": "out",
+      "width": "8"
+    },
+    "numBeams_V_V_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "numBeams_V_V_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "l1toc_stateout_V": {
+      "dir": "out",
+      "width": "8"
+    },
+    "rtcid_V_V_TDATA": {
+      "dir": "out",
+      "width": "16"
+    },
+    "rtcid_V_V_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "rtcid_V_V_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "CDATA_COUNTER_V": {
+      "dir": "out",
+      "width": "8"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "L1toORAN"},
+    "Info": {"L1toORAN": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"L1toORAN": {
+        "Latency": {
+          "LatencyBest": "12",
+          "LatencyAvg": "12",
+          "LatencyWorst": "12",
+          "PipelineII": "1",
+          "PipelineDepth": "13",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.40",
+          "Estimate": "2.771"
+        },
+        "Area": {
+          "BRAM_18K": "2",
+          "FF": "1177",
+          "LUT": "629",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "L1toORAN",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2022-02-17 14:19:48 IST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.1"
+  }
+}

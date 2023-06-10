@@ -1,0 +1,708 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:186:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(127,120) = din.data.range(7,0);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:187:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(119,112) = din.data.range(15,8);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:188:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(111,104) = din.data.range(23,16);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:189:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(103,96) = din.data.range(31,24);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:190:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(95,88) = din.data.range(39,32);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:191:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(87,80) = din.data.range(47,40);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:192:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(79,72) = din.data.range(55,48);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:193:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(71,64) = din.data.range(63,56);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:194:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(63,56) = din.data.range(71,64);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:195:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(55,48) = din.data.range(79,72);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:196:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(47,40) = din.data.range(87,80);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:197:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(39,32) = din.data.range(95,88);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:198:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(31,24) = din.data.range(103,96);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:199:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(23,16) = din.data.range(111,104);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:200:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(15,8) = din.data.range(119,112);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:201:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(7,0) = din.data.range(127,120);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:205:22: error: use of undeclared identifier 'Resoure_element48'
+    variable_count = Resoure_element48;
+                     ^
+Uplane_depacketiser/uplane_depacketiser.cpp:208:6: error: use of undeclared identifier 'Resoure_element48'
+case Resoure_element48:
+     ^
+Uplane_depacketiser/uplane_depacketiser.cpp:212:16: error: no member named 'data' in 'PRB_section'
+    data_dout2.data.IQ_data.range(127,120) = din.data.range(7,0);
+    ~~~~~~~~~~ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:186:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(127,120) = din.data.range(7,0);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:187:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(119,112) = din.data.range(15,8);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:188:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(111,104) = din.data.range(23,16);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:189:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(103,96) = din.data.range(31,24);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:190:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(95,88) = din.data.range(39,32);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:191:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(87,80) = din.data.range(47,40);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:192:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(79,72) = din.data.range(55,48);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:193:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(71,64) = din.data.range(63,56);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:194:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(63,56) = din.data.range(71,64);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:195:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(55,48) = din.data.range(79,72);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:196:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(47,40) = din.data.range(87,80);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:197:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(39,32) = din.data.range(95,88);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:198:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(31,24) = din.data.range(103,96);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:199:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(23,16) = din.data.range(111,104);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:200:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(15,8) = din.data.range(119,112);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:201:16: error: no member named 'data' in 'PRB_section'
+    data_dout1.data.IQ_data.range(7,0) = din.data.range(127,120);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:205:22: error: use of undeclared identifier 'Resoure_element48'
+    variable_count = Resoure_element48;
+                     ^
+Uplane_depacketiser/uplane_depacketiser.cpp:212:16: error: no member named 'data' in 'PRB_section'
+    data_dout2.data.IQ_data.range(127,120) = din.data.range(7,0);
+    ~~~~~~~~~~ ^
+Uplane_depacketiser/uplane_depacketiser.cpp:213:16: error: no member named 'data' in 'PRB_section'
+    data_dout2.data.IQ_data.range(119,112) = din.data.range(15,8);
+    ~~~~~~~~~~ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:329:7: warning: overflow converting case value to switch condition type (12 to 0) [-Wswitch]
+ case IDLE:
+      ^
+Uplane_depacketiser/uplane_depacketiser.cpp:289:6: warning: overflow converting case value to switch condition type (11 to 3) [-Wswitch]
+case New_sectionID:
+     ^
+Uplane_depacketiser/uplane_depacketiser.cpp:289:6: error: duplicate case value '3'
+Uplane_depacketiser/uplane_depacketiser.cpp:235:6: note: previous case defined here
+case Resoure_element3:
+     ^
+Uplane_depacketiser/uplane_depacketiser.cpp:48:8: warning: 9 enumeration values not handled in switch: 'IQ_PAYLOAD2', 'IQ_PAYLOAD3', 'IQ_PAYLOAD4'... [-Wswitch]
+switch(ecpri_msg_state){
+       ^
+Uplane_depacketiser/uplane_depacketiser.cpp:332:3: error: expected '}'
+ }
+  ^
+Uplane_depacketiser/uplane_depacketiser.cpp:10:37: note: to match this '{'
+       ap_uint<8> &iq_msg_state_out){
+                                    ^
+3 warnings and 2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+WARNING: [HLS 200-40] In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:648:8: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+switch(ecpri_msg_state){
+       ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 12401 ; free virtual = 53900
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 12401 ; free virtual = 53900
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 12372 ; free virtual = 53885
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 12365 ; free virtual = 53879
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Uplane_depacketiser/uplane_depacketiser.cpp:783:12) to (Uplane_depacketiser/uplane_depacketiser.cpp:826:3) in function 'uplane_depacketiser'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 12337 ; free virtual = 53852
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 12334 ; free virtual = 53849
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'uplane_depacketiser' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'uplane_depacketiser' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'uplane_depacketiser'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (3.6401ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path in module 'uplane_depacketiser' consists of the following:
+	'load' operation ('t.V', Uplane_depacketiser/uplane_depacketiser.cpp:802) on static variable 'PRB_fragmentation_V' [35]  (0 ns)
+	'add' operation ('add_ln700', Uplane_depacketiser/uplane_depacketiser.cpp:802) [67]  (0.702 ns)
+	'icmp' operation ('icmp_ln879_1', Uplane_depacketiser/uplane_depacketiser.cpp:803) [68]  (0.795 ns)
+	'select' operation ('select_ln803_1', Uplane_depacketiser/uplane_depacketiser.cpp:803) [70]  (0.364 ns)
+	'icmp' operation ('icmp_ln879_5', Uplane_depacketiser/uplane_depacketiser.cpp:815) [72]  (0.795 ns)
+	'select' operation ('select_ln815', Uplane_depacketiser/uplane_depacketiser.cpp:815) [73]  (0 ns)
+	'select' operation ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:814) [74]  (0.188 ns)
+	multiplexor before 'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:814) with incoming values : ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:814) ('select_ln681', Uplane_depacketiser/uplane_depacketiser.cpp:681) [151]  (0.796 ns)
+	'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:814) with incoming values : ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:814) ('select_ln681', Uplane_depacketiser/uplane_depacketiser.cpp:681) [151]  (0 ns)
+	'store' operation ('ecpri_msg_state_write_ln656', Uplane_depacketiser/uplane_depacketiser.cpp:656) of variable 'ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:814 on static variable 'ecpri_msg_state' [161]  (0 ns)
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+WARNING: [HLS 200-40] In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:648:8: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+switch(ecpri_msg_state){
+       ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 1475 ; free virtual = 44251
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 1475 ; free virtual = 44251
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 1459 ; free virtual = 44237
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 1452 ; free virtual = 44231
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Uplane_depacketiser/uplane_depacketiser.cpp:783:12) to (Uplane_depacketiser/uplane_depacketiser.cpp:827:3) in function 'uplane_depacketiser'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 1424 ; free virtual = 44204
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 1419 ; free virtual = 44201
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'uplane_depacketiser' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'uplane_depacketiser' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'uplane_depacketiser'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (3.6401ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path in module 'uplane_depacketiser' consists of the following:
+	'load' operation ('t.V', Uplane_depacketiser/uplane_depacketiser.cpp:802) on static variable 'PRB_fragmentation_V' [35]  (0 ns)
+	'add' operation ('add_ln700', Uplane_depacketiser/uplane_depacketiser.cpp:802) [67]  (0.702 ns)
+	'icmp' operation ('icmp_ln879_1', Uplane_depacketiser/uplane_depacketiser.cpp:803) [68]  (0.795 ns)
+	'select' operation ('select_ln803_1', Uplane_depacketiser/uplane_depacketiser.cpp:803) [70]  (0.364 ns)
+	'icmp' operation ('icmp_ln879_5', Uplane_depacketiser/uplane_depacketiser.cpp:817) [72]  (0.795 ns)
+	'select' operation ('select_ln817', Uplane_depacketiser/uplane_depacketiser.cpp:817) [73]  (0 ns)
+	'select' operation ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:816) [74]  (0.188 ns)
+	multiplexor before 'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:816) with incoming values : ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:816) ('select_ln681', Uplane_depacketiser/uplane_depacketiser.cpp:681) [151]  (0.796 ns)
+	'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:816) with incoming values : ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:816) ('select_ln681', Uplane_depacketiser/uplane_depacketiser.cpp:681) [151]  (0 ns)
+	'store' operation ('ecpri_msg_state_write_ln656', Uplane_depacketiser/uplane_depacketiser.cpp:656) of variable 'ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:816 on static variable 'ecpri_msg_state' [161]  (0 ns)
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+WARNING: [HLS 200-40] In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:42:8: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+switch(ecpri_msg_state){
+       ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 885.453 ; gain = 195.176 ; free physical = 1325 ; free virtual = 44127
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 885.453 ; gain = 195.176 ; free physical = 1325 ; free virtual = 44127
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 885.453 ; gain = 195.176 ; free physical = 1308 ; free virtual = 44111
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 885.453 ; gain = 195.176 ; free physical = 1301 ; free virtual = 44105
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 885.922 ; gain = 195.645 ; free physical = 1272 ; free virtual = 44076
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 885.922 ; gain = 195.645 ; free physical = 1270 ; free virtual = 44074
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'uplane_depacketiser' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'uplane_depacketiser' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'uplane_depacketiser'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (2.80485ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path in module 'uplane_depacketiser' consists of the following:
+	'load' operation ('count_V_load', Uplane_depacketiser/uplane_depacketiser.cpp:188) on static variable 'count_V' [68]  (0 ns)
+	'add' operation ('add_ln214', Uplane_depacketiser/uplane_depacketiser.cpp:188) [69]  (0.736 ns)
+	'icmp' operation ('icmp_ln879_2', Uplane_depacketiser/uplane_depacketiser.cpp:200) [73]  (0.829 ns)
+	'or' operation ('tmp.last.V', Uplane_depacketiser/uplane_depacketiser.cpp:200) [75]  (0.256 ns)
+	'select' operation ('select_ln200', Uplane_depacketiser/uplane_depacketiser.cpp:200) [76]  (0.188 ns)
+	multiplexor before 'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:200) with incoming values : ('select_ln200', Uplane_depacketiser/uplane_depacketiser.cpp:200) [147]  (0.796 ns)
+	'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:200) with incoming values : ('select_ln200', Uplane_depacketiser/uplane_depacketiser.cpp:200) [147]  (0 ns)
+	'store' operation ('ecpri_msg_state_write_ln50', Uplane_depacketiser/uplane_depacketiser.cpp:50) of variable 'ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:200 on static variable 'ecpri_msg_state' [157]  (0 ns)
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Uplane_depacketiser/uplane_depacketiser.cpp' ... 
+WARNING: [HLS 200-40] In file included from Uplane_depacketiser/uplane_depacketiser.cpp:1:
+Uplane_depacketiser/uplane_depacketiser.cpp:42:8: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+switch(ecpri_msg_state){
+       ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 5359 ; free virtual = 44594
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 5359 ; free virtual = 44594
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 5348 ; free virtual = 44585
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.484 ; gain = 192.207 ; free physical = 5341 ; free virtual = 44578
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 882.953 ; gain = 192.676 ; free physical = 5315 ; free virtual = 44551
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 882.953 ; gain = 192.676 ; free physical = 5312 ; free virtual = 44548
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'uplane_depacketiser' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'uplane_depacketiser' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'uplane_depacketiser'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (2.80485ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path in module 'uplane_depacketiser' consists of the following:
+	'load' operation ('count_V_load', Uplane_depacketiser/uplane_depacketiser.cpp:188) on static variable 'count_V' [68]  (0 ns)
+	'add' operation ('add_ln214', Uplane_depacketiser/uplane_depacketiser.cpp:188) [69]  (0.736 ns)
+	'icmp' operation ('icmp_ln879_2', Uplane_depacketiser/uplane_depacketiser.cpp:200) [73]  (0.829 ns)
+	'or' operation ('tmp.last.V', Uplane_depacketiser/uplane_depacketiser.cpp:200) [75]  (0.256 ns)
+	'select' operation ('select_ln200', Uplane_depacketiser/uplane_depacketiser.cpp:200) [76]  (0.188 ns)
+	multiplexor before 'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:200) with incoming values : ('select_ln200', Uplane_depacketiser/uplane_depacketiser.cpp:200) [147]  (0.796 ns)
+	'phi' operation ('ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:200) with incoming values : ('select_ln200', Uplane_depacketiser/uplane_depacketiser.cpp:200) [147]  (0 ns)
+	'store' operation ('ecpri_msg_state_write_ln50', Uplane_depacketiser/uplane_depacketiser.cpp:50) of variable 'ecpri_msg_state_new_2', Uplane_depacketiser/uplane_depacketiser.cpp:200 on static variable 'ecpri_msg_state' [157]  (0 ns)
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

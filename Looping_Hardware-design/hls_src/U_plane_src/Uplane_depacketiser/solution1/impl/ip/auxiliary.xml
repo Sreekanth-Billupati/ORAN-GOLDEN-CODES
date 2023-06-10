@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="uplane_depacketiser" xd:componentRef="uplane_depacketiser" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="state">
+  <xd:arg xd:name="data_in.data" xd:originalName="data_in" xd:direction="in" xd:interfaceRef="data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="data_in.last" xd:originalName="data_in" xd:direction="in" xd:interfaceRef="data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="data_out.IQ_data" xd:originalName="data_out" xd:direction="out" xd:interfaceRef="data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="data_out.last" xd:originalName="data_out" xd:direction="out" xd:interfaceRef="data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="count_PRBs" xd:originalName="count_PRBs" xd:direction="in" xd:interfaceRef="count_PRBs_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:arg xd:name="PRB_count_each_section" xd:originalName="PRB_count_each_section" xd:direction="out" xd:interfaceRef="PRB_count_each_section_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12" xd:firstOut="2"/>
+  <xd:arg xd:name="depack_symbol_number" xd:originalName="depack_symbol_number" xd:direction="out" xd:interfaceRef="depack_symbol_number_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="4" xd:firstOut="2"/>
+  <xd:arg xd:name="iq_msg_state_out" xd:originalName="iq_msg_state_out" xd:direction="out" xd:interfaceRef="iq_msg_state_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="424" xd:FF="743" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

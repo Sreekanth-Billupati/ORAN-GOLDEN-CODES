@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Mar 20 14:30:14 2021
+# Process ID: 23106
+# Current directory: /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/L1toORAN
+# Command line: vivado
+# Log file: /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/L1toORAN/vivado.log
+# Journal file: /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/L1toORAN/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd}
+regenerate_bd_layout
+launch_simulation

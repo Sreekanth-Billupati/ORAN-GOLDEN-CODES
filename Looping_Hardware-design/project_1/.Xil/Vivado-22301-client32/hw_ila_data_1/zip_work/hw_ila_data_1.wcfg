@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4096001fs"></ZoomEndTime>
+      <Cursor1Time time="370000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="300"></NameColumnWidth>
+      <ValueColumnWidth column_width="281"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe1_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe1_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">uplane_depacketiser_0_depack_symbol_number_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe0_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe0_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">ecpri_demux_0_ecpri_demux_eth_state_out_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe1_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe1_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">uplane_depacketiser_0_depack_symbol_number_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group2073">
+      <obj_property name="label">slot_0 : ecpri_demux_0_control_data_out : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s0)_(ecpri_demux_0_control_data_out)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s0)_(ecpri_demux_0_control_data_out)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group2074">
+         <obj_property name="label">slot_0 : ecpri_demux_0_control_data_out : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s0)_(ecpri_demux_0_control_data_out)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s0)_(ecpri_demux_0_control_data_out)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="label">slot_0 : ecpri_demux_0_control_data_out : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
+            <obj_property name="label">slot_0 : ecpri_demux_0_control_data_out : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
+            <obj_property name="label">slot_0 : ecpri_demux_0_control_data_out : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_0_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[31:0]</obj_property>
+            <obj_property name="label">slot_0 : ecpri_demux_0_control_data_out : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2081">
+      <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s1)_(ecpri_demux_0_user_data_out)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s1)_(ecpri_demux_0_user_data_out)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group2082">
+         <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s1)_(ecpri_demux_0_user_data_out)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s1)_(ecpri_demux_0_user_data_out)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tvalid</obj_property>
+            <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tready</obj_property>
+            <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tlast</obj_property>
+            <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus289">
+            <obj_property name="label">eth_type</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[111]">
+               <obj_property name="ElementShortName">[111]</obj_property>
+               <obj_property name="ObjectShortName">[111]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[110]">
+               <obj_property name="ElementShortName">[110]</obj_property>
+               <obj_property name="ObjectShortName">[110]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[109]">
+               <obj_property name="ElementShortName">[109]</obj_property>
+               <obj_property name="ObjectShortName">[109]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[108]">
+               <obj_property name="ElementShortName">[108]</obj_property>
+               <obj_property name="ObjectShortName">[108]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[107]">
+               <obj_property name="ElementShortName">[107]</obj_property>
+               <obj_property name="ObjectShortName">[107]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[106]">
+               <obj_property name="ElementShortName">[106]</obj_property>
+               <obj_property name="ObjectShortName">[106]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[105]">
+               <obj_property name="ElementShortName">[105]</obj_property>
+               <obj_property name="ObjectShortName">[105]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[104]">
+               <obj_property name="ElementShortName">[104]</obj_property>
+               <obj_property name="ObjectShortName">[104]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[103]">
+               <obj_property name="ElementShortName">[103]</obj_property>
+               <obj_property name="ObjectShortName">[103]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[102]">
+               <obj_property name="ElementShortName">[102]</obj_property>
+               <obj_property name="ObjectShortName">[102]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[101]">
+               <obj_property name="ElementShortName">[101]</obj_property>
+               <obj_property name="ObjectShortName">[101]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[100]">
+               <obj_property name="ElementShortName">[100]</obj_property>
+               <obj_property name="ObjectShortName">[100]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[99]">
+               <obj_property name="ElementShortName">[99]</obj_property>
+               <obj_property name="ObjectShortName">[99]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[98]">
+               <obj_property name="ElementShortName">[98]</obj_property>
+               <obj_property name="ObjectShortName">[98]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[97]">
+               <obj_property name="ElementShortName">[97]</obj_property>
+               <obj_property name="ObjectShortName">[97]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[96]">
+               <obj_property name="ElementShortName">[96]</obj_property>
+               <obj_property name="ObjectShortName">[96]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tkeep">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tkeep[15:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tkeep[15:0]</obj_property>
+            <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tuser">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_1_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tuser</obj_property>
+            <obj_property name="label">slot_1 : ecpri_demux_0_user_data_out : TUSER</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2089">
+      <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group2090">
+         <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tvalid</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tready</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tlast</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_2_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2095">
+      <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_V : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_V)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_V)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group2096">
+         <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_V : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_V)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_V)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tvalid</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_V : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tready</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_V : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tlast</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_V : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_3_axis_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tdata[63:0]</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_V : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2101">
+      <obj_property name="label">slot_4 : uplane_depacketiser_0_data_out : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s4)_(uplane_depacketiser_0_data_out)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s4)_(uplane_depacketiser_0_data_out)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group2102">
+         <obj_property name="label">slot_4 : uplane_depacketiser_0_data_out : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s4)_(uplane_depacketiser_0_data_out)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s4)_(uplane_depacketiser_0_data_out)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tvalid</obj_property>
+            <obj_property name="label">slot_4 : uplane_depacketiser_0_data_out : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tready</obj_property>
+            <obj_property name="label">slot_4 : uplane_depacketiser_0_data_out : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tlast</obj_property>
+            <obj_property name="label">slot_4 : uplane_depacketiser_0_data_out : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_4 : uplane_depacketiser_0_data_out : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus826">
+            <obj_property name="label">eth_type</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[111]">
+               <obj_property name="ElementShortName">[111]</obj_property>
+               <obj_property name="ObjectShortName">[111]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[110]">
+               <obj_property name="ElementShortName">[110]</obj_property>
+               <obj_property name="ObjectShortName">[110]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[109]">
+               <obj_property name="ElementShortName">[109]</obj_property>
+               <obj_property name="ObjectShortName">[109]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[108]">
+               <obj_property name="ElementShortName">[108]</obj_property>
+               <obj_property name="ObjectShortName">[108]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[107]">
+               <obj_property name="ElementShortName">[107]</obj_property>
+               <obj_property name="ObjectShortName">[107]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[106]">
+               <obj_property name="ElementShortName">[106]</obj_property>
+               <obj_property name="ObjectShortName">[106]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[105]">
+               <obj_property name="ElementShortName">[105]</obj_property>
+               <obj_property name="ObjectShortName">[105]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[104]">
+               <obj_property name="ElementShortName">[104]</obj_property>
+               <obj_property name="ObjectShortName">[104]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[103]">
+               <obj_property name="ElementShortName">[103]</obj_property>
+               <obj_property name="ObjectShortName">[103]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[102]">
+               <obj_property name="ElementShortName">[102]</obj_property>
+               <obj_property name="ObjectShortName">[102]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[101]">
+               <obj_property name="ElementShortName">[101]</obj_property>
+               <obj_property name="ObjectShortName">[101]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[100]">
+               <obj_property name="ElementShortName">[100]</obj_property>
+               <obj_property name="ObjectShortName">[100]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[99]">
+               <obj_property name="ElementShortName">[99]</obj_property>
+               <obj_property name="ObjectShortName">[99]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[98]">
+               <obj_property name="ElementShortName">[98]</obj_property>
+               <obj_property name="ObjectShortName">[98]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[97]">
+               <obj_property name="ElementShortName">[97]</obj_property>
+               <obj_property name="ObjectShortName">[97]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tdata[96]">
+               <obj_property name="ElementShortName">[96]</obj_property>
+               <obj_property name="ObjectShortName">[96]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2107">
+      <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s5)_(xxv_ethernet_0_axis_rx_0)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s5)_(xxv_ethernet_0_axis_rx_0)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group2108">
+         <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s5)_(xxv_ethernet_0_axis_rx_0)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s5)_(xxv_ethernet_0_axis_rx_0)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tvalid</obj_property>
+            <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tlast</obj_property>
+            <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tdata[63:0]</obj_property>
+            <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tkeep">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tkeep[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tkeep[7:0]</obj_property>
+            <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tuser">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/net_slot_5_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tuser</obj_property>
+            <obj_property name="label">slot_5 : xxv_ethernet_0_axis_rx_0 : TUSER</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe4_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe4_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">probe4_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">uplane_depacketiser_0_PRB_count_each_section_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe1_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe1_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">uplane_depacketiser_0_depack_symbol_number_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe3_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">uplane_depacketiser_0_count_PRBs_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="check_40G_sim_i/system_ila_0/inst/probe2_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">check_40G_sim_i/system_ila_0/inst/probe2_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe2_1[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">uplane_depacketiser_0_iq_msg_state_out_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

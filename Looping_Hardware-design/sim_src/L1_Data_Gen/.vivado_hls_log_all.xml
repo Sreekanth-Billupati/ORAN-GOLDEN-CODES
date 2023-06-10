@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cplane_data_counter_s' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.358+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'temp_ind_V' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.354+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ext_ind_V' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.350+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'numExt_V' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.346+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_count_V' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.342+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'seq_count_V' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.337+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.333+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'CDATA_COUNTER_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.330+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'l1datagen_stateout_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.326+0530" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'numExt.V'." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:16.146+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'section_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:05.475+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'extension_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:05.466+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IMPL 213-205] Ignored option '-use_netlist' which is only valid for 'pcore'." projectName="L1_Data_Gen" solutionName="solution1" date="2021-04-07T10:55:26.688+0530" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

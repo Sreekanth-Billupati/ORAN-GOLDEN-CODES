@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="mparam" xd:componentRef="mparam" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="indata" xd:originalName="indata" xd:direction="in" xd:interfaceRef="indata_V_V" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="out1data.ethsmac" xd:originalName="out1data" xd:direction="out" xd:interfaceRef="out1data_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:0" xd:dataWidth="48"/>
+  <xd:arg xd:name="out1data.ethdmac" xd:originalName="out1data" xd:direction="out" xd:interfaceRef="out1data_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:48" xd:dataWidth="48"/>
+  <xd:arg xd:name="out1data.ethertype" xd:originalName="out1data" xd:direction="out" xd:interfaceRef="out1data_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="111:96" xd:dataWidth="16"/>
+  <xd:arg xd:name="out2data" xd:originalName="out2data" xd:direction="out" xd:interfaceRef="out2data_V_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="state_out" xd:originalName="state_out" xd:direction="out" xd:interfaceRef="state_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="175" xd:FF="499" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find source file ethernet_mux.h; skipping it." projectName="Ethernet_MUX" solutionName="solution1" date="2023-03-03T10:27:10.402+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'ethernet_mux.h'" projectName="Ethernet_MUX" solutionName="solution1" date="2023-03-03T10:27:09.007+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

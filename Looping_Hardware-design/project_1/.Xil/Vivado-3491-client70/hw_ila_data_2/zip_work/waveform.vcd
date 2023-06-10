@@ -1,0 +1,73 @@
+$date
+        2021-Feb-26 11:43:25
+$end
+$version
+        Vivado v2019.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 128 " check_40G_sim_i/system_ila_1/inst/net_slot_0_axis_tdata [127:0] $end
+$var reg 1 D" check_40G_sim_i/system_ila_1/inst/net_slot_0_axis_tvalid $end
+$var reg 1 E" check_40G_sim_i/system_ila_1/inst/net_slot_0_axis_tready $end
+$var reg 1 F" check_40G_sim_i/system_ila_1/inst/net_slot_0_axis_tlast $end
+$var reg 136 G" check_40G_sim_i/system_ila_1/inst/net_slot_1_axis_tdata [135:0] $end
+$var reg 17 q# check_40G_sim_i/system_ila_1/inst/net_slot_1_axis_tkeep [16:0] $end
+$var reg 1 $$ check_40G_sim_i/system_ila_1/inst/net_slot_1_axis_tvalid $end
+$var reg 1 %$ check_40G_sim_i/system_ila_1/inst/net_slot_1_axis_tready $end
+$var reg 1 &$ check_40G_sim_i/system_ila_1/inst/net_slot_1_axis_tlast $end
+$var reg 48 '$ check_40G_sim_i/system_ila_1/inst/net_slot_2_axis_tdata [47:0] $end
+$var reg 1 W$ check_40G_sim_i/system_ila_1/inst/net_slot_2_axis_tvalid $end
+$var reg 1 X$ check_40G_sim_i/system_ila_1/inst/net_slot_2_axis_tready $end
+$var reg 1 Y$ check_40G_sim_i/system_ila_1/inst/net_slot_2_axis_tlast $end
+$var reg 64 Z$ check_40G_sim_i/system_ila_1/inst/net_slot_3_axis_tdata [63:0] $end
+$var reg 1 <% check_40G_sim_i/system_ila_1/inst/net_slot_3_axis_tvalid $end
+$var reg 1 =% check_40G_sim_i/system_ila_1/inst/net_slot_3_axis_tready $end
+$var reg 1 >% check_40G_sim_i/system_ila_1/inst/net_slot_3_axis_tlast $end
+$var reg 3 ?% Interface__i2_s0___cplane_depacketizer_0_beam_data_ [2:0] $end
+$var reg 3 B% Interface__i2_s1___uplane_depacketiser_0_data_out_ [2:0] $end
+$var reg 3 E% Interface__i2_s2___uplane_depacketiser_0_ecpri_cnfg_out_ [2:0] $end
+$var reg 3 H% Interface__i2_s3___cplane_depacketizer_0_beam_info_V_ [2:0] $end
+$var reg 3 K% T_Channel__i2_s0___cplane_depacketizer_0_beam_data_ [2:0] $end
+$var reg 3 N% T_Channel__i2_s1___uplane_depacketiser_0_data_out_ [2:0] $end
+$var reg 3 Q% T_Channel__i2_s2___uplane_depacketiser_0_ecpri_cnfg_out_ [2:0] $end
+$var reg 3 T% T_Channel__i2_s3___cplane_depacketizer_0_beam_info_V_ [2:0] $end
+$var reg 1 W% _TRIGGER $end
+$var reg 1 X% _WINDOW $end
+$var reg 1 Y% _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+0D"
+1E"
+0F"
+b0 G"
+b10000000000000000 q#
+0$$
+1%$
+0&$
+b0 '$
+0W$
+1X$
+0Y$
+b0 Z$
+0<%
+1=%
+0>%
+b11 ?%
+b11 B%
+b11 E%
+b11 H%
+b11 K%
+b11 N%
+b11 Q%
+b11 T%
+0W%
+1X%
+0Y%
+$end
+#100
+1W%

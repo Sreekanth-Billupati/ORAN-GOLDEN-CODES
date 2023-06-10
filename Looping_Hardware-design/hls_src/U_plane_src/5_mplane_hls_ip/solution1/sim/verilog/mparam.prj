@@ -1,0 +1,8 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_s_out2data_V_V.v"
+sv xil_defaultlib "mparam.autotb.v"
+sv xil_defaultlib "AESL_axi_s_out1data_V.v"
+sv xil_defaultlib "AESL_axi_s_indata_V_V.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "mparam.v"
+

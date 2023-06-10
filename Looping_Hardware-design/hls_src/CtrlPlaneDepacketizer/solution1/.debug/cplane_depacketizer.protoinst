@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"cplane_depacketizer": {
+			"proto_instances": {
+			}
+		}
+	}
+}

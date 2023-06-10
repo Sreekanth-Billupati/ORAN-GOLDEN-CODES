@@ -1,0 +1,224 @@
+
+
+================================================================
+== Vivado HLS Report for 'uplane_depacketiser'
+================================================================
+* Date:           Mon Mar  6 10:28:45 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        Uplane_depacketiser
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvd1760-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     2.737|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++-----------------+---------+-------+---------+--------+-----+
+|DSP              |        -|      -|        -|       -|    -|
+|Expression       |        -|      -|        0|     179|    -|
+|FIFO             |        -|      -|        -|       -|    -|
+|Instance         |        -|      -|        -|       -|    -|
+|Memory           |        -|      -|        -|       -|    -|
+|Multiplexer      |        -|      -|        -|     245|    -|
+|Register         |        -|      -|      743|       -|    -|
++-----------------+---------+-------+---------+--------+-----+
+|Total            |        0|      0|      743|     424|    0|
++-----------------+---------+-------+---------+--------+-----+
+|Available        |     1968|   1968|  1045440|  522720|  128|
++-----------------+---------+-------+---------+--------+-----+
+|Utilization (%)  |        0|      0|    ~0   |   ~0   |    0|
++-----------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln209_fu_727_p2                    |     +    |      0|  0|  19|          12|          12|
+    |add_ln700_fu_607_p2                    |     +    |      0|  0|  15|           1|           8|
+    |and_ln879_1_fu_677_p2                  |    and   |      0|  0|   2|           1|           1|
+    |and_ln879_fu_645_p2                    |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_373                       |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_576                       |    and   |      0|  0|   2|           1|           1|
+    |data_in_V_data_V_0_load_A              |    and   |      0|  0|   2|           1|           1|
+    |data_in_V_data_V_0_load_B              |    and   |      0|  0|   2|           1|           1|
+    |data_out_V_IQ_data_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
+    |data_out_V_IQ_data_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
+    |data_out_V_last_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |data_out_V_last_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |data_in_V_data_V_0_state_cmp_full      |   icmp   |      0|  0|   8|           2|           1|
+    |data_out_V_IQ_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |data_out_V_last_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln879_1_fu_613_p2                 |   icmp   |      0|  0|  11|           8|           5|
+    |icmp_ln879_2_fu_591_p2                 |   icmp   |      0|  0|  11|           6|           4|
+    |icmp_ln879_3_fu_755_p2                 |   icmp   |      0|  0|  11|           8|           1|
+    |icmp_ln879_4_fu_619_p2                 |   icmp   |      0|  0|  13|          12|           9|
+    |icmp_ln879_5_fu_625_p2                 |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln879_fu_749_p2                   |   icmp   |      0|  0|  13|          16|          10|
+    |ap_block_state1_pp0_stage0_iter0       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2_io                     |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                     |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2       |    or    |      0|  0|   2|           1|           1|
+    |tmp_last_V_fu_683_p2                   |    or    |      0|  0|   2|           1|           1|
+    |select_ln206_fu_631_p3                 |  select  |      0|  0|   3|           1|           3|
+    |select_ln74_fu_761_p3                  |  select  |      0|  0|   2|           1|           2|
+    |select_ln879_1_fu_659_p3               |  select  |      0|  0|   3|           1|           1|
+    |select_ln879_2_fu_668_p3               |  select  |      0|  0|   8|           1|           1|
+    |select_ln879_fu_651_p3                 |  select  |      0|  0|   3|           1|           3|
+    |xor_ln879_fu_639_p2                    |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                  |          |      0|  0| 179|          98|          81|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                       | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |PRB_count_V                                       |   9|          2|   12|         24|
+    |ap_phi_mux_PRB_fragmentation_V_1_phi_fu_324_p20   |  15|          3|    8|         24|
+    |ap_phi_mux_PRB_fragmentation_V_s_phi_fu_288_p20   |  15|          3|    1|          3|
+    |ap_phi_mux_ecpri_msg_state_flag_1_phi_fu_219_p20  |  15|          3|    1|          3|
+    |ap_phi_mux_ecpri_msg_state_new_1_phi_fu_255_p20   |  41|          8|    3|         24|
+    |data_in_TDATA_blk_n                               |   9|          2|    1|          2|
+    |data_in_V_data_V_0_data_out                       |   9|          2|  128|        256|
+    |data_in_V_data_V_0_state                          |  15|          3|    2|          6|
+    |data_in_V_last_V_0_state                          |  15|          3|    2|          6|
+    |data_out_TDATA_blk_n                              |   9|          2|    1|          2|
+    |data_out_V_IQ_data_V_1_data_in                    |  21|          4|  128|        512|
+    |data_out_V_IQ_data_V_1_data_out                   |   9|          2|  128|        256|
+    |data_out_V_IQ_data_V_1_state                      |  15|          3|    2|          6|
+    |data_out_V_last_V_1_data_in                       |  15|          3|    1|          3|
+    |data_out_V_last_V_1_data_out                      |   9|          2|    1|          2|
+    |data_out_V_last_V_1_state                         |  15|          3|    2|          6|
+    |symbolID_V                                        |   9|          2|    6|         12|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                             | 245|         50|  427|       1147|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+-----+----+-----+-----------+
+    |                    Name                    |  FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+-----+----+-----+-----------+
+    |PRB_count_V                                 |   12|   0|   12|          0|
+    |PRB_fragmentation_V                         |    8|   0|    8|          0|
+    |add_ln209_reg_927                           |   12|   0|   12|          0|
+    |add_ln209_reg_927_pp0_iter1_reg             |   12|   0|   12|          0|
+    |ap_CS_iter0_fsm                             |    1|   0|    1|          0|
+    |ap_CS_iter1_fsm                             |    1|   0|    1|          0|
+    |ap_CS_iter2_fsm                             |    1|   0|    1|          0|
+    |data_in_V_data_V_0_payload_A                |  128|   0|  128|          0|
+    |data_in_V_data_V_0_payload_B                |  128|   0|  128|          0|
+    |data_in_V_data_V_0_sel_rd                   |    1|   0|    1|          0|
+    |data_in_V_data_V_0_sel_wr                   |    1|   0|    1|          0|
+    |data_in_V_data_V_0_state                    |    2|   0|    2|          0|
+    |data_in_V_last_V_0_state                    |    2|   0|    2|          0|
+    |data_out_V_IQ_data_V_1_payload_A            |  128|   0|  128|          0|
+    |data_out_V_IQ_data_V_1_payload_B            |  128|   0|  128|          0|
+    |data_out_V_IQ_data_V_1_sel_rd               |    1|   0|    1|          0|
+    |data_out_V_IQ_data_V_1_sel_wr               |    1|   0|    1|          0|
+    |data_out_V_IQ_data_V_1_state                |    2|   0|    2|          0|
+    |data_out_V_last_V_1_payload_A               |    1|   0|    1|          0|
+    |data_out_V_last_V_1_payload_B               |    1|   0|    1|          0|
+    |data_out_V_last_V_1_sel_rd                  |    1|   0|    1|          0|
+    |data_out_V_last_V_1_sel_wr                  |    1|   0|    1|          0|
+    |data_out_V_last_V_1_state                   |    2|   0|    2|          0|
+    |ecpri_msg_state                             |    3|   0|    3|          0|
+    |ecpri_msg_state_load_reg_894                |    3|   0|    3|          0|
+    |ecpri_msg_state_load_reg_894_pp0_iter1_reg  |    3|   0|    3|          0|
+    |reg_515                                     |    8|   0|    8|          0|
+    |reg_519                                     |    8|   0|    8|          0|
+    |reg_523                                     |    8|   0|    8|          0|
+    |reg_527                                     |    8|   0|    8|          0|
+    |reg_531                                     |    8|   0|    8|          0|
+    |reg_535                                     |    8|   0|    8|          0|
+    |reg_539                                     |    8|   0|    8|          0|
+    |reg_543                                     |    8|   0|    8|          0|
+    |reg_547                                     |    8|   0|    8|          0|
+    |reg_551                                     |    8|   0|    8|          0|
+    |reg_555                                     |    8|   0|    8|          0|
+    |reg_559                                     |    8|   0|    8|          0|
+    |reg_563                                     |    8|   0|    8|          0|
+    |reg_567                                     |    8|   0|    8|          0|
+    |reg_571                                     |    8|   0|    8|          0|
+    |symbolID_V                                  |    6|   0|    6|          0|
+    |tmp_last_V_reg_907                          |    1|   0|    1|          0|
+    |trunc_ln647_1_reg_912                       |    8|   0|    8|          0|
+    |trunc_ln647_2_reg_902                       |    8|   0|    8|          0|
+    |trunc_ln647_reg_917                         |    8|   0|    8|          0|
+    |trunc_ln_reg_922                            |    4|   0|    4|          0|
+    |trunc_ln_reg_922_pp0_iter1_reg              |    4|   0|    4|          0|
+    +--------------------------------------------+-----+----+-----+-----------+
+    |Total                                       |  743|   0|  743|          0|
+    +--------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+--------------+--------------------------+--------------+
+|         RTL Ports        | Dir | Bits|   Protocol   |       Source Object      |    C Type    |
++--------------------------+-----+-----+--------------+--------------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_none |    uplane_depacketiser   | return value |
+|ap_rst_n                  |  in |    1| ap_ctrl_none |    uplane_depacketiser   | return value |
+|data_in_TDATA             |  in |  128|     axis     |     data_in_V_data_V     |    pointer   |
+|data_in_TVALID            |  in |    1|     axis     |     data_in_V_last_V     |    pointer   |
+|data_in_TREADY            | out |    1|     axis     |     data_in_V_last_V     |    pointer   |
+|data_in_TLAST             |  in |    1|     axis     |     data_in_V_last_V     |    pointer   |
+|data_out_TDATA            | out |  128|     axis     |   data_out_V_IQ_data_V   |    pointer   |
+|data_out_TREADY           |  in |    1|     axis     |   data_out_V_IQ_data_V   |    pointer   |
+|data_out_TVALID           | out |    1|     axis     |     data_out_V_last_V    |    pointer   |
+|data_out_TLAST            | out |    1|     axis     |     data_out_V_last_V    |    pointer   |
+|count_PRBs_V              |  in |    8|    ap_none   |       count_PRBs_V       |    pointer   |
+|PRB_count_each_section_V  | out |   12|    ap_none   | PRB_count_each_section_V |    pointer   |
+|depack_symbol_number_V    | out |    4|    ap_none   |  depack_symbol_number_V  |    pointer   |
+|iq_msg_state_out_V        | out |    8|    ap_none   |    iq_msg_state_out_V    |    pointer   |
++--------------------------+-----+-----+--------------+--------------------------+--------------+
+

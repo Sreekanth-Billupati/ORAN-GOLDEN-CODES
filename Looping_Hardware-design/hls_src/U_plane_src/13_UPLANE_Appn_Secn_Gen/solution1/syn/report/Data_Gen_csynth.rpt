@@ -1,0 +1,145 @@
+
+
+================================================================
+== Vivado HLS Report for 'Data_Gen'
+================================================================
+* Date:           Sun Mar 26 23:31:22 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        13_UPLANE_Appn_Secn_Gen
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     1.486|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      23|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      27|    -|
+|Register         |        -|      -|      72|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      72|      50|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1_pp0_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op34_write_state2    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op44_write_state2    |    and   |      0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_116_p3           |    and   |      0|  0|   2|           1|           0|
+    |icmp_ln879_fu_175_p2              |   icmp   |      0|  0|  13|          10|           5|
+    |ap_block_state2_io                |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  23|          15|           9|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |L1_axis_V_TDATA_blk_n             |   9|          2|    1|          2|
+    |application_header_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |section_header_V_TDATA_blk_n      |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  27|          6|    3|          6|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_iter0_fsm     |   1|   0|    1|          0|
+    |ap_CS_iter1_fsm     |   1|   0|    1|          0|
+    |icmp_ln879_reg_335  |   1|   0|    1|          0|
+    |p_Result_s_reg_339  |   2|   0|    2|          0|
+    |state_V             |   2|   0|    2|          0|
+    |tmp1_reg_322        |  64|   0|   64|          0|
+    |tmp_reg_318         |   1|   0|    1|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               |  72|   0|   72|          0|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+--------------+----------------------+--------------+
+|          RTL Ports          | Dir | Bits|   Protocol   |     Source Object    |    C Type    |
++-----------------------------+-----+-----+--------------+----------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_none |       Data_Gen       | return value |
+|ap_rst_n                     |  in |    1| ap_ctrl_none |       Data_Gen       | return value |
+|L1_axis_V_TDATA              |  in |   64|     axis     |       L1_axis_V      |    pointer   |
+|L1_axis_V_TVALID             |  in |    1|     axis     |       L1_axis_V      |    pointer   |
+|L1_axis_V_TREADY             | out |    1|     axis     |       L1_axis_V      |    pointer   |
+|application_header_V_TDATA   | out |   32|     axis     | application_header_V |    pointer   |
+|application_header_V_TVALID  | out |    1|     axis     | application_header_V |    pointer   |
+|application_header_V_TREADY  |  in |    1|     axis     | application_header_V |    pointer   |
+|section_header_V_TDATA       | out |   48|     axis     |   section_header_V   |    pointer   |
+|section_header_V_TVALID      | out |    1|     axis     |   section_header_V   |    pointer   |
+|section_header_V_TREADY      |  in |    1|     axis     |   section_header_V   |    pointer   |
+|state_out_V                  | out |    8|    ap_none   |      state_out_V     |    pointer   |
+|symb_check_V                 | out |    6|    ap_vld    |     symb_check_V     |    pointer   |
+|symb_check_V_ap_vld          | out |    1|    ap_vld    |     symb_check_V     |    pointer   |
+|symbol_check_id_V            | out |    6|    ap_vld    |   symbol_check_id_V  |    pointer   |
+|symbol_check_id_V_ap_vld     | out |    1|    ap_vld    |   symbol_check_id_V  |    pointer   |
++-----------------------------+-----+-----+--------------+----------------------+--------------+
+

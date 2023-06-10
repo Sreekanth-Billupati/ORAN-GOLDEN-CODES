@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="err_count" xd:componentRef="err_count" xd:initiationInterval="962" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="observed_output.data" xd:originalName="observed_output" xd:direction="in" xd:interfaceRef="observed_output" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="observed_output.keep" xd:originalName="observed_output" xd:direction="in" xd:interfaceRef="observed_output" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="observed_output.user" xd:originalName="observed_output" xd:direction="in" xd:interfaceRef="observed_output" xd:busTypeRef="axis" xd:dataWidth="7"/>
+  <xd:arg xd:name="observed_output.last" xd:originalName="observed_output" xd:direction="in" xd:interfaceRef="observed_output" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="error_count" xd:originalName="error_count" xd:direction="out" xd:interfaceRef="error_count" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="1"/>
+  <xd:arg xd:name="iteration_count" xd:originalName="iteration_count" xd:direction="out" xd:interfaceRef="iteration_count" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="961" xd:worst-case="961" xd:average-case="961"/>
+  <xd:resourceEstimates xd:LUT="157" xd:FF="53" xd:BRAM="4" xd:DSP="0"/>
+</xd:acceleratorMap>

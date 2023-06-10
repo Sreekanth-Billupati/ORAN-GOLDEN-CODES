@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Mar 20 12:36:35 2021
+# Process ID: 4205
+# Current directory: /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/L1toORAN
+# Command line: vivado
+# Log file: /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/L1toORAN/vivado.log
+# Journal file: /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/L1toORAN/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd}
+validate_bd_design -force
+save_bd_design
+generate_target Simulation [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd]
+export_ip_user_files -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -directory /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files -ipstatic_source_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/questa} {ies=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd}
+startgroup
+delete_bd_objs [get_bd_intf_nets L1toORAN_0_numBeams_V_V]
+delete_bd_objs [get_bd_intf_nets L1toORAN_0_rtcid_V_V]
+delete_bd_objs [get_bd_intf_nets L1toORAN_0_section_header_V]
+delete_bd_objs [get_bd_intf_nets S_AXIS1_1]
+delete_bd_objs [get_bd_intf_nets L1toORAN_0_application_header_V]
+delete_bd_objs [get_bd_intf_nets L1toORAN_0_extension_header_V]
+endgroup
+startgroup
+disconnect_bd_net /proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins L1toORAN_0/ap_rst_n]
+disconnect_bd_net /sim_clk_gen_1_clk [get_bd_pins L1toORAN_0/ap_clk]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS_1]
+endgroup
+delete_bd_objs [get_bd_cells L1toORAN_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:L1toORAN:1.0 L1toORAN_0
+endgroup
+set_property location {4 1279 88} [get_bd_cells L1toORAN_0]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins L1toORAN_0/L1_axis_V]
+connect_bd_net [get_bd_pins L1toORAN_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins L1toORAN_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+regenerate_bd_layout
+connect_bd_intf_net [get_bd_intf_pins L1toORAN_0/extension_header_V] -boundary_type upper [get_bd_intf_pins Cplane_Packetizer/S_AXIS4]
+connect_bd_intf_net [get_bd_intf_pins L1toORAN_0/numBeams_V_V] -boundary_type upper [get_bd_intf_pins Cplane_Packetizer/S_AXIS2]
+regenerate_bd_layout
+connect_bd_intf_net [get_bd_intf_pins L1toORAN_0/rtcid_V_V] -boundary_type upper [get_bd_intf_pins Cplane_Packetizer/S_AXIS5]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins Cplane_Packetizer/S_AXIS] [get_bd_intf_pins L1toORAN_0/application_header_V]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins Cplane_Packetizer/S_AXIS1] [get_bd_intf_pins L1toORAN_0/section_header_V]
+connect_bd_intf_net [get_bd_intf_pins L1toORAN_0/mux_config_V_V] -boundary_type upper [get_bd_intf_pins Ethernet_ecpri_mux/S_AXIS1]
+validate_bd_design
+save_bd_design
+generate_target Simulation [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd]
+export_ip_user_files -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -directory /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files -ipstatic_source_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/questa} {ies=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/design_1_wrapper_behav.wcfg
+source CU_Integration_sim_wrapper.tcl
+restart
+add_force {/CU_Integration_sim_wrapper/reset} -radix hex {0 0ns}
+add_force {/CU_Integration_sim_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/CU_Integration_sim_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+run all
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd}
+restart
+run all
+run all
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/U_plane_sim/U_plane_sim.bd}
+close_bd_design [get_bd_designs U_plane_sim]
+current_wave_config {design_1_wrapper_behav.wcfg}
+add_wave {{/CU_Integration_sim_wrapper/CU_Integration_sim_i/L1toORAN_0/rtcid_V_V_TVALID}} {{/CU_Integration_sim_wrapper/CU_Integration_sim_i/L1toORAN_0/rtcid_V_V_TREADY}} {{/CU_Integration_sim_wrapper/CU_Integration_sim_i/L1toORAN_0/rtcid_V_V_TDATA}} 
+restart
+run all
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd}
+delete_bd_objs [get_bd_intf_nets Cplane_Packetizer/cplane_packetizer_0_eth_data]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins Cplane_Packetizer/cplane_packetizer_0/eth_data_TREADY]
+save_wave_config {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/design_1_wrapper_behav.wcfg}
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd]
+export_ip_user_files -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -directory /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files -ipstatic_source_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/questa} {ies=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/design_1_wrapper_behav.wcfg
+source CU_Integration_sim_wrapper.tcl
+restart
+add_force {/CU_Integration_sim_wrapper/reset} -radix hex {0 0ns}
+add_force {/CU_Integration_sim_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/CU_Integration_sim_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+run all
+open_bd_design {/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd}
+update_ip_catalog -rebuild
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {CU_Integration_sim_L1toORAN_0_1 C_plane_L1toORAN_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {CU_Integration_sim_L1toORAN_0_1 C_plane_L1toORAN_0_0}] -no_script -sync -force -quiet
+close_sim
+report_ip_status -name ip_status 
+current_bd_design [get_bd_designs CU_Integration_sim]
+connect_bd_intf_net [get_bd_intf_pins Cplane_Packetizer/eth_data] [get_bd_intf_pins Cplane_Packetizer/cplane_packetizer_0/eth_data]
+save_bd_design
+generate_target Simulation [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd]
+export_ip_user_files -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.srcs/sources_1/bd/CU_Integration_sim/CU_Integration_sim.bd] -directory /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files -ipstatic_source_dir /home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/questa} {ies=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/aswin/Desktop/Vivado_projects/13_LETS_INTEGRATE/C/looping/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation

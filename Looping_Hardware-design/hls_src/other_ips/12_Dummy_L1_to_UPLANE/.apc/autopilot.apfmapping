@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="UP_L1_datagen.cpp" path="/home/aswin/Desktop/Vivado_hls_projects/12_Dummy_L1_to_UPLANE/UP_L1_datagen.cpp"/>
+    <originFiles name="UP_L1_datagen.h" path="/home/aswin/Desktop/Vivado_hls_projects/12_Dummy_L1_to_UPLANE/UP_L1_datagen.h"/>
+    <originFiles name="section_input.txt" path="/home/aswin/Desktop/Vivado_hls_projects/12_Dummy_L1_to_UPLANE/section_input.txt"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

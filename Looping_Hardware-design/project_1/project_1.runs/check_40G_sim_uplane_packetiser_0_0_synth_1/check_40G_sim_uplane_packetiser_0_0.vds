@@ -1,0 +1,446 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar 27 11:30:05 2023
+# Process ID: 6599
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1
+# Command line: vivado -log check_40G_sim_uplane_packetiser_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source check_40G_sim_uplane_packetiser_0_0.tcl
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/check_40G_sim_uplane_packetiser_0_0.vds
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source check_40G_sim_uplane_packetiser_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sai/Desktop/Looping_Hardware-design/sim_src'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sai/Desktop/Looping_Hardware-design/hls_src'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_19.1/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Userplane_L1_Data_Gen:1.0'. The one found in IP location '/home/sai/Desktop/Looping_Hardware-design/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/solution1/impl/ip' will take precedence over the same IP in location /home/sai/Desktop/Looping_Hardware-design/hls_src/other_ips/12_Dummy_L1_to_UPLANE/solution1/impl/ip
+Command: synth_design -top check_40G_sim_uplane_packetiser_0_0 -part xczu19eg-ffvd1760-3-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu19eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu19eg'
+INFO: [Common 17-1540] The version limit for your license is '2021.09' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xczu19eg-ffvd1760-3-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6667 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2500.184 ; gain = 0.000 ; free physical = 17195 ; free virtual = 53749
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'check_40G_sim_uplane_packetiser_0_0' [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ip/check_40G_sim_uplane_packetiser_0_0/synth/check_40G_sim_uplane_packetiser_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'uplane_packetiser' [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ipshared/f9a4/hdl/verilog/uplane_packetiser.v:12]
+	Parameter ap_ST_iter0_fsm_state1 bound to: 1'b0 
+	Parameter ap_ST_iter1_fsm_state2 bound to: 1'b0 
+	Parameter ap_ST_iter1_fsm_state0 bound to: 1'b1 
+	Parameter ap_const_lv128_lc_2 bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-226] default block is never used [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ipshared/f9a4/hdl/verilog/uplane_packetiser.v:576]
+INFO: [Synth 8-6155] done synthesizing module 'uplane_packetiser' (1#1) [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ipshared/f9a4/hdl/verilog/uplane_packetiser.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'check_40G_sim_uplane_packetiser_0_0' (2#1) [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ip/check_40G_sim_uplane_packetiser_0_0/synth/check_40G_sim_uplane_packetiser_0_0.v:58]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[111]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[110]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[109]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[108]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[107]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[106]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[105]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[104]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[103]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[102]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[101]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[100]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[99]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[98]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[97]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[96]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[95]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[94]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[93]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[92]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[91]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[90]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[89]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[88]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[87]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[86]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[85]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[84]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[83]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[82]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[81]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[80]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[79]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[78]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[77]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[76]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[75]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[74]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[73]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[72]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[71]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[70]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[69]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[68]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[67]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[66]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[65]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[64]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[63]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[62]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[61]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[60]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[59]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[58]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[57]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[56]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[55]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[54]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[53]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[52]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[51]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[50]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[49]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[48]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[47]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[46]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[45]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[44]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[43]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[42]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[41]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[40]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[39]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[38]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[37]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[36]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[35]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[34]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[33]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[32]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[31]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[30]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[29]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[28]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[27]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[26]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[25]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[24]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[23]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[22]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[21]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[20]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[19]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[18]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[17]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[16]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[15]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[14]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[13]
+WARNING: [Synth 8-3331] design uplane_packetiser has unconnected port Ethernet_header_V_TDATA[12]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2500.184 ; gain = 0.000 ; free physical = 17290 ; free virtual = 53847
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2500.184 ; gain = 0.000 ; free physical = 17231 ; free virtual = 53788
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2500.184 ; gain = 0.000 ; free physical = 17231 ; free virtual = 53788
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ip/check_40G_sim_uplane_packetiser_0_0/constraints/uplane_packetiser_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2683.746 ; gain = 10.906 ; free physical = 16976 ; free virtual = 53543
+Finished Parsing XDC File [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ip/check_40G_sim_uplane_packetiser_0_0/constraints/uplane_packetiser_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2683.746 ; gain = 0.000 ; free physical = 16977 ; free virtual = 53544
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2683.746 ; gain = 0.000 ; free physical = 16980 ; free virtual = 53547
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2683.746 ; gain = 183.562 ; free physical = 17095 ; free virtual = 53672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu19eg-ffvd1760-3-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2683.746 ; gain = 183.562 ; free physical = 17092 ; free virtual = 53669
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2683.746 ; gain = 183.562 ; free physical = 17085 ; free virtual = 53662
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'oran_ctrl_state_load_reg_1134_reg[3:3]' into 'oran_ctrl_state_reg[3:3]' [/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/ipshared/f9a4/hdl/verilog/uplane_packetiser.v:641]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2683.746 ; gain = 183.562 ; free physical = 17112 ; free virtual = 53691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 23    
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module uplane_packetiser 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 23    
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1968 (col length:264)
+BRAMs: 1968 (col length: RAMB18 264 RAMB36 132)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[0]' (FDE) to 'inst/tmp_5_reg_1223_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[1]' (FDE) to 'inst/tmp_5_reg_1223_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[2]' (FDE) to 'inst/tmp_5_reg_1223_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[3]' (FDE) to 'inst/tmp_5_reg_1223_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[4]' (FDE) to 'inst/tmp_5_reg_1223_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[5]' (FDE) to 'inst/tmp_5_reg_1223_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[6]' (FDE) to 'inst/tmp_5_reg_1223_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp_numPrbu_V_load_n_reg_1198_reg[7]' (FDE) to 'inst/tmp_5_reg_1223_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln_reg_1233_reg[0]' (FDE) to 'inst/tmp_startsymbolId_V_s_reg_1182_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln_reg_1233_reg[1]' (FDE) to 'inst/tmp_startsymbolId_V_s_reg_1182_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln_reg_1233_reg[2]' (FDE) to 'inst/tmp_startsymbolId_V_s_reg_1182_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln_reg_1233_reg[3]' (FDE) to 'inst/tmp_startsymbolId_V_s_reg_1182_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ap_CS_iter0_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\oran_ctrl_state_reg[3] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 2683.746 ; gain = 183.562 ; free physical = 17038 ; free virtual = 53620
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:10 . Memory (MB): peak = 3109.668 ; gain = 609.484 ; free physical = 14900 ; free virtual = 51525
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:12 . Memory (MB): peak = 3147.699 ; gain = 647.516 ; free physical = 14769 ; free virtual = 51394
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 3155.707 ; gain = 655.523 ; free physical = 14747 ; free virtual = 51372
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14709 ; free virtual = 51335
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14707 ; free virtual = 51333
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14715 ; free virtual = 51342
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14720 ; free virtual = 51346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14726 ; free virtual = 51352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14725 ; free virtual = 51352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     8|
+|2     |LUT1   |     3|
+|3     |LUT2   |    21|
+|4     |LUT3   |     6|
+|5     |LUT4   |    17|
+|6     |LUT5   |   129|
+|7     |LUT6   |    39|
+|8     |FDRE   |   343|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |   566|
+|2     |  inst   |uplane_packetiser |   566|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.676 ; gain = 658.492 ; free physical = 14725 ; free virtual = 51351
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 121 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 3158.676 ; gain = 474.930 ; free physical = 14759 ; free virtual = 51386
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 3158.684 ; gain = 658.492 ; free physical = 14759 ; free virtual = 51386
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3228.410 ; gain = 0.000 ; free physical = 15268 ; free virtual = 51895
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:35 . Memory (MB): peak = 3228.410 ; gain = 1802.000 ; free physical = 15522 ; free virtual = 52151
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3228.410 ; gain = 0.000 ; free physical = 15522 ; free virtual = 52150
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/check_40G_sim_uplane_packetiser_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP check_40G_sim_uplane_packetiser_0_0, cache-ID = 2f154a8e3af48de2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3252.422 ; gain = 0.000 ; free physical = 16494 ; free virtual = 53120
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_packetiser_0_0_synth_1/check_40G_sim_uplane_packetiser_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file check_40G_sim_uplane_packetiser_0_0_utilization_synth.rpt -pb check_40G_sim_uplane_packetiser_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 27 11:31:56 2023...

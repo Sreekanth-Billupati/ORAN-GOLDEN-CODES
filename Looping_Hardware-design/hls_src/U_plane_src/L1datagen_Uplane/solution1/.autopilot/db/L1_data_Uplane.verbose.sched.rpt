@@ -1,0 +1,246 @@
+
+
+================================================================
+== Vivado HLS Report for 'L1_data_Uplane'
+================================================================
+* Date:           Wed Mar 17 11:27:32 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        L1datagen_Uplane
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvd1760-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     0.965|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    3|    3|    3|    3| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%data_src_state_load = load i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:49]   --->   Operation 5 'load' 'data_src_state_load' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.96>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 82380544)" [L1datagen_Uplane/L1_data_UP.cpp:654]   --->   Operation 6 'write' <Predicate = (data_src_state_load == 14)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:664]   --->   Operation 7 'write' <Predicate = (data_src_state_load == 14)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 8 [1/1] (0.96ns)   --->   "store i4 -1, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:685]   --->   Operation 8 'store' <Predicate = (data_src_state_load == 14)> <Delay = 0.96>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 81331968)" [L1datagen_Uplane/L1_data_UP.cpp:606]   --->   Operation 9 'write' <Predicate = (data_src_state_load == 13)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:616]   --->   Operation 10 'write' <Predicate = (data_src_state_load == 13)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 11 [1/1] (0.96ns)   --->   "store i4 -2, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:639]   --->   Operation 11 'store' <Predicate = (data_src_state_load == 13)> <Delay = 0.96>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 80283392)" [L1datagen_Uplane/L1_data_UP.cpp:556]   --->   Operation 12 'write' <Predicate = (data_src_state_load == 12)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:567]   --->   Operation 13 'write' <Predicate = (data_src_state_load == 12)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 14 [1/1] (0.96ns)   --->   "store i4 -3, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:591]   --->   Operation 14 'store' <Predicate = (data_src_state_load == 12)> <Delay = 0.96>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 79234816)" [L1datagen_Uplane/L1_data_UP.cpp:509]   --->   Operation 15 'write' <Predicate = (data_src_state_load == 11)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:519]   --->   Operation 16 'write' <Predicate = (data_src_state_load == 11)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 17 [1/1] (0.96ns)   --->   "store i4 -4, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:541]   --->   Operation 17 'store' <Predicate = (data_src_state_load == 11)> <Delay = 0.96>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 78186240)" [L1datagen_Uplane/L1_data_UP.cpp:463]   --->   Operation 18 'write' <Predicate = (data_src_state_load == 10)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:473]   --->   Operation 19 'write' <Predicate = (data_src_state_load == 10)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 20 [1/1] (0.96ns)   --->   "store i4 -5, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:494]   --->   Operation 20 'store' <Predicate = (data_src_state_load == 10)> <Delay = 0.96>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 77137664)" [L1datagen_Uplane/L1_data_UP.cpp:419]   --->   Operation 21 'write' <Predicate = (data_src_state_load == 9)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:429]   --->   Operation 22 'write' <Predicate = (data_src_state_load == 9)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 23 [1/1] (0.96ns)   --->   "store i4 -6, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:450]   --->   Operation 23 'store' <Predicate = (data_src_state_load == 9)> <Delay = 0.96>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 76089088)" [L1datagen_Uplane/L1_data_UP.cpp:373]   --->   Operation 24 'write' <Predicate = (data_src_state_load == 8)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638017)" [L1datagen_Uplane/L1_data_UP.cpp:383]   --->   Operation 25 'write' <Predicate = (data_src_state_load == 8)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 26 [1/1] (0.96ns)   --->   "store i4 -7, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:404]   --->   Operation 26 'store' <Predicate = (data_src_state_load == 8)> <Delay = 0.96>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 75040512)" [L1datagen_Uplane/L1_data_UP.cpp:329]   --->   Operation 27 'write' <Predicate = (data_src_state_load == 7)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 855638016)" [L1datagen_Uplane/L1_data_UP.cpp:337]   --->   Operation 28 'write' <Predicate = (data_src_state_load == 7)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 29 [1/1] (0.96ns)   --->   "store i4 -8, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:358]   --->   Operation 29 'store' <Predicate = (data_src_state_load == 7)> <Delay = 0.96>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 72943360)" [L1datagen_Uplane/L1_data_UP.cpp:247]   --->   Operation 30 'write' <Predicate = (data_src_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 553648132)" [L1datagen_Uplane/L1_data_UP.cpp:257]   --->   Operation 31 'write' <Predicate = (data_src_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 32 [1/1] (0.96ns)   --->   "store i4 6, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:278]   --->   Operation 32 'store' <Predicate = (data_src_state_load == 5)> <Delay = 0.96>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 71894784)" [L1datagen_Uplane/L1_data_UP.cpp:201]   --->   Operation 33 'write' <Predicate = (data_src_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 553648132)" [L1datagen_Uplane/L1_data_UP.cpp:211]   --->   Operation 34 'write' <Predicate = (data_src_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 35 [1/1] (0.96ns)   --->   "store i4 5, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:233]   --->   Operation 35 'store' <Predicate = (data_src_state_load == 4)> <Delay = 0.96>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 70846208)" [L1datagen_Uplane/L1_data_UP.cpp:156]   --->   Operation 36 'write' <Predicate = (data_src_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 553648132)" [L1datagen_Uplane/L1_data_UP.cpp:166]   --->   Operation 37 'write' <Predicate = (data_src_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 38 [1/1] (0.96ns)   --->   "store i4 4, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:187]   --->   Operation 38 'store' <Predicate = (data_src_state_load == 3)> <Delay = 0.96>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 69797632)" [L1datagen_Uplane/L1_data_UP.cpp:109]   --->   Operation 39 'write' <Predicate = (data_src_state_load == 2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 553648132)" [L1datagen_Uplane/L1_data_UP.cpp:119]   --->   Operation 40 'write' <Predicate = (data_src_state_load == 2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 41 [1/1] (0.96ns)   --->   "store i4 3, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:142]   --->   Operation 41 'store' <Predicate = (data_src_state_load == 2)> <Delay = 0.96>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 68749056)" [L1datagen_Uplane/L1_data_UP.cpp:63]   --->   Operation 42 'write' <Predicate = (data_src_state_load == 1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 553648132)" [L1datagen_Uplane/L1_data_UP.cpp:73]   --->   Operation 43 'write' <Predicate = (data_src_state_load == 1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 44 [1/1] (0.96ns)   --->   "store i4 2, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:95]   --->   Operation 44 'store' <Predicate = (data_src_state_load == 1)> <Delay = 0.96>
+
+State 3 <SV = 2> <Delay = 0.96>
+ST_3 : Operation 45 [1/1] (0.72ns)   --->   "switch i4 %data_src_state_load, label %._crit_edge [
+    i4 1, label %1
+    i4 2, label %2
+    i4 3, label %3
+    i4 4, label %4
+    i4 5, label %5
+    i4 6, label %6
+    i4 7, label %7
+    i4 -8, label %8
+    i4 -7, label %9
+    i4 -6, label %10
+    i4 -5, label %11
+    i4 -4, label %12
+    i4 -3, label %13
+    i4 -2, label %14
+    i4 -1, label %15
+  ]" [L1datagen_Uplane/L1_data_UP.cpp:51]   --->   Operation 45 'switch' <Predicate = true> <Delay = 0.72>
+ST_3 : Operation 46 [1/1] (0.96ns)   --->   "store i4 1, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:690]   --->   Operation 46 'store' <Predicate = (data_src_state_load == 15)> <Delay = 0.96>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:691]   --->   Operation 47 'br' <Predicate = (data_src_state_load == 15)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 419639305)" [L1datagen_Uplane/L1_data_UP.cpp:674]   --->   Operation 48 'write' <Predicate = (data_src_state_load == 14)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:688]   --->   Operation 49 'br' <Predicate = (data_src_state_load == 14)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 419639305)" [L1datagen_Uplane/L1_data_UP.cpp:627]   --->   Operation 50 'write' <Predicate = (data_src_state_load == 13)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:642]   --->   Operation 51 'br' <Predicate = (data_src_state_load == 13)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 419639305)" [L1datagen_Uplane/L1_data_UP.cpp:578]   --->   Operation 52 'write' <Predicate = (data_src_state_load == 12)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:594]   --->   Operation 53 'br' <Predicate = (data_src_state_load == 12)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 419639305)" [L1datagen_Uplane/L1_data_UP.cpp:529]   --->   Operation 54 'write' <Predicate = (data_src_state_load == 11)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:544]   --->   Operation 55 'br' <Predicate = (data_src_state_load == 11)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 100872200)" [L1datagen_Uplane/L1_data_UP.cpp:483]   --->   Operation 56 'write' <Predicate = (data_src_state_load == 10)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:497]   --->   Operation 57 'br' <Predicate = (data_src_state_load == 10)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 100872200)" [L1datagen_Uplane/L1_data_UP.cpp:439]   --->   Operation 58 'write' <Predicate = (data_src_state_load == 9)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:452]   --->   Operation 59 'br' <Predicate = (data_src_state_load == 9)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 100872200)" [L1datagen_Uplane/L1_data_UP.cpp:393]   --->   Operation 60 'write' <Predicate = (data_src_state_load == 8)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:407]   --->   Operation 61 'br' <Predicate = (data_src_state_load == 8)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 100872200)" [L1datagen_Uplane/L1_data_UP.cpp:347]   --->   Operation 62 'write' <Predicate = (data_src_state_load == 7)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:361]   --->   Operation 63 'br' <Predicate = (data_src_state_load == 7)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %app_out_V_V, i32 73991936)" [L1datagen_Uplane/L1_data_UP.cpp:293]   --->   Operation 64 'write' <Predicate = (data_src_state_load == 6)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 956301319)" [L1datagen_Uplane/L1_data_UP.cpp:303]   --->   Operation 65 'write' <Predicate = (data_src_state_load == 6)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 66 [1/1] (0.96ns)   --->   "store i4 7, i4* @data_src_state, align 1" [L1datagen_Uplane/L1_data_UP.cpp:314]   --->   Operation 66 'store' <Predicate = (data_src_state_load == 6)> <Delay = 0.96>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:317]   --->   Operation 67 'br' <Predicate = (data_src_state_load == 6)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 402788358)" [L1datagen_Uplane/L1_data_UP.cpp:267]   --->   Operation 68 'write' <Predicate = (data_src_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:281]   --->   Operation 69 'br' <Predicate = (data_src_state_load == 5)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 402788358)" [L1datagen_Uplane/L1_data_UP.cpp:221]   --->   Operation 70 'write' <Predicate = (data_src_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:235]   --->   Operation 71 'br' <Predicate = (data_src_state_load == 4)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 402788355)" [L1datagen_Uplane/L1_data_UP.cpp:176]   --->   Operation 72 'write' <Predicate = (data_src_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:189]   --->   Operation 73 'br' <Predicate = (data_src_state_load == 3)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 402788355)" [L1datagen_Uplane/L1_data_UP.cpp:130]   --->   Operation 74 'write' <Predicate = (data_src_state_load == 2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:144]   --->   Operation 75 'br' <Predicate = (data_src_state_load == 2)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 402788355)" [L1datagen_Uplane/L1_data_UP.cpp:83]   --->   Operation 76 'write' <Predicate = (data_src_state_load == 1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "br label %._crit_edge" [L1datagen_Uplane/L1_data_UP.cpp:97]   --->   Operation 77 'br' <Predicate = (data_src_state_load == 1)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %app_out_V_V), !map !65"   --->   Operation 78 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i48* %sec_out_V_V), !map !69"   --->   Operation 79 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %L1_state_out), !map !73"   --->   Operation 80 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @L1_data_Uplane_str) nounwind"   --->   Operation 81 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [L1datagen_Uplane/L1_data_UP.cpp:8]   --->   Operation 82 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %app_out_V_V, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [L1datagen_Uplane/L1_data_UP.cpp:11]   --->   Operation 83 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i48* %sec_out_V_V, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [L1datagen_Uplane/L1_data_UP.cpp:12]   --->   Operation 84 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %L1_state_out, [8 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [L1datagen_Uplane/L1_data_UP.cpp:13]   --->   Operation 85 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [L1datagen_Uplane/L1_data_UP.cpp:14]   --->   Operation 86 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i4* @data_src_state, i32 1, [1 x i8]* @p_str) nounwind" [L1datagen_Uplane/L1_data_UP.cpp:47]   --->   Operation 87 'specreset' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln49 = zext i4 %data_src_state_load to i8" [L1datagen_Uplane/L1_data_UP.cpp:49]   --->   Operation 88 'zext' 'zext_ln49' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %L1_state_out, i8 %zext_ln49)" [L1datagen_Uplane/L1_data_UP.cpp:49]   --->   Operation 89 'write' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3305422850)" [L1datagen_Uplane/L1_data_UP.cpp:684]   --->   Operation 90 'write' <Predicate = (data_src_state_load == 14)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3305422850)" [L1datagen_Uplane/L1_data_UP.cpp:638]   --->   Operation 91 'write' <Predicate = (data_src_state_load == 13)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3305422850)" [L1datagen_Uplane/L1_data_UP.cpp:589]   --->   Operation 92 'write' <Predicate = (data_src_state_load == 12)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3305422850)" [L1datagen_Uplane/L1_data_UP.cpp:539]   --->   Operation 93 'write' <Predicate = (data_src_state_load == 11)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:493]   --->   Operation 94 'write' <Predicate = (data_src_state_load == 10)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:449]   --->   Operation 95 'write' <Predicate = (data_src_state_load == 9)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:403]   --->   Operation 96 'write' <Predicate = (data_src_state_load == 8)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:357]   --->   Operation 97 'write' <Predicate = (data_src_state_load == 7)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:313]   --->   Operation 98 'write' <Predicate = (data_src_state_load == 6)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:277]   --->   Operation 99 'write' <Predicate = (data_src_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:231]   --->   Operation 100 'write' <Predicate = (data_src_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:186]   --->   Operation 101 'write' <Predicate = (data_src_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:141]   --->   Operation 102 'write' <Predicate = (data_src_state_load == 2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i48P(i48* %sec_out_V_V, i48 3624112133)" [L1datagen_Uplane/L1_data_UP.cpp:93]   --->   Operation 103 'write' <Predicate = (data_src_state_load == 1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "ret void" [L1datagen_Uplane/L1_data_UP.cpp:695]   --->   Operation 104 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0.965ns
+The critical path consists of the following:
+	'store' operation ('store_ln685', L1datagen_Uplane/L1_data_UP.cpp:685) of constant 15 on static variable 'data_src_state' [27]  (0.965 ns)
+
+ <State 3>: 0.965ns
+The critical path consists of the following:
+	'store' operation ('store_ln690', L1datagen_Uplane/L1_data_UP.cpp:690) of constant 1 on static variable 'data_src_state' [20]  (0.965 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

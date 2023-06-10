@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="section_input.txt" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/sim_src/L1_Data_Gen/section_input.txt"/>
+    <originFiles name="extension_input.txt" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/sim_src/L1_Data_Gen/extension_input.txt"/>
+    <originFiles name="L1_Data_Gen_header.h" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/sim_src/L1_Data_Gen/L1_Data_Gen_header.h"/>
+    <originFiles name="L1_Data_Gen.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/sim_src/L1_Data_Gen/L1_Data_Gen.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="L1_Data_Gen_tb.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/sim_src/L1_Data_Gen/L1_Data_Gen_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

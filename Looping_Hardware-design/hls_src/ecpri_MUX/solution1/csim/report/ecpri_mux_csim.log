@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../ecpri_mux_tb.cpp in debug mode
+   Generating csim.exe
+******************************************
+
+	Starting eCPRI_mux testbench
+
+ 	End of testbench
+No. of outputs read :41
+Error count :0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="check_40G_sim_uplane_depacketiser_0_0_synth_1" LaunchDir="/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_uplane_depacketiser_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

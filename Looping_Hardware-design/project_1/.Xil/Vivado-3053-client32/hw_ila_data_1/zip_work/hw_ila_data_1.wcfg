@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/sai/petalinux/Oran_any_TDD_Hardware/oran_any_tdd_hardware/Hardware_MIMO_design/ORAN_INTEG_1/myproj/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="512583fs"></ZoomStartTime>
+      <ZoomEndTime time="529884fs"></ZoomEndTime>
+      <Cursor1Time time="519000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="516"></NameColumnWidth>
+      <ValueColumnWidth column_width="267"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="42" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe0_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe0_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[1:0]</obj_property>
+      <obj_property name="label">ecpri_demux_0_ecpri_demux_eth_state_out_V</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe1_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe1_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[7:0]</obj_property>
+      <obj_property name="label">ecpri_demux_0_msg_type_out_V</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1000">
+      <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s0)_(cplane_depacketizer_0_beam_data)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s0)_(cplane_depacketizer_0_beam_data)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group1001">
+         <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s0)_(cplane_depacketizer_0_beam_data)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s0)_(cplane_depacketizer_0_beam_data)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
+            <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
+            <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1006">
+      <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s1)_(cplane_depacketizer_0_beam_info_V)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s1)_(cplane_depacketizer_0_beam_info_V)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group1007">
+         <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s1)_(cplane_depacketizer_0_beam_info_V)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s1)_(cplane_depacketizer_0_beam_info_V)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tvalid</obj_property>
+            <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tready</obj_property>
+            <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tlast</obj_property>
+            <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group17">
+      <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group18">
+         <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tvalid</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tready</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tlast</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group23">
+      <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <wvobject type="group" fp_name="group24">
+         <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tvalid</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tready</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tlast</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe2_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe2_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe2_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_0_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe4_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe4_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe4_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_1_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe6_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe6_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe6_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_2_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe3_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe3_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_3_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe5_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe5_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe5_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_4_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe0_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe0_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">ecpri_demux_0_ecpri_demux_eth_state_out_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe1_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe1_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">ecpri_demux_0_msg_type_out_V</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="Interface_(i1:s0)_(cplane_depacketizer_0_beam_data)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Interface_(i1:s0)_(cplane_depacketizer_0_beam_data)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Interface_(i1:s0)_(cplane_depacketizer_0_beam_data)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s0)_(cplane_depacketizer_0_beam_data)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="Interface_(i1:s1)_(cplane_depacketizer_0_beam_info_V)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Interface_(i1:s1)_(cplane_depacketizer_0_beam_info_V)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Interface_(i1:s1)_(cplane_depacketizer_0_beam_info_V)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s1)_(cplane_depacketizer_0_beam_info_V)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="Interface_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tdata">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">net_slot_0_axis_tdata[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TDATA</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tlast">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
+      <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tready">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
+      <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tvalid">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_0_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
+      <obj_property name="label">slot_0 : cplane_depacketizer_0_beam_data : TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tdata">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">net_slot_1_axis_tdata[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TDATA</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tlast">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">net_slot_1_axis_tlast</obj_property>
+      <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tready">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">net_slot_1_axis_tready</obj_property>
+      <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tvalid">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_1_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">net_slot_1_axis_tvalid</obj_property>
+      <obj_property name="label">slot_1 : cplane_depacketizer_0_beam_info_V : TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tdata">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">net_slot_2_axis_tdata[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TDATA</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tlast">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">net_slot_2_axis_tlast</obj_property>
+      <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tready">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">net_slot_2_axis_tready</obj_property>
+      <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tvalid">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_2_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">net_slot_2_axis_tvalid</obj_property>
+      <obj_property name="label">slot_2 : cplane_depacketizer_0_beam_data_uplink : TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tdata">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">net_slot_3_axis_tdata[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TDATA</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tlast">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">net_slot_3_axis_tlast</obj_property>
+      <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tready">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">net_slot_3_axis_tready</obj_property>
+      <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tvalid">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/net_slot_3_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">net_slot_3_axis_tvalid</obj_property>
+      <obj_property name="label">slot_3 : cplane_depacketizer_0_beam_info_uplink_V : TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="T_Channel_(i1:s0)_(cplane_depacketizer_0_beam_data)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">T_Channel_(i1:s0)_(cplane_depacketizer_0_beam_data)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">T_Channel_(i1:s0)_(cplane_depacketizer_0_beam_data)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Purple</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">T_Channel_(i1:s0)_(cplane_depacketizer_0_beam_data)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="T_Channel_(i1:s1)_(cplane_depacketizer_0_beam_info_V)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">T_Channel_(i1:s1)_(cplane_depacketizer_0_beam_info_V)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">T_Channel_(i1:s1)_(cplane_depacketizer_0_beam_info_V)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Purple</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">T_Channel_(i1:s1)_(cplane_depacketizer_0_beam_info_V)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Purple</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">T_Channel_(i1:s2)_(cplane_depacketizer_0_beam_data_uplink)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)[2:0]</obj_property>
+      <obj_property name="ObjectShortName">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Purple</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Detail_Data">T_Channel_(i1:s3)_(cplane_depacketizer_0_beam_info_uplink_V)_tooltip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe2_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe2_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe2_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_0_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe4_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe4_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe4_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_1_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe6_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe6_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe6_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_2_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe3_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe3_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_3_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="CU_Integration_sim_i/system_ila_0/inst/probe5_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CU_Integration_sim_i/system_ila_0/inst/probe5_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe5_1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">pass_thru_counterlast_4_count</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

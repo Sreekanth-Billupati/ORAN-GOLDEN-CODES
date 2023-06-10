@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May  9 16:11:07 2023
+# Process ID: 3938
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2
+# Command line: vivado -log check_40G_sim_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source check_40G_sim_wrapper.tcl -notrace
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.vdi
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/vivado.jou
+#-----------------------------------------------------------
+source check_40G_sim_wrapper.tcl -notrace

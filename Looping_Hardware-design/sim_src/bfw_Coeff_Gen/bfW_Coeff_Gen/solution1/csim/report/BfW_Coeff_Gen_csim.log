@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../mat_coeff_gen_tb.cpp in debug mode
+   Compiling ../../../../mat_coeff_gen.cpp in debug mode
+   Generating csim.exe
+
+Starting testbench
+No errors found
+WARNING: Hls::stream 'hls::stream<ap_uint<128> >.1' contains leftover data, which may result in RTL simulation hanging.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

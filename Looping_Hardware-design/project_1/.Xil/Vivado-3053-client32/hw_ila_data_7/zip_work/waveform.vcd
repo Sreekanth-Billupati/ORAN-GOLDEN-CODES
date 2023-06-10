@@ -1,0 +1,141 @@
+$date
+        2023-Mar-28 18:14:00
+$end
+$version
+        Vivado v2019.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 2 " design_1_i/ORAN_IISC_NEW/system_ila_0/inst/probe0_1 [1:0] $end
+$var reg 4 $ design_1_i/ORAN_IISC_NEW/system_ila_0/inst/probe1_1 [3:0] $end
+$var reg 8 ( design_1_i/ORAN_IISC_NEW/system_ila_0/inst/probe2_1 [7:0] $end
+$var reg 3 0 design_1_i/ORAN_IISC_NEW/system_ila_0/inst/probe3_1 [2:0] $end
+$var reg 12 3 design_1_i/ORAN_IISC_NEW/system_ila_0/inst/probe4_1 [11:0] $end
+$var reg 32 ? design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_0_axis_tdata [31:0] $end
+$var reg 1 _ design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_0_axis_tvalid $end
+$var reg 1 ` design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_0_axis_tready $end
+$var reg 1 a design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_0_axis_tlast $end
+$var reg 128 b design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_1_axis_tdata [127:0] $end
+$var reg 16 &# design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_1_axis_tkeep [15:0] $end
+$var reg 1 6# design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_1_axis_tuser $end
+$var reg 1 7# design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_1_axis_tvalid $end
+$var reg 1 8# design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_1_axis_tready $end
+$var reg 1 9# design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_1_axis_tlast $end
+$var reg 128 :# design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_2_axis_tdata [127:0] $end
+$var reg 1 \$ design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_2_axis_tvalid $end
+$var reg 1 ]$ design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_2_axis_tready $end
+$var reg 1 ^$ design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_2_axis_tlast $end
+$var reg 64 _$ design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_3_axis_tdata [63:0] $end
+$var reg 1 A% design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_3_axis_tvalid $end
+$var reg 1 B% design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_3_axis_tready $end
+$var reg 1 C% design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_3_axis_tlast $end
+$var reg 128 D% design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_4_axis_tdata [127:0] $end
+$var reg 1 f& design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_4_axis_tvalid $end
+$var reg 1 g& design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_4_axis_tready $end
+$var reg 1 h& design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_4_axis_tlast $end
+$var reg 64 i& design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_5_axis_tdata [63:0] $end
+$var reg 8 K' design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_5_axis_tkeep [7:0] $end
+$var reg 1 S' design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_5_axis_tuser $end
+$var reg 1 T' design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_5_axis_tvalid $end
+$var reg 1 U' design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_5_axis_tlast $end
+$var reg 128 V' design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_6_axis_tdata [127:0] $end
+$var reg 16 x( design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_6_axis_tkeep [15:0] $end
+$var reg 1 *) design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_6_axis_tuser $end
+$var reg 1 +) design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_6_axis_tvalid $end
+$var reg 1 ,) design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_6_axis_tready $end
+$var reg 1 -) design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_6_axis_tlast $end
+$var reg 128 .) design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_7_axis_tdata [127:0] $end
+$var reg 16 P* design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_7_axis_tkeep [15:0] $end
+$var reg 1 `* design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_7_axis_tvalid $end
+$var reg 1 a* design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_7_axis_tready $end
+$var reg 1 b* design_1_i/ORAN_IISC_NEW/system_ila_0/inst/net_slot_7_axis_tlast $end
+$var reg 3 c* Interface__i7_s0___ecpri_demux_0_control_data_out_ [2:0] $end
+$var reg 3 f* Interface__i7_s1___ecpri_demux_0_user_data_out_ [2:0] $end
+$var reg 3 i* Interface__i7_s2___cplane_depacketizer_0_beam_data_ [2:0] $end
+$var reg 3 l* Interface__i7_s3___cplane_depacketizer_0_beam_info_V_ [2:0] $end
+$var reg 3 o* Interface__i7_s4___uplane_depacketiser_0_data_out_ [2:0] $end
+$var reg 3 r* Interface__i7_s5___xxv_ethernet_0_axis_rx_0_ [2:0] $end
+$var reg 3 u* Interface__i7_s6___Ethernet_demux_0_cu_data_out_ [2:0] $end
+$var reg 3 x* Interface__i7_s7___tkeep_cleaner_FAPI_1_master_ [2:0] $end
+$var reg 3 {* T_Channel__i7_s0___ecpri_demux_0_control_data_out_ [2:0] $end
+$var reg 3 ~* T_Channel__i7_s1___ecpri_demux_0_user_data_out_ [2:0] $end
+$var reg 3 #+ T_Channel__i7_s2___cplane_depacketizer_0_beam_data_ [2:0] $end
+$var reg 3 &+ T_Channel__i7_s3___cplane_depacketizer_0_beam_info_V_ [2:0] $end
+$var reg 3 )+ T_Channel__i7_s4___uplane_depacketiser_0_data_out_ [2:0] $end
+$var reg 3 ,+ T_Channel__i7_s5___xxv_ethernet_0_axis_rx_0_ [2:0] $end
+$var reg 3 /+ T_Channel__i7_s6___Ethernet_demux_0_cu_data_out_ [2:0] $end
+$var reg 3 2+ T_Channel__i7_s7___tkeep_cleaner_FAPI_1_master_ [2:0] $end
+$var reg 1 5+ _TRIGGER $end
+$var reg 1 6+ _WINDOW $end
+$var reg 1 7+ _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+b0 $
+b0 (
+b0 0
+b0 3
+b0 ?
+0_
+1`
+0a
+b0 b
+b0 &#
+06#
+07#
+18#
+09#
+b0 :#
+0\$
+1]$
+0^$
+b0 _$
+0A%
+1B%
+0C%
+b0 D%
+0f&
+1g&
+0h&
+b0 i&
+b11111111 K'
+0S'
+0T'
+0U'
+b0 V'
+b111111111111 x(
+0*)
+0+)
+1,)
+0-)
+b0 .)
+b0 P*
+0`*
+1a*
+0b*
+b11 c*
+b11 f*
+b11 i*
+b11 l*
+b11 o*
+b11 r*
+b11 u*
+b11 x*
+b11 {*
+b11 ~*
+b11 #+
+b11 &+
+b11 )+
+b11 ,+
+b11 /+
+b11 2+
+05+
+16+
+07+
+$end
+#2048
+15+

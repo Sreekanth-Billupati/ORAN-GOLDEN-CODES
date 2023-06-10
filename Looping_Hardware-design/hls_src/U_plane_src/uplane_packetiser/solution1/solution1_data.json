@@ -1,0 +1,688 @@
+{
+  "Top": "uplane_packetiser",
+  "RtlTop": "uplane_packetiser",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "state",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu19eg",
+    "Package": "-ffvd1760",
+    "Speed": "-3-e"
+  },
+  "HlsSolution": {"Config": [
+      "config_rtl -encoding=auto",
+      "config_rtl -kernel_profile=0",
+      "config_rtl -module_auto_prefix=0",
+      "config_rtl -mult_keep_attribute=0",
+      "config_rtl -reset=state",
+      "config_rtl -reset_async=0",
+      "config_rtl -reset_level=low",
+      "config_rtl -verbose=0",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
+      "config_export -vivado_optimization_level=2",
+      "config_export -vivado_phys_opt=place",
+      "config_export -vivado_report_level=0"
+    ]},
+  "Args": {
+    "Ethernet_header": {
+      "index": "0",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "eth_head",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "dst_mac": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "src_mac": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "eth_type": {
+            "order": "2",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "eCPRI_header": {
+      "index": "1",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "eCPRI_head",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "version": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "msg_type": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "payload_size": {
+            "order": "2",
+            "dataType": "ap_uint"
+          },
+          "pcid1": {
+            "order": "3",
+            "dataType": "ap_uint"
+          },
+          "seqid": {
+            "order": "4",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "application_header": {
+      "index": "2",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "Appn_header",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "dataDirection": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "payloadVersion": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "filterIndex": {
+            "order": "2",
+            "dataType": "ap_uint"
+          },
+          "frameId": {
+            "order": "3",
+            "dataType": "ap_uint"
+          },
+          "subframeId": {
+            "order": "4",
+            "dataType": "ap_uint"
+          },
+          "slotID": {
+            "order": "5",
+            "dataType": "ap_uint"
+          },
+          "startsymbolId": {
+            "order": "6",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "section_header": {
+      "index": "3",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "Section_header",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "sectionID": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "rb": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "symInc": {
+            "order": "2",
+            "dataType": "ap_uint"
+          },
+          "startPrbu": {
+            "order": "3",
+            "dataType": "ap_uint"
+          },
+          "numPrbu": {
+            "order": "4",
+            "dataType": "ap_uint"
+          },
+          "udCompHdr": {
+            "order": "5",
+            "dataType": "ap_uint"
+          },
+          "reserved": {
+            "order": "6",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "IQ_data": {
+      "index": "4",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "PRB_FIELD",
+        "structImpl": "flat-interface",
+        "fields": {"data": {
+            "order": "0",
+            "dataType": "ap_uint"
+          }}
+      }
+    },
+    "eth_data": {
+      "index": "5",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "ETH_BUS",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "keep": {
+            "order": "1",
+            "dataType": "ap_uint"
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "state_out": {
+      "index": "6",
+      "type": {
+        "dataType": "unsigned",
+        "dataWidth": "8",
+        "interfaceRef": "state_out"
+      }
+    },
+    "symbol_number": {
+      "index": "7",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "4",
+        "interfaceRef": "symbol_number_V"
+      }
+    },
+    "Total_PRB_count": {
+      "index": "8",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "12",
+        "interfaceRef": "Total_PRB_count_V"
+      }
+    },
+    "symbol_id_check": {
+      "index": "9",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "6",
+        "interfaceRef": "symbol_id_check_V"
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "3.2",
+    "IsCombLogic": "0",
+    "II": "1",
+    "Latency": "1",
+    "Uncertainty": "0.4"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 3.200 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "uplane_packetiser",
+    "Version": "1.0",
+    "DisplayName": "Uplane_packetiser",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/uplane_packetizer.cpp"],
+    "Vhdl": ["impl\/vhdl\/uplane_packetiser.vhd"],
+    "Verilog": ["impl\/verilog\/uplane_packetiser.v"],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/home\/sai\/petalinux\/dummy_iisc\/siso_oran_dl\/ORAN_INTEG_1\/hls_src\/U_plane_src\/uplane_packetiser\/solution1\/.autopilot\/db\/uplane_packetiser.design.xml",
+    "DebugDir": "\/home\/sai\/petalinux\/dummy_iisc\/siso_oran_dl\/ORAN_INTEG_1\/hls_src\/U_plane_src\/uplane_packetiser\/solution1\/.debug",
+    "ProtoInst": ["\/home\/sai\/petalinux\/dummy_iisc\/siso_oran_dl\/ORAN_INTEG_1\/hls_src\/U_plane_src\/uplane_packetiser\/solution1\/.debug\/uplane_packetiser.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "Ethernet_header_V eCPRI_header_V application_header_V section_header_V IQ_data_V_data_V eth_data",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "application_header_V": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "application_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "32",
+          "Fields": {
+            "dataDirection": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "payloadVersion": {
+              "Type": "integer unsigned",
+              "Width": "3"
+            },
+            "filterIndex": {
+              "Type": "integer unsigned",
+              "Width": "4"
+            },
+            "frameId": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "subframeId": {
+              "Type": "integer unsigned",
+              "Width": "4"
+            },
+            "slotID": {
+              "Type": "integer unsigned",
+              "Width": "6"
+            },
+            "startsymbolId": {
+              "Type": "integer unsigned",
+              "Width": "6"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "32"}
+    },
+    "eCPRI_header_V": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "eCPRI_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "64",
+          "Fields": {
+            "version": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "msg_type": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "payload_size": {
+              "Type": "integer unsigned",
+              "Width": "16"
+            },
+            "pcid1": {
+              "Type": "integer unsigned",
+              "Width": "16"
+            },
+            "seqid": {
+              "Type": "integer unsigned",
+              "Width": "16"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "64"}
+    },
+    "eth_data": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "eth_data",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "128"
+        },
+        "TREADY": {"Type": "bool"},
+        "TVALID": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TKEEP": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        }
+      },
+      "port_width": {
+        "TDATA": "128",
+        "TKEEP": "16",
+        "TLAST": "1"
+      }
+    },
+    "Ethernet_header_V": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "Ethernet_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "112",
+          "Fields": {
+            "dst_mac": {
+              "Type": "integer unsigned",
+              "Width": "48"
+            },
+            "src_mac": {
+              "Type": "integer unsigned",
+              "Width": "48"
+            },
+            "eth_type": {
+              "Type": "integer unsigned",
+              "Width": "16"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "112"}
+    },
+    "IQ_data_V_data_V": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "IQ_data_V_data_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "128"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "128"}
+    },
+    "section_header_V": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "section_header_V",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "48",
+          "Fields": {
+            "sectionID": {
+              "Type": "integer unsigned",
+              "Width": "12"
+            },
+            "rb": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "symInc": {
+              "Type": "integer unsigned",
+              "Width": "1"
+            },
+            "startPrbu": {
+              "Type": "integer unsigned",
+              "Width": "10"
+            },
+            "numPrbu": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "udCompHdr": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "reserved": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "48"}
+    },
+    "state_out": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "state_out",
+      "bundle_role": "default"
+    },
+    "symbol_id_check_V": {
+      "type": "data",
+      "dir": "out",
+      "width": "6",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        }},
+      "bundle_name": "symbol_id_check_V",
+      "bundle_role": "default"
+    },
+    "symbol_number_V": {
+      "type": "data",
+      "dir": "out",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        }},
+      "bundle_name": "symbol_number_V",
+      "bundle_role": "default"
+    },
+    "Total_PRB_count_V": {
+      "type": "data",
+      "dir": "out",
+      "width": "12",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "12"
+        }},
+      "bundle_name": "Total_PRB_count_V",
+      "bundle_role": "default"
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Ethernet_header_V_TDATA": {
+      "dir": "in",
+      "width": "112"
+    },
+    "Ethernet_header_V_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Ethernet_header_V_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "eCPRI_header_V_TDATA": {
+      "dir": "in",
+      "width": "64"
+    },
+    "eCPRI_header_V_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "eCPRI_header_V_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "application_header_V_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "application_header_V_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "application_header_V_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "section_header_V_TDATA": {
+      "dir": "in",
+      "width": "48"
+    },
+    "section_header_V_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "section_header_V_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "IQ_data_V_data_V_TDATA": {
+      "dir": "in",
+      "width": "128"
+    },
+    "IQ_data_V_data_V_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "IQ_data_V_data_V_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "eth_data_TDATA": {
+      "dir": "out",
+      "width": "128"
+    },
+    "eth_data_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "eth_data_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "eth_data_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "eth_data_TKEEP": {
+      "dir": "out",
+      "width": "16"
+    },
+    "state_out": {
+      "dir": "out",
+      "width": "8"
+    },
+    "symbol_number_V": {
+      "dir": "out",
+      "width": "4"
+    },
+    "Total_PRB_count_V": {
+      "dir": "out",
+      "width": "12"
+    },
+    "symbol_id_check_V": {
+      "dir": "out",
+      "width": "6"
+    },
+    "symbol_id_check_V_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "uplane_packetiser"},
+    "Info": {"uplane_packetiser": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"uplane_packetiser": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "2",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.40",
+          "Estimate": "2.966"
+        },
+        "Area": {
+          "FF": "356",
+          "LUT": "337",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "uplane_packetiser",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2023-03-26 23:15:27 IST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.1"
+  }
+}

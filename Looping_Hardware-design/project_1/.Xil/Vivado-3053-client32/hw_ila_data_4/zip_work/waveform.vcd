@@ -1,0 +1,31 @@
+$date
+        2023-Mar-30 10:49:41
+$end
+$version
+        Vivado v2019.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " CU_Integration_sim_i/system_ila_3/inst/probe0_1 $end
+$var reg 1 # CU_Integration_sim_i/system_ila_3/inst/probe1_1 $end
+$var reg 1 $ CU_Integration_sim_i/system_ila_3/inst/probe2_1 $end
+$var reg 1 % CU_Integration_sim_i/system_ila_3/inst/probe3_1 $end
+$var reg 1 & _TRIGGER $end
+$var reg 1 ' _WINDOW $end
+$var reg 1 ( _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+0#
+0$
+0%
+0&
+1'
+0(
+$end
+#512
+1&

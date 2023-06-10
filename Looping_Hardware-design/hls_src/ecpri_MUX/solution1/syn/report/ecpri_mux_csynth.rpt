@@ -1,0 +1,267 @@
+
+
+================================================================
+== Vivado HLS Report for 'ecpri_mux'
+================================================================
+* Date:           Fri Feb  4 12:41:27 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        ecpri_MUX
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     3.153|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|     181|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     405|    -|
+|Register         |        -|      -|    1260|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|    1260|     586|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln700_1_fu_370_p2                      |     +    |      0|  0|  11|           3|           1|
+    |add_ln700_2_fu_337_p2                      |     +    |      0|  0|  15|           8|           1|
+    |add_ln700_fu_357_p2                        |     +    |      0|  0|  19|          12|           1|
+    |ap_condition_1065                          |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_852                           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_897                           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_941                           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_950                           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_969                           |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op14_read_state1              |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op57_write_state2             |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op94_write_state3             |    and   |      0|  0|   2|           1|           1|
+    |control_data_in_V_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |control_data_in_V_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |control_data_in_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |control_data_in_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |mux_data_out_V_data_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |mux_data_out_V_data_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |mux_data_out_V_last_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |mux_data_out_V_last_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_152_p3                    |    and   |      0|  0|   2|           1|           0|
+    |user_data_in_V_data_V_0_load_A             |    and   |      0|  0|   2|           1|           1|
+    |user_data_in_V_data_V_0_load_B             |    and   |      0|  0|   2|           1|           1|
+    |user_data_in_V_last_V_0_load_A             |    and   |      0|  0|   2|           1|           1|
+    |user_data_in_V_last_V_0_load_B             |    and   |      0|  0|   2|           1|           1|
+    |control_data_in_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |control_data_in_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln879_1_fu_398_p2                     |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln879_fu_364_p2                       |   icmp   |      0|  0|  13|          12|          12|
+    |icmp_ln887_fu_311_p2                       |   icmp   |      0|  0|  11|           8|           8|
+    |mux_data_out_V_data_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |mux_data_out_V_last_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |user_data_in_V_data_V_0_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |user_data_in_V_last_V_0_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_state1_pp0_stage0_iter0           |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2_io                         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2           |    or    |      0|  0|   2|           1|           1|
+    |select_ln104_fu_404_p3                     |  select  |      0|  0|   3|           1|           2|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                      |          |      0|  0| 181|          85|          57|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                       | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_iter1_fsm                                   |  15|          3|    2|          6|
+    |ap_NS_iter2_fsm                                   |  15|          3|    2|          6|
+    |ap_phi_mux_section_count_V_flag_1_phi_fu_249_p10  |  21|          4|    1|          4|
+    |ap_phi_mux_section_count_V_flag_phi_fu_209_p6     |  15|          3|    1|          3|
+    |ap_phi_mux_section_count_V_new_1_phi_fu_270_p10   |  15|          3|   12|         36|
+    |ap_phi_mux_section_count_V_new_s_phi_fu_223_p6    |  15|          3|   12|         36|
+    |ap_phi_mux_storemerge255_phi_fu_236_p6            |  15|          3|    2|          6|
+    |control_data_in_TDATA_blk_n                       |   9|          2|    1|          2|
+    |control_data_in_V_data_V_0_data_out               |   9|          2|  128|        256|
+    |control_data_in_V_data_V_0_state                  |  15|          3|    2|          6|
+    |control_data_in_V_last_V_0_data_out               |   9|          2|    1|          2|
+    |control_data_in_V_last_V_0_state                  |  15|          3|    2|          6|
+    |ecpri_mux_state                                   |  27|          5|    2|         10|
+    |layer_count_V                                     |   9|          2|    3|          6|
+    |mux_config_in_V_V_TDATA_blk_n                     |   9|          2|    1|          2|
+    |mux_data_out_TDATA_blk_n                          |   9|          2|    1|          2|
+    |mux_data_out_V_data_V_1_data_in                   |  15|          3|  128|        384|
+    |mux_data_out_V_data_V_1_data_out                  |   9|          2|  128|        256|
+    |mux_data_out_V_data_V_1_state                     |  15|          3|    2|          6|
+    |mux_data_out_V_keep_V_1_state                     |  15|          3|    2|          6|
+    |mux_data_out_V_last_V_1_data_in                   |  15|          3|    1|          3|
+    |mux_data_out_V_last_V_1_data_out                  |   9|          2|    1|          2|
+    |mux_data_out_V_last_V_1_state                     |  15|          3|    2|          6|
+    |mux_data_out_V_user_V_1_state                     |  15|          3|    2|          6|
+    |numSection_V                                      |   9|          2|   12|         24|
+    |tlast_counter_V                                   |   9|          2|    8|         16|
+    |user_data_in_TDATA_blk_n                          |   9|          2|    1|          2|
+    |user_data_in_V_data_V_0_data_out                  |   9|          2|  128|        256|
+    |user_data_in_V_data_V_0_state                     |  15|          3|    2|          6|
+    |user_data_in_V_last_V_0_data_out                  |   9|          2|    1|          2|
+    |user_data_in_V_last_V_0_state                     |  15|          3|    2|          6|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                             | 405|         83|  593|       1370|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+-----+----+-----+-----------+
+    |                    Name                    |  FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_iter0_fsm                             |    1|   0|    1|          0|
+    |ap_CS_iter1_fsm                             |    2|   0|    2|          0|
+    |ap_CS_iter2_fsm                             |    2|   0|    2|          0|
+    |control_data_in_V_data_V_0_payload_A        |  128|   0|  128|          0|
+    |control_data_in_V_data_V_0_payload_B        |  128|   0|  128|          0|
+    |control_data_in_V_data_V_0_sel_rd           |    1|   0|    1|          0|
+    |control_data_in_V_data_V_0_sel_wr           |    1|   0|    1|          0|
+    |control_data_in_V_data_V_0_state            |    2|   0|    2|          0|
+    |control_data_in_V_last_V_0_payload_A        |    1|   0|    1|          0|
+    |control_data_in_V_last_V_0_payload_B        |    1|   0|    1|          0|
+    |control_data_in_V_last_V_0_sel_rd           |    1|   0|    1|          0|
+    |control_data_in_V_last_V_0_sel_wr           |    1|   0|    1|          0|
+    |control_data_in_V_last_V_0_state            |    2|   0|    2|          0|
+    |ecpri_mux_state                             |    2|   0|    2|          0|
+    |ecpri_mux_state_load_reg_484                |    2|   0|    2|          0|
+    |ecpri_mux_state_load_reg_484_pp0_iter1_reg  |    2|   0|    2|          0|
+    |icmp_ln887_reg_489                          |    1|   0|    1|          0|
+    |icmp_ln887_reg_489_pp0_iter1_reg            |    1|   0|    1|          0|
+    |layer_count_V                               |    3|   0|    3|          0|
+    |mux_cnfg_V                                  |   96|   0|   96|          0|
+    |mux_data_out_V_data_V_1_payload_A           |  128|   0|  128|          0|
+    |mux_data_out_V_data_V_1_payload_B           |  128|   0|  128|          0|
+    |mux_data_out_V_data_V_1_sel_rd              |    1|   0|    1|          0|
+    |mux_data_out_V_data_V_1_sel_wr              |    1|   0|    1|          0|
+    |mux_data_out_V_data_V_1_state               |    2|   0|    2|          0|
+    |mux_data_out_V_keep_V_1_sel_rd              |    1|   0|    1|          0|
+    |mux_data_out_V_keep_V_1_state               |    2|   0|    2|          0|
+    |mux_data_out_V_last_V_1_payload_A           |    1|   0|    1|          0|
+    |mux_data_out_V_last_V_1_payload_B           |    1|   0|    1|          0|
+    |mux_data_out_V_last_V_1_sel_rd              |    1|   0|    1|          0|
+    |mux_data_out_V_last_V_1_sel_wr              |    1|   0|    1|          0|
+    |mux_data_out_V_last_V_1_state               |    2|   0|    2|          0|
+    |mux_data_out_V_user_V_1_sel_rd              |    1|   0|    1|          0|
+    |mux_data_out_V_user_V_1_state               |    2|   0|    2|          0|
+    |numSection_V                                |   12|   0|   12|          0|
+    |numSection_V_load_reg_469                   |   12|   0|   12|          0|
+    |numSection_V_load_reg_469_pp0_iter1_reg     |   12|   0|   12|          0|
+    |section_count_V                             |   12|   0|   12|          0|
+    |t_V_1_reg_479                               |    3|   0|    3|          0|
+    |t_V_1_reg_479_pp0_iter1_reg                 |    3|   0|    3|          0|
+    |t_V_reg_474                                 |   12|   0|   12|          0|
+    |t_V_reg_474_pp0_iter1_reg                   |   12|   0|   12|          0|
+    |tlast_counter_V                             |    8|   0|    8|          0|
+    |tmp_data_V_1_reg_493                        |  128|   0|  128|          0|
+    |tmp_data_V_reg_503                          |  128|   0|  128|          0|
+    |tmp_last_V_1_reg_498                        |    1|   0|    1|          0|
+    |tmp_last_V_reg_508                          |    1|   0|    1|          0|
+    |user_data_in_V_data_V_0_payload_A           |  128|   0|  128|          0|
+    |user_data_in_V_data_V_0_payload_B           |  128|   0|  128|          0|
+    |user_data_in_V_data_V_0_sel_rd              |    1|   0|    1|          0|
+    |user_data_in_V_data_V_0_sel_wr              |    1|   0|    1|          0|
+    |user_data_in_V_data_V_0_state               |    2|   0|    2|          0|
+    |user_data_in_V_last_V_0_payload_A           |    1|   0|    1|          0|
+    |user_data_in_V_last_V_0_payload_B           |    1|   0|    1|          0|
+    |user_data_in_V_last_V_0_sel_rd              |    1|   0|    1|          0|
+    |user_data_in_V_last_V_0_sel_wr              |    1|   0|    1|          0|
+    |user_data_in_V_last_V_0_state               |    2|   0|    2|          0|
+    +--------------------------------------------+-----+----+-----+-----------+
+    |Total                                       | 1260|   0| 1260|          0|
+    +--------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+--------------+--------------------------+--------------+
+|         RTL Ports        | Dir | Bits|   Protocol   |       Source Object      |    C Type    |
++--------------------------+-----+-----+--------------+--------------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_none |         ecpri_mux        | return value |
+|ap_rst_n                  |  in |    1| ap_ctrl_none |         ecpri_mux        | return value |
+|control_data_in_TDATA     |  in |  128|     axis     | control_data_in_V_data_V |    pointer   |
+|control_data_in_TVALID    |  in |    1|     axis     | control_data_in_V_last_V |    pointer   |
+|control_data_in_TREADY    | out |    1|     axis     | control_data_in_V_last_V |    pointer   |
+|control_data_in_TLAST     |  in |    1|     axis     | control_data_in_V_last_V |    pointer   |
+|control_data_in_TUSER     |  in |    1|     axis     | control_data_in_V_user_V |    pointer   |
+|control_data_in_TKEEP     |  in |   16|     axis     | control_data_in_V_keep_V |    pointer   |
+|user_data_in_TDATA        |  in |  128|     axis     |   user_data_in_V_data_V  |    pointer   |
+|user_data_in_TVALID       |  in |    1|     axis     |   user_data_in_V_last_V  |    pointer   |
+|user_data_in_TREADY       | out |    1|     axis     |   user_data_in_V_last_V  |    pointer   |
+|user_data_in_TLAST        |  in |    1|     axis     |   user_data_in_V_last_V  |    pointer   |
+|user_data_in_TUSER        |  in |    1|     axis     |   user_data_in_V_user_V  |    pointer   |
+|user_data_in_TKEEP        |  in |   16|     axis     |   user_data_in_V_keep_V  |    pointer   |
+|mux_data_out_TDATA        | out |  128|     axis     |   mux_data_out_V_data_V  |    pointer   |
+|mux_data_out_TREADY       |  in |    1|     axis     |   mux_data_out_V_data_V  |    pointer   |
+|mux_data_out_TVALID       | out |    1|     axis     |   mux_data_out_V_last_V  |    pointer   |
+|mux_data_out_TLAST        | out |    1|     axis     |   mux_data_out_V_last_V  |    pointer   |
+|mux_data_out_TUSER        | out |    1|     axis     |   mux_data_out_V_user_V  |    pointer   |
+|mux_data_out_TKEEP        | out |   16|     axis     |   mux_data_out_V_keep_V  |    pointer   |
+|mux_config_in_V_V_TDATA   |  in |   96|     axis     |     mux_config_in_V_V    |    pointer   |
+|mux_config_in_V_V_TVALID  |  in |    1|     axis     |     mux_config_in_V_V    |    pointer   |
+|mux_config_in_V_V_TREADY  | out |    1|     axis     |     mux_config_in_V_V    |    pointer   |
+|ecpri_mux_state_out_V     | out |    2|    ap_none   |   ecpri_mux_state_out_V  |    pointer   |
+|num_section_out_V         | out |   12|    ap_none   |     num_section_out_V    |    pointer   |
+|section_count_out_V       | out |   12|    ap_none   |    section_count_out_V   |    pointer   |
+|layer_count_out_V         | out |    3|    ap_none   |     layer_count_out_V    |    pointer   |
++--------------------------+-----+-----+--------------+--------------------------+--------------+
+

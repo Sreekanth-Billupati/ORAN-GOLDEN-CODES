@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization." projectName="L1datagen_Uplane" solutionName="solution1" date="2021-03-17T11:27:32.347+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="L1datagen_Uplane" solutionName="solution1" date="2021-03-17T11:27:32.333+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane' (Function: L1_data_Uplane): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xA;   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:684) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:664)." projectName="L1datagen_Uplane" solutionName="solution1" date="2021-03-17T11:27:32.210+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane' (Function: L1_data_Uplane): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:674) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:664)." projectName="L1datagen_Uplane" solutionName="solution1" date="2021-03-17T11:27:32.191+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:4)." projectName="L1datagen_Uplane" solutionName="solution1" date="2021-03-17T11:27:32.017+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3)." projectName="L1datagen_Uplane" solutionName="solution1" date="2021-03-17T11:27:31.770+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

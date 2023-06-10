@@ -1,0 +1,487 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../L1_Data_Gen.cpp in debug mode
+   Generating csim.exe
+ext_ind=0x0
+data_src_state=0
+ext_ind=0x0
+data_src_state=0
+ext_ind=0x0
+data_src_state=1
+ext_ind=0x0
+data_src_state=1
+ext_ind=0x0
+data_src_state=2
+ext_ind=0x0
+data_src_state=2
+ext_ind=0x0
+data_src_state=3
+numPRB=0x1
+Section count 0x0
+ext_ind=0x0
+data_src_state=3
+beamID_1=0x0a11
+last ext_ind=0x1
+Section count 0x1
+ext_ind=0x1
+data_src_state=0
+ext_ind=0x1
+data_src_state=0
+ext_ind=0x1
+data_src_state=1
+ext_ind=0x1
+data_src_state=1
+ext_ind=0x1
+data_src_state=2
+ext_ind=0x1
+data_src_state=2
+ext_ind=0x1
+data_src_state=3
+numPRB=0x4
+Section count 0x1
+ext_ind=0x1
+data_src_state=3
+beamID_case1=0x0b11
+numExt1=0x4
+Section count 0x1
+ext_ind=0x2
+data_src_state=3
+numPRB=0x4
+Section count 0x1
+ext_ind=0x2
+data_src_state=3
+beamID_1=0x0b12
+last ext_ind=0x3
+Section count 0x2
+ext_ind=0x3
+data_src_state=0
+ext_ind=0x3
+data_src_state=0
+ext_ind=0x3
+data_src_state=1
+ext_ind=0x3
+data_src_state=1
+ext_ind=0x3
+data_src_state=2
+ext_ind=0x3
+data_src_state=2
+ext_ind=0x3
+data_src_state=3
+numPRB=0x4
+Section count 0x2
+ext_ind=0x3
+data_src_state=3
+beamID_case1=0x0c11
+numExt1=0x6
+Section count 0x2
+ext_ind=0x4
+data_src_state=3
+numPRB=0x4
+Section count 0x2
+ext_ind=0x4
+data_src_state=3
+beamID_case1=0x0c12
+numExt1=0x6
+Section count 0x2
+ext_ind=0x5
+data_src_state=3
+numPRB=0x4
+Section count 0x2
+ext_ind=0x5
+data_src_state=3
+beamID_1=0x0c13
+last ext_ind=0x6
+Section count 0x3
+ext_ind=0x6
+data_src_state=0
+ext_ind=0x6
+data_src_state=0
+ext_ind=0x6
+data_src_state=1
+ext_ind=0x6
+data_src_state=1
+ext_ind=0x6
+data_src_state=2
+ext_ind=0x6
+data_src_state=2
+ext_ind=0x6
+data_src_state=3
+numPRB=0x5
+Section count 0x3
+ext_ind=0x6
+data_src_state=3
+beamID_case1=0x0d11
+numExt1=0x8
+Section count 0x3
+ext_ind=0x7
+data_src_state=3
+numPRB=0x5
+Section count 0x3
+ext_ind=0x7
+data_src_state=3
+beamID_case1=0x0d12
+numExt1=0x8
+Section count 0x3
+ext_ind=0x8
+data_src_state=3
+numPRB=0x5
+Section count 0x3
+ext_ind=0x8
+data_src_state=3
+beamID_case1=0x0d13
+numExt1=0x8
+Section count 0x3
+ext_ind=0x9
+data_src_state=3
+numPRB=0x5
+Section count 0x3
+ext_ind=0x9
+data_src_state=3
+beamID_1=0x0d14
+last ext_ind=0xa
+Section count 0x4
+ext_ind=0xa
+data_src_state=0
+ext_ind=0xa
+data_src_state=0
+ext_ind=0xa
+data_src_state=1
+ext_ind=0xa
+data_src_state=1
+ext_ind=0xa
+data_src_state=2
+ext_ind=0xa
+data_src_state=2
+ext_ind=0xa
+data_src_state=3
+numPRB=0x10
+Section count 0x4
+ext_ind=0xa
+data_src_state=3
+beamID_case1=0x0e11
+numExt1=0xa
+Section count 0x4
+ext_ind=0xb
+data_src_state=3
+numPRB=0x10
+Section count 0x4
+ext_ind=0xb
+data_src_state=3
+beamID_case1=0x0e12
+numExt1=0xa
+Section count 0x4
+ext_ind=0xc
+data_src_state=3
+numPRB=0x10
+Section count 0x4
+ext_ind=0xc
+data_src_state=3
+beamID_case1=0x0e13
+numExt1=0xa
+Section count 0x4
+ext_ind=0xd
+data_src_state=3
+numPRB=0x10
+Section count 0x4
+ext_ind=0xd
+data_src_state=3
+beamID_case1=0x0e14
+numExt1=0xa
+Section count 0x4
+ext_ind=0xe
+data_src_state=3
+numPRB=0x10
+Section count 0x4
+ext_ind=0xe
+data_src_state=3
+beamID_1=0x0e15
+last ext_ind=0xf
+Section count 0x5
+ext_ind=0xf
+data_src_state=0
+ext_ind=0xf
+data_src_state=0
+ext_ind=0xf
+data_src_state=1
+ext_ind=0xf
+data_src_state=1
+ext_ind=0xf
+data_src_state=2
+ext_ind=0xf
+data_src_state=2
+ext_ind=0xf
+data_src_state=3
+numPRB=0x1
+Section count 0x5
+ext_ind=0xf
+data_src_state=3
+beamID_1=0x111
+last ext_ind=0x0
+Section count 0x6
+ext_ind=0x0
+data_src_state=0
+ext_ind=0x0
+data_src_state=0
+ext_ind=0x0
+data_src_state=1
+ext_ind=0x0
+data_src_state=1
+ext_ind=0x0
+data_src_state=2
+ext_ind=0x0
+data_src_state=2
+ext_ind=0x0
+data_src_state=3
+numPRB=0x1
+Section count 0x6
+ext_ind=0x0
+data_src_state=3
+beamID_case1=0x0a11
+numExt1=0x4
+Section count 0x6
+ext_ind=0x1
+data_src_state=3
+numPRB=0x4
+Section count 0x6
+ext_ind=0x1
+data_src_state=3
+beamID_1=0x0b11
+last ext_ind=0x2
+Section count 0x7
+ext_ind=0x2
+data_src_state=0
+ext_ind=0x2
+data_src_state=0
+ext_ind=0x2
+data_src_state=1
+ext_ind=0x2
+data_src_state=1
+ext_ind=0x2
+data_src_state=2
+ext_ind=0x2
+data_src_state=2
+ext_ind=0x2
+data_src_state=3
+numPRB=0x4
+Section count 0x7
+ext_ind=0x2
+data_src_state=3
+beamID_case1=0x0b12
+numExt1=0x6
+Section count 0x7
+ext_ind=0x3
+data_src_state=3
+numPRB=0x4
+Section count 0x7
+ext_ind=0x3
+data_src_state=3
+beamID_case1=0x0c11
+numExt1=0x6
+Section count 0x7
+ext_ind=0x4
+data_src_state=3
+numPRB=0x4
+Section count 0x7
+ext_ind=0x4
+data_src_state=3
+beamID_1=0x0c12
+last ext_ind=0x5
+Section count 0x8
+ext_ind=0x5
+data_src_state=0
+ext_ind=0x5
+data_src_state=0
+ext_ind=0x5
+data_src_state=1
+ext_ind=0x5
+data_src_state=1
+ext_ind=0x5
+data_src_state=2
+ext_ind=0x5
+data_src_state=2
+ext_ind=0x5
+data_src_state=3
+numPRB=0x4
+Section count 0x8
+ext_ind=0x5
+data_src_state=3
+beamID_case1=0x0c13
+numExt1=0x8
+Section count 0x8
+ext_ind=0x6
+data_src_state=3
+numPRB=0x5
+Section count 0x8
+ext_ind=0x6
+data_src_state=3
+beamID_case1=0x0d11
+numExt1=0x8
+Section count 0x8
+ext_ind=0x7
+data_src_state=3
+numPRB=0x5
+Section count 0x8
+ext_ind=0x7
+data_src_state=3
+beamID_case1=0x0d12
+numExt1=0x8
+Section count 0x8
+ext_ind=0x8
+data_src_state=3
+numPRB=0x5
+Section count 0x8
+ext_ind=0x8
+data_src_state=3
+beamID_1=0x0d13
+last ext_ind=0x9
+Section count 0x9
+ext_ind=0x9
+data_src_state=0
+ext_ind=0x9
+data_src_state=0
+ext_ind=0x9
+data_src_state=1
+ext_ind=0x9
+data_src_state=1
+ext_ind=0x9
+data_src_state=2
+ext_ind=0x9
+data_src_state=2
+ext_ind=0x9
+data_src_state=3
+numPRB=0x5
+Section count 0x9
+ext_ind=0x9
+data_src_state=3
+beamID_case1=0x0d14
+numExt1=0xa
+Section count 0x9
+ext_ind=0xa
+data_src_state=3
+numPRB=0x10
+Section count 0x9
+ext_ind=0xa
+data_src_state=3
+beamID_case1=0x0e11
+numExt1=0xa
+Section count 0x9
+ext_ind=0xb
+data_src_state=3
+numPRB=0x10
+Section count 0x9
+ext_ind=0xb
+data_src_state=3
+beamID_case1=0x0e12
+numExt1=0xa
+Section count 0x9
+ext_ind=0xc
+data_src_state=3
+numPRB=0x10
+Section count 0x9
+ext_ind=0xc
+data_src_state=3
+beamID_case1=0x0e13
+numExt1=0xa
+Section count 0x9
+ext_ind=0xd
+data_src_state=3
+numPRB=0x10
+Section count 0x9
+ext_ind=0xd
+data_src_state=3
+beamID_1=0x0e14
+last ext_ind=0xe
+Section count 0x0
+ext_ind=0xe
+data_src_state=0
+ext_ind=0xe
+data_src_state=0
+ext_ind=0xe
+data_src_state=1
+ext_ind=0xe
+data_src_state=1
+ext_ind=0xe
+data_src_state=2
+ext_ind=0xe
+data_src_state=2
+ext_ind=0xe
+data_src_state=3
+numPRB=0x10
+Section count 0x0
+ext_ind=0xe
+data_src_state=3
+beamID_1=0x0e15
+last ext_ind=0xf
+Section count 0x1
+ext_ind=0xf
+data_src_state=0
+ext_ind=0xf
+data_src_state=0
+ext_ind=0xf
+data_src_state=1
+ext_ind=0xf
+data_src_state=1
+ext_ind=0xf
+data_src_state=2
+ext_ind=0xf
+data_src_state=2
+ext_ind=0xf
+data_src_state=3
+numPRB=0x1
+Section count 0x1
+ext_ind=0xf
+data_src_state=3
+beamID_case1=0x111
+numExt1=0x4
+Section count 0x1
+ext_ind=0x0
+data_src_state=3
+numPRB=0x1
+Section count 0x1
+ext_ind=0x0
+data_src_state=3
+beamID_1=0x0a11
+last ext_ind=0x1
+Section count 0x2
+ext_ind=0x1
+data_src_state=0
+ext_ind=0x1
+data_src_state=0
+ext_ind=0x1
+data_src_state=1
+ext_ind=0x1
+data_src_state=1
+ext_ind=0x1
+data_src_state=2
+ext_ind=0x1
+data_src_state=2
+ext_ind=0x1
+data_src_state=3
+numPRB=0x4
+Section count 0x2
+ext_ind=0x1
+data_src_state=3
+beamID_case1=0x0b11
+numExt1=0x6
+Section count 0x2
+ext_ind=0x2
+data_src_state=3
+numPRB=0x4
+Section count 0x2
+ext_ind=0x2
+data_src_state=3
+beamID_case1=0x0b12
+numExt1=0x6
+Section count 0x2
+ext_ind=0x3
+data_src_state=3
+numPRB=0x4
+Section count 0x2
+ext_ind=0x3
+data_src_state=3
+beamID_1=0x0c11
+last ext_ind=0x4
+Section count 0x3
+WARNING: Hls::stream 'hls::stream<l1_data_axis>.1' contains leftover data, which may result in RTL simulation hanging.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

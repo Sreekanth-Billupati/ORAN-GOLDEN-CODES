@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ecpri_mux.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/ecpri_MUX/ecpri_mux.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="ecpri_mux.csv" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/ecpri_mux.csv"/>
+    <originFiles name="ecpri_mux_exp_out.csv" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/ecpri_mux_exp_out.csv"/>
+    <originFiles name="ecpri_mux_tb.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/ecpri_mux_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

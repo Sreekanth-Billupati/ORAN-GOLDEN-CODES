@@ -1,0 +1,485 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>mdata_numCoeff_V</name>
+<CType>
+<TypeName>ap_uint 12</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>ethernet_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>112</TypeWidth>
+<PhysicalWidth>112</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>dmac</FieldName>
+<FieldType>
+<TypeName>ap_uint 48</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>smac</FieldName>
+<FieldType>
+<TypeName>ap_uint 48</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>ethtype</FieldName>
+<FieldType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>eCPRI_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>version</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>msg_type</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>payload_size</FieldName>
+<FieldType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>rtcid</FieldName>
+<FieldType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>seqid</FieldName>
+<FieldType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>application_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>dataDirection</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>payloadVersion</FieldName>
+<FieldType>
+<TypeName>ap_uint 3</TypeName>
+<TypeWidth>3</TypeWidth>
+<PhysicalWidth>3</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>filterIndex</FieldName>
+<FieldType>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>frameId</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>subframeId</FieldName>
+<FieldType>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>slotID</FieldName>
+<FieldType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>startsymbolId</FieldName>
+<FieldType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>numSections</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>sectionType</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>udCompHdr</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>reserved</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>section_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>sectionID</FieldName>
+<FieldType>
+<TypeName>ap_uint 12</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>rb</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>symInc</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>startPrbu</FieldName>
+<FieldType>
+<TypeName>ap_uint 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>numPrbu</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>reMask</FieldName>
+<FieldType>
+<TypeName>ap_uint 12</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>numSymbol</FieldName>
+<FieldType>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>beamID</FieldName>
+<FieldType>
+<TypeName>ap_uint 15</TypeName>
+<TypeWidth>15</TypeWidth>
+<PhysicalWidth>15</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>ef</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>extension_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>72</TypeWidth>
+<PhysicalWidth>72</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>ef</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>extType</FieldName>
+<FieldType>
+<TypeName>ap_uint 7</TypeName>
+<TypeWidth>7</TypeWidth>
+<PhysicalWidth>7</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>extLen</FieldName>
+<FieldType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>disablebfW</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>RAD</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>reserved</FieldName>
+<FieldType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>numBundPRB</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>bfWCompHdr</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>bfWCompParam</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>reserved_comp</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>beamID</FieldName>
+<FieldType>
+<TypeName>ap_uint 15</TypeName>
+<TypeWidth>15</TypeWidth>
+<PhysicalWidth>15</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>beam_data_V_data_V</name>
+<CType>
+<TypeName>ap_uint 128</TypeName>
+<TypeWidth>128</TypeWidth>
+<PhysicalWidth>128</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>beam_data_V_last_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>eth_data_V_data_V</name>
+<CType>
+<TypeName>ap_uint 128</TypeName>
+<TypeWidth>128</TypeWidth>
+<PhysicalWidth>128</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>eth_data_V_user_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>eth_data_V_keep_V</name>
+<CType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>eth_data_V_last_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>numCoeff_V</name>
+<CType>
+<TypeName>ap_uint 5</TypeName>
+<TypeWidth>5</TypeWidth>
+<PhysicalWidth>5</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>cstate_out_V</name>
+<CType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>numMatrix_V_V</name>
+<CType>
+<TypeName>ap_uint 3</TypeName>
+<TypeWidth>3</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>rtcid_V_V</name>
+<CType>
+<TypeName>ap_uint 16</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

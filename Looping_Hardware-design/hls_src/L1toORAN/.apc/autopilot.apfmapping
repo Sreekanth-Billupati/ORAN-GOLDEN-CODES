@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="oran_header.h" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/lib/oran_header.h"/>
+    <originFiles name="ethernet_header.h" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/lib/ethernet_header.h"/>
+    <originFiles name="L1toORAN_main.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/L1toORAN/L1toORAN_main.cpp"/>
+    <originFiles name="L1_controller_header.h" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/lib/L1_controller_header.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Ethernet_demux": {
+			"proto_instances": {
+			}
+		}
+	}
+}

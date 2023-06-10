@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vivado HLS Report for 'L1_data_Uplane'
+================================================================
+* Date:           Wed Mar 17 11:27:32 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        L1datagen_Uplane
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvd1760-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     0.965|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    3|    3|    3|    3| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++-----------------+---------+-------+---------+--------+-----+
+|DSP              |        -|      -|        -|       -|    -|
+|Expression       |        -|      -|        0|      72|    -|
+|FIFO             |        -|      -|        -|       -|    -|
+|Instance         |        -|      -|        -|       -|    -|
+|Memory           |        -|      -|        -|       -|    -|
+|Multiplexer      |        -|      -|        -|     213|    -|
+|Register         |        -|      -|       12|       -|    -|
++-----------------+---------+-------+---------+--------+-----+
+|Total            |        0|      0|       12|     285|    0|
++-----------------+---------+-------+---------+--------+-----+
+|Available        |     1968|   1968|  1045440|  522720|  128|
++-----------------+---------+-------+---------+--------+-----+
+|Utilization (%)  |        0|      0|    ~0   |   ~0   |    0|
++-----------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_pp0_stage0_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage2_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_517           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_521           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_525           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_529           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_533           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_537           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_541           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_545           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_549           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_553           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_557           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_561           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_565           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_569           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_572           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_575           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_578           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_581           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_584           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_587           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_590           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_593           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_596           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_599           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_602           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_605           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_608           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_612           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_615           |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2_io         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_io         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_io         |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0              |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0|  72|          36|          37|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |app_out_V_V_TDATA        |  62|         15|   32|        480|
+    |app_out_V_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |data_src_state           |  62|         15|    4|         60|
+    |sec_out_V_V_TDATA        |  50|         11|   48|        528|
+    |sec_out_V_V_TDATA_blk_n  |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 213|         49|   87|       1076|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+---+----+-----+-----------+
+    |             Name            | FF| LUT| Bits| Const Bits|
+    +-----------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                    |  3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter1      |  1|   0|    1|          0|
+    |data_src_state               |  4|   0|    4|          0|
+    |data_src_state_load_reg_259  |  4|   0|    4|          0|
+    +-----------------------------+---+----+-----+-----------+
+    |Total                        | 12|   0|   12|          0|
+    +-----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+--------------+----------------+--------------+
+|      RTL Ports     | Dir | Bits|   Protocol   |  Source Object |    C Type    |
++--------------------+-----+-----+--------------+----------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_none | L1_data_Uplane | return value |
+|ap_rst_n            |  in |    1| ap_ctrl_none | L1_data_Uplane | return value |
+|app_out_V_V_TDATA   | out |   32|     axis     |   app_out_V_V  |    pointer   |
+|app_out_V_V_TVALID  | out |    1|     axis     |   app_out_V_V  |    pointer   |
+|app_out_V_V_TREADY  |  in |    1|     axis     |   app_out_V_V  |    pointer   |
+|sec_out_V_V_TDATA   | out |   48|     axis     |   sec_out_V_V  |    pointer   |
+|sec_out_V_V_TVALID  | out |    1|     axis     |   sec_out_V_V  |    pointer   |
+|sec_out_V_V_TREADY  |  in |    1|     axis     |   sec_out_V_V  |    pointer   |
+|L1_state_out        | out |    8|    ap_none   |  L1_state_out  |    pointer   |
++--------------------+-----+-----+--------------+----------------+--------------+
+

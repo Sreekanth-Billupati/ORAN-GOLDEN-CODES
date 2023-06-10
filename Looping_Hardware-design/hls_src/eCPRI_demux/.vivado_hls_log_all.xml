@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'first_read' is power-on initialization." projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:56.095+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'msg_type_V' is power-on initialization." projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:56.083+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'state_V' is power-on initialization." projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:56.080+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'msg_type_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:56.076+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'ecpri_demux_eth_state_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:56.072+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find source file ecpri_demux_header.h; skipping it." projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:46.943+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'ecpri_demux_header.h'" projectName="eCPRI_demux" solutionName="solution1" date="2021-12-01T10:46:46.278+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

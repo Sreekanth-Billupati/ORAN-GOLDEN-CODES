@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 21 13:07:29 2023
+# Process ID: 25978
+# Current directory: /home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/solution1/impl/ip/vivado.log
+# Journal file: /home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

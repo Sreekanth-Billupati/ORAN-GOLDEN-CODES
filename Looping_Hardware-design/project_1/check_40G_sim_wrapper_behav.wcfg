@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="check_40G_sim_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="check_40G_sim_wrapper" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="51980545834fs"></ZoomStartTime>
+      <ZoomEndTime time="52115945835fs"></ZoomEndTime>
+      <Cursor1Time time="52006313500fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="252"></NameColumnWidth>
+      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="group" fp_name="group21">
+      <obj_property name="label">L1_datagen_Uplane</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/app_out_V_V_TVALID">
+         <obj_property name="ElementShortName">app_out_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">app_out_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/app_out_V_V_TREADY">
+         <obj_property name="ElementShortName">app_out_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">app_out_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/app_out_V_V_TDATA">
+         <obj_property name="ElementShortName">app_out_V_V_TDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">app_out_V_V_TDATA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/sec_out_V_V_TVALID">
+         <obj_property name="ElementShortName">sec_out_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">sec_out_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/sec_out_V_V_TREADY">
+         <obj_property name="ElementShortName">sec_out_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">sec_out_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/sec_out_V_V_TDATA">
+         <obj_property name="ElementShortName">sec_out_V_V_TDATA[47:0]</obj_property>
+         <obj_property name="ObjectShortName">sec_out_V_V_TDATA[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/L1_state_out">
+         <obj_property name="ElementShortName">L1_state_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">L1_state_out[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group29">
+      <obj_property name="label">C-plane-pack</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/application_header_V_TVALID">
+         <obj_property name="ElementShortName">application_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">application_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/application_header_V_TREADY">
+         <obj_property name="ElementShortName">application_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">application_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/application_header_V_TDATA">
+         <obj_property name="ElementShortName">application_header_V_TDATA[63:0]</obj_property>
+         <obj_property name="ObjectShortName">application_header_V_TDATA[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/section_header_V_TVALID">
+         <obj_property name="ElementShortName">section_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">section_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/section_header_V_TREADY">
+         <obj_property name="ElementShortName">section_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">section_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/section_header_V_TDATA">
+         <obj_property name="ElementShortName">section_header_V_TDATA[63:0]</obj_property>
+         <obj_property name="ObjectShortName">section_header_V_TDATA[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/ethernet_header_V_TVALID">
+         <obj_property name="ElementShortName">ethernet_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">ethernet_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/ethernet_header_V_TREADY">
+         <obj_property name="ElementShortName">ethernet_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">ethernet_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/ethernet_header_V_TDATA">
+         <obj_property name="ElementShortName">ethernet_header_V_TDATA[111:0]</obj_property>
+         <obj_property name="ObjectShortName">ethernet_header_V_TDATA[111:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eCPRI_header_V_TVALID">
+         <obj_property name="ElementShortName">eCPRI_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">eCPRI_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eCPRI_header_V_TREADY">
+         <obj_property name="ElementShortName">eCPRI_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">eCPRI_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eCPRI_header_V_TDATA">
+         <obj_property name="ElementShortName">eCPRI_header_V_TDATA[63:0]</obj_property>
+         <obj_property name="ObjectShortName">eCPRI_header_V_TDATA[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eth_data_TVALID">
+         <obj_property name="ElementShortName">eth_data_TVALID</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eth_data_TREADY">
+         <obj_property name="ElementShortName">eth_data_TREADY</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eth_data_TDATA">
+         <obj_property name="ElementShortName">eth_data_TDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/cplane_packetizer_0/eth_data_TLAST">
+         <obj_property name="ElementShortName">eth_data_TLAST[0:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TLAST[0:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group303">
+      <obj_property name="label">Uplane_data_gen</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/app_out_V_V_TVALID">
+         <obj_property name="ElementShortName">app_out_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">app_out_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/app_out_V_V_TREADY">
+         <obj_property name="ElementShortName">app_out_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">app_out_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/app_out_V_V_TDATA">
+         <obj_property name="ElementShortName">app_out_V_V_TDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">app_out_V_V_TDATA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/sec_out_V_V_TVALID">
+         <obj_property name="ElementShortName">sec_out_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">sec_out_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/sec_out_V_V_TREADY">
+         <obj_property name="ElementShortName">sec_out_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">sec_out_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/sec_out_V_V_TDATA">
+         <obj_property name="ElementShortName">sec_out_V_V_TDATA[47:0]</obj_property>
+         <obj_property name="ObjectShortName">sec_out_V_V_TDATA[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/L1_data_Uplane_0/L1_state_out">
+         <obj_property name="ElementShortName">L1_state_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">L1_state_out[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group46">
+      <obj_property name="label">ecpri_mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/ctrl_user_data_out_TVALID">
+         <obj_property name="ElementShortName">ctrl_user_data_out_TVALID</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_out_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/ctrl_user_data_out_TREADY">
+         <obj_property name="ElementShortName">ctrl_user_data_out_TREADY</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_out_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/ctrl_user_data_out_TDATA">
+         <obj_property name="ElementShortName">ctrl_user_data_out_TDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_out_TDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/ctrl_user_data_out_TLAST">
+         <obj_property name="ElementShortName">ctrl_user_data_out_TLAST[0:0]</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_out_TLAST[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/ctrl_user_data_out_TKEEP">
+         <obj_property name="ElementShortName">ctrl_user_data_out_TKEEP[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_out_TKEEP[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/mux_config_in_V_V_TVALID">
+         <obj_property name="ElementShortName">mux_config_in_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">mux_config_in_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/mux_config_in_V_V_TREADY">
+         <obj_property name="ElementShortName">mux_config_in_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">mux_config_in_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/mux_config_in_V_V_TDATA">
+         <obj_property name="ElementShortName">mux_config_in_V_V_TDATA[95:0]</obj_property>
+         <obj_property name="ObjectShortName">mux_config_in_V_V_TDATA[95:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/user_config_in_V_V_TVALID">
+         <obj_property name="ElementShortName">user_config_in_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">user_config_in_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/user_config_in_V_V_TREADY">
+         <obj_property name="ElementShortName">user_config_in_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">user_config_in_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/user_config_in_V_V_TDATA">
+         <obj_property name="ElementShortName">user_config_in_V_V_TDATA[15:0]</obj_property>
+         <obj_property name="ObjectShortName">user_config_in_V_V_TDATA[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/ecpri_mux_state_out_V">
+         <obj_property name="ElementShortName">ecpri_mux_state_out_V[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ecpri_mux_state_out_V[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/num_section_out_V">
+         <obj_property name="ElementShortName">num_section_out_V[11:0]</obj_property>
+         <obj_property name="ObjectShortName">num_section_out_V[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/section_count_out_V">
+         <obj_property name="ElementShortName">section_count_out_V[11:0]</obj_property>
+         <obj_property name="ObjectShortName">section_count_out_V[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ecpri_mux_0/layer_count_out_V">
+         <obj_property name="ElementShortName">layer_count_out_V[2:0]</obj_property>
+         <obj_property name="ObjectShortName">layer_count_out_V[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group62">
+      <obj_property name="label">epack_gen</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/epacket_gen_0/dout_TVALID">
+         <obj_property name="ElementShortName">dout_TVALID</obj_property>
+         <obj_property name="ObjectShortName">dout_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/epacket_gen_0/dout_TREADY">
+         <obj_property name="ElementShortName">dout_TREADY</obj_property>
+         <obj_property name="ObjectShortName">dout_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/epacket_gen_0/dout_TLAST">
+         <obj_property name="ElementShortName">dout_TLAST[0:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_TLAST[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/epacket_gen_0/dout_TDATA">
+         <obj_property name="ElementShortName">dout_TDATA[135:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_TDATA[135:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/epacket_gen_0/dout_TKEEP">
+         <obj_property name="ElementShortName">dout_TKEEP[16:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_TKEEP[16:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group74">
+      <obj_property name="label">U-plane</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/section_header_V_TVALID">
+         <obj_property name="ElementShortName">section_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">section_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/section_header_V_TREADY">
+         <obj_property name="ElementShortName">section_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">section_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/section_header_V_TDATA">
+         <obj_property name="ElementShortName">section_header_V_TDATA[47:0]</obj_property>
+         <obj_property name="ObjectShortName">section_header_V_TDATA[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/IQ_data_V_TVALID">
+         <obj_property name="ElementShortName">IQ_data_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">IQ_data_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/IQ_data_V_TREADY">
+         <obj_property name="ElementShortName">IQ_data_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">IQ_data_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/IQ_data_V_TDATA">
+         <obj_property name="ElementShortName">IQ_data_V_TDATA[135:0]</obj_property>
+         <obj_property name="ObjectShortName">IQ_data_V_TDATA[135:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/application_header_V_TVALID">
+         <obj_property name="ElementShortName">application_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">application_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/application_header_V_TREADY">
+         <obj_property name="ElementShortName">application_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">application_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/application_header_V_TDATA">
+         <obj_property name="ElementShortName">application_header_V_TDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">application_header_V_TDATA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/Ethernet_header_V_TVALID">
+         <obj_property name="ElementShortName">Ethernet_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">Ethernet_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/Ethernet_header_V_TREADY">
+         <obj_property name="ElementShortName">Ethernet_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">Ethernet_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/Ethernet_header_V_TDATA">
+         <obj_property name="ElementShortName">Ethernet_header_V_TDATA[111:0]</obj_property>
+         <obj_property name="ObjectShortName">Ethernet_header_V_TDATA[111:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eCPRI_header_V_TVALID">
+         <obj_property name="ElementShortName">eCPRI_header_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">eCPRI_header_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eCPRI_header_V_TREADY">
+         <obj_property name="ElementShortName">eCPRI_header_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">eCPRI_header_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eCPRI_header_V_TDATA">
+         <obj_property name="ElementShortName">eCPRI_header_V_TDATA[63:0]</obj_property>
+         <obj_property name="ObjectShortName">eCPRI_header_V_TDATA[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eth_data_TVALID">
+         <obj_property name="ElementShortName">eth_data_TVALID</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eth_data_TREADY">
+         <obj_property name="ElementShortName">eth_data_TREADY</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eth_data_TDATA">
+         <obj_property name="ElementShortName">eth_data_TDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TDATA[127:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eth_data_TLAST">
+         <obj_property name="ElementShortName">eth_data_TLAST[0:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TLAST[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eth_data_TKEEP">
+         <obj_property name="ElementShortName">eth_data_TKEEP[15:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TKEEP[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/eth_data_TUSER">
+         <obj_property name="ElementShortName">eth_data_TUSER[0:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_TUSER[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/user_configs_V_V_TVALID">
+         <obj_property name="ElementShortName">user_configs_V_V_TVALID</obj_property>
+         <obj_property name="ObjectShortName">user_configs_V_V_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/user_configs_V_V_TREADY">
+         <obj_property name="ElementShortName">user_configs_V_V_TREADY</obj_property>
+         <obj_property name="ObjectShortName">user_configs_V_V_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/user_configs_V_V_TDATA">
+         <obj_property name="ElementShortName">user_configs_V_V_TDATA[15:0]</obj_property>
+         <obj_property name="ObjectShortName">user_configs_V_V_TDATA[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/state_out">
+         <obj_property name="ElementShortName">state_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">state_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/symbol_number_V">
+         <obj_property name="ElementShortName">symbol_number_V[3:0]</obj_property>
+         <obj_property name="ObjectShortName">symbol_number_V[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/uplane_packetiser_0/Total_PRB_count_V">
+         <obj_property name="ElementShortName">Total_PRB_count_V[11:0]</obj_property>
+         <obj_property name="ObjectShortName">Total_PRB_count_V[11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group102">
+      <obj_property name="label">Data_Fifo_5</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_aresetn">
+         <obj_property name="ElementShortName">s_axis_aresetn</obj_property>
+         <obj_property name="ObjectShortName">s_axis_aresetn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_aclk">
+         <obj_property name="ElementShortName">s_axis_aclk</obj_property>
+         <obj_property name="ObjectShortName">s_axis_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_tlast">
+         <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/s_axis_tuser">
+         <obj_property name="ElementShortName">s_axis_tuser[69:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[69:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/m_axis_tlast">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/axis_data_fifo_5/m_axis_tuser">
+         <obj_property name="ElementShortName">m_axis_tuser[69:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[69:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group503">
+      <obj_property name="label">ether_mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/ctrl_user_data_in_TVALID">
+         <obj_property name="ElementShortName">ctrl_user_data_in_TVALID</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_in_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/ctrl_user_data_in_TREADY">
+         <obj_property name="ElementShortName">ctrl_user_data_in_TREADY</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_in_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/ctrl_user_data_in_TDATA">
+         <obj_property name="ElementShortName">ctrl_user_data_in_TDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_in_TDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/ctrl_user_data_in_TLAST">
+         <obj_property name="ElementShortName">ctrl_user_data_in_TLAST[0:0]</obj_property>
+         <obj_property name="ObjectShortName">ctrl_user_data_in_TLAST[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/eth_data_out_TVALID">
+         <obj_property name="ElementShortName">eth_data_out_TVALID</obj_property>
+         <obj_property name="ObjectShortName">eth_data_out_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/eth_data_out_TREADY">
+         <obj_property name="ElementShortName">eth_data_out_TREADY</obj_property>
+         <obj_property name="ObjectShortName">eth_data_out_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/eth_data_out_TDATA">
+         <obj_property name="ElementShortName">eth_data_out_TDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_out_TDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/eth_data_out_TUSER">
+         <obj_property name="ElementShortName">eth_data_out_TUSER[69:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_out_TUSER[69:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/ether_mux_0/eth_data_out_TLAST">
+         <obj_property name="ElementShortName">eth_data_out_TLAST[0:0]</obj_property>
+         <obj_property name="ObjectShortName">eth_data_out_TLAST[0:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group628">
+      <obj_property name="label">Ethernet_tx</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/tx_axis_tready_0">
+         <obj_property name="ElementShortName">tx_axis_tready_0</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tready_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/tx_axis_tvalid_0">
+         <obj_property name="ElementShortName">tx_axis_tvalid_0</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tvalid_0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/tx_axis_tdata_0">
+         <obj_property name="ElementShortName">tx_axis_tdata_0[127:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tdata_0[127:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/tx_axis_tuser_0">
+         <obj_property name="ElementShortName">tx_axis_tuser_0[69:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tuser_0[69:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group513">
+      <obj_property name="label">Ethernet_rx</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/inst/rx_axis_tvalid_0">
+         <obj_property name="ElementShortName">rx_axis_tvalid_0</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tvalid_0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/inst/rx_axis_tdata_0">
+         <obj_property name="ElementShortName">rx_axis_tdata_0[127:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tdata_0[127:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/check_40G_sim_wrapper/check_40G_sim_i/l_ethernet_0/inst/rx_axis_tuser_0">
+         <obj_property name="ElementShortName">rx_axis_tuser_0[69:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tuser_0[69:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

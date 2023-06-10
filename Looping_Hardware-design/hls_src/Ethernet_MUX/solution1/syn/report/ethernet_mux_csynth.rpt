@@ -1,0 +1,180 @@
+
+
+================================================================
+== Vivado HLS Report for 'ethernet_mux'
+================================================================
+* Date:           Fri Mar  3 10:27:25 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        Ethernet_MUX
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     0.000|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      26|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     135|    -|
+|Register         |        -|      -|     443|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|     443|     161|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_pp0_stage0_01001         |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_181                  |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op14_read_state1     |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op48_write_state2    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op52_write_state2    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op9_read_state1      |    and   |      0|  0|   2|           1|           1|
+    |tmp_1_nbreadreq_fu_82_p6          |    and   |      0|  0|   2|           1|           0|
+    |tmp_2_nbreadreq_fu_96_p6          |    and   |      0|  0|   2|           1|           0|
+    |tmp_nbreadreq_fu_68_p6            |    and   |      0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2_io                |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  26|          13|          11|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |eth_data_out_TDATA             |  21|          4|  128|        512|
+    |eth_data_out_TDATA_blk_n       |   9|          2|    1|          2|
+    |eth_data_out_TKEEP             |  21|          4|   16|         64|
+    |eth_data_out_TLAST             |  21|          4|    1|          4|
+    |eth_data_out_TUSER             |  21|          4|    1|          4|
+    |ether_mux_data_in_TDATA_blk_n  |   9|          2|    1|          2|
+    |mgmt_data_in_TDATA_blk_n       |   9|          2|    1|          2|
+    |ptp_tag_filed_out_V            |  15|          3|   16|         48|
+    |sync_data_in_TDATA_blk_n       |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          | 135|         27|  166|        640|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+-----+----+-----+-----------+
+    |           Name          |  FF | LUT| Bits| Const Bits|
+    +-------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |    1|   0|    1|          0|
+    |tmp_1_reg_223            |    1|   0|    1|          0|
+    |tmp_2_reg_227            |    1|   0|    1|          0|
+    |tmp_data_V_1_reg_251     |  128|   0|  128|          0|
+    |tmp_data_V_2_reg_231     |  128|   0|  128|          0|
+    |tmp_data_V_reg_271       |  128|   0|  128|          0|
+    |tmp_keep_V_1_reg_261     |   16|   0|   16|          0|
+    |tmp_keep_V_2_reg_241     |   16|   0|   16|          0|
+    |tmp_keep_V_reg_281       |   16|   0|   16|          0|
+    |tmp_last_V_1_reg_266     |    1|   0|    1|          0|
+    |tmp_last_V_2_reg_246     |    1|   0|    1|          0|
+    |tmp_last_V_reg_286       |    1|   0|    1|          0|
+    |tmp_reg_219              |    1|   0|    1|          0|
+    |tmp_user_V_1_reg_256     |    1|   0|    1|          0|
+    |tmp_user_V_2_reg_236     |    1|   0|    1|          0|
+    |tmp_user_V_reg_276       |    1|   0|    1|          0|
+    +-------------------------+-----+----+-----+-----------+
+    |Total                    |  443|   0|  443|          0|
+    +-------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+--------------+----------------------------+--------------+
+|          RTL Ports         | Dir | Bits|   Protocol   |        Source Object       |    C Type    |
++----------------------------+-----+-----+--------------+----------------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_none |        ethernet_mux        | return value |
+|ap_rst_n                    |  in |    1| ap_ctrl_none |        ethernet_mux        | return value |
+|ether_mux_data_in_TDATA     |  in |  128|     axis     | ether_mux_data_in_V_data_V |    pointer   |
+|ether_mux_data_in_TVALID    |  in |    1|     axis     | ether_mux_data_in_V_data_V |    pointer   |
+|ether_mux_data_in_TREADY    | out |    1|     axis     | ether_mux_data_in_V_last_V |    pointer   |
+|ether_mux_data_in_TLAST     |  in |    1|     axis     | ether_mux_data_in_V_last_V |    pointer   |
+|ether_mux_data_in_TUSER     |  in |    1|     axis     | ether_mux_data_in_V_user_V |    pointer   |
+|ether_mux_data_in_TKEEP     |  in |   16|     axis     | ether_mux_data_in_V_keep_V |    pointer   |
+|sync_data_in_TDATA          |  in |  128|     axis     |    sync_data_in_V_data_V   |    pointer   |
+|sync_data_in_TVALID         |  in |    1|     axis     |    sync_data_in_V_data_V   |    pointer   |
+|sync_data_in_TREADY         | out |    1|     axis     |    sync_data_in_V_last_V   |    pointer   |
+|sync_data_in_TLAST          |  in |    1|     axis     |    sync_data_in_V_last_V   |    pointer   |
+|sync_data_in_TUSER          |  in |    1|     axis     |    sync_data_in_V_user_V   |    pointer   |
+|sync_data_in_TKEEP          |  in |   16|     axis     |    sync_data_in_V_keep_V   |    pointer   |
+|mgmt_data_in_TDATA          |  in |  128|     axis     |    mgmt_data_in_V_data_V   |    pointer   |
+|mgmt_data_in_TVALID         |  in |    1|     axis     |    mgmt_data_in_V_data_V   |    pointer   |
+|mgmt_data_in_TREADY         | out |    1|     axis     |    mgmt_data_in_V_last_V   |    pointer   |
+|mgmt_data_in_TLAST          |  in |    1|     axis     |    mgmt_data_in_V_last_V   |    pointer   |
+|mgmt_data_in_TUSER          |  in |    1|     axis     |    mgmt_data_in_V_user_V   |    pointer   |
+|mgmt_data_in_TKEEP          |  in |   16|     axis     |    mgmt_data_in_V_keep_V   |    pointer   |
+|eth_data_out_TDATA          | out |  128|     axis     |    eth_data_out_V_data_V   |    pointer   |
+|eth_data_out_TREADY         |  in |    1|     axis     |    eth_data_out_V_data_V   |    pointer   |
+|eth_data_out_TVALID         | out |    1|     axis     |    eth_data_out_V_last_V   |    pointer   |
+|eth_data_out_TLAST          | out |    1|     axis     |    eth_data_out_V_last_V   |    pointer   |
+|eth_data_out_TUSER          | out |    1|     axis     |    eth_data_out_V_user_V   |    pointer   |
+|eth_data_out_TKEEP          | out |   16|     axis     |    eth_data_out_V_keep_V   |    pointer   |
+|ptp_tag_filed_out_V         | out |   16|    ap_vld    |     ptp_tag_filed_out_V    |    pointer   |
+|ptp_tag_filed_out_V_ap_vld  | out |    1|    ap_vld    |     ptp_tag_filed_out_V    |    pointer   |
++----------------------------+-----+-----+--------------+----------------------------+--------------+
+

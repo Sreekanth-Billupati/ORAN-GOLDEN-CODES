@@ -1,0 +1,123 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'err_count'" level="0">
+<item name = "Date">Sat Jun 20 06:40:50 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">err_count</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20, 2.540, 0.40</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">961, 961, 961, 961, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">960, 960, 2, -, -, 480, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 118, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">4, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 39, -</column>
+<column name="Register">-, -, 53, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="expOutput_V_U">err_count_expOutput_V, 4, 0, 0, 0, 480, 128, 1, 61440</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln27_fu_135_p2">+, 0, 0, 39, 32, 1</column>
+<column name="i_V_fu_114_p2">+, 0, 0, 16, 9, 1</column>
+<column name="icmp_ln883_fu_129_p2">icmp, 0, 0, 50, 128, 128</column>
+<column name="icmp_ln887_fu_108_p2">icmp, 0, 0, 13, 9, 7</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 4, 1, 4</column>
+<column name="observed_output_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="t_V_reg_91">9, 2, 9, 18</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="i_V_reg_155">9, 0, 9, 0</column>
+<column name="t_V_reg_91">9, 0, 9, 0</column>
+<column name="temp_count">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, err_count, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, err_count, return value</column>
+<column name="observed_output_TDATA">in, 128, axis, observed_output_V_data_V, pointer</column>
+<column name="observed_output_TVALID">in, 1, axis, observed_output_V_data_V, pointer</column>
+<column name="observed_output_TREADY">out, 1, axis, observed_output_V_last_V, pointer</column>
+<column name="observed_output_TLAST">in, 1, axis, observed_output_V_last_V, pointer</column>
+<column name="observed_output_TKEEP">in, 16, axis, observed_output_V_keep_V, pointer</column>
+<column name="observed_output_TUSER">in, 7, axis, observed_output_V_user_V, pointer</column>
+<column name="error_count">out, 32, ap_none, error_count, pointer</column>
+<column name="iteration_count">out, 32, ap_none, iteration_count, pointer</column>
+</table>
+</item>
+</section>
+</profile>

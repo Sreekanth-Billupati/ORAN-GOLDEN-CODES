@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/uplane_packetiser/solution1/.autopilot/db/a.g.bc ${1+"$@"}

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar  8 15:04:52 2021
+# Process ID: 1933
+# Current directory: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hls_ip/uplane_packetiser
+# Command line: vivado vivado_hls.app
+# Log file: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hls_ip/uplane_packetiser/vivado.log
+# Journal file: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hls_ip/uplane_packetiser/vivado.jou
+#-----------------------------------------------------------
+start_gui

@@ -1,0 +1,2 @@
+/bin/sh: line 1: /bin/mv: Permission denied
+make: *** [obj/apatb_L1_Data_Gen.o] Error 126

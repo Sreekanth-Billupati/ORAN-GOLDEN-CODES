@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="section_input.txt" path="/home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/section_input.txt"/>
+    <originFiles name="UP_L1_datagen.h" path="/home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/UP_L1_datagen.h"/>
+    <originFiles name="UP_L1_datagen.cpp" path="/home/sai/petalinux/dummy_iisc/siso_oran_dl/ORAN_INTEG_1/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/UP_L1_datagen.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,1744 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 31 12:51:07 2020
+# Process ID: 7516
+# Current directory: /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master
+# Command line: vivado -source design_1.tcl
+# Log file: /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/vivado.log
+# Journal file: /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source design_1.tcl
+update_compile_order -fileset sources_1
+################################################################
+# This is a generated script based on design: design_1
+#
+# Though there are limitations about the generated script,
+# the main purpose of this utility is to make learning
+# IP Integrator Tcl commands easier.
+################################################################
+namespace eval _tcl {
+proc get_script_folder {} {
+   set script_path [file normalize [info script]]
+   set script_folder [file dirname $script_path]
+   return $script_folder
+}
+}
+variable script_folder
+set script_folder [_tcl::get_script_folder]
+################################################################
+# Check if script is running in correct Vivado version.
+################################################################
+set scripts_vivado_version 2019.1
+set current_vivado_version [version -short]
+if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+   puts ""
+   catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+
+   return 1
+}
+################################################################
+# START
+################################################################
+# To test this script, run the following commands from Vivado Tcl console:
+# source design_1_script.tcl
+# If there is no project opened, this script will create a
+# project, but make sure you do not have an existing project
+# <./myproj/project_1.xpr> in the current working folder.
+set list_projs [get_projects -quiet]
+if { $list_projs eq "" } {
+   create_project project_1 myproj -part xczu9eg-ffvb1156-2-e
+   set_property BOARD_PART xilinx.com:zcu102:part0:3.3 [current_project]
+}
+# CHANGE DESIGN NAME HERE
+variable design_name
+set design_name design_1
+# If you do not already have an existing IP Integrator design open,
+# you can create a design using the following command:
+#    create_bd_design $design_name
+# Creating design if needed
+set errMsg ""
+set nRet 0
+set cur_design [current_bd_design -quiet]
+set list_cells [get_bd_cells -quiet]
+if { ${design_name} eq "" } {
+   # USE CASES:
+   #    1) Design_name not set
+
+   set errMsg "Please set the variable <design_name> to a non-empty value."
+   set nRet 1
+
+} elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+   # USE CASES:
+   #    2): Current design opened AND is empty AND names same.
+   #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+   #    4): Current design opened AND is empty AND names diff; design_name exists in project.
+
+   if { $cur_design ne $design_name } {
+      common::send_msg_id "BD_TCL-001" "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+      set design_name [get_property NAME $cur_design]
+   }
+   common::send_msg_id "BD_TCL-002" "INFO" "Constructing design in IPI design <$cur_design>..."
+
+} elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+   # USE CASES:
+   #    5) Current design opened AND has components AND same names.
+
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 1
+} elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+   # USE CASES: 
+   #    6) Current opened design, has components, but diff names, design_name exists in project.
+   #    7) No opened design, design_name exists in project.
+
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 2
+
+} else {
+   # USE CASES:
+   #    8) No opened design, design_name not in project.
+   #    9) Current opened design, has components, but diff names, design_name not in project.
+
+   common::send_msg_id "BD_TCL-003" "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+
+   create_bd_design $design_name
+
+   common::send_msg_id "BD_TCL-004" "INFO" "Making design <$design_name> as current_bd_design."
+   current_bd_design $design_name
+
+}
+common::send_msg_id "BD_TCL-005" "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+if { $nRet != 0 } {
+   catch {common::send_msg_id "BD_TCL-114" "ERROR" $errMsg}
+   return $nRet
+}
+set bCheckIPsPassed 1
+##################################################################
+# CHECK IPs
+##################################################################
+set bCheckIPs 1
+if { $bCheckIPs == 1 } {
+   set list_check_ips "\ 
+xilinx.com:hls:BfW_Coeff_Gen:1.0\
+xilinx.com:hls:L1_Data_Gen:1.0\
+xilinx.com:hls:L1toORAN:1.0\
+xilinx.com:ip:axis_data_fifo:2.0\
+xilinx.com:hls:err_count:1.0\
+xilinx.com:ip:system_ila:1.1\
+xilinx.com:ip:clk_wiz:6.0\
+xilinx.com:ip:proc_sys_reset:5.0\
+xilinx.com:ip:axis_register_slice:1.1\
+xilinx.com:hls:cplane_packetizer:1.0\
+xilinx.com:ip:xlconstant:1.1\
+xilinx.com:hls:cplane_depacketizer:1.0\
+xilinx.com:hls:Ethernet_demux:1.0\
+xilinx.com:hls:ecpri_demux:1.0\
+xilinx.com:hls:ecpri_mux:1.0\
+xilinx.com:hls:ethernet_mux:1.0\
+"
+
+   set list_ips_missing ""
+   common::send_msg_id "BD_TCL-006" "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+
+   foreach ip_vlnv $list_check_ips {
+      set ip_obj [get_ipdefs -all $ip_vlnv]
+      if { $ip_obj eq "" } {
+         lappend list_ips_missing $ip_vlnv
+      }
+   }
+
+   if { $list_ips_missing ne "" } {
+      catch {common::send_msg_id "BD_TCL-115" "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+      set bCheckIPsPassed 0
+   }
+
+}
+if { $bCheckIPsPassed != 1 } {
+  common::send_msg_id "BD_TCL-1003" "WARNING" "Will not continue with creation of design due to the error(s) above."
+  return 3
+}
+set_property  ip_repo_paths  {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/sim_src} [current_project]
+update_ip_catalog
+################################################################
+# This is a generated script based on design: design_1
+#
+# Though there are limitations about the generated script,
+# the main purpose of this utility is to make learning
+# IP Integrator Tcl commands easier.
+################################################################
+namespace eval _tcl {
+proc get_script_folder {} {
+   set script_path [file normalize [info script]]
+   set script_folder [file dirname $script_path]
+   return $script_folder
+}
+}
+variable script_folder
+set script_folder [_tcl::get_script_folder]
+################################################################
+# Check if script is running in correct Vivado version.
+################################################################
+set scripts_vivado_version 2019.1
+set current_vivado_version [version -short]
+if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+   puts ""
+   catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+
+   return 1
+}
+################################################################
+# START
+################################################################
+# To test this script, run the following commands from Vivado Tcl console:
+# source design_1_script.tcl
+# If there is no project opened, this script will create a
+# project, but make sure you do not have an existing project
+# <./myproj/project_1.xpr> in the current working folder.
+set list_projs [get_projects -quiet]
+if { $list_projs eq "" } {
+   create_project project_1 myproj -part xczu9eg-ffvb1156-2-e
+   set_property BOARD_PART xilinx.com:zcu102:part0:3.3 [current_project]
+}
+# CHANGE DESIGN NAME HERE
+variable design_name
+set design_name design_1
+# If you do not already have an existing IP Integrator design open,
+# you can create a design using the following command:
+#    create_bd_design $design_name
+# Creating design if needed
+set errMsg ""
+set nRet 0
+set cur_design [current_bd_design -quiet]
+set list_cells [get_bd_cells -quiet]
+if { ${design_name} eq "" } {
+   # USE CASES:
+   #    1) Design_name not set
+
+   set errMsg "Please set the variable <design_name> to a non-empty value."
+   set nRet 1
+
+} elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+   # USE CASES:
+   #    2): Current design opened AND is empty AND names same.
+   #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+   #    4): Current design opened AND is empty AND names diff; design_name exists in project.
+
+   if { $cur_design ne $design_name } {
+      common::send_msg_id "BD_TCL-001" "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+      set design_name [get_property NAME $cur_design]
+   }
+   common::send_msg_id "BD_TCL-002" "INFO" "Constructing design in IPI design <$cur_design>..."
+
+} elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+   # USE CASES:
+   #    5) Current design opened AND has components AND same names.
+
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 1
+} elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+   # USE CASES: 
+   #    6) Current opened design, has components, but diff names, design_name exists in project.
+   #    7) No opened design, design_name exists in project.
+
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 2
+
+} else {
+   # USE CASES:
+   #    8) No opened design, design_name not in project.
+   #    9) Current opened design, has components, but diff names, design_name not in project.
+
+   common::send_msg_id "BD_TCL-003" "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+
+   create_bd_design $design_name
+
+   common::send_msg_id "BD_TCL-004" "INFO" "Making design <$design_name> as current_bd_design."
+   current_bd_design $design_name
+
+}
+common::send_msg_id "BD_TCL-005" "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+if { $nRet != 0 } {
+   catch {common::send_msg_id "BD_TCL-114" "ERROR" $errMsg}
+   return $nRet
+}
+set bCheckIPsPassed 1
+##################################################################
+# CHECK IPs
+##################################################################
+set bCheckIPs 1
+if { $bCheckIPs == 1 } {
+   set list_check_ips "\ 
+xilinx.com:hls:BfW_Coeff_Gen:1.0\
+xilinx.com:hls:L1_Data_Gen:1.0\
+xilinx.com:hls:L1toORAN:1.0\
+xilinx.com:ip:axis_data_fifo:2.0\
+xilinx.com:hls:err_count:1.0\
+xilinx.com:ip:system_ila:1.1\
+xilinx.com:ip:clk_wiz:6.0\
+xilinx.com:ip:proc_sys_reset:5.0\
+xilinx.com:ip:axis_register_slice:1.1\
+xilinx.com:hls:cplane_packetizer:1.0\
+xilinx.com:ip:xlconstant:1.1\
+xilinx.com:hls:cplane_depacketizer:1.0\
+xilinx.com:hls:Ethernet_demux:1.0\
+xilinx.com:hls:ecpri_demux:1.0\
+xilinx.com:hls:ecpri_mux:1.0\
+xilinx.com:hls:ethernet_mux:1.0\
+"
+
+   set list_ips_missing ""
+   common::send_msg_id "BD_TCL-006" "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+
+   foreach ip_vlnv $list_check_ips {
+      set ip_obj [get_ipdefs -all $ip_vlnv]
+      if { $ip_obj eq "" } {
+         lappend list_ips_missing $ip_vlnv
+      }
+   }
+
+   if { $list_ips_missing ne "" } {
+      catch {common::send_msg_id "BD_TCL-115" "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+      set bCheckIPsPassed 0
+   }
+
+}
+if { $bCheckIPsPassed != 1 } {
+  common::send_msg_id "BD_TCL-1003" "WARNING" "Will not continue with creation of design due to the error(s) above."
+  return 3
+}
+##################################################################
+# DESIGN PROCs
+##################################################################
+# Hierarchical cell: Ethernet_ecpri_mux
+proc create_hier_cell_Ethernet_ecpri_mux { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Ethernet_ecpri_mux() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS
+
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS1
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 eth_data_out
+
+
+  # Create pins
+  create_bd_pin -dir I -type clk ap_clk
+  create_bd_pin -dir I -type rst ap_rst_n
+
+  # Create instance: axis_register_slice_6, and set properties
+  set axis_register_slice_6 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_6 ]
+
+  # Create instance: axis_register_slice_7, and set properties
+  set axis_register_slice_7 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_7 ]
+
+  # Create instance: axis_register_slice_8, and set properties
+  set axis_register_slice_8 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_8 ]
+
+  # Create instance: ecpri_mux_0, and set properties
+  set ecpri_mux_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ecpri_mux:1.0 ecpri_mux_0 ]
+
+  # Create instance: ethernet_mux_0, and set properties
+  set ethernet_mux_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ethernet_mux:1.0 ethernet_mux_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net L1toORAN_0_mux_config_V_V [get_bd_intf_pins S_AXIS1] [get_bd_intf_pins axis_register_slice_7/S_AXIS]
+  connect_bd_intf_net -intf_net axis_register_slice_6_M_AXIS [get_bd_intf_pins axis_register_slice_6/M_AXIS] [get_bd_intf_pins ecpri_mux_0/ctrl_data_in]
+  connect_bd_intf_net -intf_net axis_register_slice_7_M_AXIS [get_bd_intf_pins axis_register_slice_7/M_AXIS] [get_bd_intf_pins ecpri_mux_0/mux_config_in_V_V]
+  connect_bd_intf_net -intf_net axis_register_slice_8_M_AXIS [get_bd_intf_pins axis_register_slice_8/M_AXIS] [get_bd_intf_pins ethernet_mux_0/ctrl_user_data_in]
+  connect_bd_intf_net -intf_net cplane_packetizer_0_eth_data [get_bd_intf_pins S_AXIS] [get_bd_intf_pins axis_register_slice_6/S_AXIS]
+  connect_bd_intf_net -intf_net ecpri_mux_0_ctrl_user_data_out [get_bd_intf_pins axis_register_slice_8/S_AXIS] [get_bd_intf_pins ecpri_mux_0/ctrl_user_data_out]
+  connect_bd_intf_net -intf_net ethernet_mux_0_eth_data_out [get_bd_intf_pins eth_data_out] [get_bd_intf_pins ethernet_mux_0/eth_data_out]
+
+  # Create port connections
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins ap_rst_n] [get_bd_pins axis_register_slice_6/aresetn] [get_bd_pins axis_register_slice_7/aresetn] [get_bd_pins axis_register_slice_8/aresetn] [get_bd_pins ecpri_mux_0/ap_rst_n] [get_bd_pins ethernet_mux_0/ap_rst_n]
+  connect_bd_net -net sim_clk_gen_1_clk [get_bd_pins ap_clk] [get_bd_pins axis_register_slice_6/aclk] [get_bd_pins axis_register_slice_7/aclk] [get_bd_pins axis_register_slice_8/aclk] [get_bd_pins ecpri_mux_0/ap_clk] [get_bd_pins ethernet_mux_0/ap_clk]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+# Hierarchical cell: Ethernet_ecpri_demux
+proc create_hier_cell_Ethernet_ecpri_demux { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Ethernet_ecpri_demux() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 ctrl_data_out
+
+
+  # Create pins
+  create_bd_pin -dir I -type clk aclk
+  create_bd_pin -dir I -type rst aresetn
+
+  # Create instance: Ethernet_demux_0, and set properties
+  set Ethernet_demux_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:Ethernet_demux:1.0 Ethernet_demux_0 ]
+
+  # Create instance: axis_register_slice_9, and set properties
+  set axis_register_slice_9 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_9 ]
+
+  # Create instance: axis_register_slice_10, and set properties
+  set axis_register_slice_10 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_10 ]
+
+  # Create instance: ecpri_demux_0, and set properties
+  set ecpri_demux_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ecpri_demux:1.0 ecpri_demux_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins ctrl_data_out] [get_bd_intf_pins ecpri_demux_0/ctrl_data_out]
+  connect_bd_intf_net -intf_net Ethernet_demux_0_cu_data_out [get_bd_intf_pins Ethernet_demux_0/cu_data_out] [get_bd_intf_pins axis_register_slice_10/S_AXIS]
+  connect_bd_intf_net -intf_net axis_register_slice_10_M_AXIS [get_bd_intf_pins axis_register_slice_10/M_AXIS] [get_bd_intf_pins ecpri_demux_0/ctrl_user_data_in]
+  connect_bd_intf_net -intf_net axis_register_slice_9_M_AXIS [get_bd_intf_pins Ethernet_demux_0/eth_data_rx] [get_bd_intf_pins axis_register_slice_9/M_AXIS]
+  connect_bd_intf_net -intf_net ethernet_mux_0_eth_data_out [get_bd_intf_pins S_AXIS] [get_bd_intf_pins axis_register_slice_9/S_AXIS]
+
+  # Create port connections
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins aresetn] [get_bd_pins Ethernet_demux_0/ap_rst_n] [get_bd_pins axis_register_slice_10/aresetn] [get_bd_pins axis_register_slice_9/aresetn] [get_bd_pins ecpri_demux_0/ap_rst_n]
+  connect_bd_net -net sim_clk_gen_1_clk [get_bd_pins aclk] [get_bd_pins Ethernet_demux_0/ap_clk] [get_bd_pins axis_register_slice_10/aclk] [get_bd_pins axis_register_slice_9/aclk] [get_bd_pins ecpri_demux_0/ap_clk]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+# Hierarchical cell: Cplane_depacketizer
+proc create_hier_cell_Cplane_depacketizer { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Cplane_depacketizer() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 beam_data
+
+
+  # Create pins
+  create_bd_pin -dir I -type clk ap_clk
+  create_bd_pin -dir I -type rst ap_rst_n
+
+  # Create instance: axis_register_slice_11, and set properties
+  set axis_register_slice_11 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_11 ]
+
+  # Create instance: cplane_depacketizer_0, and set properties
+  set cplane_depacketizer_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:cplane_depacketizer:1.0 cplane_depacketizer_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net Conn [get_bd_intf_pins beam_data] [get_bd_intf_pins cplane_depacketizer_0/beam_data]
+  connect_bd_intf_net -intf_net axis_register_slice_11_M_AXIS [get_bd_intf_pins axis_register_slice_11/M_AXIS] [get_bd_intf_pins cplane_depacketizer_0/eth_data]
+  connect_bd_intf_net -intf_net ecpri_demux_0_ctrl_data_out [get_bd_intf_pins S_AXIS] [get_bd_intf_pins axis_register_slice_11/S_AXIS]
+
+  # Create port connections
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins ap_rst_n] [get_bd_pins axis_register_slice_11/aresetn] [get_bd_pins cplane_depacketizer_0/ap_rst_n]
+  connect_bd_net -net sim_clk_gen_1_clk [get_bd_pins ap_clk] [get_bd_pins axis_register_slice_11/aclk] [get_bd_pins cplane_depacketizer_0/ap_clk]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+# Hierarchical cell: Cplane_Packetizer
+proc create_hier_cell_Cplane_Packetizer { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Cplane_Packetizer() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS
+
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS1
+
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS2
+
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS3
+
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS4
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 eth_data
+
+
+  # Create pins
+  create_bd_pin -dir I -type clk aclk
+  create_bd_pin -dir I -type rst aresetn
+
+  # Create instance: axis_register_slice_1, and set properties
+  set axis_register_slice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_1 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.TDATA_NUM_BYTES {8} \
+ ] $axis_register_slice_1
+
+  # Create instance: axis_register_slice_2, and set properties
+  set axis_register_slice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_2 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.TDATA_NUM_BYTES {8} \
+ ] $axis_register_slice_2
+
+  # Create instance: axis_register_slice_3, and set properties
+  set axis_register_slice_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_3 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.TDATA_NUM_BYTES {1} \
+ ] $axis_register_slice_3
+
+  # Create instance: axis_register_slice_4, and set properties
+  set axis_register_slice_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_4 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.TDATA_NUM_BYTES {16} \
+ ] $axis_register_slice_4
+
+  # Create instance: axis_register_slice_5, and set properties
+  set axis_register_slice_5 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_5 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.TDATA_NUM_BYTES {9} \
+ ] $axis_register_slice_5
+
+  # Create instance: cplane_packetizer_0, and set properties
+  set cplane_packetizer_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:cplane_packetizer:1.0 cplane_packetizer_0 ]
+
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+
+  # Create instance: xlconstant_2, and set properties
+  set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {16} \
+   CONFIG.CONST_WIDTH {5} \
+ ] $xlconstant_2
+
+  # Create instance: xlconstant_3, and set properties
+  set xlconstant_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_3 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0xAEFEEEEEEEEEEEEEFFFFFFFFFFFF} \
+   CONFIG.CONST_WIDTH {128} \
+ ] $xlconstant_3
+
+  # Create instance: xlconstant_4, and set properties
+  set xlconstant_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_4 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0x00000000000200} \
+   CONFIG.CONST_WIDTH {64} \
+ ] $xlconstant_4
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net BfW_Coeff_Gen_0_bfw_coeff_V_V [get_bd_intf_pins S_AXIS3] [get_bd_intf_pins axis_register_slice_4/S_AXIS]
+  connect_bd_intf_net -intf_net L1toORAN_0_application_header_V [get_bd_intf_pins S_AXIS] [get_bd_intf_pins axis_register_slice_1/S_AXIS]
+  connect_bd_intf_net -intf_net L1toORAN_0_extension_header_V [get_bd_intf_pins S_AXIS4] [get_bd_intf_pins axis_register_slice_5/S_AXIS]
+  connect_bd_intf_net -intf_net L1toORAN_0_numBeams_V_V [get_bd_intf_pins S_AXIS2] [get_bd_intf_pins axis_register_slice_3/S_AXIS]
+  connect_bd_intf_net -intf_net L1toORAN_0_section_header_V [get_bd_intf_pins S_AXIS1] [get_bd_intf_pins axis_register_slice_2/S_AXIS]
+  connect_bd_intf_net -intf_net axis_register_slice_1_M_AXIS [get_bd_intf_pins axis_register_slice_1/M_AXIS] [get_bd_intf_pins cplane_packetizer_0/application_header_V]
+  connect_bd_intf_net -intf_net axis_register_slice_2_M_AXIS [get_bd_intf_pins axis_register_slice_2/M_AXIS] [get_bd_intf_pins cplane_packetizer_0/section_header_V]
+  connect_bd_intf_net -intf_net axis_register_slice_3_M_AXIS [get_bd_intf_pins axis_register_slice_3/M_AXIS] [get_bd_intf_pins cplane_packetizer_0/numMatrix_V_V]
+  connect_bd_intf_net -intf_net axis_register_slice_4_M_AXIS [get_bd_intf_pins axis_register_slice_4/M_AXIS] [get_bd_intf_pins cplane_packetizer_0/beam_data]
+  connect_bd_intf_net -intf_net axis_register_slice_5_M_AXIS [get_bd_intf_pins axis_register_slice_5/M_AXIS] [get_bd_intf_pins cplane_packetizer_0/extension_header_V]
+  connect_bd_intf_net -intf_net cplane_packetizer_0_eth_data [get_bd_intf_pins eth_data] [get_bd_intf_pins cplane_packetizer_0/eth_data]
+
+  # Create port connections
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins aresetn] [get_bd_pins axis_register_slice_1/aresetn] [get_bd_pins axis_register_slice_2/aresetn] [get_bd_pins axis_register_slice_3/aresetn] [get_bd_pins axis_register_slice_4/aresetn] [get_bd_pins axis_register_slice_5/aresetn] [get_bd_pins cplane_packetizer_0/ap_rst_n]
+  connect_bd_net -net sim_clk_gen_1_clk [get_bd_pins aclk] [get_bd_pins axis_register_slice_1/aclk] [get_bd_pins axis_register_slice_2/aclk] [get_bd_pins axis_register_slice_3/aclk] [get_bd_pins axis_register_slice_4/aclk] [get_bd_pins axis_register_slice_5/aclk] [get_bd_pins cplane_packetizer_0/ap_clk]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins cplane_packetizer_0/ap_start] [get_bd_pins cplane_packetizer_0/eCPRI_header_V_TVALID] [get_bd_pins cplane_packetizer_0/ethernet_header_V_TVALID] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_2_dout [get_bd_pins cplane_packetizer_0/numCoeff_V] [get_bd_pins xlconstant_2/dout]
+  connect_bd_net -net xlconstant_3_dout [get_bd_pins cplane_packetizer_0/ethernet_header_V_TDATA] [get_bd_pins xlconstant_3/dout]
+  connect_bd_net -net xlconstant_4_dout [get_bd_pins cplane_packetizer_0/eCPRI_header_V_TDATA] [get_bd_pins xlconstant_4/dout]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+# Hierarchical cell: Clock_reset
+proc create_hier_cell_Clock_reset { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Clock_reset() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 user_si570_sysclk
+
+
+  # Create pins
+  create_bd_pin -dir O -type clk clk_out1
+  create_bd_pin -dir O -from 0 -to 0 -type rst peripheral_aresetn
+  create_bd_pin -dir O -from 0 -to 0 -type rst peripheral_aresetn1
+  create_bd_pin -dir I -type rst reset
+  create_bd_pin -dir O -type clk slowest_sync_clk
+
+  # Create instance: clk_wiz, and set properties
+  set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
+  set_property -dict [ list \
+   CONFIG.AUTO_PRIMITIVE {MMCM} \
+   CONFIG.CLKIN1_JITTER_PS {33.330000000000005} \
+   CONFIG.CLKOUT1_DRIVES {Buffer} \
+   CONFIG.CLKOUT1_JITTER {110.912} \
+   CONFIG.CLKOUT1_PHASE_ERROR {84.520} \
+   CONFIG.CLKOUT2_DRIVES {Buffer} \
+   CONFIG.CLKOUT2_JITTER {89.755} \
+   CONFIG.CLKOUT2_PHASE_ERROR {84.520} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {312.500} \
+   CONFIG.CLKOUT2_USED {true} \
+   CONFIG.CLKOUT3_DRIVES {Buffer} \
+   CONFIG.CLKOUT4_DRIVES {Buffer} \
+   CONFIG.CLKOUT5_DRIVES {Buffer} \
+   CONFIG.CLKOUT6_DRIVES {Buffer} \
+   CONFIG.CLKOUT7_DRIVES {Buffer} \
+   CONFIG.CLK_IN1_BOARD_INTERFACE {user_si570_sysclk} \
+   CONFIG.ENABLE_CLOCK_MONITOR {false} \
+   CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+   CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {12.500} \
+   CONFIG.MMCM_CLKIN1_PERIOD {3.333} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
+   CONFIG.MMCM_COMPENSATION {AUTO} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {3} \
+   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.OVERRIDE_MMCM {true} \
+   CONFIG.PRIMITIVE {MMCM} \
+   CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} \
+   CONFIG.RESET_BOARD_INTERFACE {reset} \
+   CONFIG.USE_BOARD_FLOW {true} \
+   CONFIG.USE_LOCKED {true} \
+   CONFIG.USE_RESET {true} \
+ ] $clk_wiz
+
+  # Create instance: proc_sys_reset_0, and set properties
+  set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
+  set_property -dict [ list \
+   CONFIG.RESET_BOARD_INTERFACE {reset} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $proc_sys_reset_0
+
+  # Create instance: proc_sys_reset_1, and set properties
+  set proc_sys_reset_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_1 ]
+  set_property -dict [ list \
+   CONFIG.RESET_BOARD_INTERFACE {reset} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $proc_sys_reset_1
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net user_si570_sysclk_1 [get_bd_intf_pins user_si570_sysclk] [get_bd_intf_pins clk_wiz/CLK_IN1_D]
+
+  # Create port connections
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins clk_out1] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins peripheral_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins peripheral_aresetn1] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+  connect_bd_net -net reset_1 [get_bd_pins reset] [get_bd_pins clk_wiz/reset] [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in]
+  connect_bd_net -net sim_clk_gen_1_clk [get_bd_pins slowest_sync_clk] [get_bd_pins clk_wiz/clk_out2] [get_bd_pins proc_sys_reset_1/slowest_sync_clk]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+# Procedure to create entire design; Provide argument to make
+# procedure reusable. If parentCell is "", will use root.
+proc create_root_design { parentCell } {
+
+  variable script_folder
+  variable design_name
+
+  if { $parentCell eq "" } {
+     set parentCell [get_bd_cells /]
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+
+  # Create interface ports
+  set user_si570_sysclk [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 user_si570_sysclk ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {300000000} \
+   ] $user_si570_sysclk
+
+
+  # Create ports
+  set reset [ create_bd_port -dir I -type rst reset ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $reset
+
+  # Create instance: BfW_Coeff_Gen_0, and set properties
+  set BfW_Coeff_Gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:BfW_Coeff_Gen:1.0 BfW_Coeff_Gen_0 ]
+
+  # Create instance: Clock_reset
+  create_hier_cell_Clock_reset [current_bd_instance .] Clock_reset
+
+  # Create instance: Cplane_Packetizer
+  create_hier_cell_Cplane_Packetizer [current_bd_instance .] Cplane_Packetizer
+
+  # Create instance: Cplane_depacketizer
+  create_hier_cell_Cplane_depacketizer [current_bd_instance .] Cplane_depacketizer
+
+  # Create instance: Ethernet_ecpri_demux
+  create_hier_cell_Ethernet_ecpri_demux [current_bd_instance .] Ethernet_ecpri_demux
+
+  # Create instance: Ethernet_ecpri_mux
+  create_hier_cell_Ethernet_ecpri_mux [current_bd_instance .] Ethernet_ecpri_mux
+
+  # Create instance: L1_Data_Gen_0, and set properties
+  set L1_Data_Gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:L1_Data_Gen:1.0 L1_Data_Gen_0 ]
+
+  # Create instance: L1toORAN_0, and set properties
+  set L1toORAN_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:L1toORAN:1.0 L1toORAN_0 ]
+
+  # Create instance: axis_data_fifo_0, and set properties
+  set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.IS_ACLK_ASYNC {1} \
+   CONFIG.TDATA_NUM_BYTES {16} \
+ ] $axis_data_fifo_0
+
+  # Create instance: axis_data_fifo_1, and set properties
+  set axis_data_fifo_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_1 ]
+  set_property -dict [ list \
+   CONFIG.FIFO_DEPTH {16} \
+   CONFIG.IS_ACLK_ASYNC {1} \
+   CONFIG.TDATA_NUM_BYTES {8} \
+ ] $axis_data_fifo_1
+
+  # Create instance: err_count_0, and set properties
+  set err_count_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:err_count:1.0 err_count_0 ]
+
+  # Create instance: system_ila_0, and set properties
+  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_BRAM_CNT {4.5} \
+   CONFIG.C_MON_TYPE {INTERFACE} \
+   CONFIG.C_NUM_OF_PROBES {2} \
+   CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+ ] $system_ila_0
+
+  # Create instance: system_ila_1, and set properties
+  set system_ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_1 ]
+  set_property -dict [ list \
+   CONFIG.C_BRAM_CNT {0.5} \
+   CONFIG.C_MON_TYPE {NATIVE} \
+   CONFIG.C_NUM_OF_PROBES {2} \
+ ] $system_ila_1
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net BfW_Coeff_Gen_0_bfw_coeff_V_V [get_bd_intf_pins BfW_Coeff_Gen_0/bfw_coeff_V_V] [get_bd_intf_pins Cplane_Packetizer/S_AXIS3]
+  connect_bd_intf_net -intf_net Cplane_depacketizer_beam_data [get_bd_intf_pins Cplane_depacketizer/beam_data] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+connect_bd_intf_net -intf_net [get_bd_intf_nets Cplane_depacketizer_beam_data] [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins system_ila_0/SLOT_0_AXIS]
+  connect_bd_intf_net -intf_net L1_Data_Gen_0_L1_data_out_V [get_bd_intf_pins L1_Data_Gen_0/L1_data_out_V] [get_bd_intf_pins axis_data_fifo_1/S_AXIS]
+  connect_bd_intf_net -intf_net L1toORAN_0_application_header_V [get_bd_intf_pins Cplane_Packetizer/S_AXIS] [get_bd_intf_pins L1toORAN_0/application_header_V]
+  connect_bd_intf_net -intf_net L1toORAN_0_extension_header_V [get_bd_intf_pins Cplane_Packetizer/S_AXIS4] [get_bd_intf_pins L1toORAN_0/extension_header_V]
+  connect_bd_intf_net -intf_net L1toORAN_0_mux_config_V_V [get_bd_intf_pins Ethernet_ecpri_mux/S_AXIS1] [get_bd_intf_pins L1toORAN_0/mux_config_V_V]
+  connect_bd_intf_net -intf_net L1toORAN_0_numBeams_V_V [get_bd_intf_pins Cplane_Packetizer/S_AXIS2] [get_bd_intf_pins L1toORAN_0/numBeams_V_V]
+  connect_bd_intf_net -intf_net L1toORAN_0_section_header_V [get_bd_intf_pins Cplane_Packetizer/S_AXIS1] [get_bd_intf_pins L1toORAN_0/section_header_V]
+  connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_pins Cplane_depacketizer/S_AXIS] [get_bd_intf_pins Ethernet_ecpri_demux/ctrl_data_out]
+  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins err_count_0/observed_output]
+  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS_1 [get_bd_intf_pins L1toORAN_0/L1_axis_V] [get_bd_intf_pins axis_data_fifo_1/M_AXIS]
+  connect_bd_intf_net -intf_net cplane_packetizer_0_eth_data [get_bd_intf_pins Cplane_Packetizer/eth_data] [get_bd_intf_pins Ethernet_ecpri_mux/S_AXIS]
+  connect_bd_intf_net -intf_net ethernet_mux_0_eth_data_out [get_bd_intf_pins Ethernet_ecpri_demux/S_AXIS] [get_bd_intf_pins Ethernet_ecpri_mux/eth_data_out]
+  connect_bd_intf_net -intf_net user_si570_sysclk_1 [get_bd_intf_ports user_si570_sysclk] [get_bd_intf_pins Clock_reset/user_si570_sysclk]
+
+  # Create port connections
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins Clock_reset/clk_out1] [get_bd_pins L1_Data_Gen_0/ap_clk] [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins err_count_0/ap_clk] [get_bd_pins system_ila_1/clk]
+  connect_bd_net -net err_count_0_error_count [get_bd_pins err_count_0/error_count] [get_bd_pins system_ila_1/probe0]
+  connect_bd_net -net err_count_0_iteration_count [get_bd_pins err_count_0/iteration_count] [get_bd_pins system_ila_1/probe1]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins Clock_reset/peripheral_aresetn] [get_bd_pins L1_Data_Gen_0/ap_rst_n] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins err_count_0/ap_rst_n]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins BfW_Coeff_Gen_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1] [get_bd_pins Cplane_Packetizer/aresetn] [get_bd_pins Cplane_depacketizer/ap_rst_n] [get_bd_pins Ethernet_ecpri_demux/aresetn] [get_bd_pins Ethernet_ecpri_mux/ap_rst_n] [get_bd_pins L1toORAN_0/ap_rst_n] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins system_ila_0/resetn]
+  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins Clock_reset/reset]
+  connect_bd_net -net sim_clk_gen_1_clk [get_bd_pins BfW_Coeff_Gen_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk] [get_bd_pins Cplane_Packetizer/aclk] [get_bd_pins Cplane_depacketizer/ap_clk] [get_bd_pins Ethernet_ecpri_demux/aclk] [get_bd_pins Ethernet_ecpri_mux/ap_clk] [get_bd_pins L1toORAN_0/ap_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/m_axis_aclk] [get_bd_pins system_ila_0/clk]
+
+  # Create address segments
+
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+
+  validate_bd_design
+  save_bd_design
+}
+# End of create_root_design()
+##################################################################
+# MAIN FLOW
+##################################################################
+create_root_design ""
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:L1_Data_Gen:1.0 [get_ips  design_1_L1_Data_Gen_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_L1_Data_Gen_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:ecpri_mux:1.0 [get_ips  design_1_ecpri_mux_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_ecpri_mux_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+startgroup
+make_bd_pins_external  [get_bd_pins Ethernet_ecpri_mux/ecpri_mux_0/ecpri_mux_state_out_V]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Ethernet_ecpri_mux/ecpri_mux_0/num_section_out_V]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Ethernet_ecpri_mux/ecpri_mux_0/section_count_out_V]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Ethernet_ecpri_mux/ecpri_mux_0/layer_count_out_V]
+endgroup
+save_bd_design
+make_wrapper -files [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+regenerate_bd_layout
+save_bd_design
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source design_1_wrapper.tcl
+restart
+add_force {/design_1_wrapper/reset} -radix hex {0 0ns}
+add_force {/design_1_wrapper/user_si570_sysclk_clk_p} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/design_1_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+add_force {/design_1_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+save_wave_config {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+set_property xsim.view /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg [get_filesets sim_1]
+run all
+close_sim
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:ecpri_mux:1.0 [get_ips  design_1_ecpri_mux_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_ecpri_mux_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source design_1_wrapper.tcl
+add_force {/design_1_wrapper/reset} -radix hex {0 0ns}
+add_force {/design_1_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+add_force {/design_1_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+run all
+close_sim
+create_bd_design "U_C_plane_integration"
+update_compile_order -fileset sources_1
+open_bd_design {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+current_bd_design [get_bd_designs U_C_plane_integration]
+current_bd_design design_1
+set tmpCopyObjs [concat  [get_bd_cells {Clock_reset Cplane_Packetizer Ethernet_ecpri_mux Cplane_depacketizer Ethernet_ecpri_demux axis_data_fifo_0 axis_data_fifo_1 err_count_0 L1_Data_Gen_0 BfW_Coeff_Gen_0 system_ila_0 system_ila_1 L1toORAN_0}] [get_bd_intf_ports {user_si570_sysclk}] [get_bd_ports {reset ecpri_mux_state_out_V_0 section_count_out_V_0 num_section_out_V_0 layer_count_out_V_0}] [get_bd_intf_nets {cplane_packetizer_0_eth_data axis_data_fifo_0_M_AXIS_1 L1toORAN_0_application_header_V BfW_Coeff_Gen_0_bfw_coeff_V_V L1_Data_Gen_0_L1_data_out_V L1toORAN_0_mux_config_V_V Cplane_depacketizer_beam_data ethernet_mux_0_eth_data_out S_AXIS_1 user_si570_sysclk_1 L1toORAN_0_numBeams_V_V axis_data_fifo_0_M_AXIS L1toORAN_0_extension_header_V L1toORAN_0_section_header_V}] [get_bd_nets {err_count_0_iteration_count proc_sys_reset_0_peripheral_aresetn Ethernet_ecpri_mux_layer_count_out_V_0 Ethernet_ecpri_mux_section_count_out_V_0 reset_1 Ethernet_ecpri_mux_ecpri_mux_state_out_V_0 proc_sys_reset_0_peripheral_aresetn1 err_count_0_error_count clk_wiz_clk_out1 Ethernet_ecpri_mux_num_section_out_V_0 sim_clk_gen_1_clk}]]
+current_bd_design U_C_plane_integration
+copy_bd_objs -from_design design_1 / $tmpCopyObjs
+regenerate_bd_layout
+save_bd_design
+set_property  ip_repo_paths  {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src/U_plane_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/sim_src} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/sim_src} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/sim_src /home/admin4/Desktop/saikiran/ORAN/Integration/U-Plane_ORAN/Hls} [current_project]
+update_ip_catalog
+add_files -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/U-Plane_ORAN/Hls/tkeep_cleaner_uplane_packetizer.v
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:Uplane_packetiser:1.0 Uplane_packetiser_0
+endgroup
+copy_bd_objs /  [get_bd_cells {Ethernet_ecpri_mux/axis_register_slice_6}]
+create_bd_cell -type module -reference tkeep_uplane_packetizer tkeep_uplane_packeti_0
+set_property location {6 1876 624} [get_bd_cells tkeep_uplane_packeti_0]
+connect_bd_intf_net [get_bd_intf_pins Uplane_packetiser_0/eth_data] [get_bd_intf_pins tkeep_uplane_packeti_0/slave]
+connect_bd_intf_net [get_bd_intf_pins tkeep_uplane_packeti_0/master] [get_bd_intf_pins axis_register_slice_6/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_register_slice_6/M_AXIS] [get_bd_intf_pins Ethernet_ecpri_mux/ecpri_mux_0/user_data_in]
+set_property location {6 2345 364} [get_bd_cells axis_register_slice_6]
+move_bd_cells [get_bd_cells Ethernet_ecpri_mux] [get_bd_cells axis_register_slice_6]
+set_property location {3.5 1245 489} [get_bd_cells L1toORAN_0]
+report_ip_status -name ip_status 
+save_bd_design
+close_bd_design [get_bd_designs U_C_plane_integration]
+current_bd_design [get_bd_designs design_1]
+export_ip_user_files -of_objects  [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/U_C_plane_integration/U_C_plane_integration.bd] -no_script -reset -force -quiet
+remove_files  /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/U_C_plane_integration/U_C_plane_integration.bd
+file delete -force /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/U_C_plane_integration
+create_bd_design "U_Plane"
+update_compile_order -fileset sources_1
+create_bd_design "CU_Plane"
+update_compile_order -fileset sources_1
+close_bd_design [get_bd_designs CU_Plane]
+source /home/admin4/Desktop/saikiran/ORAN/Integration/U-Plane_ORAN/Packetiser/Uplane.tcl
+open_bd_design {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd}
+current_bd_design [get_bd_designs design_1]
+current_bd_design [get_bd_designs CU_Plane]
+current_bd_design design_1
+set tmpCopyObjs [concat  [get_bd_cells {Clock_reset Cplane_Packetizer Ethernet_ecpri_mux Cplane_depacketizer Ethernet_ecpri_demux axis_data_fifo_0 axis_data_fifo_1 err_count_0 L1_Data_Gen_0 BfW_Coeff_Gen_0 system_ila_0 system_ila_1 L1toORAN_0}] [get_bd_intf_ports {user_si570_sysclk}] [get_bd_ports {reset ecpri_mux_state_out_V_0 section_count_out_V_0 num_section_out_V_0 layer_count_out_V_0}] [get_bd_intf_nets {cplane_packetizer_0_eth_data axis_data_fifo_0_M_AXIS_1 L1toORAN_0_application_header_V BfW_Coeff_Gen_0_bfw_coeff_V_V L1_Data_Gen_0_L1_data_out_V L1toORAN_0_mux_config_V_V Cplane_depacketizer_beam_data ethernet_mux_0_eth_data_out S_AXIS_1 user_si570_sysclk_1 L1toORAN_0_numBeams_V_V axis_data_fifo_0_M_AXIS L1toORAN_0_extension_header_V L1toORAN_0_section_header_V}] [get_bd_nets {err_count_0_iteration_count proc_sys_reset_0_peripheral_aresetn Ethernet_ecpri_mux_layer_count_out_V_0 Ethernet_ecpri_mux_section_count_out_V_0 reset_1 Ethernet_ecpri_mux_ecpri_mux_state_out_V_0 proc_sys_reset_0_peripheral_aresetn1 err_count_0_error_count clk_wiz_clk_out1 Ethernet_ecpri_mux_num_section_out_V_0 sim_clk_gen_1_clk}]]
+current_bd_design CU_Plane
+copy_bd_objs -from_design design_1 / $tmpCopyObjs
+current_bd_design [get_bd_designs U_Plane]
+current_bd_design [get_bd_designs CU_Plane]
+current_bd_design U_Plane
+set tmpCopyObjs [concat  [get_bd_cells {xlconstant_0 epacket_gen_0 xlconstant_1 Uplane_packetiser_0 xlconstant_2 tkeep_uplane_packeti_0 xlconstant_3 xlconstant_4 xlconstant_5 sim_clk_gen_0 xlconstant_6 xlconstant_7}] [get_bd_ports {master_TLAST_0 master_TVALID_0 master_TDATA_0 master_TKEEP_0 check_0 state_out_0}] [get_bd_intf_nets {epacket_gen_0_dout Uplane_packetiser_0_eth_data}] [get_bd_nets {xlconstant_7_dout xlconstant_0_dout xlconstant_6_dout tkeep_uplane_packeti_0_master_TKEEP xlconstant_4_dout tkeep_uplane_packeti_0_master_TLAST tkeep_uplane_packeti_0_master_TDATA sim_clk_gen_0_clk xlconstant_3_dout Uplane_packetiser_0_state_out Uplane_packetiser_0_check xlconstant_5_dout xlconstant_1_dout xlconstant_2_dout tkeep_uplane_packeti_0_master_TVALID sim_clk_gen_0_sync_rst}]]
+current_bd_design CU_Plane
+copy_bd_objs -from_design U_Plane / $tmpCopyObjs
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets tkeep_uplane_packeti_0_master_TLAST] [get_bd_nets tkeep_uplane_packeti_0_master_TKEEP] [get_bd_nets tkeep_uplane_packeti_0_master_TVALID] [get_bd_nets tkeep_uplane_packeti_0_master_TDATA] [get_bd_ports master_TLAST_0] [get_bd_ports master_TKEEP_0] [get_bd_ports master_TVALID_0] [get_bd_ports master_TDATA_0]
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets xlconstant_6_dout]
+delete_bd_objs [get_bd_cells xlconstant_6]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_2
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_2/S_AXIS] [get_bd_intf_pins tkeep_uplane_packeti_0/master]
+set_property location {5.5 1690 859} [get_bd_cells axis_data_fifo_2]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_2/M_AXIS] [get_bd_intf_pins Ethernet_ecpri_mux/ecpri_mux_0/user_data_in]
+connect_bd_net [get_bd_pins axis_data_fifo_2/s_axis_aresetn] [get_bd_pins Clock_reset/peripheral_aresetn1]
+connect_bd_net [get_bd_pins axis_data_fifo_2/s_axis_aclk] [get_bd_pins Clock_reset/slowest_sync_clk]
+regenerate_bd_layout
+startgroup
+disconnect_bd_net /sim_clk_gen_0_clk [get_bd_pins sim_clk_gen_0/clk]
+disconnect_bd_net /sim_clk_gen_0_sync_rst [get_bd_pins sim_clk_gen_0/sync_rst]
+endgroup
+delete_bd_objs [get_bd_cells sim_clk_gen_0]
+startgroup
+disconnect_bd_net /sim_clk_gen_0_clk [get_bd_pins tkeep_uplane_packeti_0/clk]
+disconnect_bd_net /sim_clk_gen_0_sync_rst [get_bd_pins tkeep_uplane_packeti_0/reset_n]
+endgroup
+startgroup
+delete_bd_objs [get_bd_nets sim_clk_gen_0_clk]
+delete_bd_objs [get_bd_nets sim_clk_gen_0_sync_rst]
+endgroup
+startgroup
+set_property -dict [list CONFIG.FIFO_DEPTH {8192}] [get_bd_cells axis_data_fifo_2]
+endgroup
+connect_bd_net [get_bd_pins tkeep_uplane_packeti_0/clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins tkeep_uplane_packeti_0/reset_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+connect_bd_net [get_bd_pins Uplane_packetiser_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins Uplane_packetiser_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TKEEP.VALUE_SRC USER CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells axis_data_fifo_2]
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {16} CONFIG.HAS_TKEEP {1} CONFIG.HAS_TLAST {1}] [get_bd_cells axis_data_fifo_2]
+endgroup
+save_bd_design
+connect_bd_net [get_bd_pins epacket_gen_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins epacket_gen_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+group_bd_cells Uplane_packetiser [get_bd_cells axis_data_fifo_2] [get_bd_cells xlconstant_0] [get_bd_cells epacket_gen_0] [get_bd_cells xlconstant_1] [get_bd_cells Uplane_packetiser_0] [get_bd_cells xlconstant_2] [get_bd_cells xlconstant_3] [get_bd_cells xlconstant_4] [get_bd_cells xlconstant_5] [get_bd_cells xlconstant_7] [get_bd_cells tkeep_uplane_packeti_0]
+regenerate_bd_layout
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+make_wrapper -files [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -top
+add_files -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/hdl/CU_Plane_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top CU_Plane_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source CU_Plane_wrapper.tcl
+add_force {/CU_Plane_wrapper/reset} -radix hex {0 0ns}
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+restart
+run all
+save_wave_config {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg}
+close_sim
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {CU_Plane_ecpri_mux_0_0 design_1_ecpri_mux_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {CU_Plane_ecpri_mux_0_0 design_1_ecpri_mux_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source CU_Plane_wrapper.tcl
+restart
+add_force {/CU_Plane_wrapper/reset} -radix hex {0 0ns}
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+run all
+close_sim
+update_ip_catalog -rebuild -scan_changes
+current_bd_design [get_bd_designs CU_Plane]
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {CU_Plane_ecpri_mux_0_0 design_1_ecpri_mux_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {CU_Plane_ecpri_mux_0_0 design_1_ecpri_mux_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source CU_Plane_wrapper.tcl
+restart
+add_force {/CU_Plane_wrapper/reset} -radix hex {0 0ns}
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+run all
+close_sim
+current_bd_design [get_bd_designs CU_Plane]
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source CU_Plane_wrapper.tcl
+close_sim
+report_ip_status -name ip_status 
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source CU_Plane_wrapper.tcl
+add_force {/CU_Plane_wrapper/reset} -radix hex {0 0ns}
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/CU_Plane_wrapper/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+run all
+close_sim
+current_bd_design [get_bd_designs U_Plane]
+close_bd_design [get_bd_designs U_Plane]
+close_bd_design [get_bd_designs CU_Plane]
+current_bd_design [get_bd_designs design_1]
+export_ip_user_files -of_objects  [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/hdl/CU_Plane_wrapper.v] -no_script -reset -force -quiet
+remove_files  /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/hdl/CU_Plane_wrapper.v
+file delete -force /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/hdl/CU_Plane_wrapper.v
+export_ip_user_files -of_objects  [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd] -no_script -reset -force -quiet
+remove_files  /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane/CU_Plane.bd
+file delete -force /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/CU_Plane
+export_ip_user_files -of_objects  [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/U_Plane/U_Plane.bd] -no_script -reset -force -quiet
+remove_files  /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/U_Plane/U_Plane.bd
+file delete -force /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/U_Plane
+report_ip_status -name ip_status 
+open_bd_design {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+create_bd_design "Uplane"
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/sim_src} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/hls_src /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/sim_src /home/admin4/Desktop/saikiran/ORAN/Integration/Uplane_finalworking_prj/hls} [current_project]
+update_ip_catalog
+export_ip_user_files -of_objects  [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/U-Plane_ORAN/Hls/tkeep_cleaner_uplane_packetizer.v] -no_script -reset -force -quiet
+remove_files  /home/admin4/Desktop/saikiran/ORAN/Integration/U-Plane_ORAN/Hls/tkeep_cleaner_uplane_packetizer.v
+add_files -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/Uplane_finalworking_prj/Verilog/tkeep_cleaner_uplane_packetizer.v
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs design_1]
+regenerate_bd_layout
+save_bd_design
+current_bd_design [get_bd_designs Uplane]
+################################################################
+# This is a generated script based on design: Uplane
+#
+# Though there are limitations about the generated script,
+# the main purpose of this utility is to make learning
+# IP Integrator Tcl commands easier.
+################################################################
+namespace eval _tcl {
+proc get_script_folder {} {
+   set script_path [file normalize [info script]]
+   set script_folder [file dirname $script_path]
+   return $script_folder
+}
+}
+variable script_folder
+set script_folder [_tcl::get_script_folder]
+################################################################
+# Check if script is running in correct Vivado version.
+################################################################
+set scripts_vivado_version 2019.1
+set current_vivado_version [version -short]
+if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+   puts ""
+   catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+
+   return 1
+}
+################################################################
+# START
+################################################################
+# To test this script, run the following commands from Vivado Tcl console:
+# source Uplane_script.tcl
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# tkeep_uplane_packetizer
+# Please add the sources of those modules before sourcing this Tcl script.
+# If there is no project opened, this script will create a
+# project, but make sure you do not have an existing project
+# <./myproj/project_1.xpr> in the current working folder.
+set list_projs [get_projects -quiet]
+if { $list_projs eq "" } {
+   create_project project_1 myproj -part xczu19eg-ffvd1760-3-e
+}
+# CHANGE DESIGN NAME HERE
+variable design_name
+set design_name Uplane
+# If you do not already have an existing IP Integrator design open,
+# you can create a design using the following command:
+#    create_bd_design $design_name
+# Creating design if needed
+set errMsg ""
+set nRet 0
+set cur_design [current_bd_design -quiet]
+set list_cells [get_bd_cells -quiet]
+if { ${design_name} eq "" } {
+   # USE CASES:
+   #    1) Design_name not set
+
+   set errMsg "Please set the variable <design_name> to a non-empty value."
+   set nRet 1
+
+} elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+   # USE CASES:
+   #    2): Current design opened AND is empty AND names same.
+   #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+   #    4): Current design opened AND is empty AND names diff; design_name exists in project.
+
+   if { $cur_design ne $design_name } {
+      common::send_msg_id "BD_TCL-001" "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+      set design_name [get_property NAME $cur_design]
+   }
+   common::send_msg_id "BD_TCL-002" "INFO" "Constructing design in IPI design <$cur_design>..."
+
+} elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+   # USE CASES:
+   #    5) Current design opened AND has components AND same names.
+
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 1
+} elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+   # USE CASES: 
+   #    6) Current opened design, has components, but diff names, design_name exists in project.
+   #    7) No opened design, design_name exists in project.
+
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 2
+
+} else {
+   # USE CASES:
+   #    8) No opened design, design_name not in project.
+   #    9) Current opened design, has components, but diff names, design_name not in project.
+
+   common::send_msg_id "BD_TCL-003" "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+
+   create_bd_design $design_name
+
+   common::send_msg_id "BD_TCL-004" "INFO" "Making design <$design_name> as current_bd_design."
+   current_bd_design $design_name
+
+}
+common::send_msg_id "BD_TCL-005" "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+if { $nRet != 0 } {
+   catch {common::send_msg_id "BD_TCL-114" "ERROR" $errMsg}
+   return $nRet
+}
+set bCheckIPsPassed 1
+##################################################################
+# CHECK IPs
+##################################################################
+set bCheckIPs 1
+if { $bCheckIPs == 1 } {
+   set list_check_ips "\ 
+xilinx.com:hls:Uplane_packetiser:1.0\
+xilinx.com:ip:axis_data_fifo:2.0\
+xilinx.com:hls:epacket_gen:1.0\
+xilinx.com:ip:sim_clk_gen:1.0\
+xilinx.com:hls:uplane_depacketiser:1.0\
+xilinx.com:ip:xlconstant:1.1\
+"
+
+   set list_ips_missing ""
+   common::send_msg_id "BD_TCL-006" "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+
+   foreach ip_vlnv $list_check_ips {
+      set ip_obj [get_ipdefs -all $ip_vlnv]
+      if { $ip_obj eq "" } {
+         lappend list_ips_missing $ip_vlnv
+      }
+   }
+
+   if { $list_ips_missing ne "" } {
+      catch {common::send_msg_id "BD_TCL-115" "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+      set bCheckIPsPassed 0
+   }
+
+}
+##################################################################
+# CHECK Modules
+##################################################################
+set bCheckModules 1
+if { $bCheckModules == 1 } {
+   set list_check_mods "\ 
+tkeep_uplane_packetizer\
+"
+
+   set list_mods_missing ""
+   common::send_msg_id "BD_TCL-006" "INFO" "Checking if the following modules exist in the project's sources: $list_check_mods ."
+
+   foreach mod_vlnv $list_check_mods {
+      if { [can_resolve_reference $mod_vlnv] == 0 } {
+         lappend list_mods_missing $mod_vlnv
+      }
+   }
+
+   if { $list_mods_missing ne "" } {
+      catch {common::send_msg_id "BD_TCL-115" "ERROR" "The following module(s) are not found in the project: $list_mods_missing" }
+      common::send_msg_id "BD_TCL-008" "INFO" "Please add source files for the missing module(s) above."
+      set bCheckIPsPassed 0
+   }
+}
+if { $bCheckIPsPassed != 1 } {
+  common::send_msg_id "BD_TCL-1003" "WARNING" "Will not continue with creation of design due to the error(s) above."
+  return 3
+}
+##################################################################
+# DESIGN PROCs
+##################################################################
+# Procedure to create entire design; Provide argument to make
+# procedure reusable. If parentCell is "", will use root.
+proc create_root_design { parentCell } {
+
+  variable script_folder
+  variable design_name
+
+  if { $parentCell eq "" } {
+     set parentCell [get_bd_cells /]
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+
+  # Create interface ports
+
+  # Create ports
+  set RE_state_out_V_0 [ create_bd_port -dir O -from 7 -to 0 -type data RE_state_out_V_0 ]
+  set SECTIONPRB_count_V_0 [ create_bd_port -dir O -from 7 -to 0 -type data SECTIONPRB_count_V_0 ]
+  set counter_PRB_V_0 [ create_bd_port -dir O -from 7 -to 0 -type data counter_PRB_V_0 ]
+  set data_out_TDATA_0 [ create_bd_port -dir O -from 135 -to 0 data_out_TDATA_0 ]
+  set data_out_TKEEP_0 [ create_bd_port -dir O -from 15 -to 0 data_out_TKEEP_0 ]
+  set data_out_TLAST_0 [ create_bd_port -dir O -from 0 -to 0 data_out_TLAST_0 ]
+  set data_out_TVALID_0 [ create_bd_port -dir O data_out_TVALID_0 ]
+  set ecpri_cnfg_out_TDATA_0 [ create_bd_port -dir O -from 47 -to 0 ecpri_cnfg_out_TDATA_0 ]
+  set ecpri_cnfg_out_TLAST_0 [ create_bd_port -dir O -from 0 -to 0 ecpri_cnfg_out_TLAST_0 ]
+  set ecpri_cnfg_out_TVALID_0 [ create_bd_port -dir O ecpri_cnfg_out_TVALID_0 ]
+  set iq_msg_state_out_V_0 [ create_bd_port -dir O -from 7 -to 0 -type data iq_msg_state_out_V_0 ]
+  set state_out_0 [ create_bd_port -dir O -from 7 -to 0 -type data state_out_0 ]
+
+  # Create instance: Uplane_packetiser_0, and set properties
+  set Uplane_packetiser_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:Uplane_packetiser:1.0 Uplane_packetiser_0 ]
+
+  # Create instance: axis_data_fifo_0, and set properties
+  set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0 ]
+  set_property -dict [ list \
+   CONFIG.FIFO_DEPTH {8192} \
+   CONFIG.HAS_TKEEP {1} \
+   CONFIG.HAS_TLAST {1} \
+   CONFIG.TDATA_NUM_BYTES {16} \
+ ] $axis_data_fifo_0
+
+  # Create instance: epacket_gen_0, and set properties
+  set epacket_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:epacket_gen:1.0 epacket_gen_0 ]
+
+  # Create instance: sim_clk_gen_0, and set properties
+  set sim_clk_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:sim_clk_gen:1.0 sim_clk_gen_0 ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {312500000} \
+   CONFIG.INITIAL_RESET_CLOCK_CYCLES {0} \
+ ] $sim_clk_gen_0
+
+  # Create instance: tkeep_uplane_packeti_0, and set properties
+  set block_name tkeep_uplane_packetizer
+  set block_cell_name tkeep_uplane_packeti_0
+  if { [catch {set tkeep_uplane_packeti_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $tkeep_uplane_packeti_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: uplane_depacketiser_0, and set properties
+  set uplane_depacketiser_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:uplane_depacketiser:1.0 uplane_depacketiser_0 ]
+
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+
+  # Create instance: xlconstant_2, and set properties
+  set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0x00002803C7EF} \
+   CONFIG.CONST_WIDTH {48} \
+ ] $xlconstant_2
+
+  # Create instance: xlconstant_3, and set properties
+  set xlconstant_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_3 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0x323D01004D250001} \
+   CONFIG.CONST_WIDTH {64} \
+ ] $xlconstant_3
+
+  # Create instance: xlconstant_4, and set properties
+  set xlconstant_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_4 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0x12718110} \
+   CONFIG.CONST_WIDTH {32} \
+ ] $xlconstant_4
+
+  # Create instance: xlconstant_5, and set properties
+  set xlconstant_5 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_5 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0xaefe413a35000002ffffffffffff} \
+   CONFIG.CONST_WIDTH {112} \
+ ] $xlconstant_5
+
+  # Create instance: xlconstant_6, and set properties
+  set xlconstant_6 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_6 ]
+
+  # Create instance: xlconstant_8, and set properties
+  set xlconstant_8 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_8 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {200} \
+   CONFIG.CONST_WIDTH {16} \
+ ] $xlconstant_8
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net Uplane_packetiser_0_eth_data [get_bd_intf_pins Uplane_packetiser_0/eth_data] [get_bd_intf_pins tkeep_uplane_packeti_0/slave]
+  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins uplane_depacketiser_0/data_in]
+  connect_bd_intf_net -intf_net epacket_gen_0_dout [get_bd_intf_pins Uplane_packetiser_0/IQ_data_V] [get_bd_intf_pins epacket_gen_0/dout]
+  connect_bd_intf_net -intf_net tkeep_uplane_packeti_0_master [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins tkeep_uplane_packeti_0/master]
+
+  # Create port connections
+  connect_bd_net -net Uplane_packetiser_0_state_out [get_bd_ports state_out_0] [get_bd_pins Uplane_packetiser_0/state_out]
+  connect_bd_net -net sim_clk_gen_0_clk [get_bd_pins Uplane_packetiser_0/ap_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins epacket_gen_0/ap_clk] [get_bd_pins sim_clk_gen_0/clk] [get_bd_pins tkeep_uplane_packeti_0/clk] [get_bd_pins uplane_depacketiser_0/ap_clk]
+  connect_bd_net -net sim_clk_gen_0_sync_rst [get_bd_pins Uplane_packetiser_0/ap_rst_n] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins epacket_gen_0/ap_rst_n] [get_bd_pins sim_clk_gen_0/sync_rst] [get_bd_pins tkeep_uplane_packeti_0/reset_n] [get_bd_pins uplane_depacketiser_0/ap_rst_n]
+  connect_bd_net -net uplane_depacketiser_0_RE_state_out_V [get_bd_ports RE_state_out_V_0] [get_bd_pins uplane_depacketiser_0/RE_state_out_V]
+  connect_bd_net -net uplane_depacketiser_0_SECTIONPRB_count_V [get_bd_ports SECTIONPRB_count_V_0] [get_bd_pins uplane_depacketiser_0/SECTIONPRB_count_V]
+  connect_bd_net -net uplane_depacketiser_0_counter_PRB_V [get_bd_ports counter_PRB_V_0] [get_bd_pins uplane_depacketiser_0/counter_PRB_V]
+  connect_bd_net -net uplane_depacketiser_0_data_out_TDATA [get_bd_ports data_out_TDATA_0] [get_bd_pins uplane_depacketiser_0/data_out_TDATA]
+  connect_bd_net -net uplane_depacketiser_0_data_out_TKEEP [get_bd_ports data_out_TKEEP_0] [get_bd_pins uplane_depacketiser_0/data_out_TKEEP]
+  connect_bd_net -net uplane_depacketiser_0_data_out_TLAST [get_bd_ports data_out_TLAST_0] [get_bd_pins uplane_depacketiser_0/data_out_TLAST]
+  connect_bd_net -net uplane_depacketiser_0_data_out_TVALID [get_bd_ports data_out_TVALID_0] [get_bd_pins uplane_depacketiser_0/data_out_TVALID]
+  connect_bd_net -net uplane_depacketiser_0_ecpri_cnfg_out_TDATA [get_bd_ports ecpri_cnfg_out_TDATA_0] [get_bd_pins uplane_depacketiser_0/ecpri_cnfg_out_TDATA]
+  connect_bd_net -net uplane_depacketiser_0_ecpri_cnfg_out_TLAST [get_bd_ports ecpri_cnfg_out_TLAST_0] [get_bd_pins uplane_depacketiser_0/ecpri_cnfg_out_TLAST]
+  connect_bd_net -net uplane_depacketiser_0_ecpri_cnfg_out_TVALID [get_bd_ports ecpri_cnfg_out_TVALID_0] [get_bd_pins uplane_depacketiser_0/ecpri_cnfg_out_TVALID]
+  connect_bd_net -net uplane_depacketiser_0_iq_msg_state_out_V [get_bd_ports iq_msg_state_out_V_0] [get_bd_pins uplane_depacketiser_0/iq_msg_state_out_V]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins Uplane_packetiser_0/ap_start] [get_bd_pins epacket_gen_0/ap_start] [get_bd_pins uplane_depacketiser_0/ap_start] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins Uplane_packetiser_0/Ethernet_header_V_TVALID] [get_bd_pins Uplane_packetiser_0/application_header_V_TVALID] [get_bd_pins Uplane_packetiser_0/eCPRI_header_V_TVALID] [get_bd_pins Uplane_packetiser_0/section_header_V_TVALID] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net xlconstant_2_dout [get_bd_pins Uplane_packetiser_0/section_header_V_TDATA] [get_bd_pins xlconstant_2/dout]
+  connect_bd_net -net xlconstant_3_dout [get_bd_pins Uplane_packetiser_0/eCPRI_header_V_TDATA] [get_bd_pins xlconstant_3/dout]
+  connect_bd_net -net xlconstant_4_dout [get_bd_pins Uplane_packetiser_0/application_header_V_TDATA] [get_bd_pins xlconstant_4/dout]
+  connect_bd_net -net xlconstant_5_dout [get_bd_pins Uplane_packetiser_0/Ethernet_header_V_TDATA] [get_bd_pins xlconstant_5/dout]
+  connect_bd_net -net xlconstant_6_dout [get_bd_pins uplane_depacketiser_0/data_out_TREADY] [get_bd_pins uplane_depacketiser_0/ecpri_cnfg_out_TREADY] [get_bd_pins xlconstant_6/dout]
+  connect_bd_net -net xlconstant_8_dout [get_bd_pins epacket_gen_0/count_V] [get_bd_pins xlconstant_8/dout]
+
+  # Create address segments
+
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+
+  validate_bd_design
+  save_bd_design
+}
+# End of create_root_design()
+##################################################################
+# MAIN FLOW
+##################################################################
+create_root_design ""
+regenerate_bd_layout
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+create_bd_design "C_U_plane"
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs design_1]
+current_bd_design [get_bd_designs C_U_plane]
+current_bd_design design_1
+set tmpCopyObjs [concat  [get_bd_cells {Clock_reset Cplane_Packetizer Ethernet_ecpri_mux Cplane_depacketizer Ethernet_ecpri_demux axis_data_fifo_0 axis_data_fifo_1 err_count_0 L1_Data_Gen_0 BfW_Coeff_Gen_0 system_ila_0 system_ila_1 L1toORAN_0}] [get_bd_intf_ports {user_si570_sysclk}] [get_bd_ports {reset ecpri_mux_state_out_V_0 section_count_out_V_0 num_section_out_V_0 layer_count_out_V_0}] [get_bd_intf_nets {cplane_packetizer_0_eth_data axis_data_fifo_0_M_AXIS_1 L1toORAN_0_application_header_V BfW_Coeff_Gen_0_bfw_coeff_V_V L1_Data_Gen_0_L1_data_out_V L1toORAN_0_mux_config_V_V Cplane_depacketizer_beam_data ethernet_mux_0_eth_data_out S_AXIS_1 user_si570_sysclk_1 L1toORAN_0_numBeams_V_V axis_data_fifo_0_M_AXIS L1toORAN_0_extension_header_V L1toORAN_0_section_header_V}] [get_bd_nets {err_count_0_iteration_count proc_sys_reset_0_peripheral_aresetn Ethernet_ecpri_mux_layer_count_out_V_0 Ethernet_ecpri_mux_section_count_out_V_0 reset_1 Ethernet_ecpri_mux_ecpri_mux_state_out_V_0 proc_sys_reset_0_peripheral_aresetn1 err_count_0_error_count clk_wiz_clk_out1 Ethernet_ecpri_mux_num_section_out_V_0 sim_clk_gen_1_clk}]]
+current_bd_design C_U_plane
+copy_bd_objs -from_design design_1 / $tmpCopyObjs
+regenerate_bd_layout
+current_bd_design [get_bd_designs Uplane]
+current_bd_design [get_bd_designs C_U_plane]
+current_bd_design Uplane
+set tmpCopyObjs [concat  [get_bd_cells {axis_data_fifo_0 xlconstant_0 epacket_gen_0 xlconstant_1 Uplane_packetiser_0 xlconstant_2 tkeep_uplane_packeti_0 xlconstant_3 xlconstant_4 xlconstant_5 sim_clk_gen_0 uplane_depacketiser_0 xlconstant_6 xlconstant_8}] [get_bd_ports {data_out_TVALID_0 ecpri_cnfg_out_TVALID_0 data_out_TLAST_0 iq_msg_state_out_V_0 counter_PRB_V_0 ecpri_cnfg_out_TDATA_0 ecpri_cnfg_out_TLAST_0 data_out_TKEEP_0 data_out_TDATA_0 SECTIONPRB_count_V_0 RE_state_out_V_0 state_out_0}] [get_bd_intf_nets {tkeep_uplane_packeti_0_master epacket_gen_0_dout Uplane_packetiser_0_eth_data axis_data_fifo_0_M_AXIS}] [get_bd_nets {uplane_depacketiser_0_counter_PRB_V xlconstant_0_dout uplane_depacketiser_0_ecpri_cnfg_out_TDATA uplane_depacketiser_0_SECTIONPRB_count_V xlconstant_6_dout uplane_depacketiser_0_RE_state_out_V xlconstant_4_dout uplane_depacketiser_0_ecpri_cnfg_out_TVALID uplane_depacketiser_0_data_out_TDATA sim_clk_gen_0_clk xlconstant_3_dout uplane_depacketiser_0_data_out_TLAST uplane_depacketiser_0_data_out_TKEEP Uplane_packetiser_0_state_out xlconstant_5_dout xlconstant_1_dout uplane_depacketiser_0_iq_msg_state_out_V uplane_depacketiser_0_data_out_TVALID xlconstant_2_dout sim_clk_gen_0_sync_rst xlconstant_8_dout uplane_depacketiser_0_ecpri_cnfg_out_TLAST}]]
+current_bd_design C_U_plane
+copy_bd_objs -from_design Uplane / $tmpCopyObjs
+set_property location {16.5 4331 147} [get_bd_cells Ethernet_ecpri_mux]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS1]
+disconnect_bd_net /sim_clk_gen_0_clk [get_bd_pins uplane_depacketiser_0/ap_clk]
+disconnect_bd_net /sim_clk_gen_0_sync_rst [get_bd_pins uplane_depacketiser_0/ap_rst_n]
+startgroup
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_ecpri_cnfg_out_TVALID]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_SECTIONPRB_count_V]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_counter_PRB_V]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_RE_state_out_V]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_data_out_TDATA]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_ecpri_cnfg_out_TLAST]
+delete_bd_objs [get_bd_nets xlconstant_6_dout]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_data_out_TLAST]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_data_out_TVALID]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_ecpri_cnfg_out_TDATA]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_data_out_TKEEP]
+delete_bd_objs [get_bd_nets uplane_depacketiser_0_iq_msg_state_out_V]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_2/M_AXIS] [get_bd_intf_pins Ethernet_ecpri_mux/ecpri_mux_0/user_data_in]
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+disconnect_bd_net /sim_clk_gen_0_clk [get_bd_pins sim_clk_gen_0/clk]
+disconnect_bd_net /sim_clk_gen_0_sync_rst [get_bd_pins sim_clk_gen_0/sync_rst]
+endgroup
+delete_bd_objs [get_bd_cells sim_clk_gen_0]
+startgroup
+disconnect_bd_net /sim_clk_gen_0_clk [get_bd_pins tkeep_uplane_packeti_0/clk]
+disconnect_bd_net /sim_clk_gen_0_sync_rst [get_bd_pins tkeep_uplane_packeti_0/reset_n]
+endgroup
+startgroup
+disconnect_bd_net /sim_clk_gen_0_clk [get_bd_pins axis_data_fifo_2/s_axis_aclk]
+disconnect_bd_net /sim_clk_gen_0_sync_rst [get_bd_pins axis_data_fifo_2/s_axis_aresetn]
+endgroup
+startgroup
+delete_bd_objs [get_bd_nets sim_clk_gen_0_sync_rst]
+delete_bd_objs [get_bd_nets sim_clk_gen_0_clk]
+endgroup
+connect_bd_net [get_bd_pins Uplane_packetiser_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins Uplane_packetiser_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+connect_bd_net [get_bd_pins epacket_gen_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins epacket_gen_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+connect_bd_net [get_bd_pins axis_data_fifo_2/s_axis_aresetn] [get_bd_pins Clock_reset/peripheral_aresetn1]
+connect_bd_net [get_bd_pins axis_data_fifo_2/s_axis_aclk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins tkeep_uplane_packeti_0/clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins tkeep_uplane_packeti_0/reset_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+regenerate_bd_layout
+disconnect_bd_net /xlconstant_0_dout [get_bd_pins uplane_depacketiser_0/ap_start]
+group_bd_cells Uplane_Packetiser [get_bd_cells axis_data_fifo_2] [get_bd_cells xlconstant_0] [get_bd_cells epacket_gen_0] [get_bd_cells xlconstant_1] [get_bd_cells xlconstant_2] [get_bd_cells Uplane_packetiser_0] [get_bd_cells tkeep_uplane_packeti_0] [get_bd_cells xlconstant_4] [get_bd_cells xlconstant_5] [get_bd_cells xlconstant_8] [get_bd_cells xlconstant_3]
+regenerate_bd_layout
+save_bd_design
+set_property location {9 2957 651} [get_bd_cells uplane_depacketiser_0]
+connect_bd_net [get_bd_pins uplane_depacketiser_0/ap_clk] [get_bd_pins Clock_reset/slowest_sync_clk]
+connect_bd_net [get_bd_pins uplane_depacketiser_0/ap_rst_n] [get_bd_pins Clock_reset/peripheral_aresetn1]
+connect_bd_intf_net [get_bd_intf_pins uplane_depacketiser_0/data_in] [get_bd_intf_pins Ethernet_ecpri_demux/ecpri_demux_0/user_data_out]
+connect_bd_net [get_bd_pins xlconstant_6/dout] [get_bd_pins uplane_depacketiser_0/ap_start]
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+delete_bd_objs [get_bd_ports data_out_TLAST_0] [get_bd_ports counter_PRB_V_0] [get_bd_ports data_out_TVALID_0] [get_bd_ports ecpri_cnfg_out_TDATA_0] [get_bd_ports ecpri_cnfg_out_TVALID_0] [get_bd_ports ecpri_cnfg_out_TLAST_0] [get_bd_ports data_out_TDATA_0] [get_bd_ports SECTIONPRB_count_V_0] [get_bd_ports data_out_TKEEP_0] [get_bd_ports RE_state_out_V_0] [get_bd_ports iq_msg_state_out_V_0]
+regenerate_bd_layout
+save_bd_design
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins uplane_depacketiser_0/ecpri_cnfg_out]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins uplane_depacketiser_0/data_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins uplane_depacketiser_0/RE_state_out_V]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins uplane_depacketiser_0/counter_PRB_V]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins uplane_depacketiser_0/SECTIONPRB_count_V]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins uplane_depacketiser_0/iq_msg_state_out_V]
+endgroup
+regenerate_bd_layout
+save_bd_design
+regenerate_bd_layout
+set_property location {9 2920 -73} [get_bd_cells uplane_depacketiser_0]
+set_property location {8 2515 258} [get_bd_cells Ethernet_ecpri_mux]
+set_property location {8 2481 -45} [get_bd_cells Ethernet_ecpri_demux]
+set_property location {6 1834 232} [get_bd_cells Ethernet_ecpri_mux]
+set_property location {7 2198 171} [get_bd_cells Ethernet_ecpri_demux]
+set_property location {8 2542 49} [get_bd_cells Cplane_depacketizer]
+set_property location {8 2677 311} [get_bd_cells uplane_depacketiser_0]
+set_property location {9.5 3190 58} [get_bd_cells system_ila_0]
+set_property location {9 3006 135} [get_bd_cells axis_data_fifo_0]
+set_property location {9 3028 316} [get_bd_cells err_count_0]
+set_property location {10 3304 320} [get_bd_cells system_ila_1]
+save_bd_design
+set_property location {7 2045 377} [get_bd_cells xlconstant_6]
+group_bd_cells Uplane_depacketiser [get_bd_cells xlconstant_6] [get_bd_cells uplane_depacketiser_0]
+set_property location {8 2447 287} [get_bd_cells Uplane_depacketiser]
+save_bd_design
+current_bd_design [get_bd_designs Uplane]
+make_wrapper -files [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/Uplane/Uplane.bd] -top
+add_files -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/Uplane/hdl/Uplane_wrapper.v
+update_compile_order -fileset sources_1
+make_wrapper -files [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd] -top
+add_files -norecurse /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/hdl/C_U_plane_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Uplane_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Uplane_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/Uplane/Uplane.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/Uplane/Uplane.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/Uplane/Uplane.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source Uplane_wrapper.tcl
+restart
+run all
+current_bd_design [get_bd_designs C_U_plane]
+report_ip_status -name ip_status 
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top C_U_plane_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top C_U_plane_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+close_sim
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source C_U_plane_wrapper.tcl
+restart
+add_force {/C_U_plane_wrapper/C_U_plane_i/Clock_reset/reset} -radix hex {0 0ns}
+add_force {/C_U_plane_wrapper/C_U_plane_i/Clock_reset/user_si570_sysclk_1_CLK_N} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/C_U_plane_wrapper/C_U_plane_i/Clock_reset/user_si570_sysclk_1_CLK_P} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+run all
+current_bd_design [get_bd_designs Uplane]
+startgroup
+current_bd_design [get_bd_designs C_U_plane]
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+close_sim
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins Uplane_depacketiser/uplane_depacketiser_0/data_out_TREADY]
+connect_bd_net [get_bd_pins Uplane_depacketiser/uplane_depacketiser_0/ecpri_cnfg_out_TREADY] [get_bd_pins xlconstant_0/dout]
+move_bd_cells [get_bd_cells Uplane_depacketiser] [get_bd_cells xlconstant_0]
+save_bd_design
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {C_U_plane_ecpri_demux_0_0 design_1_ecpri_demux_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {C_U_plane_ecpri_demux_0_0 design_1_ecpri_demux_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {C_U_plane_ecpri_demux_0_0 design_1_ecpri_demux_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {C_U_plane_ecpri_demux_0_0 design_1_ecpri_demux_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+current_bd_design [get_bd_designs C_U_plane]
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {C_U_plane_ecpri_demux_0_0 design_1_ecpri_demux_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {C_U_plane_ecpri_demux_0_0 design_1_ecpri_demux_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target Simulation [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd]
+export_ip_user_files -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.srcs/sources_1/bd/C_U_plane/C_U_plane.bd] -directory /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files -ipstatic_source_dir /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/questa} {ies=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/admin4/Desktop/saikiran/ORAN/Integration/o-ran_packetizer_depacketizer-master/myproj/design_1_wrapper_behav.wcfg
+source C_U_plane_wrapper.tcl
+add_force {/C_U_plane_wrapper/C_U_plane_i/Clock_reset/reset} -radix hex {0 0ns}
+add_force {/C_U_plane_wrapper/C_U_plane_i/Clock_reset/user_si570_sysclk_clk_n} -radix hex {1 0ns} {0 1665ps} -repeat_every 3330ps
+add_force {/C_U_plane_wrapper/C_U_plane_i/Clock_reset/user_si570_sysclk_clk_p} -radix hex {0 0ns} {1 1665ps} -repeat_every 3330ps
+restart
+run all
+close_sim

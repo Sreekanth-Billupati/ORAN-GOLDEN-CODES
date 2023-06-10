@@ -1,0 +1,5 @@
+<annotationInfo>
+<item  id="76" filename="eCPRI_demux/ecpri_demux.cpp" linenumber="79" name="section_type_V" contextFuncName="ecpri_demux" moduleName="ecpri_demux" rtlName="section_type_V_fu_220_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src"><\/item>
+<item  id="77" filename="eCPRI_demux/ecpri_demux.cpp" linenumber="80" name="icmp_ln879" contextFuncName="ecpri_demux" moduleName="ecpri_demux" rtlName="icmp_ln879_fu_230_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src"><\/item>
+<item  id="112" filename="eCPRI_demux/ecpri_demux.cpp" linenumber="42" name="p_Result_s" contextFuncName="ecpri_demux" moduleName="ecpri_demux" rtlName="p_Result_s_reg_314" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src"><\/item>
+</annotationInfo>

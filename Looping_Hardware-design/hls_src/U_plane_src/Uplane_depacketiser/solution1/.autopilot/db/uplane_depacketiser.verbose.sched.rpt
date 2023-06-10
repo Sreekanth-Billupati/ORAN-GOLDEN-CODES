@@ -1,0 +1,282 @@
+
+
+================================================================
+== Vivado HLS Report for 'uplane_depacketiser'
+================================================================
+* Date:           Mon Mar  6 10:28:45 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        Uplane_depacketiser
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvd1760-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     2.737|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 1
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.73>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%ecpri_msg_state_load = load i3* @ecpri_msg_state, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:39]   --->   Operation 4 'load' 'ecpri_msg_state_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%PRB_count_V_load = load i12* @PRB_count_V, align 2" [Uplane_depacketiser/uplane_depacketiser.cpp:119]   --->   Operation 5 'load' 'PRB_count_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%t_V = load i8* @PRB_fragmentation_V, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:195]   --->   Operation 6 'load' 't_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%symbolID_V_load = load i6* @symbolID_V, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:220]   --->   Operation 7 'load' 'symbolID_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.79ns)   --->   "switch i3 %ecpri_msg_state_load, label %._crit_edge3489 [
+    i3 0, label %0
+    i3 1, label %1
+    i3 2, label %3
+    i3 3, label %4
+    i3 -4, label %5
+    i3 -3, label %_ifconv
+    i3 -2, label %6
+  ]" [Uplane_depacketiser/uplane_depacketiser.cpp:41]   --->   Operation 8 'switch' <Predicate = true> <Delay = 0.79>
+ST_1 : Operation 9 [1/1] (0.72ns)   --->   "%icmp_ln879_2 = icmp eq i6 %symbolID_V_load, 13" [Uplane_depacketiser/uplane_depacketiser.cpp:220]   --->   Operation 9 'icmp' 'icmp_ln879_2' <Predicate = (ecpri_msg_state_load == 6)> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "br i1 %icmp_ln879_2, label %7, label %8" [Uplane_depacketiser/uplane_depacketiser.cpp:220]   --->   Operation 10 'br' <Predicate = (ecpri_msg_state_load == 6)> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.60ns)   --->   "store i12 0, i12* @PRB_count_V, align 2" [Uplane_depacketiser/uplane_depacketiser.cpp:228]   --->   Operation 11 'store' <Predicate = (ecpri_msg_state_load == 6 & !icmp_ln879_2)> <Delay = 0.60>
+ST_1 : Operation 12 [1/1] (0.79ns)   --->   "br label %._crit_edge3489"   --->   Operation 12 'br' <Predicate = (ecpri_msg_state_load == 6 & !icmp_ln879_2)> <Delay = 0.79>
+ST_1 : Operation 13 [1/1] (0.60ns)   --->   "store i6 0, i6* @symbolID_V, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:222]   --->   Operation 13 'store' <Predicate = (ecpri_msg_state_load == 6 & icmp_ln879_2)> <Delay = 0.60>
+ST_1 : Operation 14 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:224]   --->   Operation 14 'br' <Predicate = (ecpri_msg_state_load == 6 & icmp_ln879_2)> <Delay = 0.79>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty_8 = call { i128, i1 } @_ssdm_op_Read.axis.volatile.i128P.i1P(i128* %data_in_V_data_V, i1* %data_in_V_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:176]   --->   Operation 15 'read' 'empty_8' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_data_V_4 = extractvalue { i128, i1 } %empty_8, 0" [Uplane_depacketiser/uplane_depacketiser.cpp:176]   --->   Operation 16 'extractvalue' 'tmp_data_V_4' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln647_2 = trunc i128 %tmp_data_V_4 to i8" [Uplane_depacketiser/uplane_depacketiser.cpp:178]   --->   Operation 17 'trunc' 'trunc_ln647_2' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_Result_34 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 8, i32 15)" [Uplane_depacketiser/uplane_depacketiser.cpp:179]   --->   Operation 18 'partselect' 'p_Result_34' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_Result_35 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 16, i32 23)" [Uplane_depacketiser/uplane_depacketiser.cpp:180]   --->   Operation 19 'partselect' 'p_Result_35' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_Result_36 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 24, i32 31)" [Uplane_depacketiser/uplane_depacketiser.cpp:181]   --->   Operation 20 'partselect' 'p_Result_36' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_Result_37 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 32, i32 39)" [Uplane_depacketiser/uplane_depacketiser.cpp:182]   --->   Operation 21 'partselect' 'p_Result_37' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_Result_38 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 40, i32 47)" [Uplane_depacketiser/uplane_depacketiser.cpp:183]   --->   Operation 22 'partselect' 'p_Result_38' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_Result_39 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 48, i32 55)" [Uplane_depacketiser/uplane_depacketiser.cpp:184]   --->   Operation 23 'partselect' 'p_Result_39' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_Result_40 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 56, i32 63)" [Uplane_depacketiser/uplane_depacketiser.cpp:185]   --->   Operation 24 'partselect' 'p_Result_40' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_Result_41 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 64, i32 71)" [Uplane_depacketiser/uplane_depacketiser.cpp:186]   --->   Operation 25 'partselect' 'p_Result_41' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_Result_42 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 72, i32 79)" [Uplane_depacketiser/uplane_depacketiser.cpp:187]   --->   Operation 26 'partselect' 'p_Result_42' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_Result_43 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 80, i32 87)" [Uplane_depacketiser/uplane_depacketiser.cpp:188]   --->   Operation 27 'partselect' 'p_Result_43' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_Result_44 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 88, i32 95)" [Uplane_depacketiser/uplane_depacketiser.cpp:189]   --->   Operation 28 'partselect' 'p_Result_44' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_45 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 96, i32 103)" [Uplane_depacketiser/uplane_depacketiser.cpp:190]   --->   Operation 29 'partselect' 'p_Result_45' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_Result_46 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 104, i32 111)" [Uplane_depacketiser/uplane_depacketiser.cpp:191]   --->   Operation 30 'partselect' 'p_Result_46' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_Result_47 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 112, i32 119)" [Uplane_depacketiser/uplane_depacketiser.cpp:192]   --->   Operation 31 'partselect' 'p_Result_47' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_Result_48 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_4, i32 120, i32 127)" [Uplane_depacketiser/uplane_depacketiser.cpp:193]   --->   Operation 32 'partselect' 'p_Result_48' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.70ns)   --->   "%add_ln700 = add i8 1, %t_V" [Uplane_depacketiser/uplane_depacketiser.cpp:195]   --->   Operation 33 'add' 'add_ln700' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.79ns)   --->   "%icmp_ln879_1 = icmp eq i8 %add_ln700, 30" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 34 'icmp' 'icmp_ln879_1' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.79> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.86ns)   --->   "%icmp_ln879_4 = icmp eq i12 %PRB_count_V_load, 273" [Uplane_depacketiser/uplane_depacketiser.cpp:205]   --->   Operation 35 'icmp' 'icmp_ln879_4' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.79ns)   --->   "%icmp_ln879_5 = icmp eq i8 %add_ln700, 3" [Uplane_depacketiser/uplane_depacketiser.cpp:206]   --->   Operation 36 'icmp' 'icmp_ln879_5' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.79> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node select_ln879_1)   --->   "%select_ln206 = select i1 %icmp_ln879_5, i3 -2, i3 3" [Uplane_depacketiser/uplane_depacketiser.cpp:206]   --->   Operation 37 'select' 'select_ln206' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node and_ln879)   --->   "%xor_ln879 = xor i1 %icmp_ln879_1, true" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 38 'xor' 'xor_ln879' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.25ns) (out node of the LUT)   --->   "%and_ln879 = and i1 %icmp_ln879_4, %xor_ln879" [Uplane_depacketiser/uplane_depacketiser.cpp:205]   --->   Operation 39 'and' 'and_ln879' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.25> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node select_ln879_1)   --->   "%select_ln879 = select i1 %and_ln879, i3 %select_ln206, i3 3" [Uplane_depacketiser/uplane_depacketiser.cpp:205]   --->   Operation 40 'select' 'select_ln879' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.18ns) (out node of the LUT)   --->   "%select_ln879_1 = select i1 %icmp_ln879_1, i3 1, i3 %select_ln879" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 41 'select' 'select_ln879_1' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.18> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.36ns)   --->   "%select_ln879_2 = select i1 %icmp_ln879_1, i8 0, i8 %add_ln700" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 42 'select' 'select_ln879_2' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.36> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node tmp_last_V)   --->   "%and_ln879_1 = and i1 %and_ln879, %icmp_ln879_5" [Uplane_depacketiser/uplane_depacketiser.cpp:205]   --->   Operation 43 'and' 'and_ln879_1' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.25ns) (out node of the LUT)   --->   "%tmp_last_V = or i1 %icmp_ln879_1, %and_ln879_1" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 44 'or' 'tmp_last_V' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.25> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:217]   --->   Operation 45 'br' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.79>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%empty_7 = call { i128, i1 } @_ssdm_op_Read.axis.volatile.i128P.i1P(i128* %data_in_V_data_V, i1* %data_in_V_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:151]   --->   Operation 46 'read' 'empty_7' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_data_V_3 = extractvalue { i128, i1 } %empty_7, 0" [Uplane_depacketiser/uplane_depacketiser.cpp:151]   --->   Operation 47 'extractvalue' 'tmp_data_V_3' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln647_1 = trunc i128 %tmp_data_V_3 to i8" [Uplane_depacketiser/uplane_depacketiser.cpp:153]   --->   Operation 48 'trunc' 'trunc_ln647_1' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_Result_19 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 8, i32 15)" [Uplane_depacketiser/uplane_depacketiser.cpp:154]   --->   Operation 49 'partselect' 'p_Result_19' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_Result_20 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 16, i32 23)" [Uplane_depacketiser/uplane_depacketiser.cpp:155]   --->   Operation 50 'partselect' 'p_Result_20' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_Result_21 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 24, i32 31)" [Uplane_depacketiser/uplane_depacketiser.cpp:156]   --->   Operation 51 'partselect' 'p_Result_21' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_Result_22 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 32, i32 39)" [Uplane_depacketiser/uplane_depacketiser.cpp:157]   --->   Operation 52 'partselect' 'p_Result_22' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_Result_23 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 40, i32 47)" [Uplane_depacketiser/uplane_depacketiser.cpp:158]   --->   Operation 53 'partselect' 'p_Result_23' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_Result_24 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 48, i32 55)" [Uplane_depacketiser/uplane_depacketiser.cpp:159]   --->   Operation 54 'partselect' 'p_Result_24' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_Result_25 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 56, i32 63)" [Uplane_depacketiser/uplane_depacketiser.cpp:160]   --->   Operation 55 'partselect' 'p_Result_25' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_Result_26 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 64, i32 71)" [Uplane_depacketiser/uplane_depacketiser.cpp:161]   --->   Operation 56 'partselect' 'p_Result_26' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_Result_27 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 72, i32 79)" [Uplane_depacketiser/uplane_depacketiser.cpp:162]   --->   Operation 57 'partselect' 'p_Result_27' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%p_Result_28 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 80, i32 87)" [Uplane_depacketiser/uplane_depacketiser.cpp:163]   --->   Operation 58 'partselect' 'p_Result_28' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_Result_29 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 88, i32 95)" [Uplane_depacketiser/uplane_depacketiser.cpp:164]   --->   Operation 59 'partselect' 'p_Result_29' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_Result_30 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 96, i32 103)" [Uplane_depacketiser/uplane_depacketiser.cpp:165]   --->   Operation 60 'partselect' 'p_Result_30' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_Result_31 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 104, i32 111)" [Uplane_depacketiser/uplane_depacketiser.cpp:166]   --->   Operation 61 'partselect' 'p_Result_31' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_Result_32 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 112, i32 119)" [Uplane_depacketiser/uplane_depacketiser.cpp:167]   --->   Operation 62 'partselect' 'p_Result_32' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_Result_33 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_3, i32 120, i32 127)" [Uplane_depacketiser/uplane_depacketiser.cpp:168]   --->   Operation 63 'partselect' 'p_Result_33' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:173]   --->   Operation 64 'br' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.79>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%empty_5 = call { i128, i1 } @_ssdm_op_Read.axis.volatile.i128P.i1P(i128* %data_in_V_data_V, i1* %data_in_V_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:125]   --->   Operation 65 'read' 'empty_5' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_data_V_2 = extractvalue { i128, i1 } %empty_5, 0" [Uplane_depacketiser/uplane_depacketiser.cpp:125]   --->   Operation 66 'extractvalue' 'tmp_data_V_2' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i128 %tmp_data_V_2 to i8" [Uplane_depacketiser/uplane_depacketiser.cpp:127]   --->   Operation 67 'trunc' 'trunc_ln647' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_5 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 8, i32 15)" [Uplane_depacketiser/uplane_depacketiser.cpp:128]   --->   Operation 68 'partselect' 'p_Result_5' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_Result_6 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 16, i32 23)" [Uplane_depacketiser/uplane_depacketiser.cpp:129]   --->   Operation 69 'partselect' 'p_Result_6' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%p_Result_7 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 24, i32 31)" [Uplane_depacketiser/uplane_depacketiser.cpp:130]   --->   Operation 70 'partselect' 'p_Result_7' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_Result_8 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 32, i32 39)" [Uplane_depacketiser/uplane_depacketiser.cpp:131]   --->   Operation 71 'partselect' 'p_Result_8' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%p_Result_9 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 40, i32 47)" [Uplane_depacketiser/uplane_depacketiser.cpp:132]   --->   Operation 72 'partselect' 'p_Result_9' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%p_Result_4 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 48, i32 55)" [Uplane_depacketiser/uplane_depacketiser.cpp:133]   --->   Operation 73 'partselect' 'p_Result_4' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%p_Result_10 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 56, i32 63)" [Uplane_depacketiser/uplane_depacketiser.cpp:134]   --->   Operation 74 'partselect' 'p_Result_10' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_Result_11 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 64, i32 71)" [Uplane_depacketiser/uplane_depacketiser.cpp:135]   --->   Operation 75 'partselect' 'p_Result_11' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%p_Result_12 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 72, i32 79)" [Uplane_depacketiser/uplane_depacketiser.cpp:136]   --->   Operation 76 'partselect' 'p_Result_12' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_Result_13 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 80, i32 87)" [Uplane_depacketiser/uplane_depacketiser.cpp:137]   --->   Operation 77 'partselect' 'p_Result_13' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%p_Result_14 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 88, i32 95)" [Uplane_depacketiser/uplane_depacketiser.cpp:138]   --->   Operation 78 'partselect' 'p_Result_14' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%p_Result_15 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 96, i32 103)" [Uplane_depacketiser/uplane_depacketiser.cpp:139]   --->   Operation 79 'partselect' 'p_Result_15' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%p_Result_16 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 104, i32 111)" [Uplane_depacketiser/uplane_depacketiser.cpp:140]   --->   Operation 80 'partselect' 'p_Result_16' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%p_Result_17 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 112, i32 119)" [Uplane_depacketiser/uplane_depacketiser.cpp:141]   --->   Operation 81 'partselect' 'p_Result_17' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%p_Result_18 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_2, i32 120, i32 127)" [Uplane_depacketiser/uplane_depacketiser.cpp:142]   --->   Operation 82 'partselect' 'p_Result_18' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:148]   --->   Operation 83 'br' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.79>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%empty_4 = call { i128, i1 } @_ssdm_op_Read.axis.volatile.i128P.i1P(i128* %data_in_V_data_V, i1* %data_in_V_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:88]   --->   Operation 84 'read' 'empty_4' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i128, i1 } %empty_4, 0" [Uplane_depacketiser/uplane_depacketiser.cpp:88]   --->   Operation 85 'extractvalue' 'tmp_data_V_1' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%p_Result_2 = call i6 @_ssdm_op_PartSelect.i6.i128.i32.i32(i128 %tmp_data_V_1, i32 72, i32 77)" [Uplane_depacketiser/uplane_depacketiser.cpp:103]   --->   Operation 86 'partselect' 'p_Result_2' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%p_Result_3 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V_1, i32 104, i32 111)" [Uplane_depacketiser/uplane_depacketiser.cpp:112]   --->   Operation 87 'partselect' 'p_Result_3' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.60ns)   --->   "store i6 %p_Result_2, i6* @symbolID_V, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:116]   --->   Operation 88 'store' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.60>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%trunc_ln = call i4 @_ssdm_op_PartSelect.i4.i128.i32.i32(i128 %tmp_data_V_1, i32 72, i32 75)" [Uplane_depacketiser/uplane_depacketiser.cpp:117]   --->   Operation 89 'partselect' 'trunc_ln' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i8 %p_Result_3 to i12" [Uplane_depacketiser/uplane_depacketiser.cpp:119]   --->   Operation 90 'zext' 'zext_ln209' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.77ns)   --->   "%add_ln209 = add i12 %PRB_count_V_load, %zext_ln209" [Uplane_depacketiser/uplane_depacketiser.cpp:119]   --->   Operation 91 'add' 'add_ln209' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 92 [1/1] (0.60ns)   --->   "store i12 %add_ln209, i12* @PRB_count_V, align 2" [Uplane_depacketiser/uplane_depacketiser.cpp:119]   --->   Operation 92 'store' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.60>
+ST_1 : Operation 93 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:122]   --->   Operation 93 'br' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.79>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%empty = call { i128, i1 } @_ssdm_op_Read.axis.volatile.i128P.i1P(i128* %data_in_V_data_V, i1* %data_in_V_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:53]   --->   Operation 94 'read' 'empty' <Predicate = (ecpri_msg_state_load == 1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i128, i1 } %empty, 0" [Uplane_depacketiser/uplane_depacketiser.cpp:53]   --->   Operation 95 'extractvalue' 'tmp_data_V' <Predicate = (ecpri_msg_state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%p_Result_s = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_data_V, i32 96, i32 111)" [Uplane_depacketiser/uplane_depacketiser.cpp:67]   --->   Operation 96 'partselect' 'p_Result_s' <Predicate = (ecpri_msg_state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%p_Result_1 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %tmp_data_V, i32 120, i32 127)" [Uplane_depacketiser/uplane_depacketiser.cpp:70]   --->   Operation 97 'partselect' 'p_Result_1' <Predicate = (ecpri_msg_state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.93ns)   --->   "%icmp_ln879 = icmp eq i16 %p_Result_s, -338" [Uplane_depacketiser/uplane_depacketiser.cpp:72]   --->   Operation 98 'icmp' 'icmp_ln879' <Predicate = (ecpri_msg_state_load == 1)> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 99 [1/1] (0.79ns)   --->   "br i1 %icmp_ln879, label %2, label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:72]   --->   Operation 99 'br' <Predicate = (ecpri_msg_state_load == 1)> <Delay = 0.79>
+ST_1 : Operation 100 [1/1] (0.79ns)   --->   "%icmp_ln879_3 = icmp eq i8 %p_Result_1, 0" [Uplane_depacketiser/uplane_depacketiser.cpp:74]   --->   Operation 100 'icmp' 'icmp_ln879_3' <Predicate = (ecpri_msg_state_load == 1 & icmp_ln879)> <Delay = 0.79> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 101 [1/1] (0.18ns)   --->   "%select_ln74 = select i1 %icmp_ln879_3, i3 2, i3 1" [Uplane_depacketiser/uplane_depacketiser.cpp:74]   --->   Operation 101 'select' 'select_ln74' <Predicate = (ecpri_msg_state_load == 1 & icmp_ln879)> <Delay = 0.18> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 102 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:80]   --->   Operation 102 'br' <Predicate = (ecpri_msg_state_load == 1 & icmp_ln879)> <Delay = 0.79>
+ST_1 : Operation 103 [1/1] (0.60ns)   --->   "store i12 0, i12* @PRB_count_V, align 2" [Uplane_depacketiser/uplane_depacketiser.cpp:44]   --->   Operation 103 'store' <Predicate = (ecpri_msg_state_load == 0)> <Delay = 0.60>
+ST_1 : Operation 104 [1/1] (0.79ns)   --->   "br label %._crit_edge3489" [Uplane_depacketiser/uplane_depacketiser.cpp:50]   --->   Operation 104 'br' <Predicate = (ecpri_msg_state_load == 0)> <Delay = 0.79>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%ecpri_msg_state_flag_1 = phi i1 [ false, %codeRepl ], [ true, %_ifconv ], [ true, %5 ], [ true, %4 ], [ true, %3 ], [ true, %0 ], [ true, %2 ], [ true, %1 ], [ true, %8 ], [ true, %7 ]"   --->   Operation 105 'phi' 'ecpri_msg_state_flag_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%ecpri_msg_state_new_1 = phi i3 [ undef, %codeRepl ], [ %select_ln879_1, %_ifconv ], [ -3, %5 ], [ -4, %4 ], [ 3, %3 ], [ 1, %0 ], [ %select_ln74, %2 ], [ 1, %1 ], [ 1, %8 ], [ 0, %7 ]" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 106 'phi' 'ecpri_msg_state_new_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%PRB_fragmentation_V_s = phi i1 [ false, %codeRepl ], [ true, %_ifconv ], [ false, %5 ], [ false, %4 ], [ false, %3 ], [ true, %0 ], [ false, %2 ], [ false, %1 ], [ true, %8 ], [ false, %7 ]"   --->   Operation 107 'phi' 'PRB_fragmentation_V_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%PRB_fragmentation_V_1 = phi i8 [ undef, %codeRepl ], [ %select_ln879_2, %_ifconv ], [ undef, %5 ], [ undef, %4 ], [ undef, %3 ], [ 0, %0 ], [ undef, %2 ], [ undef, %1 ], [ 0, %8 ], [ 0, %7 ]" [Uplane_depacketiser/uplane_depacketiser.cpp:196]   --->   Operation 108 'phi' 'PRB_fragmentation_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "br i1 %PRB_fragmentation_V_s, label %mergeST1, label %._crit_edge3489.new2"   --->   Operation 109 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "store i8 %PRB_fragmentation_V_1, i8* @PRB_fragmentation_V, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:47]   --->   Operation 110 'store' <Predicate = (PRB_fragmentation_V_s)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "br i1 %ecpri_msg_state_flag_1, label %mergeST, label %._crit_edge3489.new"   --->   Operation 111 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "store i3 %ecpri_msg_state_new_1, i3* @ecpri_msg_state, align 1" [Uplane_depacketiser/uplane_depacketiser.cpp:49]   --->   Operation 112 'store' <Predicate = (ecpri_msg_state_flag_1)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%p_Result_50 = call i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8(i8 %trunc_ln647_2, i8 %p_Result_34, i8 %p_Result_35, i8 %p_Result_36, i8 %p_Result_37, i8 %p_Result_38, i8 %p_Result_39, i8 %p_Result_40, i8 %p_Result_41, i8 %p_Result_42, i8 %p_Result_43, i8 %p_Result_44, i8 %p_Result_45, i8 %p_Result_46, i8 %p_Result_47, i8 %p_Result_48)" [Uplane_depacketiser/uplane_depacketiser.cpp:193]   --->   Operation 113 'bitconcatenate' 'p_Result_50' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00>
+ST_2 : Operation 114 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P.i1P(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, i128 %p_Result_50, i1 %tmp_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:216]   --->   Operation 114 'write' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%p_Result_49 = call i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8(i8 %trunc_ln647_1, i8 %p_Result_19, i8 %p_Result_20, i8 %p_Result_21, i8 %p_Result_22, i8 %p_Result_23, i8 %p_Result_24, i8 %p_Result_25, i8 %p_Result_26, i8 %p_Result_27, i8 %p_Result_28, i8 %p_Result_29, i8 %p_Result_30, i8 %p_Result_31, i8 %p_Result_32, i8 %p_Result_33)" [Uplane_depacketiser/uplane_depacketiser.cpp:168]   --->   Operation 115 'bitconcatenate' 'p_Result_49' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00>
+ST_2 : Operation 116 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P.i1P(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, i128 %p_Result_49, i1 false)" [Uplane_depacketiser/uplane_depacketiser.cpp:171]   --->   Operation 116 'write' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%p_Result_s_6 = call i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8(i8 %trunc_ln647, i8 %p_Result_5, i8 %p_Result_6, i8 %p_Result_7, i8 %p_Result_8, i8 %p_Result_9, i8 %p_Result_4, i8 %p_Result_10, i8 %p_Result_11, i8 %p_Result_12, i8 %p_Result_13, i8 %p_Result_14, i8 %p_Result_15, i8 %p_Result_16, i8 %p_Result_17, i8 %p_Result_18)" [Uplane_depacketiser/uplane_depacketiser.cpp:142]   --->   Operation 117 'bitconcatenate' 'p_Result_s_6' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00>
+ST_2 : Operation 118 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P.i1P(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, i128 %p_Result_s_6, i1 false)" [Uplane_depacketiser/uplane_depacketiser.cpp:145]   --->   Operation 118 'write' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %data_in_V_data_V), !map !105"   --->   Operation 119 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %data_in_V_last_V), !map !109"   --->   Operation 120 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %data_out_V_IQ_data_V), !map !113"   --->   Operation 121 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %data_out_V_last_V), !map !117"   --->   Operation 122 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %count_PRBs_V), !map !121"   --->   Operation 123 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12* %PRB_count_each_section_V), !map !125"   --->   Operation 124 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %depack_symbol_number_V), !map !129"   --->   Operation 125 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %iq_msg_state_out_V), !map !133"   --->   Operation 126 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([20 x i8]* @uplane_depacketiser_s) nounwind"   --->   Operation 127 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 128 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:10]   --->   Operation 128 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %data_in_V_data_V, i1* %data_in_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:11]   --->   Operation 129 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %iq_msg_state_out_V, [8 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:12]   --->   Operation 130 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 2, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:13]   --->   Operation 131 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %count_PRBs_V, [8 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:14]   --->   Operation 132 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %PRB_count_each_section_V, [8 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:15]   --->   Operation 133 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %depack_symbol_number_V, [8 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:16]   --->   Operation 134 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:17]   --->   Operation 135 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i3* @ecpri_msg_state, i32 1, [1 x i8]* @p_str2) nounwind" [Uplane_depacketiser/uplane_depacketiser.cpp:38]   --->   Operation 136 'specreset' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%zext_ln301 = zext i3 %ecpri_msg_state_load to i8" [Uplane_depacketiser/uplane_depacketiser.cpp:39]   --->   Operation 137 'zext' 'zext_ln301' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %iq_msg_state_out_V, i8 %zext_ln301)" [Uplane_depacketiser/uplane_depacketiser.cpp:39]   --->   Operation 138 'write' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 139 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P.i1P(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, i128 %p_Result_50, i1 %tmp_last_V)" [Uplane_depacketiser/uplane_depacketiser.cpp:216]   --->   Operation 139 'write' <Predicate = (ecpri_msg_state_load == 5)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 140 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P.i1P(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, i128 %p_Result_49, i1 false)" [Uplane_depacketiser/uplane_depacketiser.cpp:171]   --->   Operation 140 'write' <Predicate = (ecpri_msg_state_load == 4)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 141 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P.i1P(i128* %data_out_V_IQ_data_V, i1* %data_out_V_last_V, i128 %p_Result_s_6, i1 false)" [Uplane_depacketiser/uplane_depacketiser.cpp:145]   --->   Operation 141 'write' <Predicate = (ecpri_msg_state_load == 3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i4P(i4* %depack_symbol_number_V, i4 %trunc_ln)" [Uplane_depacketiser/uplane_depacketiser.cpp:117]   --->   Operation 142 'write' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i12P(i12* %PRB_count_each_section_V, i12 %add_ln209)" [Uplane_depacketiser/uplane_depacketiser.cpp:120]   --->   Operation 143 'write' <Predicate = (ecpri_msg_state_load == 2)> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "br label %._crit_edge3489.new2"   --->   Operation 144 'br' <Predicate = (PRB_fragmentation_V_s)> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "br label %._crit_edge3489.new"   --->   Operation 145 'br' <Predicate = (ecpri_msg_state_flag_1)> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "ret void" [Uplane_depacketiser/uplane_depacketiser.cpp:233]   --->   Operation 146 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.2ns, clock uncertainty: 0.4ns.
+
+ <State 1>: 2.74ns
+The critical path consists of the following:
+	'load' operation ('t.V', Uplane_depacketiser/uplane_depacketiser.cpp:195) on static variable 'PRB_fragmentation_V' [35]  (0 ns)
+	'add' operation ('add_ln700', Uplane_depacketiser/uplane_depacketiser.cpp:195) [67]  (0.702 ns)
+	'icmp' operation ('icmp_ln879_1', Uplane_depacketiser/uplane_depacketiser.cpp:196) [68]  (0.795 ns)
+	'xor' operation ('xor_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:196) [72]  (0 ns)
+	'and' operation ('and_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:205) [73]  (0.256 ns)
+	'select' operation ('select_ln879', Uplane_depacketiser/uplane_depacketiser.cpp:205) [74]  (0 ns)
+	'select' operation ('select_ln879_1', Uplane_depacketiser/uplane_depacketiser.cpp:196) [75]  (0.188 ns)
+	multiplexor before 'phi' operation ('ecpri_msg_state_new_1', Uplane_depacketiser/uplane_depacketiser.cpp:196) with incoming values : ('select_ln879_1', Uplane_depacketiser/uplane_depacketiser.cpp:196) ('select_ln74', Uplane_depacketiser/uplane_depacketiser.cpp:74) [154]  (0.796 ns)
+	'phi' operation ('ecpri_msg_state_new_1', Uplane_depacketiser/uplane_depacketiser.cpp:196) with incoming values : ('select_ln879_1', Uplane_depacketiser/uplane_depacketiser.cpp:196) ('select_ln74', Uplane_depacketiser/uplane_depacketiser.cpp:74) [154]  (0 ns)
+	'store' operation ('store_ln49', Uplane_depacketiser/uplane_depacketiser.cpp:49) of variable 'ecpri_msg_state_new_1', Uplane_depacketiser/uplane_depacketiser.cpp:196 on static variable 'ecpri_msg_state' [164]  (0 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

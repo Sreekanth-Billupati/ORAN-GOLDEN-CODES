@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 18 16:26:55 2023
+# Process ID: 7248
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.log
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+update_compile_order -fileset sources_1
+file copy -force /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.sysdef /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+
+launch_sdk -workspace /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk -hwspec /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+file mkdir /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk
+file copy -force /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.sysdef /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+
+launch_sdk -workspace /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk -hwspec /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+open_hw
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABC094]
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABB6C8]
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABC094]
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABB6C8]
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABC094]
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABB6C8]
+close_hw
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+connect_hw_server -url 172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299A8DA96]
+set_property PARAM.FREQUENCY 10000000 [get_hw_targets */xilinx_tcf/Digilent/210299A8DA96]
+open_hw_target
+set_property PROGRAM.FILE {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.bit} [get_hw_devices xczu19_0]
+set_property PROBES.FILE {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/debug_nets.ltx} [get_hw_devices xczu19_0]
+set_property FULL_PROBES.FILE {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/debug_nets.ltx} [get_hw_devices xczu19_0]
+current_hw_device [get_hw_devices xczu19_0]
+refresh_hw_device [lindex [get_hw_devices xczu19_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]]
+current_hw_device [get_hw_devices arm_dap_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices arm_dap_1] 0]
+current_hw_device [get_hw_devices xczu19_0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tvalid -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq12'u0 [get_hw_probes check_40G_sim_i/system_ila_0/inst/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq12'u273 [get_hw_probes check_40G_sim_i/system_ila_0/inst/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+set_property OUTPUT_VALUE 1 [get_hw_probes check_40G_sim_i/Net -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_1"}]]
+commit_hw_vio [get_hw_probes {check_40G_sim_i/Net} -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_1"}]]
+startgroup
+set_property OUTPUT_VALUE 1 [get_hw_probes check_40G_sim_i/xlconstant_2_dout -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {check_40G_sim_i/xlconstant_2_dout} -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_0"}]]
+endgroup
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE gt12'u273 [get_hw_probes check_40G_sim_i/system_ila_0/inst/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+close_hw

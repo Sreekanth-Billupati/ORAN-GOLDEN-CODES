@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'Total_PRB_count_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:27.001+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'symbol_number_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:26.956+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:26.951+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'uplane_packetiser' consists of the following:&#xA;&#x9;'load' operation ('count_value_V_load', uplane_packetiser/uplane_packetizer.cpp:249) on static variable 'count_value_V' [69]  (0 ns)&#xA;&#x9;'add' operation ('add_ln214', uplane_packetiser/uplane_packetizer.cpp:249) [70]  (0.736 ns)&#xA;&#x9;'icmp' operation ('icmp_ln879', uplane_packetiser/uplane_packetizer.cpp:257) [74]  (0.829 ns)&#xA;&#x9;multiplexor before 'phi' operation ('storemerge2747') [86]  (0.605 ns)&#xA;&#x9;'phi' operation ('storemerge2747') [86]  (0 ns)&#xA;&#x9;'store' operation ('oran_ctrl_state_write_ln255', uplane_packetiser/uplane_packetizer.cpp:255) of variable 'zext_ln255', uplane_packetiser/uplane_packetizer.cpp:255 on static variable 'oran_ctrl_state' [88]  (0.796 ns)" projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:26.802+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (2.96585ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns)." projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:26.795+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'IQ_data.V.data.V' (uplane_packetiser/uplane_packetizer.cpp:8)." projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:25.645+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from uplane_packetiser/uplane_packetizer.cpp:1:&#xA;uplane_packetiser/uplane_packetizer.cpp:57:8: warning: enumeration values 'IDLEs' and 'SECTIONDATA' not handled in switch [-Wswitch]&#xA;switch(oran_ctrl_state)&#xA;       ^&#xA;1 warning generated." projectName="uplane_packetiser" solutionName="solution1" date="2023-03-26T23:15:23.802+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

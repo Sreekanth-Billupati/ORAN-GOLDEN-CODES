@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="CtrlPlanePacketizer.cpp" path="/home/ssaraswathy/Documents/XStep/Viv_design_10G/Looping_Hardware-design/hls_src/CtrlPlanePacketizer/CtrlPlanePacketizer.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="CtrlPlanePacketizer_tb.cpp" path="/home/ssaraswathy/Documents/XStep/Viv_design_10G/Looping_Hardware-design/hls_src/CtrlPlanePacketizer/CtrlPlanePacketizer_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

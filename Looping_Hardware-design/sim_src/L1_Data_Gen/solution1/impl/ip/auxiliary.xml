@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="L1_Data_Gen" xd:componentRef="L1_Data_Gen" xd:initiationInterval="1" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="L1_data_out.payload" xd:originalName="L1_data_out" xd:direction="out" xd:interfaceRef="L1_data_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="53:0" xd:dataWidth="54"/>
+  <xd:arg xd:name="L1_data_out.dst_module" xd:originalName="L1_data_out" xd:direction="out" xd:interfaceRef="L1_data_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:54" xd:dataWidth="10"/>
+  <xd:arg xd:name="l1datagen_stateout" xd:originalName="l1datagen_stateout" xd:direction="out" xd:interfaceRef="l1datagen_stateout_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="2"/>
+  <xd:arg xd:name="CDATA_COUNTER" xd:originalName="CDATA_COUNTER" xd:direction="out" xd:interfaceRef="CDATA_COUNTER_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="1169" xd:FF="334" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

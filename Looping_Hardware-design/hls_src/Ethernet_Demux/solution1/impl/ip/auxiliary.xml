@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="Ethernet_demux" xd:componentRef="Ethernet_demux" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="state">
+  <xd:arg xd:name="eth_data_rx.data" xd:originalName="eth_data_rx" xd:direction="in" xd:interfaceRef="eth_data_rx" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="eth_data_rx.user" xd:originalName="eth_data_rx" xd:direction="in" xd:interfaceRef="eth_data_rx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="eth_data_rx.keep" xd:originalName="eth_data_rx" xd:direction="in" xd:interfaceRef="eth_data_rx" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="eth_data_rx.last" xd:originalName="eth_data_rx" xd:direction="in" xd:interfaceRef="eth_data_rx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="cu_data_out.data" xd:originalName="cu_data_out" xd:direction="out" xd:interfaceRef="cu_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="cu_data_out.user" xd:originalName="cu_data_out" xd:direction="out" xd:interfaceRef="cu_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="cu_data_out.keep" xd:originalName="cu_data_out" xd:direction="out" xd:interfaceRef="cu_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="cu_data_out.last" xd:originalName="cu_data_out" xd:direction="out" xd:interfaceRef="cu_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="sync_data_out.data" xd:originalName="sync_data_out" xd:direction="out" xd:interfaceRef="sync_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="sync_data_out.user" xd:originalName="sync_data_out" xd:direction="out" xd:interfaceRef="sync_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="sync_data_out.keep" xd:originalName="sync_data_out" xd:direction="out" xd:interfaceRef="sync_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="sync_data_out.last" xd:originalName="sync_data_out" xd:direction="out" xd:interfaceRef="sync_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mgmt_data_out.data" xd:originalName="mgmt_data_out" xd:direction="out" xd:interfaceRef="mgmt_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="mgmt_data_out.user" xd:originalName="mgmt_data_out" xd:direction="out" xd:interfaceRef="mgmt_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mgmt_data_out.keep" xd:originalName="mgmt_data_out" xd:direction="out" xd:interfaceRef="mgmt_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="mgmt_data_out.last" xd:originalName="mgmt_data_out" xd:direction="out" xd:interfaceRef="mgmt_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="rx_tstamp_in" xd:originalName="rx_tstamp_in" xd:direction="in" xd:interfaceRef="rx_tstamp_in_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="80" xd:firstOut="1"/>
+  <xd:arg xd:name="rx_tstamp_out" xd:originalName="rx_tstamp_out" xd:direction="out" xd:interfaceRef="rx_tstamp_out_V_V" xd:busTypeRef="axis" xd:dataWidth="80"/>
+  <xd:arg xd:name="ethernet_demux_state_out" xd:originalName="ethernet_demux_state_out" xd:direction="out" xd:interfaceRef="ethernet_demux_state_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="3" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="781" xd:FF="1741" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

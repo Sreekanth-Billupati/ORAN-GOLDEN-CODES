@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Packet_Gen.cpp" path="/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen/Packet_Gen.cpp"/>
+    <originFiles name="Packet_Gen.h" path="/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen/Packet_Gen.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="BfW_Coeff_Gen" xd:componentRef="BfW_Coeff_Gen" xd:initiationInterval="8195" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="bfw_coeff" xd:originalName="bfw_coeff" xd:direction="out" xd:interfaceRef="bfw_coeff_V_V" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:latencyEstimates xd:best-case="8194" xd:worst-case="8194" xd:average-case="8194"/>
+  <xd:resourceEstimates xd:LUT="96" xd:FF="20" xd:BRAM="57" xd:DSP="0"/>
+</xd:acceleratorMap>

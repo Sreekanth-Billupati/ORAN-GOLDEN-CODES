@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May  9 12:21:19 2023
+# Process ID: 9063
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.log
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_2
+endgroup
+set_property location {2 386 1709} [get_bd_cells vio_2]
+set_property -dict [list CONFIG.C_PROBE_OUT0_WIDTH {6} CONFIG.C_EN_PROBE_IN_ACTIVITY {0} CONFIG.C_NUM_PROBE_IN {0}] [get_bd_cells vio_2]
+copy_bd_objs /  [get_bd_cells {vio_2}]
+set_property location {1 446 1808} [get_bd_cells vio_3]
+set_property -dict [list CONFIG.C_PROBE_OUT0_WIDTH {8}] [get_bd_cells vio_3]
+delete_bd_objs [get_bd_nets xlconstant_10_dout] [get_bd_cells xlconstant_10]
+connect_bd_net [get_bd_pins vio_3/probe_out0] [get_bd_pins Userplane_L1_Data_Gen_1/frameID_in_V]
+connect_bd_net [get_bd_pins vio_3/clk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins vio_2/clk]
+delete_bd_objs [get_bd_nets xlconstant_9_dout] [get_bd_cells xlconstant_9]
+connect_bd_net [get_bd_pins vio_2/probe_out0] [get_bd_pins Userplane_L1_Data_Gen_1/slot_in_V]
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 10
+wait_on_run impl_2
+regenerate_bd_layout
+save_bd_design
+reset_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 10
+wait_on_run impl_2
+regenerate_bd_layout
+validate_bd_design -force
+save_bd_design
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 10
+wait_on_run impl_2

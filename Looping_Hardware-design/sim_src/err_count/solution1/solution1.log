@@ -1,0 +1,1600 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:18:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff
+ ^
+err_count/expectedOutput.txt:2:2: error: expected '}'
+ 0xd5e670e3075a8fb81aae7bddefb0df6e
+ ^
+err_count/err_count.cpp:16:37: note: to match this '{'
+ ap_uint<128> expectedOutput[480] = {
+                                    ^
+err_count/err_count.cpp:25:2: error: C++ requires a type specifier for all declarations
+ error_count = temp_count;
+ ^~~~~~~~~~~
+err_count/err_count.cpp:25:16: error: use of undeclared identifier 'temp_count'; did you mean 'err_count'?
+ error_count = temp_count;
+               ^~~~~~~~~~
+               err_count
+err_count/err_count.cpp:12:6: note: 'err_count' declared here
+void err_count(hls::stream<eth_axis>&observed_output,int error_count){
+     ^
+err_count/err_count.cpp:26:1: error: extraneous closing brace ('}')
+}
+^
+1 warning and 4 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:18:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+In file included from err_count/err_count.cpp:1:
+err_count/err_count.cpp:25:2: error: C++ requires a type specifier for all declarations
+ error_count = temp_count;
+ ^~~~~~~~~~~
+err_count/err_count.cpp:25:16: error: use of undeclared identifier 'temp_count'; did you mean 'err_count'?
+ error_count = temp_count;
+               ^~~~~~~~~~
+               err_count
+err_count/err_count.cpp:12:6: note: 'err_count' declared here
+void err_count(hls::stream<eth_axis>&observed_output,int error_count){
+     ^
+err_count/err_count.cpp:26:1: error: extraneous closing brace ('}')
+}
+^
+20 warnings and 3 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:18:
+err_count/expectedOutput.txt:1:6: error: invalid digit 'c' in decimal constant
+ 7555c0aa60f884fabe4851fa7af9afff,
+     ^
+err_count/expectedOutput.txt:2:2: error: use of undeclared identifier 'd5e670e3075a8fb81aae7bddefb0df6e'
+ d5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:3: error: invalid digit 'c' in decimal constant
+ 8c1170e8f9b3dc94a98ef5d6cec27b3b,
+  ^
+err_count/expectedOutput.txt:4:9: error: invalid digit 'b' in decimal constant
+ 5060777b8a2a88103ab757328fbebebf,
+        ^
+err_count/expectedOutput.txt:5:2: error: use of undeclared identifier 'e8180acf8710a1b4e49ff218961b0b83'
+ e8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: error: use of undeclared identifier 'c7b76be43b9a1760ac265ab6bb07dfb9'
+ c7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:5: error: invalid digit 'd' in decimal constant
+ 717da164cfc5f36eadfae238dc0f0ac8,
+    ^
+err_count/expectedOutput.txt:8:4: error: invalid digit 'b' in decimal constant
+ 67bb8b94c2b4c57c2c80dcae24e3e8ee,
+   ^
+err_count/expectedOutput.txt:9:4: error: invalid digit 'b' in decimal constant
+ 21b067ca35b1f780dc562a72ad87cf9c,
+   ^
+err_count/expectedOutput.txt:10:3: error: exponent has no digits
+ 7eef2bdcad8c3ce4eba54a24ddbb8662,
+  ^
+err_count/expectedOutput.txt:11:3: error: exponent has no digits
+ 1eb1dfe777f231bce2f496661153a546,
+  ^
+err_count/expectedOutput.txt:12:2: error: use of undeclared identifier 'eb9a4f444e47646b7ea1e83907bd5632'
+ eb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:4: error: invalid digit 'b' in decimal constant
+ 59be7573094d70704b4c6ee65d4d06e2,
+   ^
+err_count/expectedOutput.txt:14:3: error: invalid digit 'c' in decimal constant
+ 5c875eed99a48541da8498bdf6225f17,
+  ^
+err_count/expectedOutput.txt:15:2: error: use of undeclared identifier 'd258111720b781ceced22a4ee690e38b'
+ d258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:5: error: invalid digit 'd' in decimal constant
+ 723d5322b476e37c9ca6bd5de7008212,
+    ^
+err_count/expectedOutput.txt:17:2: error: use of undeclared identifier 'b9892c51bd715a8454940caa331728eb'
+ b9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:3: error: invalid digit 'a' in decimal constant
+ 2a193306e8f40045d44f899927ddcd25,
+  ^
+err_count/expectedOutput.txt:19:6: error: invalid digit 'd' in decimal constant
+ 3041d8bac7c6f6d7729f409897e0d331,
+     ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:18:
+err_count/expectedOutput.txt:1:1: warning: integer constant is too large for its type
+0x7555c0aa60f884fabe4851fa7af9afff,
+^
+err_count/expectedOutput.txt:2:1: warning: integer constant is too large for its type
+0xd5e670e3075a8fb81aae7bddefb0df6e,
+^
+err_count/expectedOutput.txt:3:1: warning: integer constant is too large for its type
+0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+^
+err_count/expectedOutput.txt:4:1: warning: integer constant is too large for its type
+0x5060777b8a2a88103ab757328fbebebf,
+^
+err_count/expectedOutput.txt:5:1: warning: integer constant is too large for its type
+0xe8180acf8710a1b4e49ff218961b0b83,
+^
+err_count/expectedOutput.txt:6:1: warning: integer constant is too large for its type
+0xc7b76be43b9a1760ac265ab6bb07dfb9,
+^
+err_count/expectedOutput.txt:7:1: warning: integer constant is too large for its type
+0x717da164cfc5f36eadfae238dc0f0ac8,
+^
+err_count/expectedOutput.txt:8:1: warning: integer constant is too large for its type
+0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+^
+err_count/expectedOutput.txt:9:1: warning: integer constant is too large for its type
+0x21b067ca35b1f780dc562a72ad87cf9c,
+^
+err_count/expectedOutput.txt:10:1: warning: integer constant is too large for its type
+0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+^
+err_count/expectedOutput.txt:11:1: warning: integer constant is too large for its type
+0x1eb1dfe777f231bce2f496661153a546,
+^
+err_count/expectedOutput.txt:12:1: warning: integer constant is too large for its type
+0xeb9a4f444e47646b7ea1e83907bd5632,
+^
+err_count/expectedOutput.txt:13:1: warning: integer constant is too large for its type
+0x59be7573094d70704b4c6ee65d4d06e2,
+^
+err_count/expectedOutput.txt:14:1: warning: integer constant is too large for its type
+0x5c875eed99a48541da8498bdf6225f17,
+^
+err_count/expectedOutput.txt:15:1: warning: integer constant is too large for its type
+0xd258111720b781ceced22a4ee690e38b,
+^
+err_count/expectedOutput.txt:16:1: warning: integer constant is too large for its type
+0x723d5322b476e37c9ca6bd5de7008212,
+^
+In file included from err_count/err_count.cpp:1:
+err_count/err_count.cpp:25:2: error: C++ requires a type specifier for all declarations
+ error_count = temp_count;
+ ^~~~~~~~~~~
+err_count/err_count.cpp:25:16: error: use of undeclared identifier 'temp_count'; did you mean 'err_count'?
+ error_count = temp_count;
+               ^~~~~~~~~~
+               err_count
+err_count/err_count.cpp:12:6: note: 'err_count' declared here
+void err_count(hls::stream<eth_axis>&observed_output,int error_count){
+     ^
+err_count/err_count.cpp:26:1: error: extraneous closing brace ('}')
+}
+^
+16 warnings and 3 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:18:
+err_count/expectedOutput.txt:1:1: warning: integer constant is too large for its type
+0x7555c0aa60f884fabe4851fa7af9afff,
+^
+err_count/expectedOutput.txt:2:1: warning: integer constant is too large for its type
+0xd5e670e3075a8fb81aae7bddefb0df6e,
+^
+err_count/expectedOutput.txt:3:1: warning: integer constant is too large for its type
+0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+^
+err_count/expectedOutput.txt:4:1: warning: integer constant is too large for its type
+0x5060777b8a2a88103ab757328fbebebf,
+^
+err_count/expectedOutput.txt:5:1: warning: integer constant is too large for its type
+0xe8180acf8710a1b4e49ff218961b0b83,
+^
+err_count/expectedOutput.txt:6:1: warning: integer constant is too large for its type
+0xc7b76be43b9a1760ac265ab6bb07dfb9,
+^
+err_count/expectedOutput.txt:7:1: warning: integer constant is too large for its type
+0x717da164cfc5f36eadfae238dc0f0ac8,
+^
+err_count/expectedOutput.txt:8:1: warning: integer constant is too large for its type
+0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+^
+err_count/expectedOutput.txt:9:1: warning: integer constant is too large for its type
+0x21b067ca35b1f780dc562a72ad87cf9c,
+^
+err_count/expectedOutput.txt:10:1: warning: integer constant is too large for its type
+0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+^
+err_count/expectedOutput.txt:11:1: warning: integer constant is too large for its type
+0x1eb1dfe777f231bce2f496661153a546,
+^
+err_count/expectedOutput.txt:12:1: warning: integer constant is too large for its type
+0xeb9a4f444e47646b7ea1e83907bd5632,
+^
+err_count/expectedOutput.txt:13:1: warning: integer constant is too large for its type
+0x59be7573094d70704b4c6ee65d4d06e2,
+^
+err_count/expectedOutput.txt:14:1: warning: integer constant is too large for its type
+0x5c875eed99a48541da8498bdf6225f17,
+^
+err_count/expectedOutput.txt:15:1: warning: integer constant is too large for its type
+0xd258111720b781ceced22a4ee690e38b,
+^
+err_count/expectedOutput.txt:16:1: warning: integer constant is too large for its type
+0x723d5322b476e37c9ca6bd5de7008212,
+^
+In file included from err_count/err_count.cpp:1:
+err_count/err_count.cpp:25:2: error: C++ requires a type specifier for all declarations
+ error_count = temp_count;
+ ^~~~~~~~~~~
+err_count/err_count.cpp:25:16: error: use of undeclared identifier 'temp_count'; did you mean 'err_count'?
+ error_count = temp_count;
+               ^~~~~~~~~~
+               err_count
+err_count/err_count.cpp:12:6: note: 'err_count' declared here
+void err_count(hls::stream<eth_axis>&observed_output,int error_count){
+     ^
+err_count/err_count.cpp:26:1: error: extraneous closing brace ('}')
+}
+^
+16 warnings and 3 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:18:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0X7555C0AA60F884FABE4851FA7AF9AFFF,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0XD5E670E3075A8FB81AAE7BDDEFB0DF6E,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0X8C1170E8F9B3DC94A98EF5D6CEC27B3B,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0X5060777B8A2A88103AB757328FBEBEBF,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0XE8180ACF8710A1B4E49FF218961B0B83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0XC7B76BE43B9A1760AC265AB6BB07DFB9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0X717DA164CFC5F36EADFAE238DC0F0AC8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0X67BB8B94C2B4C57C2C80DCAE24E3E8EE,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0X21B067CA35B1F780DC562A72AD87CF9C,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0X7EEF2BDCAD8C3CE4EBA54A24DDBB8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0X1EB1DFE777F231BCE2F496661153A546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0XEB9A4F444E47646B7EA1E83907BD5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0X59BE7573094D70704B4C6EE65D4D06E2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0X5C875EED99A48541DA8498BDF6225F17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0XD258111720B781CECED22A4EE690E38B,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0X723D5322B476E37C9CA6BD5DE7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0XB9892C51BD715A8454940CAA331728EB,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0X2A193306E8F40045D44F899927DDCD25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0X3041D8BAC7C6F6D7729F409897E0D331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0X65482460FDABE4212DB351AD462C6D89,
+ ^
+err_count/expectedOutput.txt:17:2: error: excess elements in array initializer
+ 0XB9892C51BD715A8454940CAA331728EB,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from err_count/err_count.cpp:1:
+err_count/err_count.cpp:25:2: error: C++ requires a type specifier for all declarations
+ error_count = temp_count;
+ ^~~~~~~~~~~
+err_count/err_count.cpp:25:16: error: use of undeclared identifier 'temp_count'; did you mean 'err_count'?
+ error_count = temp_count;
+               ^~~~~~~~~~
+               err_count
+err_count/err_count.cpp:12:6: note: 'err_count' declared here
+void err_count(hls::stream<eth_axis>&observed_output,int error_count){
+     ^
+err_count/err_count.cpp:26:1: error: extraneous closing brace ('}')
+}
+^
+20 warnings and 4 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:20:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:20:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:21:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:22:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:22:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:20:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:21:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:22:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from err_count/err_count.cpp:1:
+err_count/err_count.cpp:12:54: error: invalid storage class specifier in function declarator
+void err_count(hls::stream<eth_axis>&observed_output,static int &error_count){
+                                                     ^
+In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:22:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings and 1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:22:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:23:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:23:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:22:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:21:
+err_count/expectedOutput.txt:1:2: warning: integer constant is too large for its type
+ 0x7555c0aa60f884fabe4851fa7af9afff,
+ ^
+err_count/expectedOutput.txt:2:2: warning: integer constant is too large for its type
+ 0xd5e670e3075a8fb81aae7bddefb0df6e,
+ ^
+err_count/expectedOutput.txt:3:2: warning: integer constant is too large for its type
+ 0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+ ^
+err_count/expectedOutput.txt:4:2: warning: integer constant is too large for its type
+ 0x5060777b8a2a88103ab757328fbebebf,
+ ^
+err_count/expectedOutput.txt:5:2: warning: integer constant is too large for its type
+ 0xe8180acf8710a1b4e49ff218961b0b83,
+ ^
+err_count/expectedOutput.txt:6:2: warning: integer constant is too large for its type
+ 0xc7b76be43b9a1760ac265ab6bb07dfb9,
+ ^
+err_count/expectedOutput.txt:7:2: warning: integer constant is too large for its type
+ 0x717da164cfc5f36eadfae238dc0f0ac8,
+ ^
+err_count/expectedOutput.txt:8:2: warning: integer constant is too large for its type
+ 0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+ ^
+err_count/expectedOutput.txt:9:2: warning: integer constant is too large for its type
+ 0x21b067ca35b1f780dc562a72ad87cf9c,
+ ^
+err_count/expectedOutput.txt:10:2: warning: integer constant is too large for its type
+ 0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+ ^
+err_count/expectedOutput.txt:11:2: warning: integer constant is too large for its type
+ 0x1eb1dfe777f231bce2f496661153a546,
+ ^
+err_count/expectedOutput.txt:12:2: warning: integer constant is too large for its type
+ 0xeb9a4f444e47646b7ea1e83907bd5632,
+ ^
+err_count/expectedOutput.txt:13:2: warning: integer constant is too large for its type
+ 0x59be7573094d70704b4c6ee65d4d06e2,
+ ^
+err_count/expectedOutput.txt:14:2: warning: integer constant is too large for its type
+ 0x5c875eed99a48541da8498bdf6225f17,
+ ^
+err_count/expectedOutput.txt:15:2: warning: integer constant is too large for its type
+ 0xd258111720b781ceced22a4ee690e38b,
+ ^
+err_count/expectedOutput.txt:16:2: warning: integer constant is too large for its type
+ 0x723d5322b476e37c9ca6bd5de7008212,
+ ^
+err_count/expectedOutput.txt:17:2: warning: integer constant is too large for its type
+ 0xb9892c51bd715a8454940caa331728eb,
+ ^
+err_count/expectedOutput.txt:18:2: warning: integer constant is too large for its type
+ 0x2a193306e8f40045d44f899927ddcd25,
+ ^
+err_count/expectedOutput.txt:19:2: warning: integer constant is too large for its type
+ 0x3041d8bac7c6f6d7729f409897e0d331,
+ ^
+err_count/expectedOutput.txt:20:2: warning: integer constant is too large for its type
+ 0x65482460fdabe4212db351ad462c6d89,
+ ^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'expectedOutput.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'err_count/err_count.cpp' ... 
+WARNING: [HLS 200-40] In file included from err_count/err_count.cpp:1:
+In file included from err_count/err_count.cpp:21:
+err_count/expectedOutput.txt:1:1: warning: integer constant is too large for its type
+0x7555c0aa60f884fabe4851fa7af9afff,
+^
+err_count/expectedOutput.txt:2:1: warning: integer constant is too large for its type
+0xd5e670e3075a8fb81aae7bddefb0df6e,
+^
+err_count/expectedOutput.txt:3:1: warning: integer constant is too large for its type
+0x8c1170e8f9b3dc94a98ef5d6cec27b3b,
+^
+err_count/expectedOutput.txt:4:1: warning: integer constant is too large for its type
+0x5060777b8a2a88103ab757328fbebebf,
+^
+err_count/expectedOutput.txt:5:1: warning: integer constant is too large for its type
+0xe8180acf8710a1b4e49ff218961b0b83,
+^
+err_count/expectedOutput.txt:6:1: warning: integer constant is too large for its type
+0xc7b76be43b9a1760ac265ab6bb07dfb9,
+^
+err_count/expectedOutput.txt:7:1: warning: integer constant is too large for its type
+0x717da164cfc5f36eadfae238dc0f0ac8,
+^
+err_count/expectedOutput.txt:8:1: warning: integer constant is too large for its type
+0x67bb8b94c2b4c57c2c80dcae24e3e8ee,
+^
+err_count/expectedOutput.txt:9:1: warning: integer constant is too large for its type
+0x21b067ca35b1f780dc562a72ad87cf9c,
+^
+err_count/expectedOutput.txt:10:1: warning: integer constant is too large for its type
+0x7eef2bdcad8c3ce4eba54a24ddbb8662,
+^
+err_count/expectedOutput.txt:11:1: warning: integer constant is too large for its type
+0x1eb1dfe777f231bce2f496661153a546,
+^
+err_count/expectedOutput.txt:12:1: warning: integer constant is too large for its type
+0xeb9a4f444e47646b7ea1e83907bd5632,
+^
+err_count/expectedOutput.txt:13:1: warning: integer constant is too large for its type
+0x59be7573094d70704b4c6ee65d4d06e2,
+^
+err_count/expectedOutput.txt:14:1: warning: integer constant is too large for its type
+0x5c875eed99a48541da8498bdf6225f17,
+^
+err_count/expectedOutput.txt:15:1: warning: integer constant is too large for its type
+0xd258111720b781ceced22a4ee690e38b,
+^
+err_count/expectedOutput.txt:16:1: warning: integer constant is too large for its type
+0x723d5322b476e37c9ca6bd5de7008212,
+^
+err_count/expectedOutput.txt:17:1: warning: integer constant is too large for its type
+0xb9892c51bd715a8454940caa331728eb,
+^
+err_count/expectedOutput.txt:18:1: warning: integer constant is too large for its type
+0x2a193306e8f40045d44f899927ddcd25,
+^
+err_count/expectedOutput.txt:19:1: warning: integer constant is too large for its type
+0x3041d8bac7c6f6d7729f409897e0d331,
+^
+err_count/expectedOutput.txt:20:1: warning: integer constant is too large for its type
+0x65482460fdabe4212db351ad462c6d89,
+^
+20 warnings generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

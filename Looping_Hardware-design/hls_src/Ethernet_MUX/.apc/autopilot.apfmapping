@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ethernet_mux.h" path="/home/sai/Desktop/Looping_Hardware-design/hls_src/ethernet_mux.h"/>
+    <originFiles name="ethernet_mux.cpp" path="/home/sai/Desktop/Looping_Hardware-design/hls_src/Ethernet_MUX/ethernet_mux.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

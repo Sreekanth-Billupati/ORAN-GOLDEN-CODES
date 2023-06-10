@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Feb  4 12:42:07 2022
+# Process ID: 27812
+# Current directory: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/C&U_Single_Looping_design_Simula/Modify_ecprimux_L1oran/hls_src/ecpri_MUX/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/C&U_Single_Looping_design_Simula/Modify_ecprimux_L1oran/hls_src/ecpri_MUX/solution1/impl/ip/vivado.log
+# Journal file: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/C&U_Single_Looping_design_Simula/Modify_ecprimux_L1oran/hls_src/ecpri_MUX/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  4 12:42:13 2022...

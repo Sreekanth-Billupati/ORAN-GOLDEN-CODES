@@ -1,0 +1,71 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>L1_data_out_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>payload</FieldName>
+<FieldType>
+<TypeName>ap_uint 54</TypeName>
+<TypeWidth>54</TypeWidth>
+<PhysicalWidth>54</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>dst_module</FieldName>
+<FieldType>
+<TypeName>ap_uint 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>slot_in_V</name>
+<CType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>frameID_in_V</name>
+<CType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>st_out_V</name>
+<CType>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>symbol_number_V</name>
+<CType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

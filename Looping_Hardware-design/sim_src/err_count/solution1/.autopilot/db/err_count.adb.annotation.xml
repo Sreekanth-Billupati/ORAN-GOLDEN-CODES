@@ -1,0 +1,8 @@
+<annotationInfo>
+<item  id="23" filename="err_count/err_count.cpp" linenumber="23" name="icmp_ln887" contextFuncName="err_count" moduleName="err_count" rtlName="icmp_ln887_fu_108_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/nsundriyal"><\/item>
+<item  id="25" filename="err_count/err_count.cpp" linenumber="23" name="i_V" contextFuncName="err_count" moduleName="err_count" rtlName="i_V_fu_114_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="16" fileDirectory="/home/nsundriyal"><\/item>
+<item  id="30" filename="err_count/err_count.cpp" linenumber="25" name="zext_ln544" contextFuncName="err_count" moduleName="err_count" rtlName="zext_ln544_fu_120_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/nsundriyal"><\/item>
+<item  id="33" filename="err_count/err_count.cpp" linenumber="26" name="icmp_ln883" contextFuncName="err_count" moduleName="err_count" rtlName="icmp_ln883_fu_129_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="50" fileDirectory="/home/nsundriyal"><\/item>
+<item  id="37" filename="err_count/err_count.cpp" linenumber="27" name="add_ln27" contextFuncName="err_count" moduleName="err_count" rtlName="add_ln27_fu_135_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/nsundriyal"><\/item>
+<item  id="41" filename="err_count/err_count.cpp" linenumber="29" name="zext_ln29" contextFuncName="err_count" moduleName="err_count" rtlName="iteration_count" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/nsundriyal"><\/item>
+</annotationInfo>

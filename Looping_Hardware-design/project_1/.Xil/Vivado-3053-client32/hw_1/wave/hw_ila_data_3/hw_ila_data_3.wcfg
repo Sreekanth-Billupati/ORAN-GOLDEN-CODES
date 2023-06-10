@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/sai/Desktop/Looping_Hardware-design/project_1/.Xil/Vivado-3053-client32/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="260"></NameColumnWidth>
+      <ValueColumnWidth column_width="296"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe0_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe0_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[7:0]</obj_property>
+      <obj_property name="label">slot_no_2</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe1_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe1_1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[9:0]</obj_property>
+      <obj_property name="label">SFN</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe2_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe2_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe2_1[63:0]</obj_property>
+      <obj_property name="label">timing_gps_0_own_uncorrected</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe3_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe3_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[63:0]</obj_property>
+      <obj_property name="label">timing_gps_0_own_clock_ns</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe4_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe4_1</obj_property>
+      <obj_property name="ObjectShortName">probe4_1</obj_property>
+      <obj_property name="label">Urx_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe5_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe5_1[32:0]</obj_property>
+      <obj_property name="ObjectShortName">probe5_1[32:0]</obj_property>
+      <obj_property name="label">gps_proc_0_sec_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe6_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe6_1</obj_property>
+      <obj_property name="ObjectShortName">probe6_1</obj_property>
+      <obj_property name="label">fdre_0_pps_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe7_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe7_1</obj_property>
+      <obj_property name="ObjectShortName">probe7_1</obj_property>
+      <obj_property name="label">slot_indication_0_2</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe8_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe8_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe8_1[3:0]</obj_property>
+      <obj_property name="label">timing_gps_0_state2_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe9_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe9_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe9_1[3:0]</obj_property>
+      <obj_property name="label">timing_gps_0_STATE2_output</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe10_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe10_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe10_1[63:0]</obj_property>
+      <obj_property name="label">timing_gps_0_GPS_ns</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe11_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe11_1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">probe11_1[10:0]</obj_property>
+      <obj_property name="label">timing_gps_0_SFN_corr</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe12_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe12_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">probe12_1[15:0]</obj_property>
+      <obj_property name="label">timing_gps_0_correction_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe13_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe13_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe13_1[63:0]</obj_property>
+      <obj_property name="label">timing_gps_0_delta_counter_ns</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe14_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe14_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">probe14_1[63:0]</obj_property>
+      <obj_property name="label">timing_gps_0_abs_correction</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/GPS_timing/system_ila_0/inst/probe15_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/GPS_timing/system_ila_0/inst/probe15_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe15_1[3:0]</obj_property>
+      <obj_property name="label">uart_rx_0_STATE</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

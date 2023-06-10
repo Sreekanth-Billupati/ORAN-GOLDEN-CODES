@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May 30 10:36:39 2023
+# Process ID: 10023
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.log
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sai/Desktop/Looping_Hardware-design/sim_src'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sai/Desktop/Looping_Hardware-design/hls_src'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_19.1/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Userplane_L1_Data_Gen:1.0'. The one found in IP location '/home/sai/Desktop/Looping_Hardware-design/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/solution1/impl/ip' will take precedence over the same IP in location /home/sai/Desktop/Looping_Hardware-design/hls_src/other_ips/12_Dummy_L1_to_UPLANE/solution1/impl/ip
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 30 10:43:42 2023...

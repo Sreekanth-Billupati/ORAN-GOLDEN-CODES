@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cplane_data_counter_s' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.133+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'mux_configs_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.129+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'numMatrix_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.126+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extn_hdr_bfWCompHdr_s' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.115+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extn_hdr_numBundPRB_s' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.109+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extn_hdr_RAD_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.106+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extn_hdr_disablebfW_s' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.102+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extn_hdr_extLen_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.098+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extn_hdr_ef_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.095+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'prb_bit_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.091+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'value_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.087+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'count' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.084+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_hdr_reMask_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.080+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_hdr_startPrb' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.076+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_hdr_symInc_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.072+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_hdr_rb_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.068+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_hdr_sectionI' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.064+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_sectionType' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.057+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_numSections' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.053+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_startsymbol' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.049+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_slotID_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.045+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_subframeId_s' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.041+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_frameId_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.038+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_filterIndex' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.033+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_payloadVers' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.030+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'appn_hdr_dataDirecti' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.025+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_hdr_numPrbu_s' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.022+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'state_V' is power-on initialization." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.018+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'CDATA_COUNTER_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.015+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'l1toc_stateout_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:48.011+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:38.511+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="L1toORAN" solutionName="solution1" date="2022-02-17T14:19:38.503+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/aswin/Desktop/Vivado_hls_projects/5_mplane_hls_ip/solution1/./sim/autowrap/testbench/mparam.cpp_pre.cpp.tb.cpp

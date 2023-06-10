@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_count_V' is power-on initialization." projectName="12_Dummy_L1_to_UPLANE" solutionName="solution1" date="2021-03-17T19:03:53.503+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'sym_count_V' is power-on initialization." projectName="12_Dummy_L1_to_UPLANE" solutionName="solution1" date="2021-03-17T19:03:53.499+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization." projectName="12_Dummy_L1_to_UPLANE" solutionName="solution1" date="2021-03-17T19:03:53.498+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'symbol_number_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="12_Dummy_L1_to_UPLANE" solutionName="solution1" date="2021-03-17T19:03:53.496+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'st_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="12_Dummy_L1_to_UPLANE" solutionName="solution1" date="2021-03-17T19:03:53.494+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'section_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="12_Dummy_L1_to_UPLANE" solutionName="solution1" date="2021-03-17T19:03:40.140+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

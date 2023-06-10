@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ecpri_demux" xd:componentRef="ecpri_demux" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="CU_data_in.data" xd:originalName="CU_data_in" xd:direction="in" xd:interfaceRef="CU_data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="CU_data_in.user" xd:originalName="CU_data_in" xd:direction="in" xd:interfaceRef="CU_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="CU_data_in.keep" xd:originalName="CU_data_in" xd:direction="in" xd:interfaceRef="CU_data_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="CU_data_in.last" xd:originalName="CU_data_in" xd:direction="in" xd:interfaceRef="CU_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="control_data_out.data" xd:originalName="control_data_out" xd:direction="out" xd:interfaceRef="control_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="control_data_out.user" xd:originalName="control_data_out" xd:direction="out" xd:interfaceRef="control_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="control_data_out.keep" xd:originalName="control_data_out" xd:direction="out" xd:interfaceRef="control_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="control_data_out.last" xd:originalName="control_data_out" xd:direction="out" xd:interfaceRef="control_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="user_data_out.data" xd:originalName="user_data_out" xd:direction="out" xd:interfaceRef="user_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="user_data_out.user" xd:originalName="user_data_out" xd:direction="out" xd:interfaceRef="user_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="user_data_out.keep" xd:originalName="user_data_out" xd:direction="out" xd:interfaceRef="user_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="user_data_out.last" xd:originalName="user_data_out" xd:direction="out" xd:interfaceRef="user_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="ecpri_demux_eth_state_out" xd:originalName="ecpri_demux_eth_state_out" xd:direction="out" xd:interfaceRef="ecpri_demux_eth_state_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="2" xd:firstOut="2"/>
+  <xd:arg xd:name="msg_type_out" xd:originalName="msg_type_out" xd:direction="out" xd:interfaceRef="msg_type_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="614" xd:FF="1116" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

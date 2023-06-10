@@ -1,0 +1,182 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/Xilinx/Vivado/2019.1/common/technology/xilinx/zynquplusRFSOC/zynquplusRFSOC.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/zynquplusRFSOC/zynquplusRFSOC'.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Packet_Gen.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Packet_Gen.cpp:1:
+In file included from Packet_Gen.cpp:1:
+./Packet_Gen.h:21:34: error: use of undeclared identifier 'stream_32'
+typedef hls::stream<ap_uint<32>> stream_32;
+                                 ^
+./Packet_Gen.h:21:43: error: type name requires a specifier or qualifier
+typedef hls::stream<ap_uint<32>> stream_32;
+                                          ^
+In file included from Packet_Gen.cpp:1:
+Packet_Gen.cpp:3:6: error: variable has incomplete type 'void'
+void Data_gen(stream_32 &Data_in)
+     ^
+Packet_Gen.cpp:3:15: error: use of undeclared identifier 'stream_32'
+void Data_gen(stream_32 &Data_in)
+              ^
+Packet_Gen.cpp:3:26: error: use of undeclared identifier 'Data_in'; did you mean 'Data_gen'?
+void Data_gen(stream_32 &Data_in)
+                         ^~~~~~~
+                         Data_gen
+Packet_Gen.cpp:3:6: note: 'Data_gen' declared here
+void Data_gen(stream_32 &Data_in)
+     ^
+Packet_Gen.cpp:3:34: error: expected ';' after top level declarator
+void Data_gen(stream_32 &Data_in)
+                                 ^
+                                 ;
+6 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/Xilinx/Vivado/2019.1/common/technology/xilinx/zynquplusRFSOC/zynquplusRFSOC.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/zynquplusRFSOC/zynquplusRFSOC'.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Packet_Gen.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Packet_Gen.cpp:1:
+In file included from Packet_Gen.cpp:1:
+./Packet_Gen.h:20:34: error: use of undeclared identifier 'stream_32'
+typedef hls::stream<ap_uint<32>> stream_32;
+                                 ^
+./Packet_Gen.h:20:43: error: type name requires a specifier or qualifier
+typedef hls::stream<ap_uint<32>> stream_32;
+                                          ^
+In file included from Packet_Gen.cpp:1:
+Packet_Gen.cpp:3:6: error: variable has incomplete type 'void'
+void Data_gen(stream_32 &Data_in)
+     ^
+Packet_Gen.cpp:3:15: error: use of undeclared identifier 'stream_32'
+void Data_gen(stream_32 &Data_in)
+              ^
+Packet_Gen.cpp:3:26: error: use of undeclared identifier 'Data_in'; did you mean 'Data_gen'?
+void Data_gen(stream_32 &Data_in)
+                         ^~~~~~~
+                         Data_gen
+Packet_Gen.cpp:3:6: note: 'Data_gen' declared here
+void Data_gen(stream_32 &Data_in)
+     ^
+Packet_Gen.cpp:3:34: error: expected ';' after top level declarator
+void Data_gen(stream_32 &Data_in)
+                                 ^
+                                 ;
+6 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/Xilinx/Vivado/2019.1/common/technology/xilinx/zynquplusRFSOC/zynquplusRFSOC.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/zynquplusRFSOC/zynquplusRFSOC'.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Packet_Gen.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Packet_Gen.cpp:1:
+In file included from Packet_Gen.cpp:1:
+./Packet_Gen.h:21:34: error: use of undeclared identifier 'stream_32'
+typedef hls::stream<ap_uint<32>> stream_32;
+                                 ^
+./Packet_Gen.h:21:43: error: type name requires a specifier or qualifier
+typedef hls::stream<ap_uint<32>> stream_32;
+                                          ^
+In file included from Packet_Gen.cpp:1:
+Packet_Gen.cpp:3:6: error: variable has incomplete type 'void'
+void Data_gen(stream_32 &Data_in)
+     ^
+Packet_Gen.cpp:3:15: error: use of undeclared identifier 'stream_32'
+void Data_gen(stream_32 &Data_in)
+              ^
+Packet_Gen.cpp:3:26: error: use of undeclared identifier 'Data_in'; did you mean 'Data_gen'?
+void Data_gen(stream_32 &Data_in)
+                         ^~~~~~~
+                         Data_gen
+Packet_Gen.cpp:3:6: note: 'Data_gen' declared here
+void Data_gen(stream_32 &Data_in)
+     ^
+Packet_Gen.cpp:3:34: error: expected ';' after top level declarator
+void Data_gen(stream_32 &Data_in)
+                                 ^
+                                 ;
+6 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/Xilinx/Vivado/2019.1/common/technology/xilinx/zynquplusRFSOC/zynquplusRFSOC.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/zynquplusRFSOC/zynquplusRFSOC'.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Packet_Gen.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Packet_Gen.cpp:1:
+In file included from Packet_Gen.cpp:1:
+./Packet_Gen.h:21:34: error: use of undeclared identifier 'stream_32'
+typedef hls::stream<ap_uint<32>> stream_32;
+                                 ^
+./Packet_Gen.h:21:43: error: type name requires a specifier or qualifier
+typedef hls::stream<ap_uint<32>> stream_32;
+                                          ^
+In file included from Packet_Gen.cpp:1:
+Packet_Gen.cpp:3:41: error: use of undeclared identifier 'Data_in'
+void Data_gen(hls::stream<ap_uint<32>> &Data_in)
+                                        ^
+Packet_Gen.cpp:15:2: error: type name requires a specifier or qualifier
+}
+ ^
+Packet_Gen.cpp:3:41: error: use of undeclared identifier 'Data_in'
+void Data_gen(hls::stream<ap_uint<32>> &Data_in)
+                                        ^
+Packet_Gen.cpp:15:2: error: type name requires a specifier or qualifier
+}
+ ^
+Packet_Gen.cpp:15:2: error: expected ')'
+Packet_Gen.cpp:3:14: note: to match this '('
+void Data_gen(hls::stream<ap_uint<32>> &Data_in)
+             ^
+Packet_Gen.cpp:15:2: error: expected function body after function declarator
+}
+ ^
+8 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

@@ -1,0 +1,22 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx_19.1/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'sai' on host 'client32.5gtbiitm.in' (Linux_x86_64 version 4.15.0-142-generic) on Fri Mar 03 10:30:32 IST 2023
+INFO: [HLS 200-10] On os Ubuntu 16.04.7 LTS
+INFO: [HLS 200-10] In directory '/home/sai/Desktop/Looping_Hardware-design/hls_src'
+Sourcing Tcl script '/home/sai/Desktop/Looping_Hardware-design/hls_src/Ethernet_Demux/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project '/home/sai/Desktop/Looping_Hardware-design/hls_src/Ethernet_Demux'.
+INFO: [HLS 200-10] Opening solution '/home/sai/Desktop/Looping_Hardware-design/hls_src/Ethernet_Demux/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_19.1/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  3 10:30:45 2023...

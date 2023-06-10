@@ -1,0 +1,13 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'harishmani' on host 'workstation3' (Linux_x86_64 version 4.15.0-142-generic) on Sat May 15 17:17:47 IST 2021
+INFO: [HLS 200-10] On os Ubuntu 16.04.7 LTS
+INFO: [HLS 200-10] In directory '/home/harishmani/5G_project/BBU_FAPI_ORAN/l1c_oran_full/Till_Scrambling/Tx_IP_repo/packet_gen/packet_gen'
+INFO: [HLS 200-10] Bringing up Vivado HLS GUI ... 
+INFO: [Common 17-206] Exiting vivado_hls at Sat May 15 17:35:24 2021...

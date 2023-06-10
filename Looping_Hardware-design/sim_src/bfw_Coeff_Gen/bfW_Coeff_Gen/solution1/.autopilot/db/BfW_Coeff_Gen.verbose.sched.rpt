@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'BfW_Coeff_Gen'
+================================================================
+* Date:           Thu Mar 11 18:04:39 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        bfW_Coeff_Gen
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     1.326|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  8194|  8194|  8194|  8194|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  8192|  8192|         2|          1|          1|  8192|    yes   |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.65>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %bfw_coeff_V_V), !map !22"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @BfW_Coeff_Gen_str) nounwind"   --->   Operation 6 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [mat_coeff_gen.cpp:5]   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %bfw_coeff_V_V, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [mat_coeff_gen.cpp:6]   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([8192 x i128]* @coeff, [1 x i8]* @p_str1, [12 x i8]* @p_str1004, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [mat_coeff_gen.cpp:8]   --->   Operation 9 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.65ns)   --->   "br label %1" [mat_coeff_gen.cpp:9]   --->   Operation 10 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 1.32>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%j_0 = phi i14 [ 0, %0 ], [ %j, %hls_label_0 ]"   --->   Operation 11 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.03ns)   --->   "%icmp_ln9 = icmp eq i14 %j_0, -8192" [mat_coeff_gen.cpp:9]   --->   Operation 12 'icmp' 'icmp_ln9' <Predicate = true> <Delay = 1.03> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8192, i64 8192, i64 8192)"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.83ns)   --->   "%j = add i14 %j_0, 1" [mat_coeff_gen.cpp:9]   --->   Operation 14 'add' 'j' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln9, label %2, label %hls_label_0" [mat_coeff_gen.cpp:9]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln11 = zext i14 %j_0 to i64" [mat_coeff_gen.cpp:11]   --->   Operation 16 'zext' 'zext_ln11' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%coeff_addr = getelementptr [8192 x i128]* @coeff, i64 0, i64 %zext_ln11" [mat_coeff_gen.cpp:11]   --->   Operation 17 'getelementptr' 'coeff_addr' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (1.23ns)   --->   "%tmp_V = load i128* %coeff_addr, align 16" [mat_coeff_gen.cpp:11]   --->   Operation 18 'load' 'tmp_V' <Predicate = (!icmp_ln9)> <Delay = 1.23> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 128> <Depth = 8192> <RAM>
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str1005)" [mat_coeff_gen.cpp:9]   --->   Operation 19 'specregionbegin' 'tmp' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [mat_coeff_gen.cpp:10]   --->   Operation 20 'specpipeline' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_3 : Operation 21 [1/2] (1.23ns)   --->   "%tmp_V = load i128* %coeff_addr, align 16" [mat_coeff_gen.cpp:11]   --->   Operation 21 'load' 'tmp_V' <Predicate = (!icmp_ln9)> <Delay = 1.23> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 128> <Depth = 8192> <RAM>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %bfw_coeff_V_V, i128 %tmp_V)" [mat_coeff_gen.cpp:11]   --->   Operation 22 'write' <Predicate = (!icmp_ln9)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1005, i32 %tmp)" [mat_coeff_gen.cpp:12]   --->   Operation 23 'specregionend' 'empty_2' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br label %1" [mat_coeff_gen.cpp:9]   --->   Operation 24 'br' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "ret void" [mat_coeff_gen.cpp:15]   --->   Operation 25 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.2ns, clock uncertainty: 0.4ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', mat_coeff_gen.cpp:9) [10]  (0.656 ns)
+
+ <State 2>: 1.33ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln9', mat_coeff_gen.cpp:9) [11]  (1.04 ns)
+	blocking operation 0.287 ns on control path)
+
+ <State 3>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('tmp.V', mat_coeff_gen.cpp:11) on array 'coeff' [20]  (1.24 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

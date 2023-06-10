@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'j_V' is power-on initialization." projectName="4_l1tomplane_bigendian" solutionName="solution1" date="2021-04-21T16:04:07.875+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'state_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="4_l1tomplane_bigendian" solutionName="solution1" date="2021-04-21T16:04:07.870+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find source file l1tomplane.h; skipping it." projectName="4_l1tomplane_bigendian" solutionName="solution1" date="2021-04-21T16:03:58.869+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'l1tomplane.h'" projectName="4_l1tomplane_bigendian" solutionName="solution1" date="2021-04-21T16:03:58.195+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

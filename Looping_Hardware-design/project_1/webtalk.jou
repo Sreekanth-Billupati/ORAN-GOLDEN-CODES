@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 28 18:03:27 2023
+# Process ID: 21106
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1
+# Command line: wbtcv -mode batch -source /home/sai/Desktop/Looping_Hardware-design/project_1/.Xil/Vivado-3053-client32/webtalk/labtool_webtalk.tcl -notrace
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/webtalk.log
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/webtalk.jou
+#-----------------------------------------------------------
+source /home/sai/Desktop/Looping_Hardware-design/project_1/.Xil/Vivado-3053-client32/webtalk/labtool_webtalk.tcl -notrace

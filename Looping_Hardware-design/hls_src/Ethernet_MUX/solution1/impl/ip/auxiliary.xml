@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ethernet_mux" xd:componentRef="ethernet_mux" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="ether_mux_data_in.data" xd:originalName="ether_mux_data_in" xd:direction="in" xd:interfaceRef="ether_mux_data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="ether_mux_data_in.user" xd:originalName="ether_mux_data_in" xd:direction="in" xd:interfaceRef="ether_mux_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="ether_mux_data_in.keep" xd:originalName="ether_mux_data_in" xd:direction="in" xd:interfaceRef="ether_mux_data_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="ether_mux_data_in.last" xd:originalName="ether_mux_data_in" xd:direction="in" xd:interfaceRef="ether_mux_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="sync_data_in.data" xd:originalName="sync_data_in" xd:direction="in" xd:interfaceRef="sync_data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="sync_data_in.user" xd:originalName="sync_data_in" xd:direction="in" xd:interfaceRef="sync_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="sync_data_in.keep" xd:originalName="sync_data_in" xd:direction="in" xd:interfaceRef="sync_data_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="sync_data_in.last" xd:originalName="sync_data_in" xd:direction="in" xd:interfaceRef="sync_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mgmt_data_in.data" xd:originalName="mgmt_data_in" xd:direction="in" xd:interfaceRef="mgmt_data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="mgmt_data_in.user" xd:originalName="mgmt_data_in" xd:direction="in" xd:interfaceRef="mgmt_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mgmt_data_in.keep" xd:originalName="mgmt_data_in" xd:direction="in" xd:interfaceRef="mgmt_data_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="mgmt_data_in.last" xd:originalName="mgmt_data_in" xd:direction="in" xd:interfaceRef="mgmt_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="eth_data_out.data" xd:originalName="eth_data_out" xd:direction="out" xd:interfaceRef="eth_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="eth_data_out.user" xd:originalName="eth_data_out" xd:direction="out" xd:interfaceRef="eth_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="eth_data_out.keep" xd:originalName="eth_data_out" xd:direction="out" xd:interfaceRef="eth_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="eth_data_out.last" xd:originalName="eth_data_out" xd:direction="out" xd:interfaceRef="eth_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="ptp_tag_filed_out" xd:originalName="ptp_tag_filed_out" xd:direction="out" xd:interfaceRef="ptp_tag_filed_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="1"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="161" xd:FF="443" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mplane.h" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src/U_plane_src/5_mplane_hls_ip/mplane.h"/>
+    <originFiles name="mparam.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src/U_plane_src/5_mplane_hls_ip/mparam.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="mparam_tb.cpp" path="/home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Simulation_design/Looping_design/ORAN_INTEG_1/hls_src/U_plane_src/5_mplane_hls_ip/mparam_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

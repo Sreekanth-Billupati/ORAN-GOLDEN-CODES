@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'tlast_counter_V' is power-on initialization." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.692+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'mux_cnfg_V' is power-on initialization." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.689+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ecpri_mux_state' is power-on initialization." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.686+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'layer_count_V' is power-on initialization." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.683+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section_count_V' is power-on initialization." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.681+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'numSection_V' is power-on initialization." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.678+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'layer_count_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.676+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'section_count_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.673+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'num_section_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.671+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'ecpri_mux_state_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.667+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'ecpri_mux' consists of the following:&#xA;&#x9;'load' operation ('t.V', ecpri_MUX/ecpri_mux.cpp:63) on static variable 'section_count_V' [54]  (0 ns)&#xA;&#x9;'add' operation ('add_ln700', ecpri_MUX/ecpri_mux.cpp:98) [92]  (0.809 ns)&#xA;&#x9;'icmp' operation ('icmp_ln879', ecpri_MUX/ecpri_mux.cpp:99) [93]  (0.976 ns)&#xA;&#x9;multiplexor before 'phi' operation ('storemerge255', ecpri_MUX/ecpri_mux.cpp:104) with incoming values : ('select_ln104', ecpri_MUX/ecpri_mux.cpp:104) [106]  (0.656 ns)&#xA;&#x9;'phi' operation ('storemerge255', ecpri_MUX/ecpri_mux.cpp:104) with incoming values : ('select_ln104', ecpri_MUX/ecpri_mux.cpp:104) [106]  (0 ns)&#xA;&#x9;'store' operation ('ecpri_mux_state_write_ln116', ecpri_MUX/ecpri_mux.cpp:116) of variable 'storemerge255', ecpri_MUX/ecpri_mux.cpp:104 on static variable 'ecpri_mux_state' [107]  (0.712 ns)" projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.623+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (3.15275ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns)." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.621+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'mux_config_in.V.V' (ecpri_MUX/ecpri_mux.cpp:20)." projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:27.500+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'ecpri_mux.csv'" projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:18.443+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'ecpri_mux_exp_out.csv'" projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:18.441+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'ecpri_mux_tb.cpp'" projectName="ecpri_MUX" solutionName="solution1" date="2022-02-04T12:41:18.424+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

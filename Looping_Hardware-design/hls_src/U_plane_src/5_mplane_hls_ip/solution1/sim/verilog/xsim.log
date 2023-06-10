@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Feb  4 14:41:18 2021
+# Process ID: 22439
+# Current directory: /home/aswin/Desktop/Vivado_hls_projects/5_mplane_hls_ip/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/mparam/xsim_script.tcl}
+# Log file: /home/aswin/Desktop/Vivado_hls_projects/5_mplane_hls_ip/solution1/sim/verilog/xsim.log
+# Journal file: /home/aswin/Desktop/Vivado_hls_projects/5_mplane_hls_ip/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/mparam/xsim_script.tcl
+# xsim {mparam} -autoloadwcfg -tclbatch {mparam.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source mparam.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 3 [0.00%] @ "107000"
+// RTL Simulation : 1 / 3 [100.00%] @ "117000"
+// RTL Simulation : 2 / 3 [100.00%] @ "123000"
+// RTL Simulation : 3 / 3 [100.00%] @ "130000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 142400 ps : File "/home/aswin/Desktop/Vivado_hls_projects/5_mplane_hls_ip/solution1/sim/verilog/mparam.autotb.v" Line 300
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Feb  4 14:41:47 2021...

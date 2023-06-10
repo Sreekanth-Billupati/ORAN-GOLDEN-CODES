@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/nsundriyal/L1_Data_Gen/solution1/./sim/autowrap/testbench/L1_Data_Gen.cpp_pre.cpp.tb.cpp

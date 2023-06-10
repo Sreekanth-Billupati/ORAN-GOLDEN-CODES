@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_count_V' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.128+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'coeff_count_V' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.084+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'temp_coeff_data_V' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.082+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_beamID_s' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.080+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_reMask_s' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.079+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_numSymc' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.077+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_numPrbc' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.076+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_startPr' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.074+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'new_beam_id_V' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.072+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_layer_V' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.071+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_id_info_startSy' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.069+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'oran_ctrl_states_V' is power-on initialization." projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:03:02.066+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'CtrlPlaneDepacketizer_tb.cpp'" projectName="CtrlPlaneDepacketizer" solutionName="solution1" date="2021-03-19T17:02:51.161+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

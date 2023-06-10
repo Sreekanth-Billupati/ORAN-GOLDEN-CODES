@@ -1,0 +1,5 @@
+<annotationInfo>
+<item  id="11" filename="mat_coeff_gen.cpp" linenumber="9" name="icmp_ln9" contextFuncName="BfW_Coeff_Gen" moduleName="BfW_Coeff_Gen" rtlName="icmp_ln9_fu_82_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/aswin/Desktop/Vivado_projects/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/sim_src/bfw_Coeff_Gen"><\/item>
+<item  id="13" filename="mat_coeff_gen.cpp" linenumber="9" name="j" contextFuncName="BfW_Coeff_Gen" moduleName="BfW_Coeff_Gen" rtlName="j_fu_88_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="21" fileDirectory="/home/aswin/Desktop/Vivado_projects/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/sim_src/bfw_Coeff_Gen"><\/item>
+<item  id="18" filename="mat_coeff_gen.cpp" linenumber="11" name="zext_ln11" contextFuncName="BfW_Coeff_Gen" moduleName="BfW_Coeff_Gen" rtlName="zext_ln11_fu_94_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/aswin/Desktop/Vivado_projects/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/sim_src/bfw_Coeff_Gen"><\/item>
+</annotationInfo>

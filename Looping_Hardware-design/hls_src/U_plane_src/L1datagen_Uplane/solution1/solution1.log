@@ -1,0 +1,1980 @@
+==============================================================
+File generated on Mon Oct 12 21:31:28 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 102.875 ; gain = 17.703
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 102.875 ; gain = 17.703
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.340 ; gain = 49.168
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.199 ; gain = 52.027
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 157.777 ; gain = 72.605
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 159.875 ; gain = 74.703
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:749) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:738).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:760) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:738).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:760) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:230).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.633 seconds; current allocated memory: 106.862 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.381 seconds; current allocated memory: 107.144 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 107.899 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 159.875 ; gain = 74.703
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 21.197 seconds; peak allocated memory: 107.899 MB.
+==============================================================
+File generated on Mon Oct 12 21:45:42 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 103.031 ; gain = 18.574
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 103.031 ; gain = 18.574
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 134.633 ; gain = 50.176
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 137.223 ; gain = 52.766
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 158.566 ; gain = 74.109
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 160.664 ; gain = 76.207
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:746) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:757) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:757) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:227).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.606 seconds; current allocated memory: 106.847 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.237 seconds; current allocated memory: 107.144 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.352 seconds; current allocated memory: 107.899 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 160.664 ; gain = 76.207
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 19.169 seconds; peak allocated memory: 107.899 MB.
+==============================================================
+File generated on Mon Oct 12 21:46:14 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Mon Oct 12 23:08:16 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 103.152 ; gain = 18.324
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 103.152 ; gain = 18.324
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.773 ; gain = 49.945
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 137.172 ; gain = 52.344
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 158.758 ; gain = 73.930
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 160.855 ; gain = 76.027
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:746) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:757) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:757) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:227).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.168 seconds; current allocated memory: 106.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.201 seconds; current allocated memory: 107.252 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.315 seconds; current allocated memory: 108.297 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 160.855 ; gain = 76.027
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 19.725 seconds; peak allocated memory: 108.297 MB.
+==============================================================
+File generated on Mon Oct 12 23:08:58 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Tue Oct 13 12:22:31 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 103.176 ; gain = 18.441
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 103.176 ; gain = 18.441
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 134.191 ; gain = 49.457
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 137.047 ; gain = 52.313
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:3).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 157.469 ; gain = 72.734
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 160.090 ; gain = 75.355
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:746) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:757) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:757) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:227).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.486 seconds; current allocated memory: 106.847 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.165 seconds; current allocated memory: 107.144 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.224 seconds; current allocated memory: 107.900 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 160.090 ; gain = 75.355
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 21.901 seconds; peak allocated memory: 107.900 MB.
+==============================================================
+File generated on Tue Oct 13 12:23:21 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Wed Oct 14 12:48:46 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 103.715 ; gain = 19.168
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 103.715 ; gain = 19.168
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.664 ; gain = 50.117
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 137.516 ; gain = 52.969
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:4).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 158.594 ; gain = 74.047
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 160.430 ; gain = 75.883
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:749) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:738).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:760) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:738).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:760) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:230).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.347 seconds; current allocated memory: 107.398 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 107.682 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'L1_data_Uplane/L1_state_out' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.247 seconds; current allocated memory: 108.455 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 160.430 ; gain = 75.883
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 19.82 seconds; peak allocated memory: 108.455 MB.
+==============================================================
+File generated on Wed Oct 14 12:50:42 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.637 ; gain = 18.836
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.637 ; gain = 18.836
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.906 ; gain = 50.105
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.500 ; gain = 52.699
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:4).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 159.258 ; gain = 74.457
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 161.359 ; gain = 76.559
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_ctrl_none' on port 'L1_state_out' changing to the default 'ap_vld' mode.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:751) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:740).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:762) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:740).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:762) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:232).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.935 seconds; current allocated memory: 107.436 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.235 seconds; current allocated memory: 107.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.323 seconds; current allocated memory: 108.518 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.359 ; gain = 76.559
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.477 seconds; peak allocated memory: 108.518 MB.
+==============================================================
+File generated on Wed Oct 14 12:51:17 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Wed Oct 14 12:54:02 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.520 ; gain = 19.066
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.520 ; gain = 19.066
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 135.172 ; gain = 50.719
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.828 ; gain = 53.375
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:4).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 159.176 ; gain = 74.723
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 161.535 ; gain = 77.082
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:751) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:740).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:762) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:740).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:762) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:232).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.917 seconds; current allocated memory: 107.437 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.155 seconds; current allocated memory: 107.739 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 108.518 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.535 ; gain = 77.082
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.265 seconds; peak allocated memory: 108.518 MB.
+==============================================================
+File generated on Wed Oct 14 12:54:54 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Thu Oct 15 11:38:19 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 103.664 ; gain = 18.938
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 103.664 ; gain = 18.938
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 134.742 ; gain = 50.016
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 137.465 ; gain = 52.738
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 157.910 ; gain = 73.184
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 160.840 ; gain = 76.113
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:754) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:743).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:765) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:743).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:765) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:235).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.295 seconds; current allocated memory: 107.483 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.257 seconds; current allocated memory: 107.787 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.309 seconds; current allocated memory: 108.551 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 160.840 ; gain = 76.113
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 22.928 seconds; peak allocated memory: 108.551 MB.
+==============================================================
+File generated on Thu Oct 15 11:38:56 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Thu Oct 15 20:18:34 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 103.621 ; gain = 18.781
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 103.621 ; gain = 18.781
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:29 . Memory (MB): peak = 134.930 ; gain = 50.090
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:30 . Memory (MB): peak = 137.129 ; gain = 52.289
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:31 . Memory (MB): peak = 158.496 ; gain = 73.656
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:31 . Memory (MB): peak = 161.383 ; gain = 76.543
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:785) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:774).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:796) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:774).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 31.699 seconds; current allocated memory: 107.378 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.248 seconds; current allocated memory: 108.389 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:34 . Memory (MB): peak = 161.383 ; gain = 76.543
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 34.116 seconds; peak allocated memory: 108.389 MB.
+==============================================================
+File generated on Thu Oct 15 20:19:55 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.777 ; gain = 18.680
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.777 ; gain = 18.680
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.805 ; gain = 49.707
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.535 ; gain = 52.438
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 158.270 ; gain = 73.172
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 161.418 ; gain = 76.320
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:784) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:773).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:795) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:773).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.69 seconds; current allocated memory: 107.378 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.432 seconds; current allocated memory: 108.389 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.418 ; gain = 76.320
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.072 seconds; peak allocated memory: 108.389 MB.
+==============================================================
+File generated on Thu Oct 15 20:22:25 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.527 ; gain = 18.969
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.527 ; gain = 18.969
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.711 ; gain = 50.152
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.043 ; gain = 52.484
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 157.926 ; gain = 73.367
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 160.813 ; gain = 76.254
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:784) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:773).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:795) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:773).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.654 seconds; current allocated memory: 107.378 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.273 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.536 seconds; current allocated memory: 108.389 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 160.813 ; gain = 76.254
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.966 seconds; peak allocated memory: 108.389 MB.
+==============================================================
+File generated on Thu Oct 15 20:22:59 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Thu Oct 15 20:25:41 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 103.672 ; gain = 18.996
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 103.672 ; gain = 18.996
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:25 . Memory (MB): peak = 134.746 ; gain = 50.070
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:26 . Memory (MB): peak = 137.148 ; gain = 52.473
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 157.992 ; gain = 73.316
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:28 . Memory (MB): peak = 161.141 ; gain = 76.465
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:784) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:773).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:795) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:773).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.068 seconds; current allocated memory: 107.378 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.275 seconds; current allocated memory: 107.696 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.558 seconds; current allocated memory: 108.423 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 161.141 ; gain = 76.465
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 33.148 seconds; peak allocated memory: 108.423 MB.
+==============================================================
+File generated on Thu Oct 15 20:26:44 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Thu Oct 15 21:04:13 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.316 ; gain = 18.758
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.316 ; gain = 18.758
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.773 ; gain = 50.215
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.500 ; gain = 52.941
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 158.918 ; gain = 74.359
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 161.801 ; gain = 77.242
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:724).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:746) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:724).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.706 seconds; current allocated memory: 107.378 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.154 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 108.422 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.801 ; gain = 77.242
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.008 seconds; peak allocated memory: 108.422 MB.
+==============================================================
+File generated on Thu Oct 15 21:08:04 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Thu Oct 15 22:03:11 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 103.605 ; gain = 18.148
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 103.605 ; gain = 18.148
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:27 . Memory (MB): peak = 134.719 ; gain = 49.262
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 137.441 ; gain = 51.984
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 159.047 ; gain = 73.590
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:31 . Memory (MB): peak = 161.934 ; gain = 76.477
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:724).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:746) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:724).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 31.582 seconds; current allocated memory: 107.409 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 107.710 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.484 seconds; current allocated memory: 108.437 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:36 . Memory (MB): peak = 161.934 ; gain = 76.477
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 36.036 seconds; peak allocated memory: 108.437 MB.
+==============================================================
+File generated on Thu Oct 15 22:04:24 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 21:15:12 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.508 ; gain = 18.969
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.508 ; gain = 18.969
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 134.477 ; gain = 49.938
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.730 ; gain = 53.191
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 158.969 ; gain = 74.430
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 161.066 ; gain = 76.527
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:745) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.261 seconds; current allocated memory: 107.393 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.208 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.388 seconds; current allocated memory: 108.422 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 161.066 ; gain = 76.527
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.774 seconds; peak allocated memory: 108.422 MB.
+==============================================================
+File generated on Fri Oct 16 21:15:58 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 21:43:26 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 103.535 ; gain = 19.117
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 103.535 ; gain = 19.117
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:27 . Memory (MB): peak = 134.313 ; gain = 49.895
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:27 . Memory (MB): peak = 137.297 ; gain = 52.879
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 158.547 ; gain = 74.129
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:29 . Memory (MB): peak = 161.168 ; gain = 76.750
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:745) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.942 seconds; current allocated memory: 107.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 107.692 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.263 seconds; current allocated memory: 108.419 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:31 . Memory (MB): peak = 161.168 ; gain = 76.750
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 31.322 seconds; peak allocated memory: 108.419 MB.
+==============================================================
+File generated on Fri Oct 16 21:44:09 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 22:01:18 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.277 ; gain = 18.703
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.277 ; gain = 18.703
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.844 ; gain = 50.270
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.570 ; gain = 52.996
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 159.156 ; gain = 74.582
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 161.777 ; gain = 77.203
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:737) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:727).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:747) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:727).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.734 seconds; current allocated memory: 107.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 107.790 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 108.823 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.777 ; gain = 77.203
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.306 seconds; peak allocated memory: 108.823 MB.
+==============================================================
+File generated on Fri Oct 16 22:02:29 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.508 ; gain = 18.426
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.508 ; gain = 18.426
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 134.934 ; gain = 49.852
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.527 ; gain = 52.445
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 158.609 ; gain = 73.527
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 160.969 ; gain = 75.887
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:737) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:727).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:747) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:727).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.783 seconds; current allocated memory: 107.439 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 107.792 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.309 seconds; current allocated memory: 108.825 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.340 ; gain = 76.258
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.21 seconds; peak allocated memory: 108.825 MB.
+==============================================================
+File generated on Fri Oct 16 22:03:02 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 22:04:51 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 22:10:54 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.520 ; gain = 19.012
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.520 ; gain = 19.012
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.754 ; gain = 50.246
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.871 ; gain = 53.363
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 159.270 ; gain = 74.762
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 161.629 ; gain = 77.121
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:745) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.907 seconds; current allocated memory: 107.393 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.157 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.239 seconds; current allocated memory: 108.422 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.629 ; gain = 77.121
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.241 seconds; peak allocated memory: 108.422 MB.
+==============================================================
+File generated on Fri Oct 16 22:11:50 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 22:32:44 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 103.664 ; gain = 18.844
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 103.664 ; gain = 18.844
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 134.840 ; gain = 50.020
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 137.043 ; gain = 52.223
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 158.305 ; gain = 73.484
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 160.926 ; gain = 76.105
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:745) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.453 seconds; current allocated memory: 107.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 107.692 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.307 seconds; current allocated memory: 108.419 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 160.926 ; gain = 76.105
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 25.074 seconds; peak allocated memory: 108.419 MB.
+==============================================================
+File generated on Fri Oct 16 22:33:20 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 22:51:28 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 103.551 ; gain = 18.953
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 103.551 ; gain = 18.953
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 134.805 ; gain = 50.207
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 137.527 ; gain = 52.930
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+ERROR: [XFORM 203-103] Cannot partition array 'section_hdr.V' (L1datagen_Uplane/L1_data_UP.cpp:30): variable is not an array.
+ERROR: [HLS 200-70] Pre-synthesis failed.
+==============================================================
+File generated on Fri Oct 16 22:52:32 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 103.621 ; gain = 18.879
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 103.621 ; gain = 18.879
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 134.777 ; gain = 50.035
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 137.242 ; gain = 52.500
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [XFORM 203-101] Partitioning array 'section_hdr_10.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 159.129 ; gain = 74.387
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 160.965 ; gain = 76.223
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:735) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:745) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:725).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.797 seconds; current allocated memory: 107.415 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.156 seconds; current allocated memory: 107.731 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.289 seconds; current allocated memory: 108.473 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 160.965 ; gain = 76.223
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 22.189 seconds; peak allocated memory: 108.473 MB.
+==============================================================
+File generated on Fri Oct 16 22:55:29 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 103.563 ; gain = 19.105
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 103.563 ; gain = 19.105
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 134.934 ; gain = 50.477
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 137.527 ; gain = 53.070
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 159.203 ; gain = 74.746
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 161.563 ; gain = 77.105
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:733) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:743) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.429 seconds; current allocated memory: 107.393 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.287 seconds; current allocated memory: 107.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.242 seconds; current allocated memory: 108.422 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 161.563 ; gain = 77.105
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 25.885 seconds; peak allocated memory: 108.422 MB.
+==============================================================
+File generated on Fri Oct 16 22:56:10 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 23:03:41 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 103.566 ; gain = 18.754
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 103.566 ; gain = 18.754
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 134.938 ; gain = 50.125
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 137.332 ; gain = 52.520
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 158.754 ; gain = 73.941
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 160.063 ; gain = 75.250
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:733) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:743) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.185 seconds; current allocated memory: 107.394 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 107.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.263 seconds; current allocated memory: 108.422 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 160.832 ; gain = 76.020
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 24.976 seconds; peak allocated memory: 108.422 MB.
+==============================================================
+File generated on Fri Oct 16 23:04:20 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.496 ; gain = 18.668
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.496 ; gain = 18.668
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 134.805 ; gain = 49.977
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 137.141 ; gain = 52.313
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 159.332 ; gain = 74.504
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 161.430 ; gain = 76.602
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:733) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:743) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.483 seconds; current allocated memory: 107.394 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.325 seconds; current allocated memory: 107.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.452 seconds; current allocated memory: 108.422 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 161.430 ; gain = 76.602
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 21.85 seconds; peak allocated memory: 108.422 MB.
+==============================================================
+File generated on Fri Oct 16 23:05:29 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Fri Oct 16 23:12:49 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+WARNING: [HLS 200-40] In file included from L1datagen_Uplane/L1_data_UP.cpp:1:
+L1datagen_Uplane/L1_data_UP.cpp:54:9: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+ switch(data_src_state)
+        ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 103.574 ; gain = 18.949
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 103.574 ; gain = 18.949
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 134.707 ; gain = 50.082
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 137.367 ; gain = 52.742
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:25 . Memory (MB): peak = 159.223 ; gain = 74.598
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:25 . Memory (MB): peak = 161.582 ; gain = 76.957
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:733) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:743) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:723).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.688 seconds; current allocated memory: 107.364 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 107.677 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.252 seconds; current allocated memory: 108.417 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 161.582 ; gain = 76.957
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 28.01 seconds; peak allocated memory: 108.417 MB.
+==============================================================
+File generated on Fri Oct 16 23:13:30 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Sat Oct 17 10:48:36 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+WARNING: [HLS 200-40] In file included from L1datagen_Uplane/L1_data_UP.cpp:1:
+L1datagen_Uplane/L1_data_UP.cpp:54:9: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+ switch(data_src_state)
+        ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 103.691 ; gain = 19.008
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 103.691 ; gain = 19.008
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 134.398 ; gain = 49.715
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 137.387 ; gain = 52.703
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:7).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 157.727 ; gain = 73.043
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '_ssdm_op_PartSet.i48.i48.i36.i32.i32' (L1datagen_Uplane/L1_data_UP.cpp:348:3) in function 'L1_data_Uplane' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 160.652 ; gain = 75.969
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:687) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:677).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:697) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:677).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:697) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:214).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.611 seconds; current allocated memory: 107.496 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.226 seconds; current allocated memory: 107.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.337 seconds; current allocated memory: 108.572 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 160.652 ; gain = 75.969
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 23.238 seconds; peak allocated memory: 108.572 MB.
+==============================================================
+File generated on Sat Oct 17 10:51:11 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+WARNING: [HLS 200-40] In file included from L1datagen_Uplane/L1_data_UP.cpp:1:
+L1datagen_Uplane/L1_data_UP.cpp:53:9: warning: enumeration value 'IDLE' not handled in switch [-Wswitch]
+ switch(data_src_state)
+        ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.559 ; gain = 18.789
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.559 ; gain = 18.789
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.793 ; gain = 50.023
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.449 ; gain = 52.680
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 158.770 ; gain = 74.000
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '_ssdm_op_PartSet.i48.i48.i36.i32.i32' (L1datagen_Uplane/L1_data_UP.cpp:337:3) in function 'L1_data_Uplane' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 161.129 ; gain = 76.359
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:676) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:666).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:686) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:666).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.71 seconds; current allocated memory: 107.397 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 107.712 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 108.451 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.129 ; gain = 76.359
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.172 seconds; peak allocated memory: 108.451 MB.
+==============================================================
+File generated on Sat Oct 17 10:51:43 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Sat Oct 17 11:01:37 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 103.609 ; gain = 18.543
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 103.609 ; gain = 18.543
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 134.762 ; gain = 49.695
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 137.223 ; gain = 52.156
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 158.305 ; gain = 73.238
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '_ssdm_op_PartSet.i48.i48.i36.i32.i32' (L1datagen_Uplane/L1_data_UP.cpp:337:3) in function 'L1_data_Uplane' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 161.188 ; gain = 76.121
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:676) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:666).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:686) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:666).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.426 seconds; current allocated memory: 107.395 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 107.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.516 seconds; current allocated memory: 108.433 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:38 . Memory (MB): peak = 161.188 ; gain = 76.121
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 38.273 seconds; peak allocated memory: 108.433 MB.
+==============================================================
+File generated on Sat Oct 17 11:02:40 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Sat Oct 17 11:26:43 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'L1datagen_Uplane/L1_data_UP.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.656 ; gain = 18.867
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.656 ; gain = 18.867
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 134.738 ; gain = 49.949
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 137.332 ; gain = 52.543
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'app_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'sec_out.V.V' (L1datagen_Uplane/L1_data_UP.cpp:6).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 158.477 ; gain = 73.688
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '_ssdm_op_PartSet.i48.i48.i36.i32.i32' (L1datagen_Uplane/L1_data_UP.cpp:337:3) in function 'L1_data_Uplane' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 161.625 ; gain = 76.836
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'L1_data_Uplane' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'L1_data_Uplane'.
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:676) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:666).
+WARNING: [SCHED 204-68] The II Violation in module 'L1_data_Uplane': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:686) and axis write on port 'sec_out_V_V' (L1datagen_Uplane/L1_data_UP.cpp:666).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.476 seconds; current allocated memory: 107.395 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.201 seconds; current allocated memory: 107.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'L1_data_Uplane' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/app_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/sec_out_V_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'L1_data_Uplane/L1_state_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'L1_state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'L1_data_Uplane' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'L1_data_Uplane'.
+INFO: [HLS 200-111]  Elapsed time: 0.355 seconds; current allocated memory: 108.433 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 161.625 ; gain = 76.836
+INFO: [SYSC 207-301] Generating SystemC RTL for L1_data_Uplane.
+INFO: [VHDL 208-304] Generating VHDL RTL for L1_data_Uplane.
+INFO: [VLOG 209-307] Generating Verilog RTL for L1_data_Uplane.
+INFO: [HLS 200-112] Total elapsed time: 20.028 seconds; peak allocated memory: 108.433 MB.
+==============================================================
+File generated on Sat Oct 17 11:27:18 +0530 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvd1760-3-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

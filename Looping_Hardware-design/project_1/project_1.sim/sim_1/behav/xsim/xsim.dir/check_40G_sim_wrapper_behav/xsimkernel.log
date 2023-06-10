@@ -1,0 +1,7 @@
+Running: xsim.dir/check_40G_sim_wrapper_behav/xsimk -simmode gui -wdb check_40G_sim_wrapper_behav.wdb -simrunnum 0 -socket 40595
+Design successfully loaded
+Design Loading Memory Usage: 271104 KB (Peak: 271104 KB)
+Design Loading CPU Usage: 420 ms
+Simulation completed
+Simulation Memory Usage: 5611956 KB (Peak: 5613504 KB)
+Simulation CPU Usage: 3120 ms

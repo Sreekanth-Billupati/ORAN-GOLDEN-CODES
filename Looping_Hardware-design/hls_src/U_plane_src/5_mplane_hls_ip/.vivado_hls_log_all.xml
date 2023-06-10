@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'l1_inp1_dmac_V' is power-on initialization." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:31.859+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'l1_inp1_smac_V' is power-on initialization." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:31.855+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'datainp2_V' is power-on initialization." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:31.852+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'datainp1_V' is power-on initialization." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:31.848+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'mplane_state' is power-on initialization." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:31.845+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'state_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:31.838+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from 5_mplane_hls_ip/mparam.cpp:1:&#xA;In file included from 5_mplane_hls_ip/mparam.cpp:1:&#xA;5_mplane_hls_ip/mplane.h:21:23: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xA; ap_uint&lt;16> ethertype=0xAEFE;&#xA;                      ^&#xA;1 warning generated." projectName="5_mplane_hls_ip" solutionName="solution1" date="2021-04-21T15:56:30.917+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

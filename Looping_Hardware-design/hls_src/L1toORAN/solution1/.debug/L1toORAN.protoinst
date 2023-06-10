@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"L1toORAN": {
+			"proto_instances": {
+			}
+		}
+	}
+}

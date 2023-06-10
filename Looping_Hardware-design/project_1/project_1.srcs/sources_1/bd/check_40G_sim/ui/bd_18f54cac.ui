@@ -1,0 +1,172 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port gt_ref_clk_0 -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace port gt_rx_0 -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace port gt_tx_0 -pg 1 -lvl 25 -x 9820 -y 760 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 15 -x 6010 -y 1100 -defaultsOSRD
+preplace inst axis_data_fifo_11 -pg 1 -lvl 3 -x 860 -y 1520 -defaultsOSRD
+preplace inst axis_data_fifo_13 -pg 1 -lvl 4 -x 1290 -y 1360 -defaultsOSRD
+preplace inst axis_data_fifo_14 -pg 1 -lvl 6 -x 2240 -y 1690 -defaultsOSRD
+preplace inst axis_data_fifo_1 -pg 1 -lvl 19 -x 7840 -y 1190 -defaultsOSRD
+preplace inst axis_data_fifo_2 -pg 1 -lvl 6 -x 2240 -y 1830 -defaultsOSRD
+preplace inst axis_data_fifo_3 -pg 1 -lvl 9 -x 3320 -y 1370 -defaultsOSRD
+preplace inst axis_data_fifo_6 -pg 1 -lvl 6 -x 2240 -y 1520 -defaultsOSRD
+preplace inst axis_data_fifo_7 -pg 1 -lvl 6 -x 2240 -y 1330 -defaultsOSRD
+preplace inst axis_data_fifo_9 -pg 1 -lvl 20 -x 8130 -y 330 -defaultsOSRD
+preplace inst axis_dwidth_converter_1 -pg 1 -lvl 11 -x 4250 -y 1350 -defaultsOSRD
+preplace inst axis_register_slice_0 -pg 1 -lvl 17 -x 6840 -y 400 -defaultsOSRD
+preplace inst axis_register_slice_1 -pg 1 -lvl 17 -x 6840 -y 540 -defaultsOSRD
+preplace inst axis_register_slice_2 -pg 1 -lvl 17 -x 6840 -y 680 -defaultsOSRD
+preplace inst axis_register_slice_3 -pg 1 -lvl 17 -x 6840 -y 1150 -defaultsOSRD
+preplace inst axis_register_slice_4 -pg 1 -lvl 17 -x 6840 -y 870 -defaultsOSRD
+preplace inst axis_register_slice_5 -pg 1 -lvl 17 -x 6840 -y 1010 -defaultsOSRD
+preplace inst axis_register_slice_6 -pg 1 -lvl 17 -x 6840 -y 1310 -defaultsOSRD
+preplace inst axis_register_slice_7 -pg 1 -lvl 6 -x 2240 -y 1140 -defaultsOSRD
+preplace inst epacket_gen_0 -pg 1 -lvl 5 -x 1790 -y 1810 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 440 -y 1220 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 12 -x 4770 -y 660 -defaultsOSRD
+preplace inst proc_sys_reset_2 -pg 1 -lvl 3 -x 860 -y 1320 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 12 -x 4770 -y 1100 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 12 -x 4770 -y 940 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 4 -x 1290 -y 1510 -defaultsOSRD
+preplace inst vio_1 -pg 1 -lvl 1 -x 130 -y 1510 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 17 -x 6840 -y 1430 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 17 -x 6840 -y 1530 -defaultsOSRD
+preplace inst xlconstant_4 -pg 1 -lvl 17 -x 6840 -y 1630 -defaultsOSRD
+preplace inst xlconstant_5 -pg 1 -lvl 17 -x 6840 -y 1730 -defaultsOSRD
+preplace inst xlconstant_6 -pg 1 -lvl 4 -x 1290 -y 1850 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 11 -x 4250 -y 1060 -defaultsOSRD
+preplace inst BfW_Coeff_Gen_0 -pg 1 -lvl 16 -x 6330 -y 900 -defaultsOSRD
+preplace inst L1_Data_Gen_0 -pg 1 -lvl 14 -x 5680 -y 1090 -defaultsOSRD
+preplace inst cplane_packetizer_0 -pg 1 -lvl 18 -x 7420 -y 1180 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 24 -x 9700 -y 200 -defaultsOSRD
+preplace inst cplane_depacketizer_0 -pg 1 -lvl 23 -x 9280 -y 160 -defaultsOSRD
+preplace inst axis_data_fifo_10 -pg 1 -lvl 22 -x 8890 -y 160 -defaultsOSRD
+preplace inst axis_data_fifo_12 -pg 1 -lvl 22 -x 8890 -y 330 -defaultsOSRD
+preplace inst xxv_ethernet_0 -pg 1 -lvl 13 -x 5250 -y 930 -defaultsOSRD
+preplace inst axis_data_fifo_5 -pg 1 -lvl 12 -x 4770 -y 1370 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 12 -x 4770 -y 500 -defaultsOSRD
+preplace inst axis_dwidth_converter_0 -pg 1 -lvl 15 -x 6010 -y 170 -defaultsOSRD
+preplace inst axis_data_fifo_8 -pg 1 -lvl 14 -x 5680 -y 150 -defaultsOSRD
+preplace inst xlconstant_7 -pg 1 -lvl 12 -x 4770 -y 840 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 13 -x 5250 -y 1480 -defaultsOSRD
+preplace inst L1toORAN_0 -pg 1 -lvl 16 -x 6330 -y 1120 -defaultsOSRD
+preplace inst ecpri_demux_0 -pg 1 -lvl 21 -x 8500 -y 350 -defaultsOSRD
+preplace inst system_ila_2 -pg 1 -lvl 24 -x 9700 -y 850 -defaultsOSRD
+preplace inst xlconstant_8 -pg 1 -lvl 19 -x 7840 -y 1070 -defaultsOSRD
+preplace inst tkeep_cleaner_FAPI_0 -pg 1 -lvl 8 -x 3050 -y 1580 -defaultsOSRD
+preplace inst tkeep_cleaner_FAPI_1 -pg 1 -lvl 19 -x 7840 -y 250 -defaultsOSRD
+preplace inst axis_data_fifo_4 -pg 1 -lvl 18 -x 7420 -y 230 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 24 -x 9700 -y 490 -defaultsOSRD
+preplace inst axis_data_fifo_15 -pg 1 -lvl 16 -x 6330 -y 190 -defaultsOSRD
+preplace inst Ethernet_demux_0 -pg 1 -lvl 17 -x 6840 -y 220 -defaultsOSRD
+preplace inst ethernet_mux_0 -pg 1 -lvl 10 -x 3690 -y 1370 -defaultsOSRD
+preplace inst uplane_depacketiser_0 -pg 1 -lvl 23 -x 9280 -y 310 -defaultsOSRD
+preplace inst Userplane_L1_Data_Gen_1 -pg 1 -lvl 3 -x 860 -y 1710 -defaultsOSRD
+preplace inst eCpri_header_config_0 -pg 1 -lvl 5 -x 1790 -y 1650 -defaultsOSRD
+preplace inst l1tomplane_0 -pg 1 -lvl 2 -x 440 -y 1500 -defaultsOSRD
+preplace inst mparam_0 -pg 1 -lvl 4 -x 1290 -y 1630 -defaultsOSRD
+preplace inst Data_Gen_1 -pg 1 -lvl 5 -x 1790 -y 1430 -defaultsOSRD
+preplace inst uplane_packetiser_0 -pg 1 -lvl 7 -x 2650 -y 1570 -defaultsOSRD
+preplace inst vio_2 -pg 1 -lvl 2 -x 440 -y 1690 -defaultsOSRD
+preplace inst vio_3 -pg 1 -lvl 2 -x 440 -y 1790 -defaultsOSRD
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 13 640 1210 1100 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 4590 1230 4980 1170 NJ 1170 5880J
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 15 20 1450 240 1330 630 1200 1110 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 3920 970 4580 1220 4960 1180 5480 1180 5890J
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 11 250 1320 620 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 4570
+preplace netloc l_ethernet_0_rx_clk_out_0 1 11 13 4570 560 5010 700 5480 230 5870 90 6130 110 6520 120 7100 310 7680 340 8000 240 8260 240 8760 80 9040 80 9550
+preplace netloc l_ethernet_0_tx_clk_out_0 1 2 17 650 1420 1110 1710 1510 1560 2090 1610 2400 1690 2910 1390 3170 1290 3460 1270 3940 1270 4560 1290 5000 1290 5450 1010 5870 1010 6130 820 6580 1230 7090 1410 7680J
+preplace netloc xlconstant_2_dout 1 4 14 1470 1570 2070J 1600 2360J 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 7130J
+preplace netloc proc_sys_reset_2_peripheral_aresetn 1 3 16 1090 1270 1500 1270 2080 1050 NJ 1050 NJ 1050 3200 1260 3450 1260 3920 1250 4570 1280 5030 1160 5460J 1000 NJ 1000 6140 830 6590 1810 NJ 1810 7670J
+preplace netloc xlconstant_0_dout 1 17 1 7160J 1350n
+preplace netloc xlconstant_4_dout 1 17 1 7120 1190n
+preplace netloc xlconstant_3_dout 1 17 1 7140J 1270n
+preplace netloc xlconstant_5_dout 1 17 1 7150J 1210n
+preplace netloc xlconstant_6_dout 1 4 1 NJ 1850
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 12 12 4950 690 5460 70 5890 80 6140 100 6590 110 7110 150 7670 330 8010 250 8250 250 8740 50 9020 400 9580
+preplace netloc Net 1 1 17 250 1430 NJ 1430 1070J 1450 1460 1550 2100J 1440 2370 1450 2920 1460 NJ 1460 3450J 1500 NJ 1500 NJ 1500 4950J 1630 5490 1790 NJ 1790 NJ 1790 NJ 1790 7170J
+preplace netloc ecpri_demux_0_ecpri_demux_eth_state_out_V 1 21 3 8750J 410 NJ 410 9560
+preplace netloc uplane_depacketiser_0_iq_msg_state_out_V 1 23 1 9570 280n
+preplace netloc xlconstant_2_dout1 1 12 1 5000J 500n
+preplace netloc proc_sys_reset_2_peripheral_reset 1 3 10 1080J 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 4990
+preplace netloc proc_sys_reset_1_peripheral_reset 1 12 1 4990 660n
+preplace netloc Net1 1 12 1 4960 840n
+preplace netloc util_vector_logic_0_Res 1 12 1 4960 920n
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 11 NJ 1220 1090J 1230 NJ 1230 NJ 1230 NJ 1230 NJ 1230 NJ 1230 NJ 1230 NJ 1230 4580J 1250 4970
+preplace netloc uplane_packetiser_0_symbol_number_V 1 7 6 2900J 1490 3170J 1520 NJ 1520 NJ 1520 NJ 1520 4990
+preplace netloc xxv_ethernet_0_stat_rx_bad_code_0 1 13 11 5470J 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 9530
+preplace netloc xxv_ethernet_0_stat_rx_hi_ber_0 1 13 11 5460J 770 NJ 770 NJ 770 NJ 770 NJ 770 NJ 770 NJ 770 NJ 770 NJ 770 NJ 770 9540
+preplace netloc xxv_ethernet_0_stat_rx_local_fault_0 1 13 11 5490J 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 9520
+preplace netloc uplane_packetiser_0_App_frag_V 1 7 6 2890J 1660 NJ 1660 NJ 1660 NJ 1660 NJ 1660 5040
+preplace netloc xlconstant_8_dout 1 19 1 8000 1070n
+preplace netloc xlconstant_1_dout 1 21 4 8750J 250 9010J 420 NJ 420 9800
+preplace netloc uplane_depacketiser_0_PRB_count_each_section_V 1 23 1 9530 300n
+preplace netloc uplane_depacketiser_0_depack_symbol_number_V 1 23 1 9520 260n
+preplace netloc Ethernet_demux_0_ethernet_demux_state_out_V 1 17 7 7090J 450 NJ 450 NJ 450 NJ 450 NJ 450 NJ 450 9590
+preplace netloc vio_3_probe_out0 1 2 1 630J 1740n
+preplace netloc vio_2_probe_out0 1 2 1 620J 1690n
+preplace netloc L1toORAN_0_rtcid_V_V 1 16 1 6550 1150n
+preplace netloc mparam_0_out1data_V 1 4 2 1480 1120 NJ
+preplace netloc axis_register_slice_6_M_AXIS 1 17 1 7100 1110n
+preplace netloc axis_data_fifo_14_M_AXIS 1 6 1 2380 1530n
+preplace netloc axis_data_fifo_9_M_AXIS 1 20 1 N 330
+preplace netloc axis_register_slice_2_M_AXIS 1 17 1 7110 680n
+preplace netloc eCpri_header_config_0_eCPRI_data_out_V_data_V 1 5 1 2070 1630n
+preplace netloc ecpri_demux_0_control_data_out 1 21 3 8770 60 NJ 60 N
+preplace netloc cplane_depacketizer_0_beam_data 1 23 1 9520 100n
+preplace netloc axis_data_fifo_8_M_AXIS 1 14 1 N 150
+preplace netloc cplane_depacketizer_0_beam_info_V 1 23 1 9530 120n
+preplace netloc axis_data_fifo_10_M_AXIS 1 22 1 9010 140n
+preplace netloc uplane_depacketiser_0_data_out 1 23 1 9540 140n
+preplace netloc L1toORAN_0_extension_header_V 1 16 1 6550 520n
+preplace netloc axis_register_slice_4_M_AXIS 1 17 1 7090 870n
+preplace netloc axis_data_fifo_0_M_AXIS 1 15 1 N 1100
+preplace netloc Userplane_L1_Data_Gen_1_L1_data_out_V 1 3 1 1080 1330n
+preplace netloc axis_data_fifo_15_M_AXIS 1 16 1 N 190
+preplace netloc axis_data_fifo_5_M_AXIS 1 12 1 5020 820n
+preplace netloc xxv_ethernet_0_axis_rx_0 1 13 11 5450 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 9580J
+preplace netloc xxv_ethernet_0_gt_tx 1 13 12 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ
+preplace netloc gt_rx_0_1 1 0 13 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ
+preplace netloc gt_ref_clk_0_1 1 0 13 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ
+preplace netloc axis_dwidth_converter_1_M_AXIS 1 11 1 N 1350
+preplace netloc axis_register_slice_3_M_AXIS 1 17 1 N 1150
+preplace netloc axis_data_fifo_2_M_AXIS1 1 6 1 2410 1590n
+preplace netloc axis_register_slice_1_M_AXIS 1 17 1 7120 540n
+preplace netloc axis_register_slice_5_M_AXIS 1 17 1 7100 1010n
+preplace netloc axis_data_fifo_13_M_AXIS 1 4 1 1490 1360n
+preplace netloc epacket_gen_0_dout 1 5 1 N 1810
+preplace netloc uplane_packetiser_0_eth_data1 1 7 6 2930 1500 NJ 1500 3440J 1510 NJ 1510 NJ 1510 4960
+preplace netloc axis_data_fifo_3_M_AXIS 1 9 1 3440 1330n
+preplace netloc L1toORAN_0_mux_config_V_V 1 16 1 6520 380n
+preplace netloc L1toORAN_0_application_header_V 1 16 1 6570 850n
+preplace netloc Ethernet_demux_0_cu_data_out 1 17 7 7120 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 9590J
+preplace netloc tkeep_cleaner_FAPI_1_master 1 19 5 7990 30 NJ 30 NJ 30 NJ 30 9560
+preplace netloc tkeep_cleaner_FAPI_0_master 1 8 5 3190 1480 NJ 1480 3930J 1460 NJ 1460 5020
+preplace netloc axis_data_fifo_4_M_AXIS 1 18 1 N 230
+preplace netloc L1_Data_Gen_0_L1_data_out_V 1 14 1 N 1070
+preplace netloc BfW_Coeff_Gen_0_bfw_coeff_V_V 1 16 1 6560 900n
+preplace netloc ethernet_mux_0_eth_data_out 1 10 3 3930 1260 NJ 1260 4970
+preplace netloc mparam_0_out2data_V_V 1 4 1 N 1630
+preplace netloc l1tomplane_0_outdata_V_V 1 2 1 N 1490
+preplace netloc axis_data_fifo_11_M_AXIS 1 3 1 1070 1520n
+preplace netloc L1toORAN_0_section_header_V 1 16 1 6540 1070n
+preplace netloc axis_register_slice_7_M_AXIS 1 6 1 2410 1140n
+preplace netloc axis_data_fifo_7_M_AXIS 1 6 1 2390 1330n
+preplace netloc cplane_packetizer_0_eth_data 1 18 1 N 1170
+preplace netloc Data_Gen_1_application_header 1 5 8 2110 1430 NJ 1430 NJ 1430 3180J 1470 NJ 1470 NJ 1470 NJ 1470 NJ
+preplace netloc axis_dwidth_converter_0_M_AXIS 1 15 1 N 170
+preplace netloc Data_Gen_1_section_header 1 5 8 2120 1420 2400J 1440 NJ 1440 3170J 1450 3460J 1490 NJ 1490 NJ 1490 N
+preplace netloc axis_data_fifo_6_M_AXIS 1 6 1 2360 1520n
+preplace netloc L1toORAN_0_numBeams_V_V 1 16 1 6530 660n
+preplace netloc ps8_0_axi_periph_M00_AXI 1 12 1 4950 800n
+preplace netloc ecpri_demux_0_user_data_out 1 21 3 8730 70 NJ 70 9570J
+preplace netloc axis_data_fifo_12_M_AXIS 1 22 1 9030 280n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 11 1 N 1040
+levelinfo -pg 1 0 130 440 860 1290 1790 2240 2650 3050 3320 3690 4250 4770 5250 5680 6010 6330 6840 7420 7840 8130 8500 8890 9280 9700 9820
+pagesize -pg 1 -db -bbox -sgen -140 0 9930 1910
+"
+}
+{
+   "da_board_cnt":"1"
+}

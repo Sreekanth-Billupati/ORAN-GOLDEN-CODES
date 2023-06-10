@@ -1,0 +1,267 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 18 16:26:55 2023
+# Process ID: 7248
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.log
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sai/Desktop/Looping_Hardware-design/sim_src'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sai/Desktop/Looping_Hardware-design/hls_src'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_19.1/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Userplane_L1_Data_Gen:1.0'. The one found in IP location '/home/sai/Desktop/Looping_Hardware-design/hls_src/U_plane_src/12_Dummy_L1_to_UPLANE/solution1/impl/ip' will take precedence over the same IP in location /home/sai/Desktop/Looping_Hardware-design/hls_src/other_ips/12_Dummy_L1_to_UPLANE/solution1/impl/ip
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 6674.676 ; gain = 316.812 ; free physical = 2425 ; free virtual = 51219
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_11
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_13
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_14
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_1
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_2
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_3
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_6
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_7
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_9
+Adding component instance block -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_1
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_0
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_1
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_3
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_4
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_5
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_6
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_7
+Adding component instance block -- xilinx.com:hls:epacket_gen:1.0 - epacket_gen_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_4
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_5
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_6
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:hls:BfW_Coeff_Gen:1.0 - BfW_Coeff_Gen_0
+Adding component instance block -- xilinx.com:hls:L1_Data_Gen:1.0 - L1_Data_Gen_0
+Adding component instance block -- xilinx.com:hls:cplane_packetizer:1.0 - cplane_packetizer_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding component instance block -- xilinx.com:hls:cplane_depacketizer:1.0 - cplane_depacketizer_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_10
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_12
+Adding component instance block -- xilinx.com:ip:xxv_ethernet:3.0 - xxv_ethernet_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_5
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_8
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_7
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_1
+Adding component instance block -- xilinx.com:hls:L1toORAN:1.0 - L1toORAN_0
+Adding component instance block -- xilinx.com:hls:ecpri_demux:1.0 - ecpri_demux_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_8
+Adding component instance block -- xilinx.com:module_ref:tkeep_cleaner_FAPI:1.0 - tkeep_cleaner_FAPI_0
+Adding component instance block -- xilinx.com:module_ref:tkeep_cleaner_FAPI:1.0 - tkeep_cleaner_FAPI_1
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_4
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_15
+Adding component instance block -- xilinx.com:hls:Ethernet_demux:1.0 - Ethernet_demux_0
+Adding component instance block -- xilinx.com:hls:ethernet_mux:1.0 - ethernet_mux_0
+Adding component instance block -- xilinx.com:hls:uplane_depacketiser:1.0 - uplane_depacketiser_0
+Adding component instance block -- xilinx.com:hls:Userplane_L1_Data_Gen:1.0 - Userplane_L1_Data_Gen_1
+Adding component instance block -- xilinx.com:hls:eCpri_header_config:1.0 - eCpri_header_config_0
+Adding component instance block -- xilinx.com:hls:l1tomplane:1.0 - l1tomplane_0
+Adding component instance block -- xilinx.com:hls:mparam:1.0 - mparam_0
+Adding component instance block -- xilinx.com:hls:Data_Gen:1.0 - Data_Gen_1
+Adding component instance block -- xilinx.com:hls:uplane_packetiser:1.0 - uplane_packetiser_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_2
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_3
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_1/probe_out0(undef) and /epacket_gen_0/ap_rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_1/probe_out0(undef) and /L1_Data_Gen_0/ap_rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_1/probe_out0(undef) and /cplane_packetizer_0/ap_rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_1/probe_out0(undef) and /tkeep_cleaner_FAPI_0/reset_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_1/probe_out0(undef) and /l1tomplane_0/ap_rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_1/probe_out0(undef) and /uplane_packetiser_0/ap_rst_n(rst)
+Successfully read diagram <check_40G_sim> from BD file </home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd>
+open_bd_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 7250.129 ; gain = 552.438 ; free physical = 2169 ; free virtual = 50967
+zynquplus
+WARNING: [Boardtcl 53-1] No current board_part set.
+ERROR: [Ip 78-125] Tcl Error in evaluating proc can_apply_rule : 
+update_compile_order -fileset sources_1
+file copy -force /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.sysdef /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+
+launch_sdk -workspace /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk -hwspec /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk -hwspec /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file mkdir /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk
+file copy -force /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.sysdef /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+
+launch_sdk -workspace /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk -hwspec /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk -hwspec /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.sdk/check_40G_sim_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABC094]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: 172.17.0.60
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABB6C8]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: 172.17.0.60
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABC094]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: 172.17.0.60
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABB6C8]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: 172.17.0.60
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABC094]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: 172.17.0.60
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+disconnect_hw_server 172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299ABB6C8]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: 172.17.0.60
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+connect_hw_server -url 172.17.0.60:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:172.17.0.60:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210299A8DA96]
+set_property PARAM.FREQUENCY 10000000 [get_hw_targets */xilinx_tcf/Digilent/210299A8DA96]
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target 172.17.0.60:3121/xilinx_tcf/Digilent/210299A8DA96
+set_property PROGRAM.FILE {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/check_40G_sim_wrapper.bit} [get_hw_devices xczu19_0]
+set_property PROBES.FILE {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/debug_nets.ltx} [get_hw_devices xczu19_0]
+set_property FULL_PROBES.FILE {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/impl_2/debug_nets.ltx} [get_hw_devices xczu19_0]
+current_hw_device [get_hw_devices xczu19_0]
+refresh_hw_device [lindex [get_hw_devices xczu19_0] 0]
+INFO: [Labtools 27-2302] Device xczu19 (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+INFO: [Labtools 27-2302] Device xczu19 (JTAG device index = 0) is programmed with a design that has 4 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_3]
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_4]
+refresh_hw_device: Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 7977.691 ; gain = 41.898 ; free physical = 277 ; free virtual = 49754
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+Processed interface ecpri_demux_0_control_data_out_ila1_slot0
+Processed interface ecpri_demux_0_user_data_out_ila1_slot1
+Processed interface cplane_depacketizer_0_beam_data_ila1_slot2
+Processed interface cplane_depacketizer_0_beam_info_V_ila1_slot3
+Processed interface uplane_depacketiser_0_data_out_ila1_slot4
+Processed interface xxv_ethernet_0_axis_rx_0_ila1_slot5
+Processed interface Ethernet_demux_0_cu_data_out_ila1_slot6
+Processed interface tkeep_cleaner_FAPI_1_master_ila1_slot7
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]]
+Processed interface uplane_packetiser_0_eth_data1_ila2_slot0
+Processed interface axis_data_fifo_5_M_AXIS_ila2_slot1
+Processed interface ethernet_mux_0_eth_data_out_ila2_slot2
+Processed interface tkeep_cleaner_FAPI_0_master_ila2_slot3
+Processed interface Data_Gen_1_application_header_ila2_slot4
+Processed interface Data_Gen_1_section_header_ila2_slot5
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]]
+current_hw_device [get_hw_devices arm_dap_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices arm_dap_1] 0]
+current_hw_device [get_hw_devices xczu19_0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2023-May-18 17:08:19
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_2/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2023-May-18 17:08:19
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.hw/backup/hw_ila_data_3.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes check_40G_sim_i/system_ila_0/inst/net_slot_4_axis_tvalid -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq12'u0 [get_hw_probes check_40G_sim_i/system_ila_0/inst/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq12'u273 [get_hw_probes check_40G_sim_i/system_ila_0/inst/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2023-May-18 17:08:58
+set_property OUTPUT_VALUE 1 [get_hw_probes check_40G_sim_i/Net -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_1"}]]
+commit_hw_vio [get_hw_probes {check_40G_sim_i/Net} -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_1"}]]
+startgroup
+set_property OUTPUT_VALUE 1 [get_hw_probes check_40G_sim_i/xlconstant_2_dout -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {check_40G_sim_i/xlconstant_2_dout} -of_objects [get_hw_vios -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/vio_0"}]]
+endgroup
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2023-May-18 17:09:19
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_1/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2023-May-18 17:09:19
+Processed interface uplane_packetiser_0_eth_data1_ila2_slot0
+Processed interface axis_data_fifo_5_M_AXIS_ila2_slot1
+Processed interface ethernet_mux_0_eth_data_out_ila2_slot2
+Processed interface tkeep_cleaner_FAPI_0_master_ila2_slot3
+Processed interface Data_Gen_1_application_header_ila2_slot4
+Processed interface Data_Gen_1_section_header_ila2_slot5
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2023-May-18 17:09:27
+Processed interface ecpri_demux_0_control_data_out_ila1_slot0
+Processed interface ecpri_demux_0_user_data_out_ila1_slot1
+Processed interface cplane_depacketizer_0_beam_data_ila1_slot2
+Processed interface cplane_depacketizer_0_beam_info_V_ila1_slot3
+Processed interface uplane_depacketiser_0_data_out_ila1_slot4
+Processed interface xxv_ethernet_0_axis_rx_0_ila1_slot5
+Processed interface Ethernet_demux_0_cu_data_out_ila1_slot6
+Processed interface tkeep_cleaner_FAPI_1_master_ila1_slot7
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE gt12'u273 [get_hw_probes check_40G_sim_i/system_ila_0/inst/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2023-May-18 17:09:37
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+open_bd_design {/home/sai/Desktop/Looping_Hardware-design/project_1/project_1.srcs/sources_1/bd/check_40G_sim/check_40G_sim.bd}
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xczu19_0] -filter {CELL_NAME=~"check_40G_sim_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2023-May-18 17:28:52
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+close_hw

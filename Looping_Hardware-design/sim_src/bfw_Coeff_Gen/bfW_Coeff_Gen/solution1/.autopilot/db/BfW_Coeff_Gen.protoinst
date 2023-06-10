@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"BfW_Coeff_Gen": {
+			"proto_instances": {
+			}
+		}
+	}
+}

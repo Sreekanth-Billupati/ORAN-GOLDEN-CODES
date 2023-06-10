@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="expectedOutput.txt" path="/home/nsundriyal/eCPRI/o-ran-linux-master/sim_src/err_count/expectedOutput.txt"/>
+    <originFiles name="err_count.cpp" path="/home/nsundriyal/eCPRI/o-ran-linux-master/sim_src/err_count/err_count.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="cplane_depacketizer" xd:componentRef="cplane_depacketizer" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="eth_data.data" xd:originalName="eth_data" xd:direction="in" xd:interfaceRef="eth_data" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="eth_data.tuser" xd:originalName="eth_data" xd:direction="in" xd:interfaceRef="eth_data" xd:busTypeRef="axis" xd:dataWidth="70"/>
+  <xd:arg xd:name="eth_data.last" xd:originalName="eth_data" xd:direction="in" xd:interfaceRef="eth_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="beam_data.data" xd:originalName="beam_data" xd:direction="out" xd:interfaceRef="beam_data" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="beam_data.last" xd:originalName="beam_data" xd:direction="out" xd:interfaceRef="beam_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="beam_info.startSymc" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="3:0" xd:dataWidth="4"/>
+  <xd:arg xd:name="beam_info.numSymc" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="7:4" xd:dataWidth="4"/>
+  <xd:arg xd:name="beam_info.startPrbc" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:8" xd:dataWidth="8"/>
+  <xd:arg xd:name="beam_info.numPrbc" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="23:16" xd:dataWidth="8"/>
+  <xd:arg xd:name="beam_info.beamID" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="39:24" xd:dataWidth="16"/>
+  <xd:arg xd:name="beam_info.bundPRB" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:40" xd:dataWidth="8"/>
+  <xd:arg xd:name="beam_info.reMask" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="59:48" xd:dataWidth="12"/>
+  <xd:arg xd:name="beam_info.layer" xd:originalName="beam_info" xd:direction="out" xd:interfaceRef="beam_info_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:60" xd:dataWidth="4"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="566" xd:FF="669" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

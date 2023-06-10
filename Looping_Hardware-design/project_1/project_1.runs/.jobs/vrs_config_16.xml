@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="check_40G_sim_eCpri_header_config_0_0_synth_1" LaunchDir="/home/ssaraswathy/Documents/XStep/Viv_design_10G/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_eCpri_header_config_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_2" LaunchDir="/home/ssaraswathy/Documents/XStep/Viv_design_10G/Looping_Hardware-design/project_1/project_1.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="check_40G_sim_eCpri_header_config_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_2" LaunchDir="/home/ssaraswathy/Documents/XStep/Viv_design_10G/Looping_Hardware-design/project_1/project_1.runs/impl_2" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_2"/>
+		<Parent Id="check_40G_sim_eCpri_header_config_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

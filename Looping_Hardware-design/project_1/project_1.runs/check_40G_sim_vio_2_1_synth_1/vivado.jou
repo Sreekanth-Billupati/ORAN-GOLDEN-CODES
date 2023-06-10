@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May  9 12:27:41 2023
+# Process ID: 11288
+# Current directory: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_vio_2_1_synth_1
+# Command line: vivado -log check_40G_sim_vio_2_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source check_40G_sim_vio_2_1.tcl
+# Log file: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_vio_2_1_synth_1/check_40G_sim_vio_2_1.vds
+# Journal file: /home/sai/Desktop/Looping_Hardware-design/project_1/project_1.runs/check_40G_sim_vio_2_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source check_40G_sim_vio_2_1.tcl -notrace

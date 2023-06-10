@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"l1tomplane": {
+			"proto_instances": {
+			}
+		}
+	}
+}

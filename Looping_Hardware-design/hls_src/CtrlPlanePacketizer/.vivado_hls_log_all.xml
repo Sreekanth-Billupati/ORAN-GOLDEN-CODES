@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cplane_packetizer/mdata_numCoeff_V' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.279+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'coeff_count_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.262+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extType11_beamID_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.252+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'extType11_reserved_c' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.236+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section1_header_ef_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.231+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section1_header_beam' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.227+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section1_header_numS' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.223+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section1_header_reMa' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.219+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section1_header_numP' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.215+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'section1_header_star' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.211+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ecpri_header_seqid_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.207+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ecpri_header_payload' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.202+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'byte_pad_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.198+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beam_count_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.194+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'temp_coeff_data_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.190+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'numBeam_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.181+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'new_beam_id_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.178+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'prev_state_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.175+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'oran_ctrl_states_V' is power-on initialization." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.172+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cstate_out_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="CtrlPlanePacketizer" solutionName="solution1" date="2021-04-05T11:06:35.168+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

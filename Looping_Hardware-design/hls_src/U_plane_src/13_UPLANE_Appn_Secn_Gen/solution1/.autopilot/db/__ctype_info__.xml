@@ -1,0 +1,197 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>L1_axis_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>payload</FieldName>
+<FieldType>
+<TypeName>ap_uint 54</TypeName>
+<TypeWidth>54</TypeWidth>
+<PhysicalWidth>54</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>dst_module</FieldName>
+<FieldType>
+<TypeName>ap_uint 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>application_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>filterIndex</FieldName>
+<FieldType>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>payloadVersion</FieldName>
+<FieldType>
+<TypeName>ap_uint 3</TypeName>
+<TypeWidth>3</TypeWidth>
+<PhysicalWidth>3</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>dataDirection</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>frameId</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>subframeId</FieldName>
+<FieldType>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>slotID</FieldName>
+<FieldType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>startsymbolId</FieldName>
+<FieldType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>section_header_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>sectionID</FieldName>
+<FieldType>
+<TypeName>ap_uint 12</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>rb</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>symInc</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>startPrbu</FieldName>
+<FieldType>
+<TypeName>ap_uint 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>numPrbu</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>udCompHdr</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>reserved</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>state_out_V</name>
+<CType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>symb_check_V</name>
+<CType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>symbol_check_id_V</name>
+<CType>
+<TypeName>ap_uint 6</TypeName>
+<TypeWidth>6</TypeWidth>
+<PhysicalWidth>6</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

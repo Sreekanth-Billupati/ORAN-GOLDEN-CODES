@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ecpri_mux" xd:componentRef="ecpri_mux" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="control_data_in.data" xd:originalName="control_data_in" xd:direction="in" xd:interfaceRef="control_data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="control_data_in.user" xd:originalName="control_data_in" xd:direction="in" xd:interfaceRef="control_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="control_data_in.keep" xd:originalName="control_data_in" xd:direction="in" xd:interfaceRef="control_data_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="control_data_in.last" xd:originalName="control_data_in" xd:direction="in" xd:interfaceRef="control_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="user_data_in.data" xd:originalName="user_data_in" xd:direction="in" xd:interfaceRef="user_data_in" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="user_data_in.user" xd:originalName="user_data_in" xd:direction="in" xd:interfaceRef="user_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="user_data_in.keep" xd:originalName="user_data_in" xd:direction="in" xd:interfaceRef="user_data_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="user_data_in.last" xd:originalName="user_data_in" xd:direction="in" xd:interfaceRef="user_data_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mux_data_out.data" xd:originalName="mux_data_out" xd:direction="out" xd:interfaceRef="mux_data_out" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="mux_data_out.user" xd:originalName="mux_data_out" xd:direction="out" xd:interfaceRef="mux_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mux_data_out.keep" xd:originalName="mux_data_out" xd:direction="out" xd:interfaceRef="mux_data_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="mux_data_out.last" xd:originalName="mux_data_out" xd:direction="out" xd:interfaceRef="mux_data_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="mux_config_in" xd:originalName="mux_config_in" xd:direction="in" xd:interfaceRef="mux_config_in_V_V" xd:busTypeRef="axis" xd:dataWidth="96"/>
+  <xd:arg xd:name="ecpri_mux_state_out" xd:originalName="ecpri_mux_state_out" xd:direction="out" xd:interfaceRef="ecpri_mux_state_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="2" xd:firstOut="2"/>
+  <xd:arg xd:name="num_section_out" xd:originalName="num_section_out" xd:direction="out" xd:interfaceRef="num_section_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12" xd:firstOut="2"/>
+  <xd:arg xd:name="section_count_out" xd:originalName="section_count_out" xd:direction="out" xd:interfaceRef="section_count_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12" xd:firstOut="2"/>
+  <xd:arg xd:name="layer_count_out" xd:originalName="layer_count_out" xd:direction="out" xd:interfaceRef="layer_count_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="3" xd:firstOut="2"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="586" xd:FF="1260" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

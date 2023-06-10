@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /home/sai/Desktop/Looping_Hardware-design/hls_src/Ethernet_Demux/solution1/.autopilot/db/a.g.bc ${1+"$@"}

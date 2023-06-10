@@ -1,0 +1,197 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'uplane_packetiser'" level="0">
+<item name = "Date">Sun Mar 26 23:15:27 2023
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">uplane_packetiser</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu19eg-ffvd1760-3-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20, 2.966, 0.40</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 1, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 114, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 223, -</column>
+<column name="Register">-, -, 356, -, -</column>
+<specialColumn name="Available">1968, 1968, 1045440, 522720, 128</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Total_PRB_count_V">+, 0, 0, 19, 12, 12</column>
+<column name="add_ln214_fu_602_p2">+, 0, 0, 17, 1, 10</column>
+<column name="add_ln219_fu_642_p2">+, 0, 0, 39, 1, 32</column>
+<column name="ap_condition_147">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln251_fu_610_p2">icmp, 0, 0, 20, 32, 5</column>
+<column name="icmp_ln879_fu_616_p2">icmp, 0, 0, 13, 10, 9</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_io">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Ethernet_header_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="IQ_data_V_data_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="PRB_count_V">9, 2, 12, 24</column>
+<column name="PRB_fragmentation">9, 2, 32, 64</column>
+<column name="ap_phi_mux_count_value_V_new_0_phi_fu_324_p6">15, 3, 10, 30</column>
+<column name="ap_phi_mux_storemerge2747_phi_fu_336_p6">15, 3, 3, 9</column>
+<column name="ap_phi_reg_pp0_iter1_tmp_last_V_reg_347">15, 3, 1, 3</column>
+<column name="application_header_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="eCPRI_header_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="eth_data_TDATA">38, 7, 128, 896</column>
+<column name="eth_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="eth_data_TKEEP">15, 3, 16, 48</column>
+<column name="eth_data_TLAST">15, 3, 1, 3</column>
+<column name="oran_ctrl_state">38, 7, 3, 21</column>
+<column name="section_header_V_TDATA_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="PRB_count_V">12, 0, 12, 0</column>
+<column name="PRB_fragmentation">32, 0, 32, 0</column>
+<column name="ap_CS_iter0_fsm">1, 0, 1, 0</column>
+<column name="ap_CS_iter1_fsm">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_tmp_last_V_reg_347">1, 0, 1, 0</column>
+<column name="count_value_V">10, 0, 10, 0</column>
+<column name="ecpri_header_payload">16, 0, 16, 0</column>
+<column name="ecpri_header_pcid1_V">16, 0, 16, 0</column>
+<column name="ecpri_header_seqid_V">16, 0, 16, 0</column>
+<column name="icmp_ln251_reg_1144">1, 0, 1, 0</column>
+<column name="icmp_ln879_reg_1148">1, 0, 1, 0</column>
+<column name="oran_ctrl_state">3, 0, 4, 1</column>
+<column name="oran_ctrl_state_load_reg_1134">3, 0, 4, 1</column>
+<column name="p_Result_1_reg_1218">8, 0, 8, 0</column>
+<column name="p_Result_4_reg_1188">4, 0, 4, 0</column>
+<column name="p_Result_5_reg_1193">2, 0, 2, 0</column>
+<column name="p_Result_7_reg_1203">8, 0, 8, 0</column>
+<column name="p_Result_9_reg_1208">2, 0, 2, 0</column>
+<column name="reg_526">8, 0, 8, 0</column>
+<column name="reg_530">8, 0, 8, 0</column>
+<column name="reg_534">8, 0, 8, 0</column>
+<column name="reg_538">8, 0, 8, 0</column>
+<column name="reg_542">8, 0, 8, 0</column>
+<column name="reg_546">8, 0, 8, 0</column>
+<column name="reg_550">8, 0, 8, 0</column>
+<column name="reg_554">8, 0, 8, 0</column>
+<column name="reg_558">8, 0, 8, 0</column>
+<column name="reg_562">8, 0, 8, 0</column>
+<column name="reg_566">8, 0, 8, 0</column>
+<column name="reg_570">8, 0, 8, 0</column>
+<column name="reg_574">8, 0, 8, 0</column>
+<column name="reg_578">8, 0, 8, 0</column>
+<column name="reg_582">8, 0, 8, 0</column>
+<column name="tmp_5_reg_1223">24, 0, 24, 0</column>
+<column name="tmp_6_reg_1228">2, 0, 2, 0</column>
+<column name="tmp_filterIndex_V_lo_reg_1167">4, 0, 4, 0</column>
+<column name="tmp_frameId_V_load_n_reg_1172">8, 0, 8, 0</column>
+<column name="tmp_msg_type_V_load_s_reg_1238">8, 0, 8, 0</column>
+<column name="tmp_numPrbu_V_load_n_reg_1198">8, 0, 8, 0</column>
+<column name="tmp_payloadVersion_V_reg_1162">3, 0, 3, 0</column>
+<column name="tmp_startsymbolId_V_s_reg_1182">6, 0, 6, 0</column>
+<column name="tmp_subframeId_V_loa_reg_1177">4, 0, 4, 0</column>
+<column name="trunc_ln647_3_reg_1213">4, 0, 4, 0</column>
+<column name="trunc_ln647_4_reg_1157">8, 0, 8, 0</column>
+<column name="trunc_ln647_5_reg_1152">8, 0, 8, 0</column>
+<column name="trunc_ln647_6_reg_1139">8, 0, 8, 0</column>
+<column name="trunc_ln_reg_1233">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, uplane_packetiser, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, uplane_packetiser, return value</column>
+<column name="Ethernet_header_V_TDATA">in, 112, axis, Ethernet_header_V, pointer</column>
+<column name="Ethernet_header_V_TVALID">in, 1, axis, Ethernet_header_V, pointer</column>
+<column name="Ethernet_header_V_TREADY">out, 1, axis, Ethernet_header_V, pointer</column>
+<column name="eCPRI_header_V_TDATA">in, 64, axis, eCPRI_header_V, pointer</column>
+<column name="eCPRI_header_V_TVALID">in, 1, axis, eCPRI_header_V, pointer</column>
+<column name="eCPRI_header_V_TREADY">out, 1, axis, eCPRI_header_V, pointer</column>
+<column name="application_header_V_TDATA">in, 32, axis, application_header_V, pointer</column>
+<column name="application_header_V_TVALID">in, 1, axis, application_header_V, pointer</column>
+<column name="application_header_V_TREADY">out, 1, axis, application_header_V, pointer</column>
+<column name="section_header_V_TDATA">in, 48, axis, section_header_V, pointer</column>
+<column name="section_header_V_TVALID">in, 1, axis, section_header_V, pointer</column>
+<column name="section_header_V_TREADY">out, 1, axis, section_header_V, pointer</column>
+<column name="IQ_data_V_data_V_TDATA">in, 128, axis, IQ_data_V_data_V, pointer</column>
+<column name="IQ_data_V_data_V_TVALID">in, 1, axis, IQ_data_V_data_V, pointer</column>
+<column name="IQ_data_V_data_V_TREADY">out, 1, axis, IQ_data_V_data_V, pointer</column>
+<column name="eth_data_TDATA">out, 128, axis, eth_data_V_data_V, pointer</column>
+<column name="eth_data_TREADY">in, 1, axis, eth_data_V_data_V, pointer</column>
+<column name="eth_data_TVALID">out, 1, axis, eth_data_V_last_V, pointer</column>
+<column name="eth_data_TLAST">out, 1, axis, eth_data_V_last_V, pointer</column>
+<column name="eth_data_TKEEP">out, 16, axis, eth_data_V_keep_V, pointer</column>
+<column name="state_out">out, 8, ap_none, state_out, pointer</column>
+<column name="symbol_number_V">out, 4, ap_none, symbol_number_V, pointer</column>
+<column name="Total_PRB_count_V">out, 12, ap_none, Total_PRB_count_V, pointer</column>
+<column name="symbol_id_check_V">out, 6, ap_vld, symbol_id_check_V, pointer</column>
+<column name="symbol_id_check_V_ap_vld">out, 1, ap_vld, symbol_id_check_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

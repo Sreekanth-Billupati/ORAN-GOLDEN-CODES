@@ -1,0 +1,7 @@
+Running: xsim.dir/mparam/xsimk -simmode gui -wdb mparam.wdb -simrunnum 0 -socket 57963
+Design successfully loaded
+Design Loading Memory Usage: 37208 KB (Peak: 37264 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 119396 KB (Peak: 176476 KB)
+Simulation CPU Usage: 0 ms

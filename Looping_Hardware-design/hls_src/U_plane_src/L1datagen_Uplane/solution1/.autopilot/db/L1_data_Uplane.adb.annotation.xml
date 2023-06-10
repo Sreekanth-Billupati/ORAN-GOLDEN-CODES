@@ -1,0 +1,3 @@
+<annotationInfo>
+<item  id="16" filename="L1datagen_Uplane/L1_data_UP.cpp" linenumber="49" name="zext_ln49" contextFuncName="L1_data_Uplane" moduleName="L1_data_Uplane" rtlName="L1_state_out" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/aswin/Desktop/Vivado_projects/12_ORAN_1L_no_compression_cont_data/ORAN_INTEG_1/hls_src/U_plane_src"><\/item>
+</annotationInfo>

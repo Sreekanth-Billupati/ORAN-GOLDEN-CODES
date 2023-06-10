@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"L1_data_Uplane": {
+			"proto_instances": {
+			}
+		}
+	}
+}

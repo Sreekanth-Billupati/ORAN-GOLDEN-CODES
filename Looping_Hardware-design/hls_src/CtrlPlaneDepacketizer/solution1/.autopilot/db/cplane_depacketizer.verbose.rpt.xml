@@ -1,0 +1,239 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'cplane_depacketizer'" level="0">
+<item name = "Date">Fri Mar 19 17:03:02 2021
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">CtrlPlaneDepacketizer</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20, 2.121, 0.40</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 1, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 128, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 438, -</column>
+<column name="Register">-, -, 669, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln700_1_fu_1350_p2">+, 0, 0, 11, 3, 1</column>
+<column name="add_ln700_2_fu_2047_p2">+, 0, 0, 11, 3, 1</column>
+<column name="add_ln700_fu_1331_p2">+, 0, 0, 15, 5, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1633">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1635">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1639">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1643">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1647">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1656">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_328">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_674">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_68">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_741">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_776">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op123_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op157_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op179_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op192_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op237_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op252_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op263_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op270_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op273_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op276_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op27_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op281_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op284_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op287_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op292_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op295_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op300_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op303_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op322_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op340_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op48_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op87_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op9_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="grp_nbreadreq_fu_230_p5">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln879_fu_1338_p2">icmp, 0, 0, 11, 5, 6</column>
+<column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_phi_mux_beam_11_phi_fu_302_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_beam_14_phi_fu_273_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_beam_1_phi_fu_389_p4">15, 3, 1, 3</column>
+<column name="ap_phi_mux_beam_5_phi_fu_360_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_beam_8_phi_fu_331_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_coeff_count_V_new_0_phi_fu_538_p4">15, 3, 5, 15</column>
+<column name="ap_phi_mux_new_read_1_phi_fu_375_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_new_read_3_phi_fu_346_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_new_read_5_phi_fu_317_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_new_read_7_phi_fu_288_p6">15, 3, 1, 3</column>
+<column name="ap_phi_mux_p_04519_22_phi_fu_401_p42">15, 3, 1, 3</column>
+<column name="ap_phi_mux_phi_ln209_phi_fu_470_p42">44, 9, 3, 27</column>
+<column name="ap_phi_reg_pp0_iter1_beam_18_reg_602">38, 7, 1, 7</column>
+<column name="ap_phi_reg_pp0_iter1_data_out_2_0_reg_545">9, 2, 1, 2</column>
+<column name="beam_count_V">9, 2, 3, 6</column>
+<column name="beam_data_TDATA">50, 11, 128, 1408</column>
+<column name="beam_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="beam_id_info_beamID_s">27, 5, 16, 80</column>
+<column name="beam_info_V_TDATA">33, 6, 64, 384</column>
+<column name="beam_info_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="eth_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="oran_ctrl_states_V">9, 2, 3, 6</column>
+<column name="temp_coeff_data_V">27, 5, 128, 640</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_beam_18_reg_602">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_data_out_2_0_reg_545">1, 0, 1, 0</column>
+<column name="beam_count_V">3, 0, 3, 0</column>
+<column name="beam_id_info_beamID_s">16, 0, 16, 0</column>
+<column name="beam_id_info_layer_V">4, 0, 4, 0</column>
+<column name="beam_id_info_numPrbc">8, 0, 8, 0</column>
+<column name="beam_id_info_numSymc">4, 0, 4, 0</column>
+<column name="beam_id_info_reMask_s">12, 0, 12, 0</column>
+<column name="beam_id_info_startPr">8, 0, 8, 0</column>
+<column name="beam_id_info_startSy">4, 0, 4, 0</column>
+<column name="coeff_count_V">5, 0, 5, 0</column>
+<column name="new_beam_id_V">1, 0, 1, 0</column>
+<column name="new_beam_id_V_load_reg_2069">1, 0, 1, 0</column>
+<column name="oran_ctrl_states_V">3, 0, 3, 0</column>
+<column name="p_Result_33_reg_2190">8, 0, 8, 0</column>
+<column name="p_Result_34_reg_2195">8, 0, 8, 0</column>
+<column name="p_Result_35_reg_2200">8, 0, 8, 0</column>
+<column name="p_Result_36_reg_2205">8, 0, 8, 0</column>
+<column name="p_Result_96_reg_2151">7, 0, 7, 0</column>
+<column name="p_Result_99_reg_2126">7, 0, 7, 0</column>
+<column name="p_Result_s_reg_2233">4, 0, 4, 0</column>
+<column name="p_Val2_3_reg_2073">128, 0, 128, 0</column>
+<column name="reg_1000">8, 0, 8, 0</column>
+<column name="reg_1004">8, 0, 8, 0</column>
+<column name="reg_1008">8, 0, 8, 0</column>
+<column name="reg_1012">8, 0, 8, 0</column>
+<column name="reg_1016">8, 0, 8, 0</column>
+<column name="reg_1020">128, 0, 128, 0</column>
+<column name="reg_980">8, 0, 8, 0</column>
+<column name="reg_984">8, 0, 8, 0</column>
+<column name="reg_988">8, 0, 8, 0</column>
+<column name="reg_992">8, 0, 8, 0</column>
+<column name="reg_996">8, 0, 8, 0</column>
+<column name="t_V_1_reg_2065">3, 0, 3, 0</column>
+<column name="temp_coeff_data_V">128, 0, 128, 0</column>
+<column name="tmp_1_reg_2210">1, 0, 1, 0</column>
+<column name="tmp_2_reg_2176">1, 0, 1, 0</column>
+<column name="tmp_3_reg_2156">1, 0, 1, 0</column>
+<column name="tmp_4_reg_2131">1, 0, 1, 0</column>
+<column name="tmp_5_reg_2106">1, 0, 1, 0</column>
+<column name="tmp_6_reg_2096">1, 0, 1, 0</column>
+<column name="tmp_7_reg_2082">1, 0, 1, 0</column>
+<column name="tmp_last_V_3_reg_2160">1, 0, 1, 0</column>
+<column name="tmp_last_V_4_reg_2135">1, 0, 1, 0</column>
+<column name="tmp_last_V_5_reg_2110">1, 0, 1, 0</column>
+<column name="tmp_last_V_6_reg_2100">1, 0, 1, 0</column>
+<column name="tmp_reg_2219">1, 0, 1, 0</column>
+<column name="trunc_ln647_10_reg_2171">7, 0, 7, 0</column>
+<column name="trunc_ln647_1_reg_2185">8, 0, 8, 0</column>
+<column name="trunc_ln647_2_reg_2166">8, 0, 8, 0</column>
+<column name="trunc_ln647_3_reg_2146">8, 0, 8, 0</column>
+<column name="trunc_ln647_4_reg_2141">8, 0, 8, 0</column>
+<column name="trunc_ln647_5_reg_2121">8, 0, 8, 0</column>
+<column name="trunc_ln647_6_reg_2116">8, 0, 8, 0</column>
+<column name="trunc_ln647_9_reg_2091">8, 0, 8, 0</column>
+<column name="trunc_ln_reg_2228">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, cplane_depacketizer, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, cplane_depacketizer, return value</column>
+<column name="eth_data_TDATA">in, 128, axis, eth_data_V_data_V, pointer</column>
+<column name="eth_data_TVALID">in, 1, axis, eth_data_V_data_V, pointer</column>
+<column name="eth_data_TREADY">out, 1, axis, eth_data_V_last_V, pointer</column>
+<column name="eth_data_TLAST">in, 1, axis, eth_data_V_last_V, pointer</column>
+<column name="eth_data_TUSER">in, 70, axis, eth_data_V_tuser_V, pointer</column>
+<column name="beam_data_TDATA">out, 128, axis, beam_data_V_data_V, pointer</column>
+<column name="beam_data_TREADY">in, 1, axis, beam_data_V_data_V, pointer</column>
+<column name="beam_data_TVALID">out, 1, axis, beam_data_V_last_V, pointer</column>
+<column name="beam_data_TLAST">out, 1, axis, beam_data_V_last_V, pointer</column>
+<column name="beam_info_V_TDATA">out, 64, axis, beam_info_V, pointer</column>
+<column name="beam_info_V_TVALID">out, 1, axis, beam_info_V, pointer</column>
+<column name="beam_info_V_TREADY">in, 1, axis, beam_info_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

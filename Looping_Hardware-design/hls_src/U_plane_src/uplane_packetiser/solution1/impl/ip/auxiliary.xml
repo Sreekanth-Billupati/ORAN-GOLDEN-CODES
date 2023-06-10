@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="uplane_packetiser" xd:componentRef="uplane_packetiser" xd:initiationInterval="1" xd:clockPeriod="3.200" xd:sequential="true" xd:hostMachine="64" xd:reset="state">
+  <xd:arg xd:name="Ethernet_header.dst_mac" xd:originalName="Ethernet_header" xd:direction="in" xd:interfaceRef="Ethernet_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:0" xd:dataWidth="48"/>
+  <xd:arg xd:name="Ethernet_header.src_mac" xd:originalName="Ethernet_header" xd:direction="in" xd:interfaceRef="Ethernet_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:48" xd:dataWidth="48"/>
+  <xd:arg xd:name="Ethernet_header.eth_type" xd:originalName="Ethernet_header" xd:direction="in" xd:interfaceRef="Ethernet_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="111:96" xd:dataWidth="16"/>
+  <xd:arg xd:name="eCPRI_header.version" xd:originalName="eCPRI_header" xd:direction="in" xd:interfaceRef="eCPRI_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="7:0" xd:dataWidth="8"/>
+  <xd:arg xd:name="eCPRI_header.msg_type" xd:originalName="eCPRI_header" xd:direction="in" xd:interfaceRef="eCPRI_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:8" xd:dataWidth="8"/>
+  <xd:arg xd:name="eCPRI_header.payload_size" xd:originalName="eCPRI_header" xd:direction="in" xd:interfaceRef="eCPRI_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:16" xd:dataWidth="16"/>
+  <xd:arg xd:name="eCPRI_header.pcid1" xd:originalName="eCPRI_header" xd:direction="in" xd:interfaceRef="eCPRI_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:32" xd:dataWidth="16"/>
+  <xd:arg xd:name="eCPRI_header.seqid" xd:originalName="eCPRI_header" xd:direction="in" xd:interfaceRef="eCPRI_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="application_header.dataDirection" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="0:0" xd:dataWidth="1"/>
+  <xd:arg xd:name="application_header.payloadVersion" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="3:1" xd:dataWidth="3"/>
+  <xd:arg xd:name="application_header.filterIndex" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="7:4" xd:dataWidth="4"/>
+  <xd:arg xd:name="application_header.frameId" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:8" xd:dataWidth="8"/>
+  <xd:arg xd:name="application_header.subframeId" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="19:16" xd:dataWidth="4"/>
+  <xd:arg xd:name="application_header.slotID" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="25:20" xd:dataWidth="6"/>
+  <xd:arg xd:name="application_header.startsymbolId" xd:originalName="application_header" xd:direction="in" xd:interfaceRef="application_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:26" xd:dataWidth="6"/>
+  <xd:arg xd:name="section_header.sectionID" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="11:0" xd:dataWidth="12"/>
+  <xd:arg xd:name="section_header.rb" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="12:12" xd:dataWidth="1"/>
+  <xd:arg xd:name="section_header.symInc" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="13:13" xd:dataWidth="1"/>
+  <xd:arg xd:name="section_header.startPrbu" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="23:14" xd:dataWidth="10"/>
+  <xd:arg xd:name="section_header.numPrbu" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:24" xd:dataWidth="8"/>
+  <xd:arg xd:name="section_header.udCompHdr" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="39:32" xd:dataWidth="8"/>
+  <xd:arg xd:name="section_header.reserved" xd:originalName="section_header" xd:direction="in" xd:interfaceRef="section_header_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:40" xd:dataWidth="8"/>
+  <xd:arg xd:name="IQ_data.data" xd:originalName="IQ_data" xd:direction="in" xd:interfaceRef="IQ_data_V_data_V" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="eth_data.data" xd:originalName="eth_data" xd:direction="out" xd:interfaceRef="eth_data" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="eth_data.keep" xd:originalName="eth_data" xd:direction="out" xd:interfaceRef="eth_data" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="eth_data.last" xd:originalName="eth_data" xd:direction="out" xd:interfaceRef="eth_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="state_out" xd:originalName="state_out" xd:direction="out" xd:interfaceRef="state_out" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:arg xd:name="symbol_number" xd:originalName="symbol_number" xd:direction="out" xd:interfaceRef="symbol_number_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="4" xd:firstOut="1"/>
+  <xd:arg xd:name="Total_PRB_count" xd:originalName="Total_PRB_count" xd:direction="out" xd:interfaceRef="Total_PRB_count_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12" xd:firstOut="1"/>
+  <xd:arg xd:name="symbol_id_check" xd:originalName="symbol_id_check" xd:direction="out" xd:interfaceRef="symbol_id_check_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="6" xd:firstOut="1"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="337" xd:FF="356" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

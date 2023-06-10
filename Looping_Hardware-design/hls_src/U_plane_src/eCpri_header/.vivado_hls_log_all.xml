@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'start_pcid_config_va' is power-on initialization." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.848+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pcid_config_value_V' is power-on initialization." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.795+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'count' is power-on initialization." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.791+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data_src_state' is power-on initialization." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.765+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'PAYLOAD_VALUE' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.750+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'state_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.747+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'eCPRI_data_out.V.data.V' (eCpri_header/eCpri_header_with_8PCID.cpp:4)." projectName="eCpri_header" solutionName="solution1" date="2021-04-09T10:12:34.495+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

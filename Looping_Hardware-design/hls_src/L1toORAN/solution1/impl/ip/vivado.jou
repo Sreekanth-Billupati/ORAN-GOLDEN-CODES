@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Feb 17 14:19:55 2022
+# Process ID: 24946
+# Current directory: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/L1toORAN/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/L1toORAN/solution1/impl/ip/vivado.log
+# Journal file: /home/ssaraswathy/Documents/ORAN_Uplane/Uplane_without_Compression/Hardware_design_TX/Looping_1layer_Test/Looping_Hardware-design/hls_src/L1toORAN/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

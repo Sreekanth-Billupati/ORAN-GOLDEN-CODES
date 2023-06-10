@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vivado HLS Report for 'eCpri_header_config'
+================================================================
+* Date:           Fri Apr  9 10:12:34 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        eCpri_header
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvd1760-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.20|     2.004|        0.40|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++-----------------+---------+-------+---------+--------+-----+
+|DSP              |        -|      -|        -|       -|    -|
+|Expression       |        -|      -|        0|      79|    -|
+|FIFO             |        -|      -|        -|       -|    -|
+|Instance         |        -|      -|        -|       -|    -|
+|Memory           |        -|      -|        -|       -|    -|
+|Multiplexer      |        -|      -|        -|     102|    -|
+|Register         |        -|      -|       88|       -|    -|
++-----------------+---------+-------+---------+--------+-----+
+|Total            |        0|      0|       88|     181|    0|
++-----------------+---------+-------+---------+--------+-----+
+|Available        |     1968|   1968|  1045440|  522720|  128|
++-----------------+---------+-------+---------+--------+-----+
+|Utilization (%)  |        0|      0|    ~0   |   ~0   |    0|
++-----------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln52_fu_189_p2                |     +    |      0|  0|  39|          32|           1|
+    |ap_block_pp0_stage0_01001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_146                  |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_162                  |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op19_read_state1     |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op48_write_state2    |    and   |      0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_80_p3            |    and   |      0|  0|   2|           1|           0|
+    |icmp_ln879_fu_196_p2              |   icmp   |      0|  0|  20|          32|           4|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2_io                |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  79|          74|          15|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                    | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |PAYLOAD_VALUE                                |  15|          3|   16|         48|
+    |ap_phi_mux_count_flag_1_phi_fu_120_p14       |  15|          3|    1|          3|
+    |ap_phi_mux_count_new_1_phi_fu_147_p14        |  15|          3|   32|         96|
+    |data_src_state                               |  15|          3|    2|          6|
+    |eCPRI_PCID_config_V_PCID_conf_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |eCPRI_data_out_V_data_V_TDATA                |  15|          3|   64|        192|
+    |eCPRI_data_out_V_data_V_TDATA_blk_n          |   9|          2|    1|          2|
+    |pcid_config_value_V                          |   9|          2|   16|         32|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |Total                                        | 102|         21|  133|        381|
+    +---------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |count                        |  32|   0|   32|          0|
+    |data_src_state               |   2|   0|    2|          0|
+    |data_src_state_load_reg_264  |   2|   0|    2|          0|
+    |icmp_ln879_reg_269           |   1|   0|    1|          0|
+    |pcid_config_value_V          |  16|   0|   16|          0|
+    |start_pcid_config_va         |  16|   0|   16|          0|
+    |tmp_PCID_conf_V_reg_277      |  16|   0|   16|          0|
+    |tmp_reg_273                  |   1|   0|    1|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  88|   0|   88|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------+-----+-----+--------------+---------------------------------+--------------+
+|                RTL Ports               | Dir | Bits|   Protocol   |          Source Object          |    C Type    |
++----------------------------------------+-----+-----+--------------+---------------------------------+--------------+
+|ap_clk                                  |  in |    1| ap_ctrl_none |       eCpri_header_config       | return value |
+|ap_rst_n                                |  in |    1| ap_ctrl_none |       eCpri_header_config       | return value |
+|eCPRI_PCID_config_V_PCID_conf_V_TDATA   |  in |   16|     axis     | eCPRI_PCID_config_V_PCID_conf_V |    pointer   |
+|eCPRI_PCID_config_V_PCID_conf_V_TVALID  |  in |    1|     axis     | eCPRI_PCID_config_V_PCID_conf_V |    pointer   |
+|eCPRI_PCID_config_V_PCID_conf_V_TREADY  | out |    1|     axis     | eCPRI_PCID_config_V_PCID_conf_V |    pointer   |
+|eCPRI_data_out_V_data_V_TDATA           | out |   64|     axis     |     eCPRI_data_out_V_data_V     |    pointer   |
+|eCPRI_data_out_V_data_V_TVALID          | out |    1|     axis     |     eCPRI_data_out_V_data_V     |    pointer   |
+|eCPRI_data_out_V_data_V_TREADY          |  in |    1|     axis     |     eCPRI_data_out_V_data_V     |    pointer   |
+|state_out                               | out |    8|    ap_none   |            state_out            |    pointer   |
+|PAYLOAD_VALUE                           | out |   16|    ap_none   |          PAYLOAD_VALUE          |    pointer   |
++----------------------------------------+-----+-----+--------------+---------------------------------+--------------+
+
